@@ -1,0 +1,44 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Data Analysis Tools"
+  author: "Ayomide"
+  date: "8/23/2024"
+  chapters:
+    - index.qmd
+    - part: sql_programming.qmd
+      chapters: 
+        - sql_creating_database.qmd
+        - sql_statement.qmd
+        - sql_text_data.qmd
+        - sql_date_data.qmd
+        - sql_data_cleaning.qmd
+        - sql_group_windows_function.qmd
+        - sql_join.qmd
+        - sql_sub_queries_cte.qmd
+        - sql_project.qmd
+    - part: r_programming.qmd
+      chapters: 
+        - r_data_types.qmd
+    - part: python_programming.qmd
+      chapters: 
+        - python_data_types.qmd
+    - part: powerbi.qmd
+      chapters: 
+        - powerbi_data_import.qmd
+    - tool_source.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    page-layout: full
+    grid: 
+      sidebar-width: 250px
+
+
+

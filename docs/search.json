@@ -1,0 +1,1099 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analysis Tools",
+    "section": "",
+    "text": "This material will cover four essential tools for data analysis, including SQL, R, Python, and Power BI. These tools serves both similar unique purpose and brings distinct strengths when working with data analysis process.\nSometimes this tools are not standalone, they can complement each other in a data analysis workflow. SQL is typically used for data extraction and initial data loading and cleaning. Python and R take over for more advanced analysis, modeling, and visualization and finally Power BI can then transform the insights into interactive and shareable reports.\n\nSQL\nR\nPython\nPower BI",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "powerbi_data_import.html",
+    "href": "powerbi_data_import.html",
+    "title": "13  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Power BI",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Processing...</span>"
+    ]
+  },
+  {
+    "objectID": "powerbi.html",
+    "href": "powerbi.html",
+    "title": "Power BI",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "Power BI"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html",
+    "href": "sql_creating_database.html",
+    "title": "1  Creating Database",
+    "section": "",
+    "text": "1.1 Relational database\nA relational database is a collection of data organized into tables, where each table represents a specific entity or concept and these tables are related to each other through common fields, allowing you to establish connections and retrieve information based on those relationships.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#what-is-sql",
+    "href": "sql_creating_database.html#what-is-sql",
+    "title": "1  Creating Database",
+    "section": "1.2 What is SQL",
+    "text": "1.2 What is SQL",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#creating-a-database-in-microsoft-sql-server",
+    "href": "sql_creating_database.html#creating-a-database-in-microsoft-sql-server",
+    "title": "1  Creating Database",
+    "section": "1.3 Creating a Database in Microsoft SQL Server",
+    "text": "1.3 Creating a Database in Microsoft SQL Server\n\nCREATE DATABASE LibraryDB;\n\n\nsample(1:50, 5)\n\n[1] 13 16  6 28 31",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#introduction",
+    "href": "sql_creating_database.html#introduction",
+    "title": "1  Creating Database",
+    "section": "",
+    "text": "1.1.1 What is a Relational Database\nEtiam non efficitur urna, quis elementum nisi. Mauris posuere a augue vel gravida. Praesent luctus erat et ex iaculis interdum. Nulla vestibulum quam ac nunc consequat vulputate. Nullam iaculis lobortis sem sit amet fringilla. Aliquam semper, metus ut blandit semper, nulla velit fermentum sapien, fermentum ultrices dolor sapien sed leo. Vestibulum molestie faucibus magna, at feugiat nulla ullamcorper a. Aliquam erat volutpat. Praesent scelerisque magna a justo maximus, sit amet suscipit mauris tempor. Nulla nec dolor eget ipsum pellentesque lobortis a in ipsum. Morbi turpis turpis, fringilla a eleifend maximus, viverra nec neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\n\n1.1.2 What is SQL",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#basic-sql-commands",
+    "href": "sql_creating_database.html#basic-sql-commands",
+    "title": "1  Creating Database",
+    "section": "1.2 Basic SQL Commands",
+    "text": "1.2 Basic SQL Commands",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#creating-and-managing-databases",
+    "href": "sql_creating_database.html#creating-and-managing-databases",
+    "title": "1  Creating Database",
+    "section": "1.2 Creating and managing databases",
+    "text": "1.2 Creating and managing databases\n\n\n\nSQL\n\n-- Syntax\nCREATE DATABASE databaseName;\n\n\nExample:\n\n\n\nSQL\n\n-- Create a database called LibraryDB\n1CREATE DATABASE LibraryDB;\n\n-- To use a specific database like the one we created use the `USE` statement\n2USE LibraryDB;\n\n\n\n1\n\nLibraryDB will be the name of the database which can be referenced.\n\n2\n\nTo switch the current database context within a SQL Server session to the specified database named\n\n\n\n\nany subsequent SQL statements executed will operate on the selected database until you change the context again.\n\n\n\n\n\n\nRemoving database\n\n\n\nExercise caution when executing this code. To permanently remove a database, the DROP DATABASEstatement must be used.\n\n\n\nSQL\n\n-- Remove the database completely.\nDROP DATABASE LibraryDB;\n\n\n\n\n\n1.2.1 Normalization:\nNormalization is a process used in SQL and database design to organize data in a way that reduces redundancy and improves data integrity. It ensures that each piece of data is stored only once, and relationships between data are correctly defined which makes the database more efficient, easier to maintain, and reduces the likelihood of anomalies when inserting, updating, or deleting data.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#creating-and-managing-tables",
+    "href": "sql_creating_database.html#creating-and-managing-tables",
+    "title": "1  Creating Database",
+    "section": "1.3 Creating and managing tables",
+    "text": "1.3 Creating and managing tables\n\n1.3.1 Creating a table:\nTo create a table in a relational database, you must use the CREATE TABLE statement followed by the table name, enclosed in parentheses. Inside the parentheses, you specify the column names and their corresponding data types, along with any additional constraints or attributes.\n\n\n\nSQL\n\n-- syntax\nCREATE TABLE tableName (\n  [column_name1] [data type] [Constraints],\n  ...\n);\n\n\nExample:\n\n\n\nSQL\n\n-- Create Books table\nCREATE TABLE Books (\n    book_id INT IDENTITY(1,1) PRIMARY KEY,\n    title NVARCHAR(255) NOT NULL,\n    author NVARCHAR(100) NOT NULL,\n    genre NVARCHAR(50),\n    publication_year INT,\n    isbn VARCHAR(13) UNIQUE NOT NULL\n);\n\n\n\n1.3.1.1 Data types\nData types in SQL define the kind of data that can be stored in a column of a table. They specify the format, range, and storage requirements for the data.\n\nCommon data types:\n\n\n\n\n\n  \n    \n      Name\n      Description\n      Example\n    \n  \n  \n    INT\nWhole numbers without decimal points\n123456\n    DECIMAL\nNumbers with decimal points\n12345.67\n    FLOAT\nNumbers with decimal points that can represent very large or very small values.\n1234.56\n    CHAR\nFixed-length character strings\nHello\n    VARCHAR\nVariable-length character strings\nHello! World\n    DATE\nDates\n2024-08-23\n    TIME\nTimes\n18:30:00\n    DATETIME\nDates and times\n2024-08-23 18:30:00\n    DATETIME2\nDates and times with more precision.\n2024-08-23 18:30:00.1234567\n  \n  \n  \n\n\n\n\n\n\n\n1.3.1.2 Table constriant\nTable constraints are rules that enforce data integrity and consistency within a database table. They are associated with columns to ensure that the data stored in those columns adheres to specific requirements.\n\nCommon types of table constraints:\nNOT NULL: This prevents null values in a column, ensuring that every row has a value for that column.\nUNIQUE: This is to ensure that all values in a column are unique, preventing duplicate entries.\nPRIMARY KEY: The primary key uniquely identifies each row in the table. it is like a combination of NOT NULL and UNIQUE constraints.\nFOREIGN KEY: This is created to references a primary key in another table, establishing a relationship between the two tables. This constraint ensures data consistency and prevents invalid references.\nCHECK: Defines a condition that must be met for any value inserted or updated in a column. For example, you could use a CHECK constraint to ensure that a numeric column is always positive. E.g ( unit_price DECIMAL(10, 2) CHECK (unit_price &gt;= 0) ).\nDEFAULT: Specifies a default value for a column if no value is provided when a new row is inserted.\n \n\n\n\n\n1.3.2 SQL table manipulation\n\n\nModifying a table\nThere are several modifications that can be performed using SQL to change the structure of an existing table in a database, such as adding, modifying, or deleting columns, and setting constraints.\n\nAdd a new column:\n\n\n\nSQL\n\n-- Add a new column to an existing table.\nALTER TABLE tableName\n  ADD column_name data_type;\n\n\n\nQuick illustration\n\n\n\nSQL\n\n-- Add a new column to an existing table.\nALTER TABLE tableName\n  ADD column3 VARCHAR;                                       \n\n\n\n\n\n\n\n\n\n\nTable\n  \n    \n      column1\n      column2\n    \n  \n  \n    One\n101\n    Two\n102\n    Three\n103\n  \n  \n  \n\n\n\n\n\n\nAltered table\n  \n    \n      column1\n      column2\n      column3\n    \n  \n  \n    One\n101\nNULL\n    Two\n102\nNULL\n    Three\n103\nNULL\n  \n  \n  \n\n\n\n\n\nExample:\n\n\n\nSQL\n\nALTER TABLE Books\n1  ADD number_of_pages INT;\n\n\n\n1\n\nadd a new column named number_of_pages to the Books table with an integer data type using the ADD keyword\n\n\n\n\n\n\n\n\nModify an existing column:\n\n\n\nSQL\n\n-- Change the data type of an existing column.\nALTER TABLE tableName\n  ALTER COLUMN column_name new_data_type;\n\n\nExample:\n\n\n\nSQL\n\nALTER TABLE Books\n1  ALTER COLUMN number_of_pages SMALLINT;\n\n\n\n1\n\nChange the data type of the number_of_pages from an integer to a SMALLINT.\n\n\n\n\n\n\n\nDrop a column:\n\n\n\nSQL\n\n-- Delete an existing column from a table.\nALTER TABLE tableName\n  DROP COLUMN column_name;\n\n\n\nQuick illustration\n\n\n\nSQL\n\nALTER TABLE tableName\n  DROP COLUMN column3;\n\n\n\n\n\n\n\n\n\n\nTable\n  \n    \n      column1\n      column2\n      column3\n    \n  \n  \n    One\n101\nNULL\n    Two\n102\nNULL\n    Three\n103\nNULL\n  \n  \n  \n\n\n\n\n\n\nAltered table\n  \n    \n      column1\n      column2\n    \n  \n  \n    One\n101\n    Two\n102\n    Three\n103\n  \n  \n  \n\n\n\n\n\nExample:\n\n\n\nSQL\n\nALTER TABLE Books\n1  DROP COLUMN number_of_pages;\n\n\n\n1\n\nRemove the column number_of_pages from the Books table using the DROP keyword.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#inserting-updating-and-deleting-data",
+    "href": "sql_creating_database.html#inserting-updating-and-deleting-data",
+    "title": "1  Creating Database",
+    "section": "1.4 Inserting, Updating and Deleting Data:",
+    "text": "1.4 Inserting, Updating and Deleting Data:\n\n1.4.1 Inserting Data\nThis is used to add new rows of data into a table.\n\n\n\n\n\n\nWarning\n\n\n\nIf you want to insert values into all columns of a table, you can do so by specifying the values in the correct order. Or better still Insert data into specific columns\n\n\n\n\n\nSQL\n\n-- Basic Syntax\nINSERT INTO tableName (column_name1, column_name2, ...)\n  VALUES (value1, value2, ...);\n\n-- Example\n-- Insert sample data into Books table\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, '9780446310789');\n\n\nYou can also insert multiple rows separated by comma\n\n\n\nSQL\n\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('1984', 'George Orwell', 'Science Fiction', 1949, '9780451524935'),\n('Pride and Prejudice', 'Jane Austen', 'Romance', 1813, '9780141439518');\n\n\nLastly you can insert values from other similar table (also known as using a Subquery) with the same data type.\n\n\n\nSQL\n\nINSERT INTO tableName (column_name1, column_name2, ...)\nSELECT column_name1, column_name2, ...\nFROM OtherTableName;\n\n\n   \n\n\n1.4.2 Updating Data\nThis is used to change existing data in one or more rows of a table.\n\n\n\nSQL\n\n-- Basic Syntax\nUPDATE tableName\n  SET column_name1 = new_value1, column_name2 = new_value2, ...\n1  WHERE condition;\n\n\n-- Example:\nUPDATE Employees\n  SET Salary = 65000\n  WHERE EmployeeID = 1;\n\n\n\n1\n\nThe condition can be based on one or more columns.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe WHERE clause is optional, but if you omit it, the UPDATE statement will modify all rows in the table, which is often not the desired outcome.\n\n\n\nSQL\n\nUPDATE Employees\n  SET Salary = Salary * 1.05;\n\n\n\n\n   \n\n\n\n\n\n\nData Type Compatibility:\n\n\n\nEnsure that the data type of the new value is compatible with the column’s data type. For example, you can’t update a VARCHAR column with an integer unless it’s converted properly.\n\n\n\n\n1.4.3 Deleting Data\nThis is used to remove rows from a table. essentially it allows you to delete one or more rows based on a specified condition.\n\n\n\nSQL\n\nDELETE FROM Customers;\n\n\n\n\n\nSQL\n\n-- Basic Syntax:\nDELETE FROM tableName\n1  WHERE condition;\n\n-- Example:\nDELETE FROM Employees\n  WHERE EmployeeID = 1;\n\n\n\n1\n\nSpecifies which rows should be deleted based on a condition relating to one or more columns.\n\n\n\n\n\n\n\n\n\n\nRemoving all Records\n\n\n\nAlways use a WHERE clause unless you intend to delete all rows in the table. Omitting the WHERE clause will result in the deletion of every row in the table, which may be irreversible without a backup.\n\n\n\nSQL\n\n-- Deleting All Rows:\nDELETE FROM tableName;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#querying-data",
+    "href": "sql_creating_database.html#querying-data",
+    "title": "1  Creating Database",
+    "section": "1.5 Querying Data",
+    "text": "1.5 Querying Data\n\n1.5.1 Selecting Data\n\n\n1.5.2 Filtering Data\n\n\n1.5.3 Sorting Data",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#aggregating-data",
+    "href": "sql_creating_database.html#aggregating-data",
+    "title": "1  Creating Database",
+    "section": "1.6 Aggregating Data",
+    "text": "1.6 Aggregating Data\n\n1.6.1 Counting Rows\n\n\n1.6.2 Summing values",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#data-type-compatibility",
+    "href": "sql_creating_database.html#data-type-compatibility",
+    "title": "1  Creating Database",
+    "section": "1.5 Data Type Compatibility:",
+    "text": "1.5 Data Type Compatibility:\nEnsure that the data type of the new value is compatible with the column’s data type. For example, you can’t update a VARCHAR column with an integer unless it’s converted properly.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html",
+    "href": "sql_command.html",
+    "title": "2  SQL Commands",
+    "section": "",
+    "text": "2.1 What are SQL Commands:\nAenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html#what-are-sql-commands",
+    "href": "sql_command.html#what-are-sql-commands",
+    "title": "2  SQL Commands",
+    "section": "",
+    "text": "2.1.1 Types",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html#inserting-updating-and-deleting-data",
+    "href": "sql_command.html#inserting-updating-and-deleting-data",
+    "title": "2  SQL Commands",
+    "section": "2.6 Inserting, Updating and Deleting Data:",
+    "text": "2.6 Inserting, Updating and Deleting Data:\n\n2.6.1 Inserting Data\nThis is used to add new rows of data into a table.\n\n\n\n\n\n\nWarning\n\n\n\nIf you want to insert values into all columns of a table, you can do so by specifying the values in the correct order. Or better still Insert data into specific columns\n\n\n\n\n\nSQL\n\n-- Basic Syntax\nINSERT INTO tableName (column_name1, column_name2, ...)\n  VALUES (value1, value2, ...);\n\n-- Example\n-- Insert sample data into Books table\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, '9780446310789');\n\n\nYou can also insert multiple rows separated by comma\n\n\n\nSQL\n\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('1984', 'George Orwell', 'Science Fiction', 1949, '9780451524935'),\n('Pride and Prejudice', 'Jane Austen', 'Romance', 1813, '9780141439518');\n\n\nLastly you can insert values from other similar table (also known as using a Subquery) with the same data type.\n\n\n\nSQL\n\nINSERT INTO tableName (column_name1, column_name2, ...)\nSELECT column_name1, column_name2, ...\nFROM OtherTableName;\n\n\n\n\n2.6.2 Updating Data\nThis is used to change existing data in one or more rows of a table.\n\n\n\nSQL\n\n-- Basic Syntax\nUPDATE tableName\n  SET column_name1 = new_value1, column_name2 = new_value2, ...\n1  WHERE condition;\n\n\n-- Example:\nUPDATE Employees\n  SET Salary = 65000\n  WHERE EmployeeID = 1;\n\n\n\n1\n\nThe condition can be based on one or more columns.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe WHERE clause is optional, but if you omit it, the UPDATE statement will modify all rows in the table, which is often not the desired outcome.\n\n\n\nSQL\n\nUPDATE Employees\n  SET Salary = Salary * 1.05;\n\n\n\n\n\n\n\n\n\n\nData Type Compatibility:\n\n\n\nEnsure that the data type of the new value is compatible with the column’s data type. For example, you can’t update a VARCHAR column with an integer unless it’s converted properly.\n\n\n\n\n2.6.3 Deleting Data\nThis is used to remove rows from a table. essentially it allows you to delete one or more rows based on a specified condition.\n\n\n\nSQL\n\n-- Basic Syntax:\nDELETE FROM tableName\n1  WHERE condition;\n\n-- Example:\nDELETE FROM Employees\n  WHERE EmployeeID = 1;\n\n\n\n1\n\nSpecifies which rows should be deleted based on a condition relating to one or more columns.\n\n\n\n\n\n\n\n\n\n\nRemoving all Records\n\n\n\nAlways use a WHERE clause unless you intend to delete all rows in the table. Omitting the WHERE clause will result in the deletion of every row in the table, which may be irreversible without a backup.\n\n\n\nSQL\n\n-- Deleting All Rows:\nDELETE FROM tableName;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html#querying-data",
+    "href": "sql_command.html#querying-data",
+    "title": "2  SQL Commands",
+    "section": "2.4 Querying Data",
+    "text": "2.4 Querying Data\n\n2.4.1 Selecting Data\nThe SELECT statement in SQL is used to retrieve data from one or more tables in a database. The SELECT statement allows you to specify exactly which columns of data you want to retrieve, as well as to filter, sort, and group the results.\n\n\n\nSQL\n\nSELECT column_name1, column_name2, ...\nFROM tableName\n\n\n\n\n\n\n\n\nMultiple ways of columns\n\n\n\nYou can select specific columns, use * to select all columns, or use expressions and functions.\n\n\n\nSQL\n\n-- All columns\n1SELECT *\nFROM tableName\n\n-- Specific columns\n2SELECT column_name1, column_name2\nFROM tableName\n\n-- Expression and functions\nSELECT \n3    COUNT(*),\n    SUM(column_name)\nFROM tableName\n\n\n\n1\n\nSelecting all columns.\n\n2\n\nSelecting specific columns.\n\n3\n\nUsing expressions and functions to perform calculation before selecting them.\n\n\n\n\n\n\nExample:\n\n\n\nSQL\n\nSELECT * FROM LibraryDB;\n\n\n\n\n\nSQL\n\nSELECT \n  title, \n  author, \n  genre,\nFROM LibraryDB;\n\n\n\n\n2.4.2 Filtering Data\n\n\n2.4.3 Sorting Data",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html#aggregating-data",
+    "href": "sql_command.html#aggregating-data",
+    "title": "2  SQL Commands",
+    "section": "2.5 Aggregating Data",
+    "text": "2.5 Aggregating Data\n\n2.5.1 Counting Rows\n\n\n2.5.2 Summing values",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html#modifying-a-table",
+    "href": "sql_command.html#modifying-a-table",
+    "title": "2  SQL Commands",
+    "section": "2.2 Modifying a Table",
+    "text": "2.2 Modifying a Table\nThere are several modifications that can be performed using SQL to change the structure of an existing table in a database, such as adding, modifying, or deleting columns, and setting constraints.\n\nAdd a New Column:\n\n\n\n\nSQL\n\n-- Add a new column to an existing table.\nALTER TABLE tableName\n  ADD column_name data_type;\n\n\n\nDrop a Column:\n\n\n\n\nSQL\n\n-- Delete an existing column from a table.\nALTER TABLE tableName\n  DROP COLUMN column_name;\n\n\n\nModify an Existing Column:\n\n\n\n\nSQL\n\n-- Change the data type of an existing column.\nALTER TABLE tableName\n  ALTER COLUMN column_name new_data_type;\n  \n-- Example:\nALTER TABLE Orders\n  ALTER COLUMN Discount DECIMAL(6, 2);\n\n\n\nAdd Constraints:\n\n\n\n\nSQL\n\n-- Add a constraint e.g. (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK)\nALTER TABLE tableName\n  ADD CONSTRAINT constraint_name constraint_type (column_name);\n\n-- Example:\nALTER TABLE Orders\n  ADD CONSTRAINT PK_OrderID PRIMARY KEY (Order_ID);",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html#deleting-a-table",
+    "href": "sql_command.html#deleting-a-table",
+    "title": "2  SQL Commands",
+    "section": "2.3 Deleting a Table:",
+    "text": "2.3 Deleting a Table:\nThis is used to permanently delete a table from the database. When you execute the DROP TABLE command, the specified table and all of its data, structure, indexes, constraints, and permissions are completely removed from the database.\n\n\n\nSQL\n\nDROP TABLE tableName;\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIf the table has any constraints like foreign keys, you may need to drop those constraints first or use cascading options to automatically drop dependent objects.\n\n\n\nSQL\n\n-- Drop the foreign keys Constraint\nALTER TABLE MainTableName\n  DROP CONSTRAINT FK_column_name;\n  \n\n-- The drop the table\nDROP TABLE TableToBeDropped;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_command.html#multiple-ways-of-columns",
+    "href": "sql_command.html#multiple-ways-of-columns",
+    "title": "2  SQL Commands",
+    "section": "2.5 Multiple ways of columns",
+    "text": "2.5 Multiple ways of columns\nYou can select specific columns, use * to select all columns, or use expressions and functions.\n\n\n\nSQL\n\n-- All columns\n1SELECT *\nFROM tableName\n\n-- Specific columns\n2SELECT column_name1, column_name2\nFROM tableName\n\n-- Expression and functions\nSELECT \n3    COUNT(*),\n    SUM(column_name)\nFROM tableName\n\n\n\n1\n\nSelecting all columns.\n\n2\n\nSelecting specific columns.\n\n3\n\nUsing expressions and functions to perform calculation before selecting them.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Commands</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html",
+    "href": "sql_statement.html",
+    "title": "2  Data Query Statement",
+    "section": "",
+    "text": "2.1 Querying Data",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Query Statement</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#what-are-sql-statements",
+    "href": "sql_statement.html#what-are-sql-statements",
+    "title": "2  SQL Statements",
+    "section": "",
+    "text": "2.1.1 Types",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Statements</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#querying-data",
+    "href": "sql_statement.html#querying-data",
+    "title": "2  Data Query Statement",
+    "section": "",
+    "text": "2.1.1 SELECT\nThe SELECT statement in SQL is used to retrieve data from one or more tables in a database. The SELECT statement allows you to specify exactly which columns of data you want to retrieve, as well as to filter, sort, and group the results.\n\n\n\nSQL\n\n-- Basic Syntax\n1SELECT column_name1, column_name2, ...\n2FROM tableName;\n\n\n\n1\n\nThe names of columns to retrieve (include in the result).\n\n2\n\nThe name of the table to retrieve the records from.\n\n\n\n\n\n\n\n\n\n\nIncluding the FROM clause\n\n\n\n“The FROM clause is essential in SQL queries to explicitly specify the table you want to retrieve data from. It’s a fundamental component of the SELECT statement.\n\n\n\n\n\n\n\n\nMultiple ways of selecting columns\n\n\n\n\n\nYou have the flexibility to select individual columns, retrieve all columns using the wildcard (*), or utilize expressions and functions to process the data before retrieving them.\n\n\n\nSQL\n\n-- All columns\n1SELECT *\nFROM tableName;\n\n-- Specific columns\n2SELECT column_name1, column_name2\nFROM tableName;\n\n-- Functions\nSELECT \n3    COUNT(*),\n    SUM(column_name)\nFROM tableName;\n\n-- Expression\n4SELECT 'Title: ' + column_name1 + ', Author: ' + column_name2\nFROM tableName;\n\n\n\n1\n\nSelecting all columns.\n\n2\n\nSelecting specific columns.\n\n3\n\nUsing functions to perform calculation before retrieving them.\n\n4\n\nUsing expressions by concatenating (Combining) two columns.\n\n\n\n\n\n\n\n\nQuick Illustration\n\n\n\nSQL\n\nSELECT * FROM TableName;\n\n\n\n\n\n\n\n\n\n\nTable\n  \n    \n      column1\n      column2\n      column3\n      column4\n    \n  \n  \n    one\n101\none\n101\n    two\n102\ntwo\n102\n    three\n103\nthree\n103\n  \n  \n  \n\n\n\n\n\n\nSelected columns\n  \n    \n      column1\n      column2\n      column3\n      column4\n    \n  \n  \n    one\n101\none\n101\n    two\n102\ntwo\n102\n    three\n103\nthree\n103\n  \n  \n  \n\n\n\n\n\nExample:\n\n\n\nSQL\n\nSELECT * FROM LibraryDB.dbo.Books;\n\n\n\n\n\n\n\n  \n    \n      book_id\n      supplier_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n    1\n1\nTo Kill a Mockingbird\nHarper Lee\nFiction\n1960\n9.780446e+12\n    2\n3\n1984\nGeorge Orwell\nScience Fiction\n1949\n9.780452e+12\n    3\n5\nPride and Prejudice\nJane Austen\nRomance\n1813\n9.780141e+12\n    4\n4\nThe Great Gatsby\nF. Scott Fitzgerald\nFiction\n1925\n9.780743e+12\n    5\n1\nThe Catcher in the Rye\nJ.D. Salinger\nFiction\n1951\n9.780317e+12\n    6\n5\nThe Hobbit\nJ.R.R. Tolkien\nFantasy\n1937\n9.780548e+12\n    7\n2\nHarry Potter and the Philosopher''s Stone\nJ.K. Rowling\nFantasy\n1997\n9.780748e+12\n    8\n4\nThe Da Vinci Code\nDan Brown\nThriller\n2003\n9.780307e+12\n    9\n5\nThe Hunger Games\nSuzanne Collins\nYoung Adult\n2008\n9.780439e+12\n    10\n3\nThe Girl with the Dragon Tattoo\nStieg Larsson\nCrime\n2005\n9.780307e+12\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nSelecting all records\n\n\n\n\n\nWhen retrieving all records from a large table, be aware that it may consume significant time and computational resources. To optimize performance, consider limiting the number of rows returned using the TOP clause:\n\n\n\nSQL\n\n1SELECT TOP 5 *\nFROM LibraryDB.dbo.Books;                               \n\n\n\n1\n\nReturn only the top 5 records in the table.\n\n\n\n\n\n\n\n\n\n  \n    \n      book_id\n      supplier_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n    1\n1\nTo Kill a Mockingbird\nHarper Lee\nFiction\n1960\n9.780446e+12\n    2\n3\n1984\nGeorge Orwell\nScience Fiction\n1949\n9.780452e+12\n    3\n5\nPride and Prejudice\nJane Austen\nRomance\n1813\n9.780141e+12\n    4\n4\nThe Great Gatsby\nF. Scott Fitzgerald\nFiction\n1925\n9.780743e+12\n    5\n1\nThe Catcher in the Rye\nJ.D. Salinger\nFiction\n1951\n9.780317e+12\n  \n  \n  \n\n\n\n\n\n\n\n\n\nSelecting specific columns\n\nQuick Illustration\n\n\n\nSQL\n\nSELECT column1, column2 FROM TableName;\n\n\n\n\n\n\n\n\n\n\nTable\n  \n    \n      column1\n      column2\n      column3\n      column4\n    \n  \n  \n    one\n101\none\n101\n    two\n102\ntwo\n102\n    three\n103\nthree\n103\n  \n  \n  \n\n\n\n\n\n\nSelected columns\n  \n    \n      column1\n      column2\n    \n  \n  \n    one\n101\n    two\n102\n    three\n103\n  \n  \n  \n\n\n\n\n\nExample:\n\n\n\nSQL\n\nSELECT \n  title, \n  author, \n  genre,\nFROM LibraryDB.dbo.Books;\n\n\n\n\n\n\n\n  \n    \n      title\n      author\n      genre\n    \n  \n  \n    To Kill a Mockingbird\nHarper Lee\nFiction\n    1984\nGeorge Orwell\nScience Fiction\n    Pride and Prejudice\nJane Austen\nRomance\n    The Great Gatsby\nF. Scott Fitzgerald\nFiction\n    The Catcher in the Rye\nJ.D. Salinger\nFiction\n    The Hobbit\nJ.R.R. Tolkien\nFantasy\n    Harry Potter and the Philosopher''s Stone\nJ.K. Rowling\nFantasy\n    The Da Vinci Code\nDan Brown\nThriller\n    The Hunger Games\nSuzanne Collins\nYoung Adult\n    The Girl with the Dragon Tattoo\nStieg Larsson\nCrime\n  \n  \n  \n\n\n\n\n\n\n\nUsing Alias AS keyword:\nThe AS keyword also known as Alias, allows you to create a temporary name or alias for a column or expression within duration of a query.\nExample:\n\n\n\nSQL\n\nSELECT \n  COUNT(*) AS total_number_of_records,\n  MAX(publication_year) AS most_recent_pulication_year\nFROM LibraryDB.dbo.Books;\n\n\n\n\n\n\n\n  \n    \n      total_number_of_records\n      most_recent_pulication_year\n    \n  \n  \n    10\n2008\n  \n  \n  \n\n\n\n\nIt can also be used to assign a temporary alias to a table for a specific query or expression. This makes the table easier to reference or understand in the result set, especially when dealing with complex joins.\n\n\n\nSQL\n\nSELECT book.supplier_id, book.title FROM LibraryDB.dbo.Books AS book; \n\n\n\n\n\n\n\n  \n    \n      supplier_id\n      title\n    \n  \n  \n    1\nTo Kill a Mockingbird\n    3\n1984\n    5\nPride and Prejudice\n    4\nThe Great Gatsby\n    1\nThe Catcher in the Rye\n    5\nThe Hobbit\n    2\nHarry Potter and the Philosopher''s Stone\n    4\nThe Da Vinci Code\n    5\nThe Hunger Games\n    3\nThe Girl with the Dragon Tattoo\n  \n  \n  \n\n\n\n\n   \n\n\n\n2.1.2 WHERE\nThe WHERE clause is used to filter records returned by a SELECT, UPDATE, DELETE, or other SQL statements. It specifies a condition that each row must meet in order to be included in the result set.\n\n\n\nSQL\n\n-- Basic Syntax\nSELECT column_name1, column_name2, ...\nFROM tableName\n1WHERE condition;\n\n\n\n1\n\nInclude the WHERE clause after the FROM clause.\n\n\n\n\n\nQuick Illustration\n\n\n\nSQL\n\nSELECT year, overall_revenue\nFROM tableName\n1WHERE year &gt; 2021;\n\n\n\n1\n\nFilter records of years after 2021.\n\n\n\n\n\n\n\n\n\n\n\n\nEntire table\n  \n    \n      year\n      overall_revenue\n    \n  \n  \n    2020\n102103\n    2021\n103675\n    2022\n103231\n    2023\n103395\n    2024\n100056\n  \n  \n  \n\n\n\n\n\n\nFiltered table\n  \n    \n      year\n      overall_revenue\n    \n  \n  \n    2022\n103231\n    2023\n103395\n    2024\n100056\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\n\nKey components of the WHERE statment\n\n\n\n\nThe condition is a logical expression that evaluates to TRUE, FALSE, or NULL.\nOnly rows for which the condition is TRUE are returned or affected by the query.\n\n\n\n\n\n2.1.2.1 Types of conditions\n\n\n1. Comparison Operators:\nThese operators are used to evaluate whether all column values match a given value.\n\n\n\n\n\n  \n    \n      Sign\n      Description\n    \n  \n  \n    =\nEqual to\n    != or &lt;&gt;\nNot equal to\n    &gt;\nGreater than\n    &lt;\nLess than\n    &gt;=\nGreater than or equal to\n    &lt;=\nLess than or equal to\n  \n  \n  \n\n\n\n\n\n\nEqual to:\n\n\n\nSQL\n\nSELECT * \nFROM LibraryDB.dbo.Books\n1WHERE publication_year = 2005;\n\n\n\n1\n\nFilter records of books published in 2005.\n\n\n\n\n\n\n\n\n\n  \n    \n      book_id\n      supplier_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n    10\n3\nThe Girl with the Dragon Tattoo\nStieg Larsson\nCrime\n2005\n9.780307e+12\n  \n  \n  \n\n\n\n\n\n\nNot equal to:\n\n\n\nSQL\n\nSELECT * \nFROM LibraryDB.dbo.Books\n1WHERE publication_year != 2005;\n\n-- OR\n\nSELECT * \nFROM LibraryDB.dbo.Books\n2WHERE publication_year &lt;&gt; 2005;\n\n\n\n1\n\nFilter all books except those published in 2005.\n\n2\n\nFilter all books except those published in 2005.\n\n\n\n\n\n\n\n\n\n  \n    \n      book_id\n      supplier_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n    1\n1\nTo Kill a Mockingbird\nHarper Lee\nFiction\n1960\n9.780446e+12\n    2\n3\n1984\nGeorge Orwell\nScience Fiction\n1949\n9.780452e+12\n    3\n5\nPride and Prejudice\nJane Austen\nRomance\n1813\n9.780141e+12\n    4\n4\nThe Great Gatsby\nF. Scott Fitzgerald\nFiction\n1925\n9.780743e+12\n    5\n1\nThe Catcher in the Rye\nJ.D. Salinger\nFiction\n1951\n9.780317e+12\n    6\n5\nThe Hobbit\nJ.R.R. Tolkien\nFantasy\n1937\n9.780548e+12\n    7\n2\nHarry Potter and the Philosopher''s Stone\nJ.K. Rowling\nFantasy\n1997\n9.780748e+12\n    8\n4\nThe Da Vinci Code\nDan Brown\nThriller\n2003\n9.780307e+12\n    9\n5\nThe Hunger Games\nSuzanne Collins\nYoung Adult\n2008\n9.780439e+12\n  \n  \n  \n\n\n\n\n\n\nGreater than:\n\n\n\nSQL\n\nSELECT title, author, publication_year \nFROM LibraryDB.dbo.Books\n1WHERE publication_year &gt; 2003;\n\n\n\n1\n\nFilter records of books published after 2003.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      author\n      publication_year\n    \n  \n  \n    The Hunger Games\nSuzanne Collins\n2008\n    The Girl with the Dragon Tattoo\nStieg Larsson\n2005\n  \n  \n  \n\n\n\n\n\n\nGreater than or equal to:\n\n\n\nSQL\n\nSELECT title, author, publication_year \nFROM LibraryDB.dbo.Books\n1WHERE publication_year &gt;= 2003;\n\n\n\n1\n\nFilter the records of books published in 2003 and beyond.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      author\n      publication_year\n    \n  \n  \n    The Da Vinci Code\nDan Brown\n2003\n    The Hunger Games\nSuzanne Collins\n2008\n    The Girl with the Dragon Tattoo\nStieg Larsson\n2005\n  \n  \n  \n\n\n\n\n\n\nLess than:\n\n\n\nSQL\n\nSELECT title, author, publication_year \nFROM LibraryDB.dbo.Books\n1WHERE publication_year &lt; 2003;\n\n\n\n1\n\nFilter records of books published before 2003.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      author\n      publication_year\n    \n  \n  \n    To Kill a Mockingbird\nHarper Lee\n1960\n    1984\nGeorge Orwell\n1949\n    Pride and Prejudice\nJane Austen\n1813\n    The Great Gatsby\nF. Scott Fitzgerald\n1925\n    The Catcher in the Rye\nJ.D. Salinger\n1951\n    The Hobbit\nJ.R.R. Tolkien\n1937\n    Harry Potter and the Philosopher''s Stone\nJ.K. Rowling\n1997\n  \n  \n  \n\n\n\n\n\n\nLess than or equal to:\n\n\n\nSQL\n\nSELECT title, author, publication_year \nFROM LibraryDB.dbo.Books\n1WHERE publication_year &lt;= 2003;\n\n\n\n1\n\nFilter books published in or before 2003.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      author\n      publication_year\n    \n  \n  \n    To Kill a Mockingbird\nHarper Lee\n1960\n    1984\nGeorge Orwell\n1949\n    Pride and Prejudice\nJane Austen\n1813\n    The Great Gatsby\nF. Scott Fitzgerald\n1925\n    The Catcher in the Rye\nJ.D. Salinger\n1951\n    The Hobbit\nJ.R.R. Tolkien\n1937\n    Harry Potter and the Philosopher''s Stone\nJ.K. Rowling\n1997\n    The Da Vinci Code\nDan Brown\n2003\n  \n  \n  \n\n\n\n\n \n\n\n2. Logical Operators:\nYou can also used to combine multiple conditions by using a logical operator.\n\n\n\n\n\n  \n    \n      Keyword\n      Description\n    \n  \n  \n    AND\nBoth conditions must be true\n    OR\nAt least one condition must be true\n    NOT\nNegates a condition\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nLogic behind the Logical operators\n\n\n\n\n\n\n\n\n\n\n  \n    \n      condition A\n      Logical Operator\n      condition B\n      Output\n    \n  \n  \n    TRUE\nAND\nTRUE\nTRUE\n    TRUE\nAND\nFALSE\nFALSE\n    FALSE\nAND\nTRUE\nFALSE\n    FALSE\nAND\nFALSE\nFALSE\n    TRUE\nOR\nTRUE\nTRUE\n    TRUE\nOR\nFALSE\nTRUE\n    FALSE\nOR\nTRUE\nTRUE\n    FALSE\nOR\nFALSE\nFALSE\n  \n  \n  \n\n\n\n\nIn MS SQL Server, the AND and OR operators have equal precedence. You can use parentheses () to control the order of evaluation if needed. See Tip 2.1\n\n\n\n\n\nAND:\n\n\n\nSQL\n\nSELECT title, genre, publication_year\nFROM LibraryDB.dbo.Books\n1WHERE genre = 'Fiction' AND publication_year = 1960;\n\n\n\n1\n\nFilter records of books that have a fiction genre and published in 1960.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      genre\n      publication_year\n    \n  \n  \n  \n  \n\n\n\n\n\n\nOR:\n\n\n\nSQL\n\nSELECT title, genre, publication_year\nFROM LibraryDB.dbo.Books\n1WHERE genre = 'Fiction' OR publication_year = 1960;\n\n\n\n1\n\nFilter records of books that either have a fiction genre or were published in 1960.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      genre\n      publication_year\n    \n  \n  \n    To Kill a Mockingbird\nFiction\n1960\n    The Great Gatsby\nFiction\n1925\n    The Catcher in the Rye\nFiction\n1951\n  \n  \n  \n\n\n\n\n\n\nNOT:\n\n\n\nSQL\n\nSELECT title, genre, publication_year\nFROM LibraryDB.dbo.Books\n1WHERE NOT genre = 'Fiction';\n\n\n\n1\n\nFilter records of books where the genre is not ‘fiction’.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      genre\n      publication_year\n    \n  \n  \n    1984\nScience Fiction\n1949\n    Pride and Prejudice\nRomance\n1813\n    The Hobbit\nFantasy\n1937\n    Harry Potter and the Philosopher''s Stone\nFantasy\n1997\n    The Da Vinci Code\nThriller\n2003\n    The Hunger Games\nYoung Adult\n2008\n    The Girl with the Dragon Tattoo\nCrime\n2005\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nTip 2.1: Order of Evaluation\n\n\n\nLogical Operators Precedence:\n\nNOT is evaluated first.\nAND is evaluated before OR.\n\n\n\n\n\n\n3. BETWEEN and NOT BETWEEN:\nThese clause are specifically useful when trying to filter within a range.\n\n\nBETWEEN:\nFilter between the specified range.\n\n\n\nSQL\n\nSELECT title, publication_year\nFROM LibraryDB.dbo.Books\n1WHERE publication_year BETWEEN 1997 AND 2003;\n\n\n\n1\n\nFilter records of books that were published between 1997 and 2003.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      publication_year\n    \n  \n  \n    Harry Potter and the Philosopher''s Stone\n1997\n    The Da Vinci Code\n2003\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nNote about the OR keyword.\n\n\n\nThe OR statement should be used to connect two or more conditions, not to connect the BETWEEN operator with values. So you cant write something like this:\n\n\n\nSQL\n\nSELECT title, publication_year\nFROM LibraryDB.dbo.Books\n1WHERE publication_year BETWEEN 1997 OR 2003;\n\n\n\n1\n\nThis will throw a Syntax Error. /! \n\n\n\n\n\n\n\n\n\nNOT BETWEEN:\nFilter outside the specified range.\n\n\n\nSQL\n\nSELECT title, publication_year\nFROM LibraryDB.dbo.Books\n1WHERE NOT publication_year BETWEEN 1997 AND 2003;\n\n\n\n1\n\nFilter records of books that were not published between 1997 and 2003.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      publication_year\n    \n  \n  \n    Pride and Prejudice\n1813\n    The Great Gatsby\n1925\n    The Hobbit\n1937\n    1984\n1949\n    The Catcher in the Rye\n1951\n    To Kill a Mockingbird\n1960\n    The Girl with the Dragon Tattoo\n2005\n    The Hunger Games\n2008\n  \n  \n  \n\n\n\n\n\n\n\n4. IN and NOT IN:\nThese clause are used to filter by a list of values.\n\n\nIN:\n\n\n\nSQL\n\nSELECT title, genre\nFROM LibraryDB.dbo.Books\n1WHERE genre IN ('Fiction', 'Crime');\n\n\n\n1\n\nFilter all book with a ‘fiction’ or ‘crime’ genre.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      genre\n    \n  \n  \n    To Kill a Mockingbird\nFiction\n    The Great Gatsby\nFiction\n    The Catcher in the Rye\nFiction\n    The Girl with the Dragon Tattoo\nCrime\n  \n  \n  \n\n\n\n\n\n\nNOT IN:\n\n\n\nSQL\n\nSELECT title, genre\nFROM LibraryDB.dbo.Books\n1WHERE genre NOT IN ('Fiction', 'Crime');\n\n\n\n1\n\nFilter all books except those with a ‘fiction’ or ‘crime’ genre.\n\n\n\n\n\n\n\n\n\n  \n    \n      title\n      genre\n    \n  \n  \n    1984\nScience Fiction\n    Pride and Prejudice\nRomance\n    The Hobbit\nFantasy\n    Harry Potter and the Philosopher''s Stone\nFantasy\n    The Da Vinci Code\nThriller\n    The Hunger Games\nYoung Adult\n  \n  \n  \n\n\n\n\n\n\n5. LIKE and NOT LIKE:\nThese clause are mostly used for pattern matching, typically with string data.\n\n\nLIKE:\n\n\n\nSQL\n\nSELECT author\nFROM LibraryDB.dbo.Books \n1WHERE author LIKE 'S%';\n\n\n\n1\n\nFilter authors whose name start with ‘S’\n\n\n\n\n\n\n\n\n\n  \n    \n      author\n    \n  \n  \n    Suzanne Collins\n    Stieg Larsson\n  \n  \n  \n\n\n\n\n\n\nNOT LIKE:\n\n\n\nSQL\n\n-- @50\nSELECT author\nFROM LibraryDB.dbo.Books \n1WHERE author NOT LIKE 'S%';\n\n\n\n1\n\nFilter all authors whose name does not start with ‘S’.\n\n\n\n\n\n\n\n\n\n  \n    \n      author\n    \n  \n  \n    Harper Lee\n    George Orwell\n    Jane Austen\n    F. Scott Fitzgerald\n    J.D. Salinger\n    J.R.R. Tolkien\n    J.K. Rowling\n    Dan Brown\n  \n  \n  \n\n\n\n\n\n\n6. IS NULLand IS NOT NULL:\nThese clause are used to check for NULL values.\n\n\nIS NULL:\n\n\n\nSQL\n\nSELECT *\nFROM LibraryDB.dbo.Books\n1WHERE author IS NULL;\n\n\n\n1\n\nFilter records of author names with NULL values\n\n\n\n\n\n\n\n\n\n  \n    \n      book_id\n      supplier_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n  \n  \n\n\n\n\n\n\nIS NOT NULL:\n\n\n\nSQL\n\nSELECT book_id, title, author\nFROM LibraryDB.dbo.Books\n1WHERE author IS NOT NULL;\n\n\n\n1\n\nFilter records of author names without NULL values\n\n\n\n\n\n\n\n\n\n  \n    \n      book_id\n      supplier_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n    1\n1\nTo Kill a Mockingbird\nHarper Lee\nFiction\n1960\n9.780446e+12\n    2\n3\n1984\nGeorge Orwell\nScience Fiction\n1949\n9.780452e+12\n    3\n5\nPride and Prejudice\nJane Austen\nRomance\n1813\n9.780141e+12\n    4\n4\nThe Great Gatsby\nF. Scott Fitzgerald\nFiction\n1925\n9.780743e+12\n    5\n1\nThe Catcher in the Rye\nJ.D. Salinger\nFiction\n1951\n9.780317e+12\n    6\n5\nThe Hobbit\nJ.R.R. Tolkien\nFantasy\n1937\n9.780548e+12\n    7\n2\nHarry Potter and the Philosopher''s Stone\nJ.K. Rowling\nFantasy\n1997\n9.780748e+12\n    8\n4\nThe Da Vinci Code\nDan Brown\nThriller\n2003\n9.780307e+12\n    9\n5\nThe Hunger Games\nSuzanne Collins\nYoung Adult\n2008\n9.780439e+12\n    10\n3\nThe Girl with the Dragon Tattoo\nStieg Larsson\nCrime\n2005\n9.780307e+12\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nWith Subquery using EXISTS\n\n\n\n\n\n\nEXISTS:\n\nThe EXISTS keyword in a WHERE clause is used to check if a subquery returns at least one row. If the subquery returns any rows, the EXISTS condition evaluates to TRUE. Otherwise, it evaluates to FALSE. More on subqueries later\n\n\n\nSQL\n\nSELECT * \nFROM LibraryDB.dbo.Books b\n1WHERE EXISTS (\n    SELECT supplier_id \n    FROM LibraryDB.dbo.Supplier s \n    WHERE s.supplier_id = b.supplier_id\n);          \n\n\n\n1\n\nFilter all supplier ids in the book table that exists in the supplier table\n\n\n\n\n\n\n\n\n\n2.1.2.2 Combining Conditions\nTo retrieve all records from the books table where the books were published before the year 2000 OR the author’s name begins with ‘J’ AND the book genre is ‘Fantasy’.\n\n\n\nSQL\n\nSELECT * FROM \nLibraryDB.dbo.Books\nWHERE (publication_year &lt; 2000 OR author LIKE 'J%') AND genre = 'Fantasy';         \n\n\n\n\n\n\n\n  \n    \n      book_id\n      supplier_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n    6\n5\nThe Hobbit\nJ.R.R. Tolkien\nFantasy\n1937\n9.780548e+12\n    7\n2\nHarry Potter and the Philosopher''s Stone\nJ.K. Rowling\nFantasy\n1997\n9.780748e+12\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nWHERE Clause Summary:\n\n\n\n\n\n\nThe WHERE Clause is used to filter rows based on specified conditions.\nYou can use comparison, logical, range, list, pattern matching, and null-checking operators within the WHERE Clause.\nCombining multiple conditions using AND, OR, and NOT lets you create detailed and specific queries.\nSubqueries and the EXISTS keyword allow for complex filtering scenarios.\nThe correct use of the WHERE Clause is essential for efficient data retrieval, especially in large database.\n\n\n\n\n   \n\n\n\n2.1.3 ORDER BY\nThe ORDER BY clause in SQL Server is used to sort the result set of a query by one or more columns. Sorting can be done in ascending (ASC) or descending (DESC) order, and it can be applied to any data type that can be ordered.\n\n\n\nSQL\n\n-- Basic Syntax\nSELECT column_name1, column_name2, ...\nFROM tableName\nORDER BY column_name1 [ASC|DESC], column_name2 [ASC|DESC], ...;\n\n\n\n\n\n\n\n\nKey components of the ORDER BY Clause\n\n\n\n\nUsing the ASC keyword, you can sort a column in ascending (small - big or first - last)\nYou can sort a column in descending order using the DESC keyword (big - small or last - first)\nBy default including the ORDER BY clause in your query will sort the values in ascending order.\nYou can sort by multiple columns. The result set is sorted by the first column, and within each value of that column, it is sorted by the next column, and so on.\n\n\n\n\n\n\nSQL\n\n-- Use the Product Order database\nUSE ProductOrderDB;\nGO\n\n\n\nSorting by a single column:\n\nQuick Illustration\n\n\n\nSQL\n\n-- Sort: Ascending\nSELECT column1, column2\nFROM TableName\nORDER BY column1;\n\n-- Sort: Descending\nSELECT column1, column2\nFROM TableName\nORDER BY column1 DESC;\n\n\n\n\n\n\n\n\n\n\nTable\n  \n    \n      column1\n      column2\n    \n  \n  \n    1\nJan\n    2\nFeb\n    4\nMar\n    3\nApr\n  \n  \n  \n\n\n\n\n\n\nSort: Ascending\n  \n    \n      column1\n      column2\n    \n  \n  \n    1\nJan\n    2\nFeb\n    3\nApr\n    4\nMar\n  \n  \n  \n\n\n\n\n\n\nSort: Descending\n  \n    \n      column1\n      column2\n    \n  \n  \n    4\nMar\n    3\nApr\n    2\nFeb\n    1\nJan\n  \n  \n  \n\n\n\n\n\n\n\n\nSQL\n\n-- In ascending order\nSELECT order_date, order_quantity, unit_price, delivery_date\nFROM ProductOrderDB.dbo.orders\nORDER BY order_date ASC;\n\n\n\n\n\n\n\n  \n    \n      order_date\n      order_quantity\n      unit_price\n      delivery_date\n    \n  \n  \n    2023-01-02\n5\n50.21\n2023-01-16\n    2023-01-12\n6\n75.21\n2023-01-22\n    2023-01-24\n10\n50.21\n2023-02-02\n    2023-01-25\n5\n75.21\n2023-02-07\n    2023-01-27\n6\n50.21\n2023-02-06\n    2023-02-09\n9\n50.21\n2023-02-20\n    2023-02-10\n8\n50.21\n2023-02-22\n    2023-02-25\n7\n50.21\n2023-03-05\n    2023-03-09\n5\n150.21\n2023-03-16\n    2023-03-13\n10\n75.21\n2023-03-23\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\n-- In descending order\nSELECT order_date, order_quantity, unit_price, delivery_date\nFROM ProductOrderDB.dbo.orders\nORDER BY order_date DESC;\n\n\n\n\n\n\n\n  \n    \n      order_date\n      order_quantity\n      unit_price\n      delivery_date\n    \n  \n  \n    2023-06-28\n5\n100.21\n2023-07-07\n    2023-06-04\n7\n75.21\n2023-06-16\n    2023-05-18\n8\n100.21\n2023-05-30\n    2023-04-28\n5\n150.21\n2023-05-05\n    2023-04-19\n9\n75.21\n2023-05-01\n    2023-04-08\n5\n50.21\n2023-04-22\n    2023-04-02\n10\n75.21\n2023-04-13\n    2023-03-30\n6\n50.21\n2023-04-09\n    2023-03-29\n7\n75.21\n2023-04-10\n    2023-03-28\n9\n150.21\n2023-04-06\n  \n  \n  \n\n\n\n\n\n\n\nSorting multiple columns:\nWhen you sort using the ORDER BY clause with multiple columns, SQL sorts the rows first by the first column listed, then by the second column, and so on.\nThe order of the columns in the ORDER BY clause is very important because each subsequent column is only used to sort rows that are tied .\n\n\n\n\n\n\nHow it works:\n\n\n\n\nSQL sorts all rows based on the values in the first column you specify and this sets the primary order of the rows.\nIf there are rows with the same value in the first column, SQL then sorts those rows by the second column.\nThe process continues for all other additional columns.\n\n\n\n\n\n\nSQL\n\nSELECT unit_price, sales\nFROM ProductOrderDB.dbo.orders\n1ORDER BY unit_price, sales;\n\n\n\n1\n\nSort the order table by unit price and sales in ascending order.\n\n\n\n\n\n\n\n\n\n  \n    \n      unit_price\n      sales\n      product_id\n    \n  \n  \n    50.21\nNULL\n1\n    50.21\n250\n1\n    50.21\n250\n1\n    50.21\n300\n1\n    50.21\n300\n1\n    50.21\n350\n1\n    50.21\n400\n1\n    50.21\n500\n1\n    75.21\n375\n2\n    75.21\n450\n2\n    75.21\n525\n2\n    75.21\n525\n2\n    75.21\n675\n2\n    75.21\n750\n2\n    75.21\n750\n2\n    100.21\nNULL\n3\n    100.21\n800\n3\n    150.21\n750\n4\n    150.21\n750\n4\n    150.21\n1350\n4\n  \n  \n  \n\n\n\n\n\nSorting unit_price in ascending & sales in descending order\n\n\n\nSQL\n\nSELECT unit_price, sales\nFROM ProductOrderDB.dbo.orders\n1ORDER BY unit_price, sales DESC;\n\n\n\n1\n\nSort the order table by unit price in ascending and sales in descending order.\n\n\n\n\n\n\n\n\n\n  \n    \n      unit_price\n      sales\n      product_id\n    \n  \n  \n    50.21\n500\n1\n    50.21\n400\n1\n    50.21\n350\n1\n    50.21\n300\n1\n    50.21\n300\n1\n    50.21\n250\n1\n    50.21\n250\n1\n    50.21\nNULL\n1\n    75.21\n750\n2\n    75.21\n750\n2\n    75.21\n675\n2\n    75.21\n525\n2\n    75.21\n525\n2\n    75.21\n450\n2\n    75.21\n375\n2\n    100.21\n800\n3\n    100.21\nNULL\n3\n    150.21\n1350\n4\n    150.21\n750\n4\n    150.21\n750\n4\n  \n  \n  \n\n\n\n\n\n\nSorting unit_price in descending & sales in ascending order\n\n\n\nSQL\n\nSELECT unit_price, sales\nFROM ProductOrderDB.dbo.orders\n1ORDER BY unit_price DESC, sales;\n\n\n\n1\n\nSort the order table by unit price in descending and sales in ascending order.\n\n\n\n\n\n\n\n\n\n  \n    \n      unit_price\n      sales\n      product_id\n    \n  \n  \n    150.21\n750\n4\n    150.21\n750\n4\n    150.21\n1350\n4\n    100.21\nNULL\n3\n    100.21\n800\n3\n    75.21\n375\n2\n    75.21\n450\n2\n    75.21\n525\n2\n    75.21\n525\n2\n    75.21\n675\n2\n    75.21\n750\n2\n    75.21\n750\n2\n    50.21\nNULL\n1\n    50.21\n250\n1\n    50.21\n250\n1\n    50.21\n300\n1\n    50.21\n300\n1\n    50.21\n350\n1\n    50.21\n400\n1\n    50.21\n500\n1\n  \n  \n  \n\n\n\n\n\n\nSorting both unit_price & sales in descending order\n\n\n\nSQL\n\nSELECT unit_price, sales\nFROM ProductOrderDB.dbo.orders\n1ORDER BY unit_price DESC, sales DESC;\n\n\n\n1\n\nSort the order table by unit price and sales in descending order.\n\n\n\n\n\n\n\n\n\n  \n    \n      unit_price\n      sales\n      product_id\n    \n  \n  \n    150.21\n1350\n4\n    150.21\n750\n4\n    150.21\n750\n4\n    100.21\n800\n3\n    100.21\nNULL\n3\n    75.21\n750\n2\n    75.21\n750\n2\n    75.21\n675\n2\n    75.21\n525\n2\n    75.21\n525\n2\n    75.21\n450\n2\n    75.21\n375\n2\n    50.21\n500\n1\n    50.21\n400\n1\n    50.21\n350\n1\n    50.21\n300\n1\n    50.21\n300\n1\n    50.21\n250\n1\n    50.21\n250\n1\n    50.21\nNULL\n1\n  \n  \n  \n\n\n\n\n\n\n\nUsing an Alias in ORDER BY\n\n\n\nSQL\n\nSELECT unit_price, unit_price + 5.2 AS adjusted_unit_price\nFROM ProductOrderDB.dbo.orders\nORDER BY adjusted_unit_price;\n\n\n\n\n\n\n\n  \n    \n      unit_price\n      adjusted_unit_price\n    \n  \n  \n    50.21\n55.41\n    50.21\n55.41\n    50.21\n55.41\n    50.21\n55.41\n    50.21\n55.41\n    50.21\n55.41\n    50.21\n55.41\n    50.21\n55.41\n    75.21\n80.41\n    75.21\n80.41\n  \n  \n  \n\n\n\n\n\n\nSorting by Column Position:\n\n\n\nSQL\n\nSELECT unit_price, order_quantity, sales\nFROM ProductOrderDB.dbo.orders\n1ORDER BY 1 DESC;\n\n\n\n1\n\nSort the orders table by unit_price in descending order.\n\n\n\n\n\n\n\n\n\n  \n    \n      unit_price\n      order_quantity\n      sales\n    \n  \n  \n    50.21\n5\n250\n    50.21\n8\n400\n    50.21\n9\nNULL\n    50.21\n7\n350\n    50.21\n6\n300\n    50.21\n10\n500\n    50.21\n5\n250\n    50.21\n6\n300\n    75.21\n9\n675\n    75.21\n7\n525\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nORDER BY Clause Summary:\n\n\n\n\n\n\nThe ORDER BY clause is used to sort the result set of a query in ascending or descending order.\nSorting can be done by column names, aliases, or positions in the select list.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Query Statement</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#aggregating-data",
+    "href": "sql_statement.html#aggregating-data",
+    "title": "2  Data Query Statement",
+    "section": "2.2 Aggregating Data",
+    "text": "2.2 Aggregating Data\n\nSummary Statistics:\n\n\n\nSQL\n\nSELECT \n1    MIN(ISNULL(sales, order_quantity * unit_price)) minimum_sales,\n2    ROUND(AVG(ISNULL(sales, order_quantity * unit_price)), 2) average_sales,\n3    MAX(ISNULL(sales, order_quantity * unit_price)) maximum_sales,\n4    SUM(ISNULL(sales, order_quantity * unit_price)) total_sales\nFROM ProductOrderDB.dbo.orders;\n\n\n\n1\n\nThe lowest recorded sales value.\n\n2\n\nThe average sales.\n\n3\n\nThe highest recorded sales value.\n\n4\n\nThe total amount of sales.\n\n\n\n\n\n\n\n\n\n  \n    \n      minimum_sales\n      average_sales\n      maximum_sales\n      total_sales\n    \n  \n  \n    251.05\n551\n1351.89\n11029.82",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Query Statement</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#inserting-updating-and-deleting-data",
+    "href": "sql_statement.html#inserting-updating-and-deleting-data",
+    "title": "2  SQL Statements",
+    "section": "2.4 Inserting, Updating and Deleting Data:",
+    "text": "2.4 Inserting, Updating and Deleting Data:\n\n2.4.1 Inserting Data\nThis is used to add new rows of data into a table.\n\n\n\n\n\n\nWarning\n\n\n\nIf you want to insert values into all columns of a table, you can do so by specifying the values in the correct order. Or better still Insert data into specific columns\n\n\n\n\n\nSQL\n\n-- Basic Syntax\nINSERT INTO tableName (column_name1, column_name2, ...)\n  VALUES (value1, value2, ...);\n\n-- Example\n-- Insert sample data into Books table\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, '9780446310789');\n\n\nYou can also insert multiple rows separated by comma\n\n\n\nSQL\n\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('1984', 'George Orwell', 'Science Fiction', 1949, '9780451524935'),\n('Pride and Prejudice', 'Jane Austen', 'Romance', 1813, '9780141439518');\n\n\nLastly you can insert values from other similar table (also known as using a Subquery) with the same data type.\n\n\n\nSQL\n\nINSERT INTO tableName (column_name1, column_name2, ...)\nSELECT column_name1, column_name2, ...\nFROM OtherTableName;\n\n\n   \n\n\n2.4.2 Updating Data\nThis is used to change existing data in one or more rows of a table.\n\n\n\nSQL\n\n-- Basic Syntax\nUPDATE tableName\n  SET column_name1 = new_value1, column_name2 = new_value2, ...\n1  WHERE condition;\n\n\n-- Example:\nUPDATE Employees\n  SET Salary = 65000\n  WHERE EmployeeID = 1;\n\n\n\n1\n\nThe condition can be based on one or more columns.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe WHERE clause is optional, but if you omit it, the UPDATE statement will modify all rows in the table, which is often not the desired outcome.\n\n\n\nSQL\n\nUPDATE Employees\n  SET Salary = Salary * 1.05;\n\n\n\n\n   \n\n\n\n\n\n\nData Type Compatibility:\n\n\n\nEnsure that the data type of the new value is compatible with the column’s data type. For example, you can’t update a VARCHAR column with an integer unless it’s converted properly.\n\n\n\n\n2.4.3 Deleting Data\nThis is used to remove rows from a table. essentially it allows you to delete one or more rows based on a specified condition.\n\n\n\nSQL\n\n-- Basic Syntax:\nDELETE FROM tableName\n1  WHERE condition;\n\n-- Example:\nDELETE FROM Employees\n  WHERE EmployeeID = 1;\n\n\n\n1\n\nSpecifies which rows should be deleted based on a condition relating to one or more columns.\n\n\n\n\n\n\n\n\n\n\nRemoving all Records\n\n\n\nAlways use a WHERE clause unless you intend to delete all rows in the table. Omitting the WHERE clause will result in the deletion of every row in the table, which may be irreversible without a backup.\n\n\n\nSQL\n\n-- Deleting All Rows:\nDELETE FROM tableName;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Statements</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#working-with-sql-statement-in-manipulating-tables",
+    "href": "sql_creating_database.html#working-with-sql-statement-in-manipulating-tables",
+    "title": "1  Creating Database",
+    "section": "1.4 Working with SQL Statement in Manipulating Tables",
+    "text": "1.4 Working with SQL Statement in Manipulating Tables\n\n1.4.1 Modifying a Table\nThere are several modifications that can be performed using SQL to change the structure of an existing table in a database, such as adding, modifying, or deleting columns, and setting constraints.\n\nAdd a New Column:\n\n\n\n\nSQL\n\n-- Add a new column to an existing table.\nALTER TABLE tableName\n  ADD column_name data_type;\n\n\n\nDrop a Column:\n\n\n\n\nSQL\n\n-- Delete an existing column from a table.\nALTER TABLE tableName\n  DROP COLUMN column_name;\n\n\n\nModify an Existing Column:\n\n\n\n\nSQL\n\n-- Change the data type of an existing column.\nALTER TABLE tableName\n  ALTER COLUMN column_name new_data_type;\n  \n-- Example:\nALTER TABLE Orders\n  ALTER COLUMN Discount DECIMAL(6, 2);\n\n\n\nAdd Constraints:\n\n\n\n\nSQL\n\n-- Add a constraint e.g. (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK)\nALTER TABLE tableName\n  ADD CONSTRAINT constraint_name constraint_type (column_name);\n\n-- Example:\nALTER TABLE Orders\n  ADD CONSTRAINT PK_OrderID PRIMARY KEY (Order_ID);\n\n\n\n\n\n1.4.2 Deleting a Table:\nThis is used to permanently delete a table from the database. When you execute the DROP TABLE command, the specified table and all of its data, structure, indexes, constraints, and permissions are completely removed from the database.\n\n\n\nSQL\n\nDROP TABLE tableName;\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIf the table has any constraints like foreign keys, you may need to drop those constraints first or use cascading options to automatically drop dependent objects.\n\n\n\nSQL\n\n-- Drop the foreign keys Constraint\nALTER TABLE MainTableName\n  DROP CONSTRAINT FK_column_name;\n  \n\n-- The drop the table\nDROP TABLE TableToBeDropped;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#personal-task",
+    "href": "sql_creating_database.html#personal-task",
+    "title": "1  Creating Database",
+    "section": "1.6 Personal Task",
+    "text": "1.6 Personal Task\nCreate a database called coffeeStore the create the following tables: - SalesReceipt - Products - Inventory - Customer - Staff - Outlet\nwith their appropriate keys (primary and foreign key), data types and constraints (NULL, NOT NULL). and insert the various records. from the .csv files in the coffee-database folder. you can use any data import method you fill comfortable with.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#with-subquery-using-exists",
+    "href": "sql_statement.html#with-subquery-using-exists",
+    "title": "2  SQL Statements",
+    "section": "2.3 With Subquery using EXISTS",
+    "text": "2.3 With Subquery using EXISTS\n\nEXISTS:\n\nThe EXISTS keyword in a WHERE clause is used to check if a subquery returns at least one row. If the subquery returns any rows, the EXISTS condition evaluates to TRUE. Otherwise, it evaluates to FALSE. More on subqueries later\n\n\n\nSQL\n\nSELECT * \nFROM LibraryDB.dbo.Books b\n1WHERE EXISTS (\n    SELECT supplier_id \n    FROM LibraryDB.dbo.Supplier s \n    WHERE s.supplier_id = b.supplier_id\n);          \n\n\n\n1\n\nFilter all supplier ids that exists in the supplier table",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Statements</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#selecting-all-records",
+    "href": "sql_statement.html#selecting-all-records",
+    "title": "2  SQL Statements",
+    "section": "2.3 Selecting all records",
+    "text": "2.3 Selecting all records\nWhile selecting all the records in a table it is important to know that table with millions of row will likely take alot to time an possible alot of computational resources. So you will have to limit the number of records returned by the select query. you can do this by using the TOP clause:\n\n\n\nSQL\n\n1SELECT TOP 5 *\nFROM LibraryDB.dbo.Books                               \n\n\n\n1\n\nReturn only the top 5 records in the table.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Statements</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#a-quick-guide-to-data-analysis-tools",
+    "href": "index.html#a-quick-guide-to-data-analysis-tools",
+    "title": "data-tools",
+    "section": "A Quick Guide to Data Analysis Tools",
+    "text": "A Quick Guide to Data Analysis Tools\n\nSQL\nR\nPython\nPower BI",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#personal-task",
+    "href": "sql_statement.html#personal-task",
+    "title": "2  Data Query Statement",
+    "section": "2.4 Personal Task",
+    "text": "2.4 Personal Task\n\nWorking with select\nwhere",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Query Statement</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#a-quick-guide-on-data-analysis-tools",
+    "href": "index.html#a-quick-guide-on-data-analysis-tools",
+    "title": "Data Analysis Tools",
+    "section": "A Quick Guide on Data Analysis Tools",
+    "text": "A Quick Guide on Data Analysis Tools\n\nSQL\nR\nPython\nPower BI",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#conditional-statement-case-when",
+    "href": "sql_statement.html#conditional-statement-case-when",
+    "title": "2  Data Query Statement",
+    "section": "2.3 Conditional Statement: (CASE WHEN)",
+    "text": "2.3 Conditional Statement: (CASE WHEN)\nThe CASE statement in SQL Server is a conditional expression that allows you to perform if-then-else logic. It is used to return different values based on specific conditions, and it can be used in SELECT, UPDATE, INSERT, and ORDER BY clauses, among others.\n\nSimple CASE Expression:\n\n\n\nSQL\n\n1CASE expression | column_name\n2    WHEN value1 THEN result1\n3    WHEN value2 THEN result2\n    ...  \n4    ELSE default_result\n5END\n\n\n\n1\n\nThe expression to evaluate.\n\n2\n\nValues1 that the expression is compared against.\n\n3\n\nThe result returned if the corresponding WHEN clause is true.\n\n4\n\n(Optional). The value returned if none of the WHEN conditions are met. If ELSE is not provided and no WHEN condition is met, NULL is returned.\n\n5\n\nTo indicate and end of the code block.\n\n\n\n\n\n\n\nSQL\n\n-- Example:\n\nSELECT \n    product_id,\n    CASE product_id\n        WHEN 1 THEN 'Product One'\n        WHEN 2 THEN 'Product Two'\n        WHEN 3 THEN 'Product Three'\n        WHEN 4 THEN 'Product Four'\n        ELSE 'Unknown Product'\n    END AS product_name\nFROM ProductOrderDB.dbo.orders;\n\n\nCreate a new column called product name using the values in the product id column.\n\n\n\n\n\n\nTerminating the CASE WHEN block\n\n\n\nMake sure you include the END keyword at the end of the conditional block.\n\n\n\n\n\n\n\n  \n    \n      product_id\n      product_name\n    \n  \n  \n    1\nProduct One\n    1\nProduct One\n    3\nProduct Three\n    2\nProduct Two\n    2\nProduct Two\n    2\nProduct Two\n    1\nProduct One\n    1\nProduct One\n    4\nProduct Four\n    1\nProduct One",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Query Statement</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#terminating-the-case-when-block",
+    "href": "sql_statement.html#terminating-the-case-when-block",
+    "title": "2  SQL Statements",
+    "section": "2.5 Terminating the CASE WHEN block",
+    "text": "2.5 Terminating the CASE WHEN block\nMake sure to include the END keyword at the end of the conditional block.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SQL Statements</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html",
+    "href": "sql_data_cleaning.html",
+    "title": "5  Data Cleaning",
+    "section": "",
+    "text": "5.1 Using ALTER AND UPDATE\nCleaning a table in SQL often involves updating data to correct errors, standardize formats, or remove unwanted information. In MS SQL Server, you can use the ALTER and UPDATE statements to clean and manage data effectively.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#whitespace",
+    "href": "sql_data_cleaning.html#whitespace",
+    "title": "5  Data Cleaning",
+    "section": "5.2 Whitespace",
+    "text": "5.2 Whitespace\n\n5.2.1 Removing leading whitespace\n\n\n\nSQL\n\nSELECT \n    ' MS SQL Server' AS leading_whitspace,\n1    LTRIM(' MS SQL Server') AS cleaned_string;\n\n\n\n1\n\nRemove the leading whitespace with the LTRIM function.\n\n\n\n\n\n\n\n\n\n  \n    \n      leading_whitspace\n      cleaned_string\n    \n  \n  \n    \"       MS SQL Server\nMS SQL Server\n  \n  \n  \n\n\n\n\n\n\n5.2.2 Removing trailing whitespace\n\n\n\nSQL\n\nSELECT \n    'MS SQL Server ' AS trailing_whitspace,\n1    RTRIM('MS SQL Server ') AS cleaned_string;\n\n\n\n1\n\nRemove the trailing whitespace with the RTRIM function.\n\n\n\n\n\n\n\n\n\n  \n    \n      trailing_whitspace\n      cleaned_string\n    \n  \n  \n    \"MS SQL Server      \"\nMS SQL Server\n  \n  \n  \n\n\n\n\n\n\n5.2.3 Removing whitespace\n\n\n\nSQL\n\nSELECT \n    ' MS SQL Server  ' AS both_lead_trail_whitspace,\n1    RTRIM(LTRIM('  MS SQL Server ')) AS cleaned_string,\n2    TRIM('  MS SQL Server  ') cleaned_string2;\n\n\n\n1\n\nRemove both leading & trailing whitespace with the LTRIM & RTRIM function.\n\n2\n\nRemove both leading & trailing whitespace with the TRIM\n\n\n\n\n\n\n\n\n\n  \n    \n      both_lead_trail_whitspace\n      cleaned_string\n      cleaned_string2\n    \n  \n  \n    \"     MS SQL Server    \"\nMS SQL Server\nMS SQL Server",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#null-values",
+    "href": "sql_data_cleaning.html#null-values",
+    "title": "5  Data Cleaning",
+    "section": "5.3 NULL values",
+    "text": "5.3 NULL values\n\n5.3.1 Replacing NULL values with a default Value\n\n\n\nSQL\n\nALTER TABLE tableName\n1ADD replace_values NVARCHAR(50);\n\nUPDATE tableName\n2SET replace_values = ISNULL(status, 'Unknown');\n\n3SELECT status, replace_values FROM tableName;\n\n\n\n1\n\nAdd a new column called replace_values to the table.\n\n2\n\nReplace all NULL values with the string ‘Unknown’ if the row has a NULL value.\n\n3\n\nRetrieve the original column and the edited column.\n\n\n\n\n\n\n\n\n\n  \n    \n      status\n      replace_values\n    \n  \n  \n    Complete\nComplete\n    NULL\nUnknown\n    Panding\nPanding\n    Complete\nComplete\n    NULL\nUnknown",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#converting-string-to-proper-case",
+    "href": "sql_data_cleaning.html#converting-string-to-proper-case",
+    "title": "5  Data Cleaning",
+    "section": "5.4 Converting string to proper case",
+    "text": "5.4 Converting string to proper case\n\n\n\nSQL\n\nALTER TABLE tableName\n1ADD first_name_to_title_case NVARCHAR(100);\n\n-- Converting a column to Proper Case (First letter uppercase)\nUPDATE tableName\nSET first_name_to_title_case = \n2  UPPER(LEFT(first_name, 1)) + LOWER(SUBSTRING(first_name, 2, LEN(first_name)));\n\n3SELECT first_name, first_name_to_title_case FROM tableName;\n\n\n\n1\n\nAdd a new column called first_name_to_title_case to the table.\n\n2\n\nUpdate the table with the title case converted strings.\n\n3\n\nRetrieve the original column and the edited column.\n\n\n\n\n\n\n\n\n\n  \n    \n      first_name\n      to_title_case\n    \n  \n  \n    hARPER\nHarper\n    jANE\nJane\n    cOLLINS\nCollins\n    bROWN\nBrown",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#removing-duplicates-records",
+    "href": "sql_data_cleaning.html#removing-duplicates-records",
+    "title": "5  Data Cleaning",
+    "section": "5.8 Removing duplicates records",
+    "text": "5.8 Removing duplicates records\n–",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#splitting-a-combined-column",
+    "href": "sql_data_cleaning.html#splitting-a-combined-column",
+    "title": "5  Data Cleaning",
+    "section": "5.5 Splitting a combined column",
+    "text": "5.5 Splitting a combined column\nSplitting a Combined Column into Multiple Columns.\n\n\n\nSQL\n\n-- Create and add the first_name & last_name columns to the table.\nALTER TABLE tableName\n1ADD first_name NVARCHAR(100),\n    last_name NVARCHAR(100);\n\n-- Splitting a full name into first and last names\nUPDATE tableName\n2SET first_name = LEFT(full_name, CHARINDEX(' ', full_name) - 1),\n    last_name = RIGHT(full_name, LEN(full_name) - CHARINDEX(' ', full_name));\n  \n3SELECT full_name, first_name, last_name\nFROM tableName;\n\n\n\n1\n\nAdd a new column called first_name and first_name to the table.\n\n2\n\nExtract the first and last name from the full_name column.\n\n3\n\nRetrieve the full_name, and the extracted first and last names.\n\n\n\n\n\n\n\n\n\n  \n    \n      full_name\n      first_name\n      last_name\n    \n  \n  \n    Jane Happer\nJane\nHapper\n    John Doe\nJohn\nDoe\n    Collins James\nCollins\nJames",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#handling-date-formats",
+    "href": "sql_data_cleaning.html#handling-date-formats",
+    "title": "5  Data Cleaning",
+    "section": "5.7 Handling Date Formats",
+    "text": "5.7 Handling Date Formats\nHandling Inconsistent Date Formats.\n\n\n\nSQL\n\n-- Create and add cleaned_date column to the table.\nALTER TABLE tableName\n1ADD cleaned_date DATE;\n\n-- Converting a date stored as a string to a DATE data type\nUPDATE tableName\n2SET cleaned_date = CAST(REPLACE(order_date, 'Date: ', '') AS DATE);\n  \n3SELECT order_date, cleaned_date FROM tableName;\n\n\n\n1\n\nAdd a new column called cleaned_date to the data.\n\n2\n\nRemove the string ‘Date:’ and change the order_date data type to DATE.\n\n3\n\nRetrieve the original order_date and the cleaned_date column.\n\n\n\n\n\n\n\n\n\n  \n    \n      order_date\n      cleaned_date\n    \n  \n  \n    Date: 2024-05-12\n2024-05-12\n    Date: 2024-06-15\n2024-06-15\n    Date: 2024-07-20\n2024-07-20",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#replacing-values",
+    "href": "sql_data_cleaning.html#replacing-values",
+    "title": "5  Data Cleaning",
+    "section": "5.6 Replacing values",
+    "text": "5.6 Replacing values\nCorrecting Misspelled Data.\n\n\n\nSQL\n\n-- Create and add correct_status column to the table.\nALTER TABLE tableName\n1ADD correct_status NVARCHAR(100);\n\n-- Converting a date stored as a string to a DATE data type\nUPDATE tableName\n2SET correct_status = REPLACE(status, 'Panding', 'Pending');\n   \n3SELECT status, correct_status FROM tableName;\n\n\n\n1\n\nAdd a new column called correct_status to the table.\n\n2\n\nReplace the string ‘Panding’ with ‘Pending’\n\n3\n\nRetrieve the original status and the correct_status column.\n\n\n\n\n\n\n\n\n\n  \n    \n      status\n      correct_status\n    \n  \n  \n    Complete\nComplete\n    Unknown\nUnknown\n    Panding\nPending\n    Complete\nComplete\n    Unknown\nUnknown\n  \n  \n  \n\n\n\n\n\nFiltering out characters:\n\n\n\nSQL\n\n-- Create and add correct_status column to the table.\nALTER TABLE tableName\n1ADD cleaned_change_period NVARCHAR(100);\n\n-- Converting a date stored as a string to a DATE data type\nUPDATE tableName\n2SET cleaned_change_period = REPLACE(REPLACE(REPLACE(change_period, '-', 'on'), '(', ''), ')', '');\n  \n\n3SELECT change_period, cleaned_change_period FROM tableName;\n\n\n\n1\n\nAdd the column called cleaned_change_period to the table.\n\n2\n\nRemove characters such as ‘(’, ‘)’, and replace the ‘-’ with ‘on’\n\n3\n\nRetrieve the original change_period and the cleaned_change_period column.\n\n\n\n\n\n\n\n\n\n  \n    \n      change_period\n      cleaned_change_period\n    \n  \n  \n    (Year - Year)\nYear on Year\n    (Month - Month)\nMonth on Month\n    (Year - Year)\nYear on Year",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html",
+    "href": "sql_text_data.html",
+    "title": "3  Working with Text",
+    "section": "",
+    "text": "3.1 Basic string functions",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#basic-string-functions",
+    "href": "sql_text_data.html#basic-string-functions",
+    "title": "3  Working with Text",
+    "section": "",
+    "text": "3.1.1 Concatenation\nWe can combine multiple strings into one using + sign or the CONCAT function.\n\n\n\nSQL\n\n1SELECT 'Hello' + ' ' + 'World' AS concat_string;\n-- or\n2SELECT CONCAT('Hello', ' ', 'World') AS concat_string;\n\n\n\n1\n\nJoin the string ‘Hello’ and ‘World’ together using the + sign.\n\n2\n\nJoin the string ‘Hello’ and ‘World’ together using the CONCAT function.\n\n\n\n\n\n\n\n\n\n  \n    \n      concat_string\n    \n  \n  \n    Hello World\n  \n  \n  \n\n\n\n\n\n\n\n\n\n  \n    \n      concat_string\n    \n  \n  \n    Hello World\n  \n  \n  \n\n\n\n\nExample:\n\n\n\nSQL\n\nSELECT \n  first_name,\n  last_name,\n1  CONTCAT(first_name, ' ', last_name) AS full_name\nFROM tableName;\n\n\n\n1\n\nConcatenate first & last name.\n\n\n\n\n\n\n\n\n\n  \n    \n      first_name\n      last_name\n      full_name\n    \n  \n  \n    Jane\nHapper\nJane Happer\n    John\nDoe\nJohn Doe\n    Collins\nJames\nCollins James\n  \n  \n  \n\n\n\n\n\n\n\n3.1.2 String length\n\n\n\nSQL\n\n1SELECT LEN('Hello World') AS string_length;\n\n\n\n1\n\nGet the length i.e. number of items in the ‘Hello World’ string including the space using the LEN function.\n\n\n\n\n\n\n\n\n\n  \n    \n      string_length\n    \n  \n  \n    11",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#extracting-parts-of-a-string",
+    "href": "sql_text_data.html#extracting-parts-of-a-string",
+    "title": "3  Working with Text",
+    "section": "3.2 Extracting parts of a string",
+    "text": "3.2 Extracting parts of a string\nTo return a specified number of characters (Length) from the left side of a string.\n\nLEFT:\n\n\n\nSQL\n\n1SELECT full_name, LEFT(full_name, 5) AS left_part\nFROM tableName\n\n\n\n1\n\nGet the first 5 characters\n\n\n\n\n\n\n\n\n\n  \n    \n      full_name\n      left_part\n    \n  \n  \n    Jane Happer\nJane \n    John Doe\nJohn \n    Collins James\nColli\n  \n  \n  \n\n\n\n\n\n\nRIGHT:\n\n\n\nSQL\n\n1SELECT full_name, RIGHT(full_name, 5) AS right_part\nFROM tableName\n\n\n\n1\n\nGet the last 5 characters\n\n\n\n\n\n\n\n\n\n  \n    \n      full_name\n      left_part\n    \n  \n  \n    Jane Happer\napper\n    John Doe\nn Doe\n    Collins James\nJames\n  \n  \n  \n\n\n\n\n\n\nSUBSTRING:\n\n\n\n\n\n\nStart & Length arguments\n\n\n\nThe SUBSTRING returns a specified portion of a string, starting at a specified position and with a specified length.\n\n\n\n\n\nSQL\n\n1SELECT address, SUBSTRING(address, 5, LEN(address)) AS sub_string\nFROM tableName\n\n\n\n1\n\nGet a sub of the address string starting from the 5 position to the last position.\n\n\n\n\n\n\n\n\n\n  \n    \n      address\n      sub_string\n    \n  \n  \n    Bwari, Abuja\nAbuja\n    Ikeja, Lagos\nLagos\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe start parameter in SUBSTRING is 1-based, which means the first character is at position 1.\nIf the length is omitted in SUBSTRING it returns all characters from the start position to the end of the string.\nIf the length is greater than the remaining string length, the function returns the remaining characters.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#string-replacement-and-removal",
+    "href": "sql_text_data.html#string-replacement-and-removal",
+    "title": "3  Working with Text",
+    "section": "3.4 String replacement and removal",
+    "text": "3.4 String replacement and removal\n\n3.4.1 REPLACE\nThis function replace occurrences of a substring within a string or the whole string.\n\n\n\nSQL\n\nSELECT \n1  current_health, REPLACE(current_health, 'K', 'Okay') AS updated_current_health\nFROM tableName\n\n\n\n1\n\nReplace all ‘K’ with the string ‘Okay’\n\n\n\n\n\n\n\n\n\n  \n    \n      current_health\n      updated_current_health\n    \n  \n  \n    Bad\nBad\n    Good\nGood\n    K\nOkay\n    Bad\nBad\n    Good\nGood\n    K\nOkay\n  \n  \n  \n\n\n\n\n\n\n3.4.2 Trim strings\n\nTRIM:\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  TRIM(' Hello World ') AS trimmed_string;\n\n\n\n1\n\nRemove both leading and trailing spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      trimmed_string\n    \n  \n  \n    \"          Hello World        \"\n\"Hello World\"\n  \n  \n  \n\n\n\n\n\n\nLTRIM (left trim):\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  LTRIM(' Hello World ') AS left_trimmed_string;\n\n\n\n1\n\nRemove leading spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      left_trimmed_string\n    \n  \n  \n    \"        Hello World        \"\n\"Hello World        \"\n  \n  \n  \n\n\n\n\n\n\nRTRIM (right trim):\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  RTRIM(' Hello World ') AS right_trimmed_string;\n\n\n\n1\n\nRemove trailing spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      right_trimmed_string\n    \n  \n  \n    \"        Hello World        \"\n\"        Hello World\"",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#string-formatting",
+    "href": "sql_text_data.html#string-formatting",
+    "title": "3  Working with Text",
+    "section": "3.5 String formatting",
+    "text": "3.5 String formatting\n\n3.5.1 UPPER and LOWER\n\n\n\nSQL\n\nSELECT  \n  first_name,\n1  UPPER(first_name) AS to_upper_case,\n2  LOWER(first_name) AS to_lower_case,\n3  UPPER(LEFT(column_name, 1)) + LOWER(SUBSTRING(column_name, 2, LEN(column_name))) AS to_title_case\n\n\n\n1\n\nConvert names to upper case.\n\n2\n\nConvert names to lower case.\n\n3\n\nConvert names to title case.\n\n\n\n\n\n\n\n\n\n  \n    \n      first_name\n      to_upper_case\n      to_lower_case\n      to_title_case\n    \n  \n  \n    hARPER\nHARPER\nharper\nHarper\n    jANE\nJANE\njane\nJane\n    cOLLINS\nCOLLINS\ncollins\nCollins\n    bROWN\nBROWN\nbrown\nBrown\n  \n  \n  \n\n\n\n\n\n\n3.5.2 FORMAT\n\n\n\nSQL\n\n-- Format a number with commas\nSELECT \n  1234567.89 AS number,\n1  FORMAT(1234567.89, 'N2') AS formatted_number;\n\n-- Format a date\nSELECT \n  GETDATE() AS current_date,\n2  FORMAT(GETDATE(), 'MMMM dd, yyyy') AS formatted_date;\n\n\n\n1\n\nFormat a number with commas.\n\n2\n\nFormat a date.\n\n\n\n\n\n\n\n\n\n  \n    \n      number\n      formatted_number\n    \n  \n  \n    1234568\n1,234,567.89\n  \n  \n  \n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n      forma_date\n    \n  \n  \n    2024-8-31\nAugust 31, 2024",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#string-aggregation",
+    "href": "sql_text_data.html#string-aggregation",
+    "title": "3  Working with Text",
+    "section": "3.6 String aggregation",
+    "text": "3.6 String aggregation\nConcatenate values from multiple rows into a single string.\n\n\n\n\n\n  \n    \n      split_value\n    \n  \n  \n    Category One\n    Category Two\n    Category Three\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\n1SELECT STRING_AGG(product_category, ', ') AS aggregated_string\nFROM tableName;\n\n\n\n1\n\nCombine all categories (rows) into a single string and separated by a comma (,)\n\n\n\n\n\n\n\n\n\n  \n    \n      product_category\n    \n  \n  \n    Category One, Category Two, Category Three",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#string-splitting",
+    "href": "sql_text_data.html#string-splitting",
+    "title": "3  Working with Text",
+    "section": "3.7 String splitting",
+    "text": "3.7 String splitting\nSplit a string into multiple rows based on a delimiter.\n\n\n\n\n\n  \n    \n      char_column\n    \n  \n  \n    'Hello', 'World', 'SQL', 'Server'\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\nSELECT value AS split_value\n1FROM STRING_SPLIT('Hello,World,SQL,Server', ',');\n\n\n\n1\n\nSplit the ‘Hello,World,SQL,Server’ into multiple rows using the (,) comma.\n\n\n\n\n\n\n\n\n\n  \n    \n      split_value\n    \n  \n  \n    Hello\n    World\n    SQL\n    Server",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#pattern-matching-with-like",
+    "href": "sql_text_data.html#pattern-matching-with-like",
+    "title": "3  Working with Text",
+    "section": "3.8 Pattern Matching with LIKE",
+    "text": "3.8 Pattern Matching with LIKE\n\nUsing Wildcards:\nStarts with a string\n\n\n\nSQL\n\nSELECT full_name from tableName\n1WHERE full_name LIKE 'Jane%';\n\n\n\n1\n\nFind strings starting with ‘Jane’\n\n\n\n\n\n\n\n\n\n  \n    \n      full_name\n    \n  \n  \n    Jane Happer\n  \n  \n  \n\n\n\n\nStarts with a string\n\n\n\nSQL\n\nSELECT full_name from tableName\n1WHERE full_name LIKE '%James';\n\n\n\n1\n\nFind strings ending with ‘James’\n\n\n\n\n\n\n\n\n\n  \n    \n      full_name\n    \n  \n  \n    Collins James\n  \n  \n  \n\n\n\n\ncontaining a string\n\n\n\nSQL\n\nSELECT full_name from tableName\n1WHERE full_name LIKE '%John%';\n\n\n\n1\n\nFind strings containing ‘John’\n\n\n\n\n\n\n\n\n\n  \n    \n      full_name\n    \n  \n  \n    John Doe",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html",
+    "href": "sql_date_data.html",
+    "title": "4  Working with Date",
+    "section": "",
+    "text": "4.1 Getting the current date and time\nSQL\n\n1SELECT GETDATE() AS current_date_time;\n\n\n\n1\n\nReturns the current date and time.\ncurrent_date_time\n    \n  \n  \n    2024-08-31 02:45:08.504956",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#personal-task",
+    "href": "sql_date_data.html#personal-task",
+    "title": "4  Working with Date",
+    "section": "4.7 Personal Task",
+    "text": "4.7 Personal Task\n\nWorking with select\nwhere",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#personal-task",
+    "href": "sql_text_data.html#personal-task",
+    "title": "3  Working with Text",
+    "section": "3.9 Personal Task",
+    "text": "3.9 Personal Task\n\nWorking with select\nwhere",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#extracting-date-and-time-parts",
+    "href": "sql_date_data.html#extracting-date-and-time-parts",
+    "title": "4  Working with Date",
+    "section": "4.3 Extracting date and time parts",
+    "text": "4.3 Extracting date and time parts\nYou can extract specific parts of a date or time using the following functions:\n\nDate Parts:\n\n\n\nSQL\n\nSELECT \n    GETDATE() AS current_date_time,\n1    DATEPART(YEAR, GETDATE()) AS current_year,\n2    DATEPART(QUARTER, GETDATE()) AS current_quarter,\n3    DATEPART(MONTH, GETDATE()) AS current_month,\n4    DATEPART(DAY, GETDATE()) AS current_day;\n\n\n\n1\n\nExtracts the year from the date.\n\n2\n\nExtracts the quarter from the date.\n\n3\n\nExtracts the month from the date.\n\n4\n\nExtracts the day of the month from the date.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n  \n  \n    \n      current_date_time\n      current_year\n      current_quarter\n      current_month\n      current_day\n    \n  \n  \n    2024-08-27 02:41:44.380\n2024\n3\n8\n31\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nOther ways\n\n\n\n\n\n\n\n\nSQL\n\nSELECT \n    GETDATE() AS current_date_time,\n    YEAR(GETDATE()) AS current_year,\n    MONTH(GETDATE()) AS current_month,\n    DAY(GETDATE()) AS current_day,\n\n\n\n\n\n\n\n  \n    \n      current_date_time\n      current_year\n      current_month\n      current_day\n    \n  \n  \n    2024-08-27 02:41:44.380\n2024\n8\n31\n  \n  \n  \n\n\n\n\n\n\n\n\n\nWeekday name:\n\n\n\nSQL\n\nSELECT DATENAME(weekday, GETDATE()) AS weekday_name;\n\n\n\n\n\n\n\n  \n    \n      weekday_name\n    \n  \n  \n    Saturday",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#check-date",
+    "href": "sql_date_data.html#check-date",
+    "title": "4  Working with Date",
+    "section": "4.2 Check date",
+    "text": "4.2 Check date\n\n\n\nSQL\n\n1SELECT ISDATE('2023-12-31') AS is_valid_date,\n2       ISDATE('2023-13-31') AS is_invalid_date;\n\n\n\n1\n\n12th month of 2023\n\n2\n\n13th month of 2023\n\n\n\n\n\n\n\n\n\n  \n    \n      is_valid_date\n      is_invalid_date\n    \n  \n  \n    1\n0",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#date-and-time-calculations",
+    "href": "sql_date_data.html#date-and-time-calculations",
+    "title": "4  Working with Date",
+    "section": "4.4 Date and time calculations",
+    "text": "4.4 Date and time calculations\n\nADD:\nAdd a specified number of units (e.g., day, month, year) to a date.\n\n\n\nSQL\n\nSELECT \n  GETDATE() AS current_date_time,\n  DATEADD(DAY, 10, GETDATE()) AS date_plus_seven_days,\n  DATEADD(MONTH, 2, GETDATE()) AS date_plus_two_months,\n  DATEADD(YEAR, 1, GETDATE()) AS date_plus_one_year;\n\n\n\n\n\n\n\n  \n    \n      current_date_time\n      date_plus_seven_days\n      date_plus_two_months\n      date_plus_one_year\n    \n  \n  \n    2024-08-31 02:45:11.853102\n2024-09-07 02:45:11.853102\n2024-10-31 02:45:11.853102\n2025-08-31 02:45:11.853102\n  \n  \n  \n\n\n\n\n\n\nDATEDIFF:\nCalculates the difference between two dates in a specified unit.\n\n\n\nSQL\n\nSELECT\n    GETDATE() AS current_date_time,\n    DATEADD(DAY, 7, GETDATE()) AS plus_seven_days,\n    DATEDIFF(DAY, GETDATE(), DATEADD(DAY, 7, GETDATE())) AS days_difference;\n\n\n\n\n\n\n\n  \n    \n      current_date_time\n      plus_seven_days\n      days_difference\n    \n  \n  \n    2024-08-31 02:45:12.259725\n2024-09-07 02:45:12.259896\n7",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#formatting-and-parsing-dates",
+    "href": "sql_date_data.html#formatting-and-parsing-dates",
+    "title": "4  Working with Date",
+    "section": "4.5 Formatting and parsing dates",
+    "text": "4.5 Formatting and parsing dates\n\nFORMAT:\nFormats a date/time value according to a specified format.\n\n\n\nSQL\n\nSELECT \n1    FORMAT(GETDATE(), 'yyyy-MM-dd') AS formatted_date,\n2    FORMAT(GETDATE(), 'MMMM dd, yyyy') AS formatted_date_words;\n\n\n\n1\n\nFormat as full year (‘yyyy’), two month value (‘MM’) and day.\n\n2\n\nFormat as text date.\n\n\n\n\n\n\n\n\n\n  \n    \n      formatted_date\n      formatted_date_words\n    \n  \n  \n    2024-08-31\nAugust 31, 2024\n  \n  \n  \n\n\n\n\n\n\nCAST:\n\n\n\nSQL\n\nSELECT \n1    CAST(GETDATE() AS DATE) AS date_only,\n2    CAST(GETDATE() AS TIME) AS time_only,\n3    CAST(GETDATE() AS VARCHAR) AS date_as_string;\n\n\n\n1\n\nExtract the date.\n\n2\n\nExtract the time.\n\n3\n\nFormat date as a string.\n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n      date_only\n      time_only\n      date_as_string\n    \n  \n  \n    2024-08-31 02:45:12.847313\n2024-08-31\n02:45:12.12\nAug 31 2024 02:45AM",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#date-and-time-comparison",
+    "href": "sql_date_data.html#date-and-time-comparison",
+    "title": "4  Working with Date",
+    "section": "4.6 Date and time comparison",
+    "text": "4.6 Date and time comparison\n\n\n\nSQL\n\nSELECT \n  CASE\n    WHEN '2024-08-26' &gt; '2024-08-01' THEN 'Later'\n    ELSE 'Earlier or Same'\n  END AS comparison_result;\n\n\n\n\n\n\n\n  \n    \n      comparison_result\n    \n  \n  \n    Later",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_group_windows_function.html",
+    "href": "sql_group_windows_function.html",
+    "title": "6  Grouping Data",
+    "section": "",
+    "text": "6.1 GROUP BY\nThe GROUP BY clause is used to arrange identical data into groups. It is often used with aggregate functions such as COUNT(), SUM(), AVG(), MAX(), and MIN() to perform operations on each group of data.\nSQL\n\n-- Basic Syntax\n\n1SELECT column_name1, aggregate_function(column_column2)\nFROM table_name\n2GROUP BY column_name1;\n\n\n\n1\n\naggregate_function like SUM(), AVG(), MAX() etc.\n\n2\n\nThe name of the column to group the table by.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grouping Data</span>"
+    ]
+  },
+  {
+    "objectID": "sql_group_windows_function.html#getting-the-current-date-and-time",
+    "href": "sql_group_windows_function.html#getting-the-current-date-and-time",
+    "title": "6  Groups & Windows",
+    "section": "8.1 Getting the Current Date and Time",
+    "text": "8.1 Getting the Current Date and Time",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Groups & Windows</span>"
+    ]
+  },
+  {
+    "objectID": "sql_group_windows_function.html#personal-task",
+    "href": "sql_group_windows_function.html#personal-task",
+    "title": "6  Grouping Data",
+    "section": "6.3 Personal Task",
+    "text": "6.3 Personal Task\n\nTask One\nTask Two",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grouping Data</span>"
+    ]
+  },
+  {
+    "objectID": "sql_group_windows_function.html#group-by",
+    "href": "sql_group_windows_function.html#group-by",
+    "title": "6  Grouping Data",
+    "section": "",
+    "text": "Key concepts of the GROUP BY clause\n\n\n\n\n\n\nThe GROUP BY clause groups rows that have the same values in specified columns into summary rows.\nFunctions such as COUNT, SUM, AVG, MAX, and MIN are commonly used with GROUP BY to perform calculations on each group.\nThe HAVING clause is used to filter groups based on conditions, similar to how WHERE filters rows.\n\n\n\n\n\nExample Table: Sales\n\n\n\n\n\n  \n    \n      sales_id\n      store_id\n      product_id\n      sales_date\n      amount\n    \n  \n  \n    1\n101\n201\n2024-01-01\n100\n    2\n101\n202\n2024-01-01\n150\n    3\n102\n201\n2024-01-02\n200\n    4\n103\n202\n2024-01-02\n250\n    5\n101\n201\n2024-01-03\n300\n    6\n103\n201\n2024-01-03\n150\n    7\n102\n202\n2024-01-04\n200\n    8\n103\n201\n2024-01-04\n250\n    9\n101\n202\n2024-01-05\n350\n    10\n103\n201\n2024-01-05\n250\n    11\n102\n202\n2024-01-06\n200\n    12\n103\n202\n2024-01-06\n350\n  \n  \n  \n\n\n\n\n\n\nQuick illustration of GROUP BY:\n\n\n\nSQL\n\n-- To count the number of sales per store\n1SELECT sales_id, SUM(amount) AS total_amount\nFROM sales\n2GROUP BY store_id;\n\n\n\n1\n\nSum up all the total amount of sales per store\n\n2\n\nGroup all rows by each unique store id.\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      amount\n    \n  \n  \n    101\n100\n    101\n150\n    101\n300\n    101\n350\n    102\n200\n    102\n200\n    102\n200\n    103\n250\n    103\n150\n    103\n250\n    103\n250\n    103\n350\n  \n  \n  \n\n\n\n\n\n\n\n  \n    \n      store_id\n      total_amount\n    \n  \n  \n    101\n900\n    102\n600\n    103\n1250\n  \n  \n  \n\n\n\n\n\n\n\n6.1.1 Simple GROUP BY with COUNT()\n\n\n\nSQL\n\n-- To count the number of sales per store\n1SELECT sales_id, COUNT(*) AS total_number_of_sales\nFROM sales\n2GROUP BY store_id;\n\n\n\n1\n\nCount the number of sales made in each group.\n\n2\n\nGroup all rows by each unique store id.\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      total_number_of_sales\n    \n  \n  \n    101\n4\n    102\n3\n    103\n5\n  \n  \n  \n\n\n\n\n\n\n\n6.1.2 GROUP BY with multiple columns\nGrouping by multiple columns can give more granular summaries.\n\n\n\nSQL\n\n-- count the number of sales per store and product:\n1SELECT store_id, product_id, COUNT(*) AS total_number_of_sales\nFROM sales\n2GROUP BY store_id, product_id;\n\n\n\n1\n\nCount the number of sales made in each group.\n\n2\n\nGroup all rows by each unique store and product id.\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      product_id\n      total_number_of_sales\n    \n  \n  \n    101\n201\n2\n    101\n202\n2\n    102\n201\n1\n    103\n202\n2\n    103\n201\n3\n    102\n202\n2\n  \n  \n  \n\n\n\n\n\n\n\n6.1.3 Using aggregate functions\n\n\n\nSQL\n\n-- Calculate the average amount of sales per store:\n1SELECT store_id, AVG(amount) AS average_sales_amount\nFROM sales\n2GROUP BY store_id;\n\n\n\n1\n\nGet the average of all the amount of sales per store.\n\n2\n\nGroup all rows by each unique store id.\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      average_sales_amount\n    \n  \n  \n    101\n225\n    102\n200\n    103\n250\n  \n  \n  \n\n\n\n\n\n\n\n6.1.4 HAVING clause with GROUP BY\nThe HAVING clause is used to filter groups after the aggregation.\n\n\n\nSQL\n\n-- find stores with total sales greater than N300:\n1SELECT store_id, SUM(amount) AS total_sales_amount\nFROM sales\n2GROUP BY store_id\n3HAVING SUM(amount) &gt; 300;\n\n\n\n1\n\nSum up all the total amount of sales per store.\n\n2\n\nGroup all rows by each unique store id.\n\n3\n\nFilter all total_sales_amount greater than 300.\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      total_sales_amount\n    \n  \n  \n    101\n900\n    102\n600\n    103\n1250\n  \n  \n  \n\n\n\n\n\n\n\n6.1.5 GROUP BY with DATE\nYou can also group by date or time intervals.\n\n\n\nSQL\n\n-- find the total sales per day:\n1SELECT sales_date, SUM(amount) AS daily_sales\nFROM sales\n2GROUP BY sales_date;\n\n\n\n1\n\nSum up all the total amount of sales per day.\n\n2\n\nGroup all rows by each unique date (day).\n\n\n\n\n\n\n\n\n\n  \n    \n      sales_date\n      daily_sales\n    \n  \n  \n    2024-01-01\n250\n    2024-01-02\n450\n    2024-01-03\n450\n    2024-01-04\n450\n    2024-01-05\n600\n    2024-01-06\n550\n  \n  \n  \n\n\n\n\n\n\n6.1.6 GROUP BY with expressions\nYou can also use expressions or functions in GROUP BY\n\n\n\nSQL\n\n-- Group by the year of the sales date:\n\nSELECT  \n1    DAY(sales_date) AS sales_day,\n2    SUM(amount) AS daily_sales\nFROM sales\n3GROUP BY DAY(sales_date);\n\n\n\n1\n\nExtract the day from the date.\n\n2\n\nSum up all the total amount of sales per day.\n\n3\n\nGroup all rows by each unique day.\n\n\n\n\n\n\n\n\n\n  \n    \n      sales_day\n      daily_sales\n    \n  \n  \n    1\n250\n    2\n450\n    3\n450\n    4\n450\n    5\n600\n    6\n550\n  \n  \n  \n\n\n\n\n\n\n6.1.7 GROUP BY with ORDER BY\nYou can order the results of a GROUP BY query by the aggregated values.\n\n\n\nSQL\n\nSELECT \n    store_id, \n1    SUM(amount) AS total_sales_amount\nFROM sales\n2GROUP BY store_id\n3ORDER BY total_sales_amount DESC;\n\n\n\n1\n\nSum up all the total amount of sales per store.\n\n2\n\nGroup all rows by each unique store id.\n\n3\n\nSort the aggregated output by the total sales amount in descending order.\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      total_sales_amount\n    \n  \n  \n    103\n1250\n    101\n900\n    102\n600\n  \n  \n  \n\n\n\n\n\n\n6.1.8 Grouping with a conditional aggregate\nTo calculate the number of sales and the total amount for each store, but only for sales over $100:\n\n\n\nSQL\n\nSELECT\n1    COUNT(CASE WHEN amount &gt; 100 THEN 1 END) AS high_value_sales_count,\n2    SUM(CASE WHEN amount &gt; 100 THEN amount ELSE 0 END) AS high_value_total_amount\nFROM sales\nGROUP BY store_id;\n\n\n\n1\n\nIf sales amount is greater than 100 count it.\n\n2\n\nIf sales amount is greater than 100 then add sales amount else add zero.\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      high_value_sales_count\n      high_value_total_amount\n    \n  \n  \n    101\n3\n800\n    102\n3\n600\n    103\n5\n1250\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nGroup by Summary\n\n\n\n\nIt is often used with aggregate functions to perform calculations on each group.\nHAVING clause can be used to filter groups after the aggregation.\nORDER BY can be combined with GROUP BY to sort the results by the aggregated values.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grouping Data</span>"
+    ]
+  },
+  {
+    "objectID": "sql_group_windows_function.html#window-function",
+    "href": "sql_group_windows_function.html#window-function",
+    "title": "6  Grouping Data",
+    "section": "6.2 Window Function",
+    "text": "6.2 Window Function\nWindow functions perform calculations across a set of table rows related to the current row. Unlike aggregate functions, which return a single value after grouping rows, window functions return multiple rows with calculated values.\n\n\n\nSQL\n\nSELECT \n  col_name1, \n1  window_function() OVER ([PARTITION BY col_name2] [ORDER BY col_name3]) AS alias_name\nFROM table_name;\n\n\n\n1\n\nDefine the window function and how it should be grouped and sorted.\n\n\n\n\n\n\n\n\n\n\nThe Key Concepts of Window Function\n\n\n\n\nOVER() Clause defines the window of rows the function operates on.\nPARTITION BY divides the result set into partitions (like a GROUP BY).\nORDER BY defines the order of rows within each partition.\n\n\n\n\n6.2.1 ROW_NUMBER\nThis function will assign a unique row number within a partition.\n\n\nQuick illustration of window function\nA Simple example of how window function works.\n\n\n\nSQL\n\nSELECT\n  month, \n  product, \n  amount,\n  ROW_NUMBER() OVER (PARTITION BY month ORDER BY amount DESC) AS row_number\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n  \n  \n    \n      month\n      product\n      amount\n      row_number\n    \n  \n  \n    Jan\nShoe\n100\n1\n    Jan\nShoe\n120\n2\n    Jan\nCup\n20\n3\n    Feb\nT-Shirt\n80\n1\n    Feb\nT-Shirt\n70\n2\n    Feb\nCup\n30\n3\n  \n  \n  \n\n\n\n\n \n\n\n\nSQL\n\nSELECT \n    store_id, \n    sales_date, \n    amount,\n1    ROW_NUMBER() OVER (PARTITION BY store_id ORDER BY sales_date) AS row_num\nFROM sales;\n\n\n\n1\n\nPartition the sales table by the unique store id, then order by the sales date. Then get the row number by the partition. In other words, the rows are numbered sequentially for each store_id based on sales_date.\n\n\n\n\n\n\n\n\n\n  \n    \n      store_id\n      sales_date\n      amount\n      row_num\n    \n  \n  \n    101\n2024-01-01\n100\n1\n    101\n2024-01-01\n150\n2\n    101\n2024-01-03\n300\n3\n    101\n2024-01-05\n350\n4\n    102\n2024-01-02\n200\n1\n    102\n2024-01-04\n200\n2\n    102\n2024-01-06\n200\n3\n    103\n2024-01-02\n250\n1\n    103\n2024-01-03\n150\n2\n    103\n2024-01-04\n250\n3\n    103\n2024-01-05\n250\n4\n    103\n2024-01-06\n350\n5\n  \n  \n  \n\n\n\n\n  \n\n\n6.2.2 SUM() as a Window Function\n\n\n\nSQL\n\nSELECT \n    store_id, \n    sales_date, \n    amount,\n    SUM(amount) OVER (PARTITION BY store_id ORDER BY sales_date) AS running_total\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      store_id\n      sales_date\n      amount\n      running_total\n    \n  \n  \n    101\n2024-01-01\n100\n250\n    101\n2024-01-01\n150\n250\n    101\n2024-01-03\n300\n550\n    101\n2024-01-05\n350\n900\n    102\n2024-01-02\n200\n200\n    102\n2024-01-04\n200\n400\n    102\n2024-01-06\n200\n600\n    103\n2024-01-02\n250\n250\n    103\n2024-01-03\n150\n400\n    103\n2024-01-04\n250\n650\n    103\n2024-01-05\n250\n900\n    103\n2024-01-06\n350\n1250\n  \n  \n  \n\n\n\n\n  \n\n\n6.2.3 RANK\nRanks the rows within a partition. Ties result in the same rank, but with gaps in the sequence.\n\n\n\nSQL\n\nSELECT \n    store_id, \n    amount,\n    RANK() OVER (PARTITION BY store_id ORDER BY amount DESC) AS rank\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      store_id\n      amount\n      rank\n    \n  \n  \n    101\n350\n1\n    101\n300\n2\n    101\n150\n3\n    101\n100\n4\n    102\n200\n1\n    102\n200\n1\n    102\n200\n1\n    103\n350\n1\n    103\n250\n2\n    103\n250\n2\n    103\n250\n2\n    103\n150\n5\n  \n  \n  \n\n\n\n\nIf two rows have the same amount within the same store_id, they will get the same rank, and the next rank will be skipped.\n  \n\n\n6.2.4 DENSE_RANK\nSimilar to RANK(), but without gaps in the ranking sequence.\n\n\n\nSQL\n\nSELECT \n    store_id, \n    amount,\n    DENSE_RANK() OVER (PARTITION BY store_id ORDER BY amount DESC) AS dense_rank\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      store_id\n      amount\n      rank\n    \n  \n  \n    101\n350\n1\n    101\n300\n2\n    101\n150\n3\n    101\n100\n4\n    102\n200\n1\n    102\n200\n1\n    102\n200\n1\n    103\n350\n1\n    103\n250\n2\n    103\n250\n2\n    103\n250\n2\n    103\n150\n3\n  \n  \n  \n\n\n\n\nThis will rank rows without gaps, even if there are ties.\n  \n\n\n6.2.5 NTILE\nDivides the result set into a specified number of buckets.\n\n\n\nSQL\n\nSELECT \n    sales_id, \n    store_id, \n    amount,\n    NTILE(2) OVER (ORDER BY amount DESC) AS bucket\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      sales_id\n      store_id\n      amount\n      bucket\n    \n  \n  \n    1\n101\n100\n1\n    2\n101\n150\n1\n    6\n103\n150\n1\n    3\n102\n200\n2\n    7\n102\n200\n2\n    11\n102\n200\n2\n    4\n103\n250\n3\n    8\n103\n250\n3\n    10\n103\n250\n3\n    5\n101\n300\n4\n    9\n101\n350\n4\n    12\n103\n350\n4\n  \n  \n  \n\n\n\n\nThis divides the result set into 2 buckets based on the Amount. Rows with the highest amounts go into the first bucket, and so on.\n  \n\n\n6.2.6 LAG\nLAG() Example: Get the previous row’s amount.\n\n\n\nSQL\n\nSELECT \n    store_id,\n      sales_date,\n    amount,\n    LAG(amount, 1, 0) OVER (ORDER BY sales_date) AS previous_amount\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      store_id\n      sales_date\n      amount\n      previous_amount\n    \n  \n  \n    101\n2024-01-01\n100\n0\n    101\n2024-01-01\n150\n100\n    102\n2024-01-02\n200\n150\n    103\n2024-01-02\n250\n200\n    101\n2024-01-03\n300\n250\n    103\n2024-01-03\n150\n300\n    102\n2024-01-04\n200\n150\n    103\n2024-01-04\n250\n200\n    101\n2024-01-05\n350\n250\n    103\n2024-01-05\n250\n350\n    102\n2024-01-06\n200\n250\n    103\n2024-01-06\n350\n200\n  \n  \n  \n\n\n\n\n\nPARTITION BY store_id\n\n\n\nSQL\n\nSELECT \n    store_id,\n      sales_date,\n    amount,\n    LAG(amount, 1, 0) OVER (PARTITION BY store_id ORDER BY sales_date) AS previous_amount\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      store_id\n      sales_date\n      amount\n      previous_amount\n    \n  \n  \n    101\n2024-01-01\n100\n0\n    101\n2024-01-01\n150\n100\n    101\n2024-01-03\n300\n150\n    101\n2024-01-05\n350\n300\n    102\n2024-01-02\n200\n0\n    102\n2024-01-04\n200\n200\n    102\n2024-01-06\n200\n200\n    103\n2024-01-02\n250\n0\n    103\n2024-01-03\n150\n250\n    103\n2024-01-04\n250\n150\n    103\n2024-01-05\n250\n250\n    103\n2024-01-06\n350\n250\n  \n  \n  \n\n\n\n\n  \n\n\n\n6.2.7 LEAD\nLEAD() Example: Get the next row’s amount.\n\n\n\nSQL\n\nSELECT \n    store_id,\n      sales_date,\n    amount,\n    LEAD(amount, 1, 0) OVER (ORDER BY sales_date) AS next_amount\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      store_id\n      sales_date\n      amount\n      previous_amount\n    \n  \n  \n    101\n2024-01-01\n100\n150\n    101\n2024-01-01\n150\n200\n    102\n2024-01-02\n200\n250\n    103\n2024-01-02\n250\n300\n    101\n2024-01-03\n300\n150\n    103\n2024-01-03\n150\n200\n    102\n2024-01-04\n200\n250\n    103\n2024-01-04\n250\n350\n    101\n2024-01-05\n350\n250\n    103\n2024-01-05\n250\n200\n    102\n2024-01-06\n200\n350\n    103\n2024-01-06\n350\n0\n  \n  \n  \n\n\n\n\n\nPARTITION BY store_id\n\n\n\nSQL\n\nSELECT \n    store_id,\n      sales_date,\n    amount,\n    LEAD(amount, 1, 0) OVER (PARTITION BY store_id ORDER BY sales_date) AS next_amount\nFROM sales;\n\n\n\n\n\n\n\n  \n    \n      store_id\n      sales_date\n      amount\n      previous_amount\n    \n  \n  \n    101\n2024-01-01\n100\n150\n    101\n2024-01-01\n150\n300\n    101\n2024-01-03\n300\n350\n    101\n2024-01-05\n350\n0\n    102\n2024-01-02\n200\n200\n    102\n2024-01-04\n200\n200\n    102\n2024-01-06\n200\n0\n    103\n2024-01-02\n250\n150\n    103\n2024-01-03\n150\n250\n    103\n2024-01-04\n250\n250\n    103\n2024-01-05\n250\n350\n    103\n2024-01-06\n350\n0\n  \n  \n  \n\n\n\n\n  \n\n\n\n6.2.8 Combining multiple window functions\nYou can combine multiple window functions in a single query.\n\n\n\nSQL\n\nSELECT \n    store_id, \n    amount,\n    ROW_NUMBER() OVER (PARTITION BY store_id ORDER BY amount DESC) AS row_num,\n    SUM(amount) OVER (PARTITION BY store_id) AS total_amount,\n    LAG(amount, 1, 0) OVER (ORDER BY sales_date) AS previous_amount\nFROM sales;\n\n\nThis query assigns a row number, calculates the total amount per store, and retrieves the previous amount for each sale.\n\n\n\n\n\n\nFRAME Clause\n\n\n\n\n\n\n\n\nSQL\n\n\nAVG(sale) OVER (PARTITION BY col_name2 ORDER BY col_name3 ROWS BETWEEN CURRENT ROW AND UNBOUNDED PRECEDING)\n\n\n\nROWS: The frame type. values such as ROWS or RANGE\nCURRENT ROW: The frame boundary (Lower value). It can include values such as CURRENT ROW, N PRECEDING or UNBOUNDED PRECEDING\nUNBOUNDED PRECEDING: The frame Boundary (Higher value). It can include values such as CURRENT ROW, N PRECEDING or UNBOUNDED PRECEDING.\n\n\nRules: - You can only use the Frame clause with Order by clause. - The lower value should be placed before the higher value.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grouping Data</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html",
+    "href": "sql_join.html",
+    "title": "7  Joins",
+    "section": "",
+    "text": "Example Tables\ncustomer_id\n      customer_name\n    \n  \n  \n    1\nPaul\n    2\nKelvin\n    3\nJohn\n    4\nDavid\norder_id\n      customer_id\n      order_date\n    \n  \n  \n    101\n1\n2024-08-01\n    102\n2\n2024-08-02\n    103\n1\n2024-08-03\n    104\n3\n2024-08-04",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#using-alias-as",
+    "href": "sql_join.html#using-alias-as",
+    "title": "7  SQL Joins",
+    "section": "7.2 Using Alias AS",
+    "text": "7.2 Using Alias AS\nThe above join query can easily be written as follows:\n\n\n\nSQL\n\nSELECT c.customer_name, o.order_id\nFROM customers AS c\nINNER JOIN orders AS o\nON c.customer_id = o.customer_id;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>SQL Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#inner-join",
+    "href": "sql_join.html#inner-join",
+    "title": "7  Joins",
+    "section": "7.1 INNER JOIN",
+    "text": "7.1 INNER JOIN\nINNER JOIN returns records that have matching values in both tables. This means that only the rows that meet the specified condition are included in the result set. If there are no matches, those rows are excluded.\n\n\n\nSQL\n\n-- Syntax\nSELECT table1.id, table1.X_col, table2.Y_col\n1FROM table1\n2INNER JOIN table2\n3ON table1.id  = table2.id ;\n\n\n\n1\n\nThis specifies the primary table from which you want to retrieve data.\n\n2\n\nThis indicates that you are performing an INNER JOIN operation with table2\n\n3\n\nThis line specifies the condition for the join. The ON keyword is used to define how the two tables are related.\n\n\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      X_col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable2\n  \n    \n    \n  \n  \n    \n      id\n      Y_col\n    \n  \n  \n    1\nY1\n    2\nY2\n    4\nY3\n  \n  \n  \n\n\n\n\n\n\ntable1 INNER JOIN table2\n  \n    \n    \n    \n  \n  \n    \n      id\n      X_col\n      Y_col\n    \n  \n  \n    1\nX1\nY1\n    2\nX2\nY2\n  \n  \n  \n\n\n\n\n\n\nExample\nShow customers who have orders.\n\n\n\nSQL\n\nSELECT \n    customers.customer_id, \n    customers.customer_name, \n    orders.order_id\nFROM customers\nINNER JOIN orders\n    ON customers.customer_id = orders.customer_id;\n\n\n\n\n\n\n\n  \n    \n      customer_id\n      customer_name\n      order_id\n    \n  \n  \n    1\nPaul\n101\n    1\nPaul\n103\n    2\nKelvin\n102\n    3\nJohn\n104\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nUsing Alias AS\n\n\n\nThe above join query can easily be written as follows:\n\n\n\nSQL\n\nSELECT c.customer_name, o.order_id\nFROM customers AS c\nINNER JOIN orders AS o\n    ON c.customer_id = o.customer_id;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#left-join-left-outer-join",
+    "href": "sql_join.html#left-join-left-outer-join",
+    "title": "7  Joins",
+    "section": "7.2 LEFT JOIN (LEFT OUTER JOIN)",
+    "text": "7.2 LEFT JOIN (LEFT OUTER JOIN)\nThis returns all records from the left table and the matched records from the right table. If there are no matches in the right table, the result set will still include all rows from the left table, but the columns from the right table will contain NULL values.\n\n\n\nSQL\n\n-- Syntax\nSELECT table1.id, table1.X_col, table2.Y_col\n1FROM table1\n2LEFT JOIN table2\n3ON table1.id  = table2.id ;\n\n\n\n1\n\nThis indicates the primary table from which the query will start retrieving data.\n\n2\n\nThis specifies that you are performing a LEFT JOIN with table2. The LEFT JOIN keyword indicates that all records from the left table table1 will be included in the result, along with matching records from the right table table2.\n\n3\n\nThis specifies the condition for the join operation. The id is a column that exists in both table1 and table2.\n\n\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      X_col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable2\n  \n    \n    \n  \n  \n    \n      id\n      Y_col\n    \n  \n  \n    1\nY1\n    2\nY2\n    4\nY3\n  \n  \n  \n\n\n\n\n\n\ntable1 LEFT JOIN table2\n  \n    \n    \n    \n  \n  \n    \n      id\n      X_col\n      Y_col\n    \n  \n  \n    1\nX1\nY1\n    2\nX2\nY2\n    3\nX3\nNULL\n  \n  \n  \n\n\n\n\n\n\nExample\nShows all customers, including those without orders (with NULLs in order_id).\n\n\n\nSQL\n\nSELECT \n    customers.customer_id, \n    customers.customer_name, \n    orders.order_id\nFROM customers\nLEFT JOIN orders\n    ON customers.customer_id = orders.customer_id;\n\n\n\n\n\n\n\n  \n    \n      customer_id\n      customer_name\n      order_id\n    \n  \n  \n    1\nPaul\n101\n    1\nPaul\n103\n    2\nKelvin\n102\n    3\nJohn\n104\n    4\nDavid\nNULL",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#right-join-right-outer-join",
+    "href": "sql_join.html#right-join-right-outer-join",
+    "title": "7  Joins",
+    "section": "7.3 RIGHT JOIN (RIGHT OUTER JOIN)",
+    "text": "7.3 RIGHT JOIN (RIGHT OUTER JOIN)\nThis type of join is the opposite of the LEFT JOIN. It returns all records from the right table and the matched records from the left table. If there are no matches in the left table, the result will still include all rows from the right table, with NULLs in the columns from the left table.\n\n\n\nSQL\n\n-- Syntax\nSELECT table2.id, table1.X_col, table2.Y_col\n1FROM table1\n2RIGHT JOIN table2\n3ON table1.id  = table2.id;\n\n\n\n1\n\nThis indicates the primary table from which the query will retrieve the data.\n\n2\n\nThis specifies that you are performing a RIGHT JOIN with table2. The RIGHT JOIN keyword indicates that all records from the right table table2 will be included in the result, along with matching records from the left table table1.\n\n3\n\nThis specifies the condition for the join operation. The id is a column that exists in both table1 and table2.\n\n\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      X_col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable2\n  \n    \n    \n  \n  \n    \n      id\n      Y_col\n    \n  \n  \n    1\nY1\n    2\nY2\n    4\nY3\n  \n  \n  \n\n\n\n\n\n\ntable1 RIGHT JOIN table2\n  \n    \n    \n    \n  \n  \n    \n      id\n      X_col\n      Y_col\n    \n  \n  \n    1\nX1\nY1\n    2\nX2\nY2\n    4\nNULL\nY3\n  \n  \n  \n\n\n\n\n\n\nExample\nShow all orders, including those without customers (with potential NULLs in customer_name).\n\n\n\nSQL\n\nSELECT \n    customers.customer_id, \n    customers.customer_name, \n    orders.order_id\nFROM customers\nRIGHT JOIN orders\n    ON Customers.customer_id = orders.customer_id;\n\n\n\n\n\n\n\n  \n    \n      customer_id\n      customer_name\n      order_id\n    \n  \n  \n    1\nPaul\n101\n    1\nPaul\n103\n    2\nKelvin\n102\n    3\nJohn\n104",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#full-join-full-outer-join",
+    "href": "sql_join.html#full-join-full-outer-join",
+    "title": "7  Joins",
+    "section": "7.4 FULL JOIN (FULL OUTER JOIN)",
+    "text": "7.4 FULL JOIN (FULL OUTER JOIN)\nThe FULL JOIN combines the results of both LEFT and RIGHT joins. It returns all records from both tables, with matched records where available. If there is no match, the result will include NULLs for the columns of the table that does not have a corresponding entry.\n\n\n\nSQL\n\n-- Syntax\nSELECT table1.id, table1.X_col, table2.Y_col,\n1FROM table1\n2FULL JOIN table2\n3ON table1.id  = table2.id ;\n\n\n\n1\n\nThis indicates the primary table from which the query will retrieve the data.\n\n2\n\nThis indicates that a FULL JOIN being performed with table2. The FULL JOIN keyword tells SQL to return all records from both tables involved in the join, regardless of whether there are matching records in the other table.\n\n3\n\nThis specifies the condition for the join operation. The id is a column that exists in both table1 and table2.\n\n\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      X_col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable2\n  \n    \n    \n  \n  \n    \n      id\n      Y_col\n    \n  \n  \n    1\nY1\n    2\nY2\n    4\nY3\n  \n  \n  \n\n\n\n\n\n\ntable1 FULL JOIN table2\n  \n    \n    \n    \n  \n  \n    \n      id\n      X_col\n      Y_col\n    \n  \n  \n    1\nX1\nY1\n    2\nX2\nY2\n    3\nX3\nNULL\n    4\nNULL\nY3\n  \n  \n  \n\n\n\n\n\n\nExample\nShow all customers and orders, including customers without orders and orders without customers.\n\n\n\nSQL\n\nSELECT \n    customers.customer_id, \n    customers.customer_name, \n    orders.order_id\nFROM customers\nFULL OUTER JOIN orders\n    ON customers.customer_id = orders.customer_id;\n\n\n\n\n\n\n\n  \n    \n      customer_id\n      customer_name\n      order_id\n    \n  \n  \n    1\nPaul\n101\n    1\nPaul\n103\n    2\nKelvin\n102\n    3\nJohn\n104\n    4\nDavid\nNULL",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_sub_queries_cte.html",
+    "href": "sql_sub_queries_cte.html",
+    "title": "8  Subquery & CTE",
+    "section": "",
+    "text": "8.1 Subquery\nA subquery, also known as a nested query or inner query, is a query within another SQL query. It allows you to construct complex queries by embedding one query inside another. Subqueries can be used in various parts of SQL statements, including SELECT, INSERT, UPDATE, and DELETE statements.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Subquery & CTE</span>"
+    ]
+  },
+  {
+    "objectID": "sql_sub_queries_cte.html#subquery",
+    "href": "sql_sub_queries_cte.html#subquery",
+    "title": "8  Subquery & CTE",
+    "section": "",
+    "text": "Key characteristics of subqueries\n\n\n\n\nThey are enclosed in parentheses.\nThey can be used in the SELECT, FROM, WHERE, HAVING, and JOIN clauses of the main query.\nThey can return a single value, a single row, a single column, or a table of results depending on how they’re constructed.\n\n\n\n\n8.1.1 Scalar subquery\nA scalar subquery returns a single value and can be used wherever a single value expression is allowed.\nRetrieve products from the product table where the unit price exceeds the overall average unit price.\nLet us try to get the average price per unit of each product.\n\n\n\nSQL\n\nSELECT AVG(unit_price) AS average_unit_price FROM Products;\n\n\n\n\n\n\n\n  \n    \n      average_unit_price\n    \n  \n  \n    449.99\n  \n  \n  \n\n\n\n\nRetrieve products with a unit price higher than the average using a subquery.\n\n\n\nSQL\n\nSELECT \n    product_name,                                            \n    unit_price\nFROM Products\n1WHERE unit_price &gt; (SELECT AVG(unit_price) FROM Products);\n\n\n\n1\n\nInclude a subquery to calculate the average price per unit of each product.\n\n\n\n\n\n\n\n\n\n  \n    \n      product_name\n      unit_price\n    \n  \n  \n    Laptop\n999.99\n    Smartphone\n599.99\n  \n  \n  \n\n\n\n\n  \n\n\n8.1.2 Multi-row subquery\nThis subquery returns multiple rows, but typically a single column. and it is used with operators like IN, ANY, or ALL to compare a value against a list of results.\nRetrieve the names and unit prices of products that cost more than any product in the electronic product category.\n\nRetrieve the unit prices of electronic products.\n\n\n\n\nSQL\n\nSELECT unit_price\nFROM Products\n1WHERE category = 'Electronics';\n\n\n\n1\n\nAll records where the product category is ‘Electronics’.\n\n\n\n\n\n\n\n\n\n  \n    \n      unit_price\n    \n  \n  \n    999.99\n    599.99\n    149.99\n  \n  \n  \n\n\n\n\n\nWe can finally compare and filter only product with unit price greater than any product in the ‘Electronics’ category.\n\n\n\n\nSQL\n\nSELECT product_name, unit_price\nFROM Products\n1WHERE unit_price &gt; ANY (\n2    SELECT unit_price\n    FROM Products\n    WHERE category = 'Electronics'\n);\n\n\n\n1\n\nGet unit_price greater than any of the products in the ‘Electronics’ category.\n\n2\n\nAdd the subquery.\n\n\n\n\n\n\n\n\n\n  \n    \n      product_name\n      unit_price\n    \n  \n  \n    Laptop\n999.99\n    Smartphone\n599.99\n    Desk Chair\n199.99\n    Coffee Table\n299.99\n  \n  \n  \n\n\n\n\n  \n\n\n8.1.3 Correlated subquery\nA correlated subquery is a subquery that depends on the outer query for its values and is executed once for each row in the outer query.\nWe can retrieve products with a price higher than the average price in their category: To do this let’s get the average price per unit for each category.\n\n\n\nSQL\n\n1SELECT category, AVG(unit_price) AS average_unit_price\nFROM Products\n2GROUP BY category;\n\n\n\n1\n\nGet the average unit price and give it the name average_unit_price.\n\n2\n\nGroup the records by product category.\n\n\n\n\n\n\n\n\n\n  \n    \n      category\n      average_unit_price\n    \n  \n  \n    Electronics\n583.3233\n    Furniture\n249.9900\n  \n  \n  \n\n\n\n\nNow we can retrieve products with a unit price higher than the average for their category.\n\n\n\nSQL\n\nSELECT \n    p1.product_id, \n    p1.product_name, \n    p1.unit_price, \n    p1.category\nFROM Products p1\nWHERE p1.unit_price &gt; (\n    SELECT AVG(p2.unit_price)\n    FROM Products p2\n    WHERE p2.category = p1.category\n);\n\n\n\nThe process\n\nIt looks at each product (p1) in the outer query.\nFor each product, it calculates the average price of products in the same category (p2).\nThen it compares the product’s price to this average.\nIf the product’s price is higher than the average for its category, it’s included in the results.\n\n\n\n\n\n\n  \n    \n      product_id\n      product_name\n      unit_price\n      category\n    \n  \n  \n    1\nLaptop\n999.99\nElectronics\n    2\nSmartphone\n599.99\nElectronics\n    5\nCoffee Table\n299.99\nFurniture\n  \n  \n  \n\n\n\n\n  \n\n\n\n8.1.4 Nested Subquery\nA nested subquery is a subquery within another subquery.\nRetrieve the names and unit prices of products purchased after March:\n\nGet the ids of orders placed after March:\n\n\n\n\nSQL\n\nSELECT order_id\nFROM Orders\n1WHERE MONTH(order_date) &gt; 3;\n\n\n\n1\n\nFilter only months after March.\n\n\n\n\n\n\n\n\n\n  \n    \n      order_id\n    \n  \n  \n    4\n    5\n  \n  \n  \n\n\n\n\n\nRetrieve the order IDs of orders placed after March by selecting the resulting order IDs from the inner query.\n\n\n\n\nSQL\n\nSELECT DISTINCT(product_id)\nFROM OrderDetails\n1WHERE order_id IN (\n2    SELECT order_id\n    FROM Orders\n    WHERE  MONTH(order_date) &gt; 3\n);\n\n\n\n1\n\nGet orders after March.\n\n2\n\nAdd the subquery.\n\n\n\n\n\n\n\n\n\n  \n    \n      product_id\n    \n  \n  \n    2\n    3\n    4\n    5\n  \n  \n  \n\n\n\n\n\nRetrieve the names and unit prices of products purchased in orders placed after March, using the product IDs obtained from the subquery.\n\n\n\n\nSQL\n\nSELECT product_name, unit_price\nFROM Products\nWHERE product_id IN (\n1    SELECT product_id\n    FROM OrderDetails\n    WHERE order_id IN (\n2        SELECT order_id\n        FROM Orders\n        WHERE  MONTH(order_date) &gt; 3\n    )\n);\n\n\n\n1\n\nSubquery\n\n2\n\nInner Subquery.\n\n\n\n\n\n\n\n\n\n  \n    \n      product_name\n      unit_price\n    \n  \n  \n    Smartphone\n599.99\n    Headphones\n149.99\n    Desk Chair\n199.99\n    Coffee Table\n299.99",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Subquery & CTE</span>"
+    ]
+  },
+  {
+    "objectID": "sql_sub_queries_cte.html#common-table-expressions-ctes",
+    "href": "sql_sub_queries_cte.html#common-table-expressions-ctes",
+    "title": "8  Subquery & CTE",
+    "section": "8.2 Common table expressions (CTEs)",
+    "text": "8.2 Common table expressions (CTEs)\nCTEs are a feature in SQL that provide a way to create temporary result sets that can be referenced within a SELECT, INSERT, UPDATE, or DELETE statement. Unlike subqueries, CTEs make queries easier to understand and can be reused within the main query.\n\n\n\nSQL\n\n-- Basic syntax of a CTE\nWITH CTE_name (column_name1, column_name2, ...) AS (\n    -- CTE Query\n    SELECT column_list\n    FROM table_name\n    WHERE condition\n)\n-- Main query using the CTE\nSELECT column_name1, column_name2\nFROM CTE_name\nWHERE condition;\n\n\n\n\n\n\n\n\nAbout the CTE query\n\n\n\n\n\n\nWITH: This keyword is used to define a CTE. It tells SQL Server that a CTE is about to be declared.\nCTE_name: This is the name of the CTE, it is is a temporary, virtual table name that can be used within the scope of the statement.\n(column_name1, column_name2, ...): These are optional column aliases that specify the names of the columns in the CTE. If not specified, the columns from the inner SELECT query will be used by default.\nAS (): This keyword specifies the beginning of the CTE definition.\n\n\n\n\n\n8.2.1 Simple CTE\nTo retrieve all products and product categories with unit price above the average unit price:\n\nWe need to first get the average unit price.\n\n\n\n\nSQL\n\n1SELECT AVG(unit_price) AS average_unit_price\nFROM Products;\n\n\n\n1\n\nAverage price per unit of all products.\n\n\n\n\n\n\n\n\n\n  \n    \n      average_unit_price\n    \n  \n  \n    449.99\n  \n  \n  \n\n\n\n\n\nUse the calculated average unit price from the CTE to filter products with a unit price higher than the average.\n\n\n\n\nSQL\n\nWITH avg_unit_price_cte AS (\n1    SELECT AVG(unit_price) AS average_unit_price\n    FROM Products\n)\nSELECT product_name, category\nFROM Products, avg_unit_price_cte\n2WHERE unit_price &gt; average_unit_price;\n\n\n\n1\n\nThe average price per unit of all products\n\n2\n\nUsing the average_unit_price value from the CTE table avg_unit_price_cte to get unit_price that are greater than the average.\n\n\n\n\n\n\n\n\n\n  \n    \n      product_name\n      category\n    \n  \n  \n    Laptop\nElectronics\n    Smartphone\nElectronics\n  \n  \n  \n\n\n\n\n   \n\n\n8.2.2 Recursive CTE\nUsed for hierarchical data, like organizational structures or tree data.\n\n\n\nSQL\n\nWITH recursive_order_details AS (\n    -- Anchor member: Start with the first order detail\n    SELECT \n        order_detail_id, \n        product_id, \n        quantity, \n        CAST(quantity AS INT) AS cumulative_quantity\n    FROM OrderDetails\n    WHERE order_detail_id = 1  -- Start from the first OrderDetail (or any base case)\n\n    UNION ALL\n\n    -- Recursive member: Incrementally add quantities of the next order detail\n    SELECT \n        od.order_detail_id, \n        od.product_id, \n        od.quantity, \n        rod.cumulative_quantity + od.quantity AS cumulative_quantity\n    FROM OrderDetails od\n    INNER JOIN recursive_order_details rod \n        ON od.order_detail_id = rod.order_detail_id + 1  -- Go to the next order detail\n)\n-- Main query using the CTE\nSELECT \n    order_detail_id, \n    product_id, \n    quantity, \n    cumulative_quantity\nFROM recursive_order_details\nORDER BY order_detail_id;\n\n\n\n\n\n\n\n  \n    \n      order_detail_id\n      order_id\n      product_id\n      quantity\n      cumulative_quantity\n    \n  \n  \n    1\n1\n1\n1\n1\n    2\n1\n2\n2\n3\n    3\n2\n2\n1\n4\n    4\n2\n3\n3\n7\n    5\n3\n1\n1\n8\n    6\n3\n3\n2\n10\n    7\n4\n2\n1\n11\n    8\n4\n4\n2\n13\n    9\n5\n3\n2\n15\n    10\n5\n5\n1\n16\n  \n  \n  \n\n\n\n\n   \n\n\n8.2.3 Multiple CTEs\nCombining multiple CTEs in a single query.\nIdentify the highest unit price for each product category, and then list products with a unit price exceeding 80% of their respective category’s highest unit price.\n\nLet’s determine the highest unit price for each product category.\n\n\n\n\nSQL\n\n1SELECT category, MAX(unit_price) AS max_unit_price_per_cat\nFROM Products\nGROUP BY category;\n\n\n\n1\n\nMaximum unit price by product category.\n\n\n\n\n\n\n\n\n\n  \n    \n      category\n      max_unit_price_per_cat\n    \n  \n  \n    Electronics\n999.99\n    Furniture\n299.99\n  \n  \n  \n\n\n\n\n\nRetrieve products with a unit price exceeding 80% of the maximum unit price within their respective product categories.\n\n\n\n\nSQL\n\nWITH cat_max_unit_price_cte AS (\n    SELECT category, MAX(unit_price) AS max_unit_price_per_cat\n    FROM Products\n    GROUP BY category\n)\nSELECT \n    p.product_id, \n    p.product_name, \n    p.unit_price,\n    c.category, \n    c.max_unit_price_per_cat,\n    0.8 * c.max_unit_price_per_cat AS unit_price_80_percent\nFROM Products AS p\nINNER JOIN cat_max_unit_price_cte AS c\n    ON p.category = c.category\nWHERE p.unit_price &gt; 0.8 * max_unit_price_per_cat;\n\n\n\n\n\n\n\n  \n    \n      product_id\n      product_name\n      unit_price\n      category\n      max_unit_price_per_cat\n      unit_price_80_percent\n    \n  \n  \n    1\nLaptop\n999.99\nElectronics\n999.99\n799.992\n    5\nCoffee Table\n299.99\nFurniture\n299.99\n239.992\n  \n  \n  \n\n\n\n\n\nSelect the product, category and unit price greater than 80% of the unit price in their category. NOTE that we can add more complex query from the resulting records of the high_products CTE\n\n\n\n\nSQL\n\nWITH cat_max_unit_price_cte AS (\n    SELECT category, MAX(unit_price) AS max_unit_price_per_cat\n    FROM Products\n    GROUP BY category\n),\nhigh_products AS (\n    SELECT \n        p.product_id, \n        p.product_name, \n        p.unit_price,\n        c.category, \n        c.max_unit_price_per_cat\n    FROM Products AS p\n    INNER JOIN cat_max_unit_price_cte AS c\n        ON p.category = c.category\n    WHERE p.unit_price &gt; 0.8 * max_unit_price_per_cat\n)\nSELECT \n    product_name, \n    category, \n    unit_price\nFROM high_products;\n\n\n\n\n\n\n\n  \n    \n      product_name\n      category\n      unit_price\n    \n  \n  \n    Laptop\nElectronics\n999.99\n    Coffee Table\nFurniture\n299.99",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Subquery & CTE</span>"
+    ]
+  },
+  {
+    "objectID": "sql_sub_queries_cte.html#personal-task",
+    "href": "sql_sub_queries_cte.html#personal-task",
+    "title": "8  Subquery & CTE",
+    "section": "8.3 Personal Task",
+    "text": "8.3 Personal Task\n\nTask 1\nTask 2",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Subquery & CTE</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#cross-join",
+    "href": "sql_join.html#cross-join",
+    "title": "7  Joins",
+    "section": "7.5 CROSS JOIN",
+    "text": "7.5 CROSS JOIN\nThe CROSS JOIN produces a Cartesian product of the two tables, this means that it returns every possible combination of rows from both tables. This type of join does not require a condition to join the tables.\n\n\n\n\n\n\nCartesian product\n\n\n\nBecause CROSS JOIN does not require a condition to join the tables, this can lead to a large number of results, especially if both tables contain many rows.\n\n\n\n\n\nSQL\n\n-- Syntax\nSELECT table1.id, table1.X_col, table2.id, table2.Y_col\n1FROM table1\n2CROSS JOIN table2\n\n\n\n1\n\nThis indicates the primary table from which the query will retrieve the data.\n\n2\n\nThis indicates that a CROSS JOIN being performed with table2. The CROSS JOIN keyword tells SQL to return all every row from table1 combined with every row from table2.\n\n\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      X_col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable2\n  \n    \n    \n  \n  \n    \n      id\n      Y_col\n    \n  \n  \n    1\nY1\n    2\nY2\n    4\nY3\n  \n  \n  \n\n\n\n\n\n\ntable1 CROSS JOIN table2\n  \n    \n    \n    \n    \n  \n  \n    \n      X_id\n      X_col\n      Y_id\n      Y_col\n    \n  \n  \n    1\nX1\n1\nY1\n    1\nX1\n2\nY2\n    1\nX1\n4\nY3\n    2\nX2\n1\nY1\n    2\nX2\n2\nY2\n    2\nX2\n4\nY3\n    3\nX3\n1\nY1\n    3\nX3\n2\nY2\n    3\nX3\n4\nY3\n  \n  \n  \n\n\n\n\n\n\nExample\nShow every customer paired with every order.\n\n\n\nSQL\n\nSELECT\n    customers.customer_id, \n    Customers.customer_name, \n    orders.order_id\nFROM Customers\nCROSS JOIN orders;\n\n\n\n\n\n\n\n  \n    \n      customer_id\n      customer_name\n      order_id\n    \n  \n  \n    1\nPaul\n101\n    1\nPaul\n102\n    1\nPaul\n103\n    1\nPaul\n104\n    2\nKelvin\n101\n    2\nKelvin\n102\n    2\nKelvin\n103\n    2\nKelvin\n104\n    3\nJohn\n101\n    3\nJohn\n102\n    3\nJohn\n103\n    3\nJohn\n104\n    4\nDavid\n101\n    4\nDavid\n102\n    4\nDavid\n103\n    4\nDavid\n104",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#self-join",
+    "href": "sql_join.html#self-join",
+    "title": "7  Joins",
+    "section": "7.6 SELF JOIN",
+    "text": "7.6 SELF JOIN\nThis is a regular join but the table is joined with itself. Often used to compare rows within the same table.\n\n\n\nSQL\n\n-- Syntax\n1SELECT x.column_name, y.column_name\n2FROM table1 AS x, table1 AS y\n3WHERE x.id &lt;&gt; y.id;\n\n\n\n1\n\nSelect columns from the two table1 using the separate table to distinguish between records.\n\n2\n\nThis indicates the data is being selected from table1 twice only and an alias is created to distinguish between the two records.\n\n3\n\nThis specifies the condition for the join operation. The id is a column that exists in both table1 and table2.\n\n\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      X_col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable1 SELF JOIN table1\n  \n    \n    \n  \n  \n    \n      id\n      Y_col\n    \n  \n  \n    1\nY1\n    2\nY2\n    4\nY3\n  \n  \n  \n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n  \n  \n    \n      X_id\n      Y_id\n      X_col\n      Y_col\n    \n  \n  \n    1\n2\nX1\nY2\n    1\n4\nX1\nY3\n    2\n1\nX2\nY1\n    2\n4\nX2\nY3\n    3\n1\nX3\nY1\n    3\n2\nX3\nY2\n    3\n4\nX3\nY3\n  \n  \n  \n\n\n\n\n\n\nExample\nPairs of customers with their orders.\n\n\n\nSQL\n\nSELECT \n    a.customer_id AS a_customer_id,\n    b.customer_id AS b_customer_id,\n    a.customer_name AS customer1, \n    b.customer_name AS customer2\nFROM customers AS a, customers AS b\nWHERE a.customer_id &lt;&gt; b.customer_id;\n\n\n\n\n\n\n\n  \n    \n      a_customer_id\n      b_customer_id\n      a_customer_name\n      b_customer_name\n    \n  \n  \n    2\n1\nPaul\nKelvin\n    3\n1\nJohn\nKelvin\n    4\n1\nDavid\nKelvin\n    1\n2\nKelvin\nPaul\n    3\n2\nJohn\nPaul\n    4\n2\nDavid\nPaul\n    1\n3\nKelvin\nJohn\n    2\n3\nPaul\nJohn\n    4\n3\nDavid\nJohn\n    1\n4\nKelvin\nDavid\n    2\n4\nPaul\nDavid\n    3\n4\nJohn\nDavid",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#personal-task",
+    "href": "sql_join.html#personal-task",
+    "title": "7  Joins",
+    "section": "7.9 Personal Task",
+    "text": "7.9 Personal Task\n\nTask 1\nTask 2",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#union",
+    "href": "sql_join.html#union",
+    "title": "7  Joins",
+    "section": "7.7 UNION",
+    "text": "7.7 UNION\nThe UNION operator combines the results of two or more SELECT statements into one. It automatically removes duplicate rows from the final result set, ensuring that only unique records are displayed.\n\n\n\nSQL\n\nSELECT id, col\nFROM table1\nUNION\nSELECT id, col\nFROM table2;\n\n\n\n\n\n\n\n\nKey important points about the UNION operator\n\n\n\n\nThe number and order of columns in all SELECT statements must match.\nThe data types of corresponding columns must be compatible.\nUNION removes duplicate rows.\n\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable2\n  \n    \n    \n  \n  \n    \n      id\n      col\n    \n  \n  \n    1\nX1\n    2\nX2\n    4\nX4\n  \n  \n  \n\n\n\n\n\n\ntable1 UNION table2\n  \n    \n    \n  \n  \n    \n      id\n      col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n    4\nX4\n  \n  \n  \n\n\n\n\n\n\nExample\n\n\n\nSQL\n\nSELECT product_id, product_name\nFROM Products_A\nUNION\nSELECT product_id, product_name\nFROM Products_B;\n\n\n\n\n\n\n\n  \n    \n      product_id\n      product_name\n    \n  \n  \n    1\nLaptop\n    2\nSmartphone\n    3\nTablet",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_join.html#union-all",
+    "href": "sql_join.html#union-all",
+    "title": "7  Joins",
+    "section": "7.8 UNION ALL",
+    "text": "7.8 UNION ALL\nUNION ALL is similar to UNION but does not remove duplicate rows. This means it combines all rows from the queries, including duplicates.\n\n\n\nSQL\n\nSELECT id, col\nFROM table1\nUNION ALL\nSELECT id, col\nFROM table2;\n\n\n\n\n\n\n\n\n\n\ntable1\n  \n    \n    \n  \n  \n    \n      id\n      col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n  \n  \n  \n\n\n\n\n\n\ntable2\n  \n    \n    \n  \n  \n    \n      id\n      col\n    \n  \n  \n    1\nX1\n    2\nX2\n    4\nX4\n  \n  \n  \n\n\n\n\n\n\ntable1 UNION ALL table2\n  \n    \n    \n  \n  \n    \n      id\n      col\n    \n  \n  \n    1\nX1\n    2\nX2\n    3\nX3\n    1\nX1\n    2\nX2\n    4\nX4\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\n\nKey important points about the UNION ALL operator\n\n\n\n\nThis does not remove duplicate rows.\nFaster than UNION because no duplicate-checking is performed.\n\n\n\n\nExample\n\n\n\nSQL\n\nSELECT product_id, product_name\nFROM Products_A\nUNION ALL\nSELECT product_id, product_name\nFROM Products_B;\n\n\n\n\n\n\n\n  \n    \n      product_id\n      product_name\n    \n  \n  \n    1\nLaptop\n    2\nSmartphone\n    2\nSmartphone\n    3\nTablet",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Joins</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#sql-structured-query-language",
+    "href": "sql_creating_database.html#sql-structured-query-language",
+    "title": "1  Creating Database",
+    "section": "SQL (Structured Query Language)",
+    "text": "SQL (Structured Query Language)\nSQL is the standard language used to interact with relational databases. It provides commands for creating, modifying, and querying data.\n\n1.1.1 General key components of a relational database:\n\nTables: A table in a relational database contains rows (records) and columns (fields).\nRows: This represent individual instances of an entity.\nColumns: This define the attributes or properties of an entity.\nPrimary key: A unique identifier for each row in a table.\nForeign key: A field in one table that references the primary key in another table to establish a relationship.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#relational-database",
+    "href": "sql_creating_database.html#relational-database",
+    "title": "1  Creating Database",
+    "section": "",
+    "text": "SQL (Structured Query Language)\nSQL is the standard language used to interact with relational databases. It provides commands for creating, modifying, and querying data.\n\n\nGeneral key components of a relational database:\n\nTables: A table in a relational database contains rows (records) and columns (fields).\nRows: This represent individual instances of an entity.\nColumns: This define the attributes or properties of an entity.\nPrimary key: A unique identifier for each row in a table.\nForeign key: A field in one table that references the primary key in another table to establish a relationship.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#sql-table-manipulation",
+    "href": "sql_creating_database.html#sql-table-manipulation",
+    "title": "1  Creating Database",
+    "section": "1.4 SQL table manipulation",
+    "text": "1.4 SQL table manipulation\n\n1.4.1 Modifying a table\nThere are several modifications that can be performed using SQL to change the structure of an existing table in a database, such as adding, modifying, or deleting columns, and setting constraints.\n\nAdd a New Column:\n\n\n\nSQL\n\n-- Add a new column to an existing table.\nALTER TABLE tableName\n  ADD column_name data_type;\n\n\nExample:\n\n\n\nSQL\n\nALTER TABLE Books\n1  ADD number_of_pages INT;\n\n\n\n1\n\nadd a new column named number_of_pages to the Books table with an integer data type using the ADD keyword\n\n\n\n\n\n\n\nModify an Existing Column:\n\n\n\nSQL\n\n-- Change the data type of an existing column.\nALTER TABLE tableName\n  ALTER COLUMN column_name new_data_type;\n\n\nExample:\n\n\n\nSQL\n\nALTER TABLE Books\n1  ALTER COLUMN number_of_pages SMALLINT;\n\n\n\n1\n\nChange the data type of the number_of_pages from an integer to a SMALLINT.\n\n\n\n\n\n\n\nDrop a Column:\n\n\n\nSQL\n\n-- Delete an existing column from a table.\nALTER TABLE tableName\n  DROP COLUMN column_name;\n\n\nExample:\n\n\n\nSQL\n\nALTER TABLE Books\n1  DROP COLUMN number_of_pages;\n\n\n\n1\n\nRemove the column number_of_pages from the Books table using the DROP keyword.\n\n\n\n\n \n\n\n\n\n1.4.2 Deleting a Table:\nThis is used to permanently delete a table from the database. When you execute the DROP TABLE command, the specified table and all of its data, structure, indexes, constraints, and permissions are completely removed from the database.\n\n\n\nSQL\n\nDROP TABLE tableName;\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIf the table has any constraints like foreign keys, you may need to drop those constraints first or use cascading options to automatically drop dependent objects.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#data-manipulation-language-dml",
+    "href": "sql_creating_database.html#data-manipulation-language-dml",
+    "title": "1  Creating Database",
+    "section": "1.4 Data Manipulation Language (DML):",
+    "text": "1.4 Data Manipulation Language (DML):\n\n1.4.1 Inserting data\nThis statement is used to insert new data into a table.\n\n\n\n\n\n\nWarning\n\n\n\nTo insert data into all columns of a table, specify the values in the correct order. Alternatively, you can target specific columns for data insertion.\n\n\n\n\n\nSQL\n\n-- Basic Syntax\nINSERT INTO tableName (column_name1, column_name2, ...)\n  VALUES (value1, value2, ...);\n\n\nExample:\n\n\n\nSQL\n\n-- Insert sample data into Books table\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, '9780446310789');\n\n\nYou can insert multiple rows of data at once by separating them with commas.\n\n\n\nSQL\n\n-- Insert Multiple Rows into the Books table\nINSERT INTO Books (title, author, genre, publication_year, isbn)\nVALUES \n('1984', 'George Orwell', 'science fiction', 1949, '9780451524935'),\n('Pride and Prejudice', 'Jane Austen', 'Romance', 1813, '9780141439518');\n\nSELECT * FROM Books;\n\n\n\n\n\n\n\n  \n    \n      book_id\n      title\n      author\n      genre\n      publication_year\n      isbn\n    \n  \n  \n    1\nTo Kill a Mockingbird\nHarper Lee\nFiction\n1960\n9780446310789\n    2\n1984\nGeorge Orwell\nscience fiction\n1949\n9780451524935\n    3\nPride and Prejudice\nJane Austen\nRomance\n1813\n9780141439518\n  \n  \n  \n\n\n\n\n   \n\n\n1.4.2 Updating data\nThis is used to change existing data in one or more rows of a table.\n\n\n\nSQL\n\n-- Basic Syntax\nUPDATE tableName\n  SET column_name1 = new_value1, column_name2 = new_value2, ...\n1  WHERE condition;\n\n\n\n1\n\nThe condition can be based on one or more columns.\n\n\n\n\n\nQuick illustration\n\n\n\nSQL\n\nUPDATE tableName\n  SET column3 = 'Smartwatch'\n1  WHERE column3 = 'Console';\n\n\n\n1\n\nChange the value in column 3 to ‘Smartwatch’ where the value is ‘Console’.\n\n\n\n\n\n\n\n\n\n\n\n\nOrignial table\n  \n    \n      column1\n      column2\n      column3\n    \n  \n  \n    1\nJan\nLaptop\n    2\nFeb\nSmartphone\n    3\nMar\nConsole\n  \n  \n  \n\n\n\n\n\n\nUpdated table\n  \n    \n      column1\n      column2\n      column3\n    \n  \n  \n    1\nJan\nLaptop\n    2\nFeb\nSmartphone\n    3\nMar\nSmartwatch\n  \n  \n  \n\n\n\n\n\nExample:\n\n\n\nSQL\n\nUPDATE Books\n1  SET genre = 'Science Fiction'\n  WHERE book_id = 2;\n\n\n\n1\n\nRename the book genre from ‘science fiction’ to ‘Science Fiction’ for the book with as id 2.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe WHERE clause is optional, but if you omit it, the UPDATE statement will modify all rows in the table, which is often not the desired outcome.\n\n\n\nSQL\n\nUPDATE Books\n  SET genre = 'Science Fiction';\n\n\n\n\n\n\n\n\n\n\nData type compatibility:\n\n\n\nEnsure that the data type of the new value is compatible with the column’s data type. For example, you can’t update a VARCHAR column with an integer unless it’s converted properly.\n\n\n   \n\n\n\n1.4.3 Deleting data\nThis statement is used to delete rows from a table, allowing you to remove all records or specific rows based on a given condition.\n\n\n\n\n\n\nDeleting all rows\n\n\n\nExecuting DELETE FROM tableName; will remove all rows from the table. If you intend to delete all records, proceed with caution. Otherwise, use the WHERE clause to specify the rows you want to delete.\n\n\n\nSQL\n\nDELETE FROM tableName;\n\n\n\n\n\n\n\nSQL\n\n-- Basic Syntax:\nDELETE FROM tableName\n1  WHERE condition;\n\n\n\n1\n\nSpecifies which rows should be deleted based on a condition relating to one or more columns.\n\n\n\n\n\nQuick illustration\n\n\n\nSQL\n\nDELETE FROM tableName\n1  WHERE column1 = 2;\n\n\n\n1\n\nDelete the row where column1 has a value of 2.\n\n\n\n\n\n\n\n\n\n\n\n\nFull table\n  \n    \n      column1\n      column2\n      column3\n    \n  \n  \n    1\nJan\nLaptop\n    2\nFeb\nSmartphone\n    3\nMar\nConsole\n  \n  \n  \n\n\n\n\n\n\nDeleted row table\n  \n    \n      column1\n      column2\n      column3\n    \n  \n  \n    1\nJan\nLaptop\n    3\nMar\nConsole\n  \n  \n  \n\n\n\n\n\n\n\n\nSQL\n\nDELETE FROM Books\n  WHERE book_id = 2;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_statement.html#searched-case-expression",
+    "href": "sql_statement.html#searched-case-expression",
+    "title": "2  Data Query Statement",
+    "section": "Searched CASE Expression:",
+    "text": "Searched CASE Expression:\nThe searched CASE expression allows for more complex conditions by using logical comparisons.\n\n\n\nSQL\n\nCASE\n1    WHEN condition1 THEN result1\n2    WHEN condition2 THEN result2\n    ...\n3    ELSE default_result\nEND\n\n\n\n1\n\ncondition1, condition2: Boolean expressions that are evaluated in order.\n\n2\n\nresult1 result2: The result returned if the corresponding condition is true.\n\n3\n\nELSE default_result: (Optional) The value returned if none of the WHEN conditions are met.\n\n\n\n\n\n\n\nSQL\n\nSELECT \n    order_quantity,\n    CASE\n        WHEN order_quantity &gt; 5 THEN 'Above 5 Quantities'\n        WHEN order_quantity &lt; 5 THEN 'Below 5 Quantities'\n        ELSE '5 Quantities'\n    END AS grouped_order_quantity\nFROM ProductOrderDB.dbo.orders;\n\n\n\n\n\n\n\n  \n    \n      order_quantity\n      grouped_order_quantity\n    \n  \n  \n    5\n5 Quantities\n    8\nAbove 5 Quantities\n    5\n5 Quantities\n    9\nAbove 5 Quantities\n    7\nAbove 5 Quantities\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nIn an ORDER BY Clause:\n\n\n\n\n\n\n\n\nSQL\n\nSELECT order_status, sales\nFROM ProductOrderDB.dbo.orders\nORDER BY \n    CASE \n        WHEN order_status = 'Completed' THEN 1\n        WHEN order_status = 'Cancelled' THEN 0\n        ELSE 3\n    END;\n    \n\n\n\n\n\n\n\n  \n    \n      order_status\n      sales\n    \n  \n  \n    Cancelled\n1350\n    Completed\n250\n    Completed\n400\n    Completed\nNA\n    Completed\n675\n    Completed\n525\n    Completed\n750\n    Completed\nNA\n    Completed\n350\n    Completed\n300\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\n\n\n\nIn an UPDATE Clause:\n\n\n\n\n\n\n\n\nSQL\n\nUPDATE ProductOrderDB.dbo.orders\nSET unite_price =\n    CASE\n        WHEN unite_price &lt;= 51 THEN 55.56\n        WHEN unite_price &lt;= 76 THEN 80.75\n        ELSE unite_price\n    END;\n\n\n\n\n\n\n\n\n\n\n\nIn a JOIN Condition:\n\n\n\n\n\n\n\n\nSQL\n\nSELECT FirstName, LastName, Salary\nFROM Employees\nWHERE \n    CASE\n        WHEN DepartmentID = 1 THEN Salary &gt; 50000\n        WHEN DepartmentID = 2 THEN Salary &gt; 40000\n        ELSE Salary &gt; 30000\n    END;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Query Statement</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#getting-the-current-date-and-time",
+    "href": "sql_date_data.html#getting-the-current-date-and-time",
+    "title": "4  Working with Date",
+    "section": "",
+    "text": "With higher precision:\n\n\n\nSQL\n\n1SELECT SYSDATETIME() AS high_precision_datetime;\n\n\n\n1\n\nReturns the current date and time with higher precision.\n\n\n\n\n\n\n\n\n\n  \n    \n      high_precision_datetime\n    \n  \n  \n    2024-08-27 02:15:08.8379183\n  \n  \n  \n\n\n\n\n\n\nANSI SQL equivalent: to GETDATE()\n\n\n\nSQL\n\n1SELECT CURRENT_TIMESTAMP AS CurrentTimestamp;\n\n\n\n1\n\nReturns the current date and time\n\n\n\n\n\n\n\n\n\n  \n    \n      high_precision_datetime\n    \n  \n  \n    2024-08-27 02:20:53.373\n  \n  \n  \n\n\n\n\n\n\nDATEFROMPARTS:\nCreates a date from separate year, month, and day values:\n\n\n\nSQL\n\nSELECT \n  2023 AS year,\n  12 AS month,\n  31 AS day,\n  DATEFROMPARTS(2023, 12, 31) AS constructed_date;\n\n\n\n\n\n\n\n  \n    \n      year\n      month\n      day\n      constructed_date\n    \n  \n  \n    2023\n12\n31\n2023-12-31\n  \n  \n  \n\n\n\n\n\n\nTRY_CONVERT:\nThis function converts a string to a date while handling conversion errors gracefully (returns NULL if conversion fails).\n\n\n\nSQL\n\nSELECT \n1    TRY_CONVERT(DATE, '2024-08-26') AS try_converted_date_one,\n2    TRY_CONVERT(DATE, '2024-02-31') AS try_converted_date_two;\n\n\n\n1\n\nConvert the 26th of August to a DATE\n\n2\n\nConvert the 31st of February to a DATE\n\n\n\n\n\n\n\n\n\n  \n    \n      try_converted_date_one\n      try_converted_date_two\n    \n  \n  \n    2024-08-26\nNULL",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Date</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#personal-task",
+    "href": "sql_data_cleaning.html#personal-task",
+    "title": "5  Data Cleaning",
+    "section": "5.9 Personal Task",
+    "text": "5.9 Personal Task\n\nWorking with select\nwhere",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_data_cleaning.html#using-alter-and-update",
+    "href": "sql_data_cleaning.html#using-alter-and-update",
+    "title": "5  Data Cleaning",
+    "section": "",
+    "text": "ALTER changes the structure of the table, which can help clean data indirectly by ensuring the columns are correctly defined.\nUPDATE directly modifies the data, making it essential for correcting and standardizing the actual values stored in the table.",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Cleaning</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#drop-table",
+    "href": "sql_creating_database.html#drop-table",
+    "title": "1  Creating Database",
+    "section": "1.5 Drop Table",
+    "text": "1.5 Drop Table\nThis is used to completely remove a table from the database, including all of its data, structure, and any associated indexes, constraints, and triggers.\n\n\n\n\n\n\nIrreversible action:\n\n\n\nThe DROP TABLE statement removes the table entirely and there’s no way to undo this action unless you have a backup.\n\n\n\n\n\nSQL\n\n1DROP TABLE TableName;\n\n\n\n1\n\nRemove the table from the database.\n\n\n\n\n\n\n\n\n\n\nDependencies\n\n\n\nIf the table you are dropping is referenced by other objects (like foreign keys in other tables), the DROP TABLE statement may fail unless those dependencies are removed or the foreign keys are dropped or altered.\n\n\nExample:\n\n\n\nSQL\n\nDROP TABLE Books;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_creating_database.html#drop-a-table",
+    "href": "sql_creating_database.html#drop-a-table",
+    "title": "1  Creating Database",
+    "section": "1.5 Drop a table",
+    "text": "1.5 Drop a table\nThis is used to completely remove a table from the database, including all of its data, structure, and any associated indexes, constraints, and triggers.\n\n\n\n\n\n\nIrreversible action:\n\n\n\nThe DROP TABLE statement removes the table entirely and there’s no way to undo this action unless you have a backup.\n\n\n\n\n\nSQL\n\n1DROP TABLE TableName;\n\n\n\n1\n\nRemove the table from the database.\n\n\n\n\n\n\n\n\n\n\nDependencies\n\n\n\nIf the table you are dropping is referenced by other objects (like foreign keys in other tables), the DROP TABLE statement may fail unless those dependencies are removed or the foreign keys are dropped or altered.\n\n\nExample:\n\n\n\nSQL\n\nDROP TABLE Books;",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Creating Database</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#character-index",
+    "href": "sql_text_data.html#character-index",
+    "title": "3  Working with Text",
+    "section": "3.3 Character index",
+    "text": "3.3 Character index\nTo find the position of a specific value in a string.\n\n\n\n\n\n\nDistinction\n\n\n\nSyntax: - CHARINDEX(search_string, target_string) - PATINDEX(pattern, target_string)\nCHARINDEX searches for an exact string, while PATINDEX searches for a pattern. also CHARINDEX does not support wildcards (% and _) while PATINDEX does.\n\n\n\nCHARINDEX:\n\n\n\nSQL\n\n1SELECT address, CHARINDEX(',', address) AS comma_position\nFROM tableName\n\n\n\n1\n\nFind the position of ‘,’ (comma) in the string\n\n\n\n\n\n\n\n\n\n  \n    \n      address\n      comma_position\n    \n  \n  \n    Bwari, Abuja\n6\n    Ikeja, Lagos\n6\n  \n  \n  \n\n\n\n\n\n\nPATINDEX:\n\n\n\nSQL\n\n1SELECT address, PATINDEX('%,%', address) AS comma_position\nFROM tableName\n\n\n\n1\n\nFind the position of ‘,’ (comma) in the string\n\n\n\n\n\n\n\n\n\n  \n    \n      address\n      comma_position\n    \n  \n  \n    Bwari, Abuja\n6\n    Ikeja, Lagos\n6",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_programming.html",
+    "href": "sql_programming.html",
+    "title": "SQL",
+    "section": "",
+    "text": "Structured Query Language",
+    "crumbs": [
+      "SQL"
+    ]
+  },
+  {
+    "objectID": "sql_programming.html#structured-query-language",
+    "href": "sql_programming.html#structured-query-language",
+    "title": "SQL",
+    "section": "",
+    "text": "You have a bunch of books, and you want to find a specific one. To do this, you might look through the catalog, which is like a database. SQL is the language you can use to “ask” the database questions.",
+    "crumbs": [
+      "SQL"
+    ]
+  },
+  {
+    "objectID": "sql_programming.html#outline",
+    "href": "sql_programming.html#outline",
+    "title": "SQL",
+    "section": "Outline",
+    "text": "Outline\n\nCreating database and tables\nData query statement\nWorking with text data\nWorking with date data\nData cleaning in SQL\nGrouping data and using window functions\nSQL joins\nSubqueries and Common table expressions (CTEs)",
+    "crumbs": [
+      "SQL"
+    ]
+  },
+  {
+    "objectID": "r_programming.html",
+    "href": "r_programming.html",
+    "title": "R",
+    "section": "",
+    "text": "R Programming Language",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "python_programming.html",
+    "href": "python_programming.html",
+    "title": "Python",
+    "section": "",
+    "text": "Python Programming Language",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "tool_source.html",
+    "href": "tool_source.html",
+    "title": "14  Data Tool Referenece",
+    "section": "",
+    "text": "14.1 SQL",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Data Tool Referenece</span>"
+    ]
+  },
+  {
+    "objectID": "tool_source.html#sql",
+    "href": "tool_source.html#sql",
+    "title": "14  Data Tool Referenece",
+    "section": "",
+    "text": "14.1.1 Key concepts of normalization\nNormalization is achieved through various “normal forms,” each with specific rules to ensure better database design. The main normal forms are:\n\nFirst Normal Form (1NF)\nThe goal of the first normal form is to ensure that each column contains only atomic (indivisible) values, and each row is unique.\n\n\n\n\n\n\nRules\n\n\n\n\n\n\nRemove duplicate columns: Each column must be unique and represent a single attribute.\nEnsure each column is atomic: No repeating groups or arrays. For example, you shouldn’t have a column with multiple phone numbers separated by commas.\nEnsure each row is unique: Use a primary key to uniquely identify each row.\n\n\n\n\n\nExample\nBefore 1NF:\n\n\n\n\n\n  \n    \n      student_id\n      name\n      subjects\n    \n  \n  \n    1\nMary\nMath, Science\n    2\nPaul\nMath, English\n  \n  \n  \n\n\n\n\nAfter 1NF:\n\n\n\n\n\n  \n    \n      student_id\n      name\n      subject\n    \n  \n  \n    1\nMary\nMath\n    1\nMary\nScience\n    2\nPaul\nMath\n    2\nPaul\nEnglish\n  \n  \n  \n\n\n\n\n\n\n\n\nSecond Normal Form (2NF)\nThe aim of the second normal form is to ensure that all non-key attributes are fully dependent on the primary key.\n\n\n\n\n\n\nRules\n\n\n\n\n\n\nBe in 1NF: The table must first satisfy all the requirements of 1NF.\nRemove partial dependencies: Each non-key attribute must depend on the whole primary key, not just part of it. This usually means removing data that doesn’t depend entirely on the primary key into a separate table.\n\n\n\n\n\nExample\nBefore 2NF:\n\n\n\n\n\n  \n    \n      order_id\n      product_id\n      product_name\n      quantity\n    \n  \n  \n    101\n1\nLaptop\n5\n    102\n2\nPhone\n8\n  \n  \n  \n\n\n\n\nThe problem here is that product_name depends only on product_id, not the whole primary key (order_id, product_id).\nAfter 2NF:\nOrders Table:\n\n\n\n\n\n  \n    \n      order_id\n      product_id\n      quantity\n    \n  \n  \n    101\n1\n5\n    102\n2\n8\n  \n  \n  \n\n\n\n\nProduct Table:\n\n\n\n\n\n  \n    \n      product_id\n      product_name\n    \n  \n  \n    1\nLaptop\n    2\nPhone\n  \n  \n  \n\n\n\n\n\n\n\n\nThird Normal Form (3NF)\nThe Thrid normal form goal is to ensure that all non-key attributes are not only fully dependent on the primary key but are also independent of each other.\n\n\n\n\n\n\nRules\n\n\n\n\n\n\nBe in 2NF: The table must first satisfy all the requirements of 2NF.\nRemove transitive dependencies: Non-key attributes should not depend on other non-key attributes.\n\n\n\n\n\nExample\nBefore 3NF:\n\n\n\n\n\n  \n    \n      employee_id\n      name\n      department\n      department_head\n    \n  \n  \n    1\nMary\nAccounting\nTom\n    2\nPaul\nIT\nBenjamin\n  \n  \n  \n\n\n\n\nThe problem here is that the department_head depends on department, not on employee_id.\nAfter 3NF:\nEmployee Table:\n\n\n\n\n\n  \n    \n      employee_id\n      name\n      department\n    \n  \n  \n    1\nMary\nAccounting\n    2\nPaul\nIT\n  \n  \n  \n\n\n\n\nDepartment Table:\n\n\n\n\n\n  \n    \n      department\n      department_head\n    \n  \n  \n    Accounting\nTom\n    IT\nBenjamin\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\nWhen not to normalize too much\n\n\n\nWhile normalization is essential, over-normalization can lead to:\n\nComplex queries: Highly normalized tables may require complex joins.\nPerformance hits: Excessive joins can slow down query performance.\n\n\n\n \n\n\n\n\n14.1.2 Data types",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Data Tool Referenece</span>"
+    ]
+  }
+]
