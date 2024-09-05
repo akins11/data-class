@@ -1,0 +1,111 @@
+transaction_id,property_address,sales_date,advertised,land_value,building_value,total_value
+1,"Allen Avenue, Lagos Island, Lagos.",date: 2024-04-21,Yes,N2892693,"N1,945,392,",
+2,"Broad Street, Surulere, Lagos.",date: 2024-01-23,No,N1010240,"N4,256,064,",
+3,"Trans Amadi Road, Obio/Akpor, Rivers.",date: 2024-01-16,Y,N1819731,"N2,891,748,",
+4,"Broad Street, Surulere, Lagos.",date: 2024-04-13,N,N3274150,"N3,762,374,",
+5,"Awolowo Road, Alimosho, Lagos.",date: 2024-04-03,N,N2124915,"N773,449,",
+6,"Peter Odili Road, Ikwerre, Rivers.",date: 2024-01-17,No,N3873439,"N2,085,969,",
+7,"Aba Road, Obio/Akpor, Rivers.",date: 2024-04-13,0,N4497053,"N3,884,598,",
+8,"Nnamdi Azikiwe Expressway, Abuja Municipal, Abuja.",date: 2024-04-23,Yes,N1874479,"N4,182,875,",
+9,"Aba Road, Eleme, Rivers.",date: 2024-01-30,1,N1365267,"N1,284,334,",
+10,"Awolowo Road, Ikeja, Lagos.",date: 2024-05-10,1,N3380050,"N3,048,537,",
+11,"Trans Amadi Road, Eleme, Rivers.",date: 2024-05-06,N,N2476007,"N731,758,",
+12,"Nnamdi Azikiwe Expressway, Bwari, Abuja.",date: 2024-01-24,Y,N3653417,"N4,059,380,",
+13,"Nnamdi Azikiwe Expressway, Abuja Municipal, Abuja.",date: 2024-01-09,N,N2330704,"N3,670,792,",
+14,"Peter Odili Road, Oyigbo, Rivers.",date: 2024-04-28,1,N1649212,"N1,787,476,",
+15,"Opebi Road, Eti-Osa, Lagos.",date: 2024-05-10,No,N3837417,"N1,000,431,",
+16,"Allen Avenue, Lagos Island, Lagos.",date: 2024-03-12,Yes,N2806999,"N4,446,668,",
+17,"Trans Amadi Road, Port Harcourt, Rivers.",date: 2024-03-16,No,N606930,"N1,081,675,",
+18,"Ikwerre Road, Ikwerre, Rivers.",date: 2024-05-23,No,N3200750,"N4,147,563,",
+19,"Opebi Road, Eti-Osa, Lagos.",date: 2024-01-05,Y,N635122,"N1,942,564,",
+20,"Constitution Avenue, Bwari, Abuja.",date: 2024-02-11,1,N4029512,"N1,904,910,",
+21,"Ikwerre Road, Port Harcourt, Rivers.",date: 2024-05-06,1,N2843062,"N660,957,",
+22,"Allen Avenue, Ikeja, Lagos.",date: 2024-01-21,N,N4412327,"N590,650,",
+23,"Awolowo Road, Eti-Osa, Lagos.",date: 2024-01-04,No,N3612611,"N1,242,464,",
+24,"Constitution Avenue, Abuja Municipal, Abuja.",date: 2024-02-06,0,N2407963,"N2,385,969,",
+25,"Stadium Road, Port Harcourt, Rivers.",date: 2024-02-13,Y,N3340107,"N1,133,794,",
+26,"Stadium Road, Oyigbo, Rivers.",date: 2024-05-11,N,N1826803,"N2,566,313,",
+27,"Constitution Avenue, Bwari, Abuja.",date: 2024-01-11,N,N2335402,"N4,853,665,",
+28,"Shehu Shagari Way, Bwari, Abuja.",date: 2024-02-21,1,N1752425,"N3,495,769,",
+29,"Peter Odili Road, Eleme, Rivers.",date: 2024-05-11,N,N964461,"N4,889,796,",N5854257
+30,"Aguiyi Ironsi Street, Kwali, Abuja.",date: 2024-03-17,N,N3855594,"N1,531,399,",N5386993
+31,"Ahmadu Bello Way, Bwari, Abuja.",date: 2024-03-15,Yes,N2657939,"N3,859,016,",N6516955
+32,"Allen Avenue, Ikeja, Lagos.",date: 2024-04-22,1,N3029231,"N769,823,",
+33,"Ahmadu Bello Way, Bwari, Abuja.",date: 2024-01-15,N,N582456,"N4,446,811,",
+34,"Peter Odili Road, Obio/Akpor, Rivers.",date: 2024-01-08,Yes,N3662092,"N856,448,",
+35,"Aba Road, Oyigbo, Rivers.",date: 2024-04-25,1,N4010960,"N794,493,",N4805453
+36,"Awolowo Road, Ikeja, Lagos.",date: 2024-01-27,No,N892837,"N2,317,261,",
+37,"Shehu Shagari Way, Bwari, Abuja.",date: 2024-04-27,No,N4444977,"N2,484,557,",
+38,"Shehu Shagari Way, Kuje, Abuja.",date: 2024-02-07,0,N3013460,"N4,322,980,",
+39,"Broad Street, Lagos Island, Lagos.",date: 2024-01-10,0,N1438638,"N2,512,816,",
+40,"Ahmadu Bello Way, Bwari, Abuja.",date: 2024-02-25,N,N3405555,"N3,046,534,",
+41,"Broad Street, Lagos Island, Lagos.",date: 2024-04-30,N,N4897187,"N1,936,519,",
+42,"Peter Odili Road, Ikwerre, Rivers.",date: 2024-02-22,0,N3546984,"N789,880,",N4336864
+43,"Awolowo Road, Ikeja, Lagos.",date: 2024-03-31,1,N2757778,"N3,499,420,",N6257198
+44,"Awolowo Road, Lagos Island, Lagos.",date: 2024-04-17,Yes,N2228616,"N817,394,",N3046010
+45,"Aguiyi Ironsi Street, Kwali, Abuja.",date: 2024-05-27,Yes,N4260683,"N3,560,825,",
+46,"Constitution Avenue, Abuja Municipal, Abuja.",date: 2024-01-16,N,N3033014,"N4,571,894,",N7604908
+47,"Aguiyi Ironsi Street, Kwali, Abuja.",date: 2024-03-04,0,N4483628,"N982,005,",
+48,"Shehu Shagari Way, Abuja Municipal, Abuja.",date: 2024-05-19,1,N2347430,"N3,056,437,",N5403867
+49,"Adetokunbo Ademola, Ikeja, Lagos.",date: 2024-02-13,0,N4685065,"N1,953,478,",
+50,"Trans Amadi Road, Oyigbo, Rivers.",date: 2024-03-07,No,N2335027,"N1,970,880,",N4305907
+51,"Stadium Road, Oyigbo, Rivers.",date: 2024-03-09,N,N1294847,"N1,245,124,",N2539971
+52,"Ahmadu Bello Way, Kuje, Abuja.",date: 2024-05-17,No,N4592359,"N3,382,579,",N7974938
+53,"Aba Road, Eleme, Rivers.",date: 2024-02-06,Y,N3036010,"N3,784,515,",
+54,"Nnamdi Azikiwe Expressway, Kuje, Abuja.",date: 2024-01-23,Y,N4902879,"N755,215,",
+55,"Adetokunbo Ademola, Lagos Island, Lagos.",date: 2024-02-03,Y,N3019628,"N3,244,854,",N6264482
+56,"Stadium Road, Obio/Akpor, Rivers.",date: 2024-04-05,Y,N1572148,"N3,801,833,",N5373981
+57,"Allen Avenue, Surulere, Lagos.",date: 2024-05-10,Yes,N4863293,"N3,836,167,",
+58,"Allen Avenue, Eti-Osa, Lagos.",date: 2024-01-06,1,N918812,"N4,663,755,",
+59,"Stadium Road, Port Harcourt, Rivers.",date: 2024-02-18,0,N3136948,"N3,324,308,",N6461256
+60,"Peter Odili Road, Oyigbo, Rivers.",date: 2024-04-11,0,N3561462,"N1,311,371,",
+61,"Awolowo Road, Surulere, Lagos.",date: 2024-03-10,1,N2336478,"N1,964,612,",
+62,"Aba Road, Oyigbo, Rivers.",date: 2024-05-17,Y,N2638657,"N4,252,982,",N6891639
+63,"Ikwerre Road, Obio/Akpor, Rivers.",date: 2024-02-14,N,N4602174,"N2,699,393,",N7301567
+64,"Trans Amadi Road, Eleme, Rivers.",date: 2024-04-19,0,N511436,"N958,003,",N1469439
+65,"Shehu Shagari Way, Kwali, Abuja.",date: 2024-05-13,No,N3659465,"N3,118,420,",N6777885
+66,"Ikwerre Road, Obio/Akpor, Rivers.",date: 2024-05-24,Yes,N2978675,"N4,560,679,",N7539354
+67,"Aba Road, Oyigbo, Rivers.",date: 2024-05-30,N,N2889786,"N4,844,286,",
+68,"Stadium Road, Oyigbo, Rivers.",date: 2024-05-20,Yes,N2079103,"N4,574,498,",
+69,"Adetokunbo Ademola, Lagos Island, Lagos.",date: 2024-01-03,0,N4391776,"N3,873,791,",
+70,"Broad Street, Ikeja, Lagos.",date: 2024-05-29,N,N3395291,"N2,992,136,",N6387427
+71,"Broad Street, Alimosho, Lagos.",date: 2024-01-03,0,N1917602,"N1,773,749,",N3691351
+72,"Opebi Road, Alimosho, Lagos.",date: 2024-01-25,Yes,N3500256,"N4,015,667,",N7515923
+73,"Allen Avenue, Lagos Island, Lagos.",date: 2024-05-19,Yes,N2386738,"N2,129,645,",N4516383
+74,"Peter Odili Road, Oyigbo, Rivers.",date: 2024-03-26,1,N568631,"N3,986,530,",N4555161
+75,"Awolowo Road, Lagos Island, Lagos.",date: 2024-02-27,0,N4506954,"N4,677,151,",
+76,"Ahmadu Bello Way, Bwari, Abuja.",date: 2024-01-14,Yes,N3226092,"N4,308,079,",N7534171
+77,"Aguiyi Ironsi Street, Kwali, Abuja.",date: 2024-02-09,Y,N3448192,"N2,925,967,",
+78,"Constitution Avenue, Kuje, Abuja.",date: 2024-02-28,Yes,N3747218,"N3,122,174,",
+79,"Broad Street, Surulere, Lagos.",date: 2024-03-13,1,N2904289,"N846,738,",N3751027
+80,"Aba Road, Eleme, Rivers.",date: 2024-04-26,Yes,N3796659,"N3,084,996,",N6881655
+81,"Opebi Road, Surulere, Lagos.",date: 2024-05-04,N,N3510047,"N2,668,015,",N6178062
+82,"Nnamdi Azikiwe Expressway, Kwali, Abuja.",date: 2024-05-27,Yes,N3165836,"N4,870,494,",
+83,"Ahmadu Bello Way, Kuje, Abuja.",date: 2024-04-22,Y,N1086354,"N3,667,760,",N4754114
+84,"Awolowo Road, Eti-Osa, Lagos.",date: 2024-04-10,N,N2368344,"N4,660,568,",N7028912
+85,"Shehu Shagari Way, Bwari, Abuja.",date: 2024-04-26,1,N1296235,"N3,350,976,",
+86,"Allen Avenue, Lagos Island, Lagos.",date: 2024-04-10,N,N4998768,"N2,281,551,",
+87,"Stadium Road, Eleme, Rivers.",date: 2024-01-20,1,N3248486,"N3,764,681,",
+88,"Nnamdi Azikiwe Expressway, Abuja Municipal, Abuja.",date: 2024-02-06,Y,N3377904,"N1,742,001,",
+89,"Trans Amadi Road, Eleme, Rivers.",date: 2024-01-13,Yes,N999876,"N2,187,453,",N3187329
+90,"Ahmadu Bello Way, Kuje, Abuja.",date: 2024-03-18,N,N4688850,"N3,416,226,",
+91,"Aguiyi Ironsi Street, Kwali, Abuja.",date: 2024-03-01,No,N4702472,"N2,281,851,",
+92,"Ikwerre Road, Obio/Akpor, Rivers.",date: 2024-05-13,N,N4096064,"N4,394,238,",N8490302
+93,"Aba Road, Obio/Akpor, Rivers.",date: 2024-02-22,0,N4745662,"N4,382,292,",
+94,"Awolowo Road, Lagos Island, Lagos.",date: 2024-01-09,N,N1442394,"N3,179,195,",N4621589
+95,"Stadium Road, Obio/Akpor, Rivers.",date: 2024-01-11,Yes,N1858080,"N839,823,",
+96,"Broad Street, Eti-Osa, Lagos.",date: 2024-05-06,Yes,N1092859,"N4,641,351,",N5734210
+97,"Constitution Avenue, Abuja Municipal, Abuja.",date: 2024-02-18,Y,N4103517,"N2,678,709,",
+98,"Trans Amadi Road, Ikwerre, Rivers.",date: 2024-02-01,Y,N2988515,"N577,565,",
+99,"Opebi Road, Ikeja, Lagos.",date: 2024-01-06,Yes,N3380792,"N4,259,754,",N7640546
+100,"Peter Odili Road, Port Harcourt, Rivers.",date: 2024-02-21,Y,N3028334,"N3,552,411,",N6580745
+101,"Aba Road, Eleme, Rivers.",date: 2024-01-30,1,N1365267,"N1,284,334,",
+102,"Ahmadu Bello Way, Bwari, Abuja.",date: 2024-02-25,N,N3405555,"N3,046,534,",
+103,"Constitution Avenue, Abuja Municipal, Abuja.",date: 2024-02-18,Y,N4103517,"N2,678,709,",
+104,"Peter Odili Road, Obio/Akpor, Rivers.",date: 2024-01-08,Yes,N3662092,"N856,448,",
+105,"Aba Road, Oyigbo, Rivers.",date: 2024-04-25,1,N4010960,"N794,493,",N4805453
+106,"Trans Amadi Road, Ikwerre, Rivers.",date: 2024-02-01,Y,N2988515,"N577,565,",
+107,"Shehu Shagari Way, Bwari, Abuja.",date: 2024-02-21,1,N1752425,"N3,495,769,",
+108,"Ikwerre Road, Obio/Akpor, Rivers.",date: 2024-05-13,N,N4096064,"N4,394,238,",N8490302
+109,"Peter Odili Road, Eleme, Rivers.",date: 2024-05-11,N,N964461,"N4,889,796,",N5854257
+110,"Nnamdi Azikiwe Expressway, Bwari, Abuja.",date: 2024-01-24,Y,N3653417,"N4,059,380,",
