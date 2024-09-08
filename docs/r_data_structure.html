@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R – Data Analysis Tools</title>
+<title>12&nbsp; Data Structure – Data Analysis Tools</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./r_basics.html" rel="next">
-<link href="./sql_project.html" rel="prev">
+<link href="./python_programming.html" rel="next">
+<link href="./r_basics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r_programming.html">R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r_programming.html">R</a></li><li class="breadcrumb-item"><a href="./r_data_structure.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Structure</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./r_programming.html" class="sidebar-item-text sidebar-link active">
+            <a href="./r_programming.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_data_structure.html" class="sidebar-item-text sidebar-link">
+  <a href="./r_data_structure.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Structure</span></span></a>
   </div>
 </li>
@@ -256,21 +256,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r-programming-language" id="toc-r-programming-language" class="nav-link active" data-scroll-target="#r-programming-language">R Programming Language</a>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link active" data-scroll-target="#vectors"><span class="header-section-number">12.1</span> Vectors</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#how-to-download-r" id="toc-how-to-download-r" class="nav-link" data-scroll-target="#how-to-download-r">How to download R</a></li>
-  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
+  <li><a href="#coercion-and-conversion" id="toc-coercion-and-conversion" class="nav-link" data-scroll-target="#coercion-and-conversion"><span class="header-section-number">12.1.1</span> Coercion and Conversion</a></li>
   </ul></li>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices"><span class="header-section-number">12.2</span> Matrices</a></li>
+  <li><a href="#list" id="toc-list" class="nav-link" data-scroll-target="#list"><span class="header-section-number">12.3</span> List</a></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames"><span class="header-section-number">12.4</span> Data Frames</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r_programming.html">R</a></li><li class="breadcrumb-item"><a href="./r_data_structure.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Structure</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">R</h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Structure</span></h1>
 </div>
 
 
@@ -287,42 +288,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="r-programming-language" class="level2">
-<h2 class="anchored" data-anchor-id="r-programming-language">R Programming Language</h2>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>R is a powerful programming language and environment specifically designed for data analysis and statistical computing. It stands out as an essential tool for anyone involved in data analysis or statistics due to its comprehensive features, extensive community support, and flexibility across different platforms.</p>
-<section id="key-features-of-r" class="level4">
-<h4 class="anchored" data-anchor-id="key-features-of-r">Key Features of R</h4>
-<ul>
-<li>Comprehensive Statistical Analysis</li>
-<li>Extensive Packages and Libraries</li>
-<li>Advanced Data Visualization</li>
-</ul>
+<section id="vectors" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="vectors"><span class="header-section-number">12.1</span> Vectors</h2>
+<section id="coercion-and-conversion" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="coercion-and-conversion"><span class="header-section-number">12.1.1</span> Coercion and Conversion</h3>
 </section>
 </section>
-<section id="how-to-download-r" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-download-r">How to download R</h3>
-<ul>
-<li>Link to download R: <a href="https://cran.r-project.org">https://cran.r-project.org</a></li>
-<li>Link to download Rstudio: <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a></li>
-</ul>
+<section id="matrices" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="matrices"><span class="header-section-number">12.2</span> Matrices</h2>
 </section>
-<section id="outline" class="level3">
-<h3 class="anchored" data-anchor-id="outline">Outline</h3>
-<ul>
-<li>Basics of R programming</li>
-<li>Data Structures</li>
-<li>Operators in R</li>
-<li>Importing and Exporting Data</li>
-<li>Tidyverse</li>
-<li>Visualization</li>
-<li>Statistical Analysis</li>
-<li>Projects</li>
-</ul>
+<section id="list" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="list"><span class="header-section-number">12.3</span> List</h2>
+</section>
+<section id="data-frames" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="data-frames"><span class="header-section-number">12.4</span> Data Frames</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -687,25 +668,66 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       };
     }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
           }
-        });
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          trigger: 'click',
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          positionFixed: true,
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
       }
   const findCites = (el) => {
     const parentEl = el.parentElement;
@@ -748,13 +770,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./sql_project.html" class="pagination-link" aria-label="Project">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Project</span></span>
+      <a href="./r_basics.html" class="pagination-link" aria-label="Basics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Basics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./r_basics.html" class="pagination-link" aria-label="Basics">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Basics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./python_programming.html" class="pagination-link" aria-label="Python">
+        <span class="nav-page-text">Python</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
