@@ -21,7 +21,8 @@ book:
         - sql_project.qmd
     - part: r_programming.qmd
       chapters: 
-        - r_data_types.qmd
+        - r_basics.qmd
+        - r_data_structure.qmd
     - part: python_programming.qmd
       chapters: 
         - python_data_types.qmd
