@@ -304,6 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#dates" id="toc-dates" class="nav-link" data-scroll-target="#dates"><span class="header-section-number">11.2.4</span> Dates</a></li>
   <li><a href="#checking-data-types" id="toc-checking-data-types" class="nav-link" data-scroll-target="#checking-data-types"><span class="header-section-number">11.2.5</span> Checking Data Types</a></li>
   </ul></li>
+  <li><a href="#pipe-operator" id="toc-pipe-operator" class="nav-link" data-scroll-target="#pipe-operator"><span class="header-section-number">11.3</span> Pipe Operator <code>|&gt;</code></a></li>
   </ul>
 </nav>
     </div>
@@ -518,23 +519,23 @@ Declaring a variable with a comment
 <p>Keywords are reserved words in R that have special meanings and cannot be used as variable names. Examples include control-flow statements like if, else, for, and constants like TRUE, FALSE, and NULL.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="vpyuuffasb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vpyuuffasb table {
+<div id="grjwcejftv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#grjwcejftv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vpyuuffasb thead, #vpyuuffasb tbody, #vpyuuffasb tfoot, #vpyuuffasb tr, #vpyuuffasb td, #vpyuuffasb th {
+#grjwcejftv thead, #grjwcejftv tbody, #grjwcejftv tfoot, #grjwcejftv tr, #grjwcejftv td, #grjwcejftv th {
   border-style: none;
 }
 
-#vpyuuffasb p {
+#grjwcejftv p {
   margin: 0;
   padding: 0;
 }
 
-#vpyuuffasb .gt_table {
+#grjwcejftv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -560,12 +561,12 @@ Declaring a variable with a comment
   border-left-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_caption {
+#grjwcejftv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vpyuuffasb .gt_title {
+#grjwcejftv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -577,7 +578,7 @@ Declaring a variable with a comment
   border-bottom-width: 0;
 }
 
-#vpyuuffasb .gt_subtitle {
+#grjwcejftv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -589,7 +590,7 @@ Declaring a variable with a comment
   border-top-width: 0;
 }
 
-#vpyuuffasb .gt_heading {
+#grjwcejftv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -601,13 +602,13 @@ Declaring a variable with a comment
   border-right-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_bottom_border {
+#grjwcejftv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_col_headings {
+#grjwcejftv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -622,7 +623,7 @@ Declaring a variable with a comment
   border-right-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_col_heading {
+#grjwcejftv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -642,7 +643,7 @@ Declaring a variable with a comment
   overflow-x: hidden;
 }
 
-#vpyuuffasb .gt_column_spanner_outer {
+#grjwcejftv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -654,15 +655,15 @@ Declaring a variable with a comment
   padding-right: 4px;
 }
 
-#vpyuuffasb .gt_column_spanner_outer:first-child {
+#grjwcejftv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vpyuuffasb .gt_column_spanner_outer:last-child {
+#grjwcejftv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vpyuuffasb .gt_column_spanner {
+#grjwcejftv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -674,11 +675,11 @@ Declaring a variable with a comment
   width: 100%;
 }
 
-#vpyuuffasb .gt_spanner_row {
+#grjwcejftv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vpyuuffasb .gt_group_heading {
+#grjwcejftv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -704,7 +705,7 @@ Declaring a variable with a comment
   text-align: left;
 }
 
-#vpyuuffasb .gt_empty_group_heading {
+#grjwcejftv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -719,15 +720,15 @@ Declaring a variable with a comment
   vertical-align: middle;
 }
 
-#vpyuuffasb .gt_from_md > :first-child {
+#grjwcejftv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vpyuuffasb .gt_from_md > :last-child {
+#grjwcejftv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vpyuuffasb .gt_row {
+#grjwcejftv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -746,7 +747,7 @@ Declaring a variable with a comment
   overflow-x: hidden;
 }
 
-#vpyuuffasb .gt_stub {
+#grjwcejftv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -759,7 +760,7 @@ Declaring a variable with a comment
   padding-right: 5px;
 }
 
-#vpyuuffasb .gt_stub_row_group {
+#grjwcejftv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -773,15 +774,15 @@ Declaring a variable with a comment
   vertical-align: top;
 }
 
-#vpyuuffasb .gt_row_group_first td {
+#grjwcejftv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vpyuuffasb .gt_row_group_first th {
+#grjwcejftv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vpyuuffasb .gt_summary_row {
+#grjwcejftv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -791,16 +792,16 @@ Declaring a variable with a comment
   padding-right: 5px;
 }
 
-#vpyuuffasb .gt_first_summary_row {
+#grjwcejftv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_first_summary_row.thick {
+#grjwcejftv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vpyuuffasb .gt_last_summary_row {
+#grjwcejftv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -810,7 +811,7 @@ Declaring a variable with a comment
   border-bottom-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_grand_summary_row {
+#grjwcejftv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -820,7 +821,7 @@ Declaring a variable with a comment
   padding-right: 5px;
 }
 
-#vpyuuffasb .gt_first_grand_summary_row {
+#grjwcejftv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -830,7 +831,7 @@ Declaring a variable with a comment
   border-top-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_last_grand_summary_row_top {
+#grjwcejftv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -840,11 +841,11 @@ Declaring a variable with a comment
   border-bottom-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_striped {
+#grjwcejftv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vpyuuffasb .gt_table_body {
+#grjwcejftv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -853,7 +854,7 @@ Declaring a variable with a comment
   border-bottom-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_footnotes {
+#grjwcejftv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -867,7 +868,7 @@ Declaring a variable with a comment
   border-right-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_footnote {
+#grjwcejftv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -876,7 +877,7 @@ Declaring a variable with a comment
   padding-right: 5px;
 }
 
-#vpyuuffasb .gt_sourcenotes {
+#grjwcejftv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -890,7 +891,7 @@ Declaring a variable with a comment
   border-right-color: #D3D3D3;
 }
 
-#vpyuuffasb .gt_sourcenote {
+#grjwcejftv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -898,72 +899,72 @@ Declaring a variable with a comment
   padding-right: 5px;
 }
 
-#vpyuuffasb .gt_left {
+#grjwcejftv .gt_left {
   text-align: left;
 }
 
-#vpyuuffasb .gt_center {
+#grjwcejftv .gt_center {
   text-align: center;
 }
 
-#vpyuuffasb .gt_right {
+#grjwcejftv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vpyuuffasb .gt_font_normal {
+#grjwcejftv .gt_font_normal {
   font-weight: normal;
 }
 
-#vpyuuffasb .gt_font_bold {
+#grjwcejftv .gt_font_bold {
   font-weight: bold;
 }
 
-#vpyuuffasb .gt_font_italic {
+#grjwcejftv .gt_font_italic {
   font-style: italic;
 }
 
-#vpyuuffasb .gt_super {
+#grjwcejftv .gt_super {
   font-size: 65%;
 }
 
-#vpyuuffasb .gt_footnote_marks {
+#grjwcejftv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vpyuuffasb .gt_asterisk {
+#grjwcejftv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vpyuuffasb .gt_indent_1 {
+#grjwcejftv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vpyuuffasb .gt_indent_2 {
+#grjwcejftv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vpyuuffasb .gt_indent_3 {
+#grjwcejftv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vpyuuffasb .gt_indent_4 {
+#grjwcejftv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vpyuuffasb .gt_indent_5 {
+#grjwcejftv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vpyuuffasb .katex-display {
+#grjwcejftv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vpyuuffasb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#grjwcejftv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1488,18 +1489,18 @@ Mixing single and double quotes
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>quantity <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"low"</span>, <span class="st">"medium"</span>, <span class="st">"high"</span>))</span>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>quantity <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="st">"Low"</span>)</span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>quantity</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] low    medium high  
-Levels: high low medium</code></pre>
+<pre><code>[1] Low
+Levels: Low</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(quantity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "high"   "low"    "medium"</code></pre>
+<pre><code>[1] "Low"</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1572,8 +1573,8 @@ Levels: high low medium</code></pre>
 </dl>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-09-08"
-[1] "2024-09-08 15:44:37 WAT"</code></pre>
+<pre><code>[1] "2024-09-09"
+[1] "2024-09-09 05:10:53 WAT"</code></pre>
 </div>
 </div>
 </section>
@@ -1600,13 +1601,72 @@ Levels: high low medium</code></pre>
 </dl>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "September 08, 2024"</code></pre>
+<pre><code>[1] "September 09, 2024"</code></pre>
 </div>
 </div>
 <!------ Data Types --------------------------------------------------------->
-
-
 </section>
+</section>
+</section>
+<section id="pipe-operator" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="pipe-operator"><span class="header-section-number">11.3</span> Pipe Operator <code>|&gt;</code></h2>
+<p>The pipe operator (|&gt;) is a tool that allows you to chain function calls together in a more readable and concise way. It takes the output of one function and passes it as the first argument to the next function. This eliminates the need for temporary variables and makes your code easier to understand and maintain. The basic syntax for using the pipe operator is:</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>expression <span class="sc">|&gt;</span> <span class="fu">function1</span>(arg2, ...) <span class="sc">|&gt;</span> <span class="fu">function2</span>(arg2, ...)</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A rewrite of this code:</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="fu">function2</span>(<span class="fu">function1</span>(expression, arg2, ...), arg2, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>A breakdown of what happens: - <strong>expression:</strong> This is the expression or object that you want to pipe. - <strong>function1:</strong> This is the first function that will be applied to the output of expression. - <strong>function2:</strong> This is the second function that will be applied to the output of <em>function1</em>. - <strong>arg2, …:</strong> These are any additional arguments that you want to pass to a function.</p>
+<p>You can chain as many functions together as you need, creating a pipeline of operations.</p>
+<section id="example" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="example">Example</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-35"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="1">1</button><span id="annotated-cell-35-1" class="code-annotation-target"><a href="#annotated-cell-35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.double</span>(<span class="fu">as.double</span>(<span class="st">"10"</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-35" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-35" data-code-lines="1" data-code-annotation="1">Convert the string (Character) “10” to a double and check if it is a double data type.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>The above code can be clearly written as follows</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-36"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="1">1</button><span id="annotated-cell-36-1" class="code-annotation-target"><a href="#annotated-cell-36-1" aria-hidden="true" tabindex="-1"></a><span class="st">"10"</span> <span class="sc">|&gt;</span> <span class="fu">as.double</span>() <span class="sc">|&gt;</span> <span class="fu">is.double</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-36" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-36" data-code-lines="1" data-code-annotation="1">Convert the string (Character) “10” to a double and check if it is a double data type.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+
+
 </section>
 </section>
 
