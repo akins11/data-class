@@ -23,6 +23,8 @@ book:
       chapters: 
         - r_basics.qmd
         - r_data_structure.qmd
+        - r_operators.qmd
+        - r_tidyverse.qmd
     - part: python_programming.qmd
       chapters: 
         - python_data_types.qmd
