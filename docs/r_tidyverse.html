@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>14&nbsp; Tidyverse – Data Analysis Tools</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./python_programming.html" rel="next">
+<link href="./r_operators.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r_programming.html">R</a></li><li class="breadcrumb-item"><a href="./r_tidyverse.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tidyverse</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Analysis Tools</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./sql_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SQL</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_creating_database.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Creating Database</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_statement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Query Statement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_text_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Working with Text</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_date_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Working with Date</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_data_cleaning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Cleaning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_group_windows_function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Grouping Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_join.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Joins</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_sub_queries_cte.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Subquery &amp; CTE</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql_project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./r_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Basics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_data_structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Structure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_tidyverse.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tidyverse</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./python_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./python_data_types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./powerbi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Power BI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./powerbi_data_import.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tool_source.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Data Tool Referenece</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#install-tidyverse-meta-package" id="toc-install-tidyverse-meta-package" class="nav-link active" data-scroll-target="#install-tidyverse-meta-package"><span class="header-section-number">14.1</span> Install tidyverse meta package</a></li>
+  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data"><span class="header-section-number">14.2</span> Importing Data</a>
+  <ul class="collapse">
+  <li><a href="#csv-file" id="toc-csv-file" class="nav-link" data-scroll-target="#csv-file"><span class="header-section-number">14.2.1</span> .CSV file</a></li>
+  <li><a href="#xlsx-file" id="toc-xlsx-file" class="nav-link" data-scroll-target="#xlsx-file"><span class="header-section-number">14.2.2</span> .xlsx file</a></li>
+  </ul></li>
+  <li><a href="#dplyr" id="toc-dplyr" class="nav-link" data-scroll-target="#dplyr"><span class="header-section-number">14.3</span> dplyr</a>
+  <ul class="collapse">
+  <li><a href="#selecting-columns" id="toc-selecting-columns" class="nav-link" data-scroll-target="#selecting-columns"><span class="header-section-number">14.3.1</span> Selecting columns</a></li>
+  <li><a href="#renaming-columns" id="toc-renaming-columns" class="nav-link" data-scroll-target="#renaming-columns"><span class="header-section-number">14.3.2</span> Renaming columns</a></li>
+  <li><a href="#reorder-columns" id="toc-reorder-columns" class="nav-link" data-scroll-target="#reorder-columns"><span class="header-section-number">14.3.3</span> Reorder columns</a></li>
+  <li><a href="#filter-records" id="toc-filter-records" class="nav-link" data-scroll-target="#filter-records"><span class="header-section-number">14.3.4</span> Filter records</a></li>
+  <li><a href="#create-modify-and-delete-columns" id="toc-create-modify-and-delete-columns" class="nav-link" data-scroll-target="#create-modify-and-delete-columns"><span class="header-section-number">14.3.5</span> Create, modify and delete columns</a></li>
+  <li><a href="#summarise-records" id="toc-summarise-records" class="nav-link" data-scroll-target="#summarise-records"><span class="header-section-number">14.3.6</span> Summarise records</a></li>
+  <li><a href="#grouped-data" id="toc-grouped-data" class="nav-link" data-scroll-target="#grouped-data"><span class="header-section-number">14.3.7</span> Grouped data</a></li>
+  <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange"><span class="header-section-number">14.3.8</span> arrange()</a></li>
+  <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins"><span class="header-section-number">14.3.9</span> joins</a></li>
+  <li><a href="#bind-row-column" id="toc-bind-row-column" class="nav-link" data-scroll-target="#bind-row-column"><span class="header-section-number">14.3.10</span> bind row &amp; column</a></li>
+  </ul></li>
+  <li><a href="#stringr" id="toc-stringr" class="nav-link" data-scroll-target="#stringr"><span class="header-section-number">14.4</span> stringr</a>
+  <ul class="collapse">
+  <li><a href="#str_length" id="toc-str_length" class="nav-link" data-scroll-target="#str_length"><span class="header-section-number">14.4.1</span> str_length()</a></li>
+  <li><a href="#case-str_to_upper-str_to_lower-str_to_title-str_to_sentence" id="toc-case-str_to_upper-str_to_lower-str_to_title-str_to_sentence" class="nav-link" data-scroll-target="#case-str_to_upper-str_to_lower-str_to_title-str_to_sentence"><span class="header-section-number">14.4.2</span> case() ||&gt; str_to_upper(), str_to_lower(), str_to_title(), str_to_sentence</a></li>
+  <li><a href="#str_detect" id="toc-str_detect" class="nav-link" data-scroll-target="#str_detect"><span class="header-section-number">14.4.3</span> str_detect()</a></li>
+  <li><a href="#str_extract-str_extract_all" id="toc-str_extract-str_extract_all" class="nav-link" data-scroll-target="#str_extract-str_extract_all"><span class="header-section-number">14.4.4</span> str_extract() || str_extract_all()</a></li>
+  <li><a href="#str_glue" id="toc-str_glue" class="nav-link" data-scroll-target="#str_glue"><span class="header-section-number">14.4.5</span> str_glue()</a></li>
+  <li><a href="#str_remove-str_remove_all" id="toc-str_remove-str_remove_all" class="nav-link" data-scroll-target="#str_remove-str_remove_all"><span class="header-section-number">14.4.6</span> str_remove() || str_remove_all()</a></li>
+  <li><a href="#str_replace-str_replace_all" id="toc-str_replace-str_replace_all" class="nav-link" data-scroll-target="#str_replace-str_replace_all"><span class="header-section-number">14.4.7</span> str_replace() || str_replace_all()</a></li>
+  <li><a href="#str_split" id="toc-str_split" class="nav-link" data-scroll-target="#str_split"><span class="header-section-number">14.4.8</span> str_split()</a></li>
+  <li><a href="#str_trim" id="toc-str_trim" class="nav-link" data-scroll-target="#str_trim"><span class="header-section-number">14.4.9</span> str_trim()</a></li>
+  </ul></li>
+  <li><a href="#tidyr" id="toc-tidyr" class="nav-link" data-scroll-target="#tidyr"><span class="header-section-number">14.5</span> tidyr</a>
+  <ul class="collapse">
+  <li><a href="#drop_na" id="toc-drop_na" class="nav-link" data-scroll-target="#drop_na"><span class="header-section-number">14.5.1</span> drop_na()</a></li>
+  <li><a href="#reshaping-data-pivot_longer-pivot_wider" id="toc-reshaping-data-pivot_longer-pivot_wider" class="nav-link" data-scroll-target="#reshaping-data-pivot_longer-pivot_wider"><span class="header-section-number">14.5.2</span> Reshaping data | pivot_longer() pivot_wider()</a></li>
+  <li><a href="#separate" id="toc-separate" class="nav-link" data-scroll-target="#separate"><span class="header-section-number">14.5.3</span> Separate||</a></li>
+  <li><a href="#unite" id="toc-unite" class="nav-link" data-scroll-target="#unite"><span class="header-section-number">14.5.4</span> unite()</a></li>
+  </ul></li>
+  <li><a href="#purrr" id="toc-purrr" class="nav-link" data-scroll-target="#purrr"><span class="header-section-number">14.6</span> purrr</a>
+  <ul class="collapse">
+  <li><a href="#map-map2-." id="toc-map-map2-." class="nav-link" data-scroll-target="#map-map2-."><span class="header-section-number">14.6.1</span> map || map2, ….</a></li>
+  <li><a href="#list-manipulation" id="toc-list-manipulation" class="nav-link" data-scroll-target="#list-manipulation"><span class="header-section-number">14.6.2</span> list manipulation</a></li>
+  </ul></li>
+  <li><a href="#lubridate" id="toc-lubridate" class="nav-link" data-scroll-target="#lubridate"><span class="header-section-number">14.7</span> lubridate</a>
+  <ul class="collapse">
+  <li><a href="#today" id="toc-today" class="nav-link" data-scroll-target="#today"><span class="header-section-number">14.7.1</span> today()</a></li>
+  <li><a href="#parse-date" id="toc-parse-date" class="nav-link" data-scroll-target="#parse-date"><span class="header-section-number">14.7.2</span> parse date</a></li>
+  <li><a href="#year-quarter-month-day" id="toc-year-quarter-month-day" class="nav-link" data-scroll-target="#year-quarter-month-day"><span class="header-section-number">14.7.3</span> year, quarter, month, day</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r_programming.html">R</a></li><li class="breadcrumb-item"><a href="./r_tidyverse.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tidyverse</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tidyverse</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="install-tidyverse-meta-package" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="install-tidyverse-meta-package"><span class="header-section-number">14.1</span> Install tidyverse meta package</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Packages in the tidyverse
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>readr:</li>
+<li>dplyr:</li>
+<li>tidyr:</li>
+<li>stringr:</li>
+<li>purrr:</li>
+<li>lubridate:</li>
+<li>ggplot2:</li>
+<li>forcats:</li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2" aria-hidden="true" tabindex="-1"></a> </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">Install the tidyverse Meta package</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="2">Load all the packages in the tidyverse</span>
+</dd>
+</dl>
+</div>
+</div>
+</section>
+<section id="importing-data" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="importing-data"><span class="header-section-number">14.2</span> Importing Data</h2>
+<p>readr / readxl</p>
+<section id="csv-file" class="level3" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="csv-file"><span class="header-section-number">14.2.1</span> .CSV file</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Base R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">{readr}</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"path/to/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"path/to/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The path can be a location in your local machine, on the internet, etc</li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">"path/to/data.csv"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(<span class="st">"column1"</span>, <span class="st">"column2"</span>, <span class="st">"column3"</span>, <span class="st">"column4"</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">column1 =</span> <span class="fu">col_double</span>(), </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">column2 =</span> <span class="fu">col_double</span>(), </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">column3 =</span> <span class="fu">col_date</span>(), </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">column4 =</span> <span class="fu">col_character</span>()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_select =</span> <span class="fu">c</span>(column1, column2, column3, column4),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"--"</span>, <span class="st">"-/-"</span>, <span class="st">"NA"</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="xlsx-file" class="level3" data-number="14.2.2">
+<h3 data-number="14.2.2" class="anchored" data-anchor-id="xlsx-file"><span class="header-section-number">14.2.2</span> .xlsx file</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"path/to/data.csv"</span>, <span class="at">sheet =</span> <span class="st">"sheet 1"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1">Read the data in the worksheet named ‘sheet 1’</span>
+</dd>
+</dl>
+</div>
+</div>
+</section>
+</section>
+<section id="dplyr" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="dplyr"><span class="header-section-number">14.3</span> dplyr</h2>
+<section id="selecting-columns" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="selecting-columns"><span class="header-section-number">14.3.1</span> Selecting columns</h3>
+<p>@ select() || tidyselect…</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(data, colum1, ....)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-1" class="code-annotation-target"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, name, height, mass, hair_color)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="1" data-code-annotation="1">Select the first three columns by name.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 4
+   name               height  mass hair_color   
+   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;        
+ 1 Luke Skywalker        172    77 blond        
+ 2 C-3PO                 167    75 &lt;NA&gt;         
+ 3 R2-D2                  96    32 &lt;NA&gt;         
+ 4 Darth Vader           202   136 none         
+ 5 Leia Organa           150    49 brown        
+ 6 Owen Lars             178   120 brown, grey  
+ 7 Beru Whitesun Lars    165    75 brown        
+ 8 R5-D4                  97    32 &lt;NA&gt;         
+ 9 Biggs Darklighter     183    84 black        
+10 Obi-Wan Kenobi        182    77 auburn, white
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>:</strong> for selecting a range of consecutive variables.</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-1" class="code-annotation-target"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, name<span class="sc">:</span>hair_color)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-5" data-code-lines="1" data-code-annotation="1">select the first three columns using the <strong>:</strong> operator.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 4
+   name               height  mass hair_color   
+   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;        
+ 1 Luke Skywalker        172    77 blond        
+ 2 C-3PO                 167    75 &lt;NA&gt;         
+ 3 R2-D2                  96    32 &lt;NA&gt;         
+ 4 Darth Vader           202   136 none         
+ 5 Leia Organa           150    49 brown        
+ 6 Owen Lars             178   120 brown, grey  
+ 7 Beru Whitesun Lars    165    75 brown        
+ 8 R5-D4                  97    32 &lt;NA&gt;         
+ 9 Biggs Darklighter     183    84 black        
+10 Obi-Wan Kenobi        182    77 auburn, white
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>!</strong> for taking the complement of a set of variables.</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1">1</button><span id="annotated-cell-6-1" class="code-annotation-target"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="sc">!</span>name)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="1" data-code-annotation="1">select all columns except the <code>name</code> column</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 13
+   height  mass hair_color    skin_color  eye_color birth_year sex    gender   
+    &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;    
+ 1    172    77 blond         fair        blue            19   male   masculine
+ 2    167    75 &lt;NA&gt;          gold        yellow         112   none   masculine
+ 3     96    32 &lt;NA&gt;          white, blue red             33   none   masculine
+ 4    202   136 none          white       yellow          41.9 male   masculine
+ 5    150    49 brown         light       brown           19   female feminine 
+ 6    178   120 brown, grey   light       blue            52   male   masculine
+ 7    165    75 brown         light       blue            47   female feminine 
+ 8     97    32 &lt;NA&gt;          white, red  red             NA   none   masculine
+ 9    183    84 black         light       brown           24   male   masculine
+10    182    77 auburn, white fair        blue-gray       57   male   masculine
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>c()</strong> for combining selections.</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-7"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-7-1"><a href="#annotated-cell-7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">c</span>(name, mass, eye_color))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   name                mass eye_color
+   &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;    
+ 1 Luke Skywalker        77 blue     
+ 2 C-3PO                 75 yellow   
+ 3 R2-D2                 32 red      
+ 4 Darth Vader          136 yellow   
+ 5 Leia Organa           49 brown    
+ 6 Owen Lars            120 blue     
+ 7 Beru Whitesun Lars    75 blue     
+ 8 R5-D4                 32 red      
+ 9 Biggs Darklighter     84 brown    
+10 Obi-Wan Kenobi        77 blue-gray
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<section id="everything" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="everything">everything()</h4>
+<p>This is a selection helper primarily used for selecting all variables from a data frame or tibble</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">everything</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 C-3PO       167    75 &lt;NA&gt;       gold       yellow         112   none  mascu…
+ 3 R2-D2        96    32 &lt;NA&gt;       white, bl… red             33   none  mascu…
+ 4 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+ 5 Leia Or…    150    49 brown      light      brown           19   fema… femin…
+ 6 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
+ 7 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
+ 8 R5-D4        97    32 &lt;NA&gt;       white, red red             NA   none  mascu…
+ 9 Biggs D…    183    84 black      light      brown           24   male  mascu…
+10 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="start_with" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="start_with">start_with()</h4>
+<p>This is a selection helper function that allows users to select variables from a data frame whose names begin with a specified prefix. It is particularly useful for tasks where you want to focus on specific groups of variables without having to manually specify each one.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(iris, <span class="fu">starts_with</span>(<span class="st">"Sepal"</span>)) <span class="sc">|&gt;</span> <span class="fu">head</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width
+1          5.1         3.5
+2          4.9         3.0
+3          4.7         3.2
+4          4.6         3.1
+5          5.0         3.6</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-9"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-9-1"><a href="#annotated-cell-9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa</code></pre>
+</div>
+</div>
+<p><strong>Multiple matches:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(iris, <span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">"Petal"</span>, <span class="st">"Sepal"</span>))) <span class="sc">|&gt;</span> <span class="fu">head</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Petal.Length Petal.Width Sepal.Length Sepal.Width
+1          1.4         0.2          5.1         3.5
+2          1.4         0.2          4.9         3.0
+3          1.3         0.2          4.7         3.2
+4          1.5         0.2          4.6         3.1
+5          1.4         0.2          5.0         3.6</code></pre>
+</div>
+</div>
+</section>
+<section id="ends_with" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ends_with">ends_with()</h4>
+<p>This function allows users to select variables (columns) from a data frame based on whether their names end with a specified suffix. The primary purpose of of the <code>ends_with()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">ends_with</span>(<span class="st">"color"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   hair_color    skin_color  eye_color
+   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;    
+ 1 blond         fair        blue     
+ 2 &lt;NA&gt;          gold        yellow   
+ 3 &lt;NA&gt;          white, blue red      
+ 4 none          white       yellow   
+ 5 brown         light       brown    
+ 6 brown, grey   light       blue     
+ 7 brown         light       blue     
+ 8 &lt;NA&gt;          white, red  red      
+ 9 black         light       brown    
+10 auburn, white fair        blue-gray
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="contains" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="contains">contains()</h4>
+<p>This function allows users to select variables from a data frame based on whether their names contain a specific substring.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">contains</span>(<span class="st">"color"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   hair_color    skin_color  eye_color
+   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;    
+ 1 blond         fair        blue     
+ 2 &lt;NA&gt;          gold        yellow   
+ 3 &lt;NA&gt;          white, blue red      
+ 4 none          white       yellow   
+ 5 brown         light       brown    
+ 6 brown, grey   light       blue     
+ 7 brown         light       blue     
+ 8 &lt;NA&gt;          white, red  red      
+ 9 black         light       brown    
+10 auburn, white fair        blue-gray
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="all_of" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="all_of">all_of()</h4>
+<p>This function is specifically designed to facilitate the selection of variables from data frames using character vectors and it is particularly useful when you want to ensure that all specified variables are present in the data frame.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">all_of</span>(<span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"height"</span>, <span class="st">"mass"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   name               height  mass
+   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt;
+ 1 Luke Skywalker        172    77
+ 2 C-3PO                 167    75
+ 3 R2-D2                  96    32
+ 4 Darth Vader           202   136
+ 5 Leia Organa           150    49
+ 6 Owen Lars             178   120
+ 7 Beru Whitesun Lars    165    75
+ 8 R5-D4                  97    32
+ 9 Biggs Darklighter     183    84
+10 Obi-Wan Kenobi        182    77
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Strict selection
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The primary characteristic of <code>all_of()</code> is that it performs strict selection. <strong>This means that if any variable specified in the character vector does not exist in the data frame, an error will be thrown</strong>. This feature ensures that users are aware of any missing variables.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-72"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-72" data-target-annotation="1">1</button><span id="annotated-cell-72-1" class="code-annotation-target"><a href="#annotated-cell-72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">all_of</span>(<span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"height"</span>, <span class="st">"mass"</span>, <span class="st">"max"</span>)))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-72" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-72" data-code-lines="1" data-code-annotation="1">The <code>max</code> value is not a valid column name in the starwars table.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `all_of()`:
+! Can't subset columns that don't exist.
+✖ Column `max` doesn't exist.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="any_of" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="any_of">any_of()</h4>
+<p>This function is particularly useful when you want to select variables from a data frame based on a character vector of variable names. The key feature of <code>any_of()</code> is its leniency regarding missing variables.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-15"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-15" data-target-annotation="1">1</button><span id="annotated-cell-15-1" class="code-annotation-target"><a href="#annotated-cell-15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">any_of</span>(<span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"height"</span>, <span class="st">"mass"</span>, <span class="st">"max"</span>)))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-15" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-15" data-code-lines="1" data-code-annotation="1">Ignores the <code>max</code> column name which does not exist in the table.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   name               height  mass
+   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt;
+ 1 Luke Skywalker        172    77
+ 2 C-3PO                 167    75
+ 3 R2-D2                  96    32
+ 4 Darth Vader           202   136
+ 5 Leia Organa           150    49
+ 6 Owen Lars             178   120
+ 7 Beru Whitesun Lars    165    75
+ 8 R5-D4                  97    32
+ 9 Biggs Darklighter     183    84
+10 Obi-Wan Kenobi        182    77
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ignores non-existent column names
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If any of the specified variable names do not exist in the data frame, any_of() will simply ignore those names without throwing an error.</p>
+</div>
+</div>
+</section>
+<section id="where" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="where">where()</h4>
+<p>This function allows users to select columns from a data frame based on a predicate function that returns either <code>TRUE</code> or <code>FALSE</code>. The predicate function can be any custom function defined by the user or built-in functions such as <code>is.numeric</code>, <code>is.factor</code>, etc.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-16"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-16" data-target-annotation="1">1</button><span id="annotated-cell-16-1" class="code-annotation-target"><a href="#annotated-cell-16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">where</span>(is.numeric))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-16" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-16" data-code-lines="1" data-code-annotation="1">Select only numeric columns</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   height  mass birth_year
+    &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt;
+ 1    172    77       19  
+ 2    167    75      112  
+ 3     96    32       33  
+ 4    202   136       41.9
+ 5    150    49       19  
+ 6    178   120       52  
+ 7    165    75       47  
+ 8     97    32       NA  
+ 9    183    84       24  
+10    182    77       57  
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p>OR using a full lambda function</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">where</span>(\(x) <span class="fu">is.numeric</span>(x)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+   height  mass birth_year
+    &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt;
+ 1    172    77       19  
+ 2    167    75      112  
+ 3     96    32       33  
+ 4    202   136       41.9
+ 5    150    49       19  
+ 6    178   120       52  
+ 7    165    75       47  
+ 8     97    32       NA  
+ 9    183    84       24  
+10    182    77       57  
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-18"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="1">1</button><span id="annotated-cell-18-1" class="code-annotation-target"><a href="#annotated-cell-18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(mtcars, <span class="fu">where</span>(\(x) <span class="fu">mean</span>(x) <span class="sc">&gt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="2">2</button><span id="annotated-cell-18-2" class="code-annotation-target"><a href="#annotated-cell-18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-18" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-18" data-code-lines="1" data-code-annotation="1">Select all numeric columns where the average value is greater than 100.</span>
+</dd>
+<dt data-target-cell="annotated-cell-18" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-18" data-code-lines="2" data-code-annotation="2">convert the data frame to a tibble.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 32 × 2
+    disp    hp
+   &lt;dbl&gt; &lt;dbl&gt;
+ 1  160    110
+ 2  160    110
+ 3  108     93
+ 4  258    110
+ 5  360    175
+ 6  225    105
+ 7  360    245
+ 8  147.    62
+ 9  141.    95
+10  168.   123
+# ℹ 22 more rows</code></pre>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="combining-selection-helpers" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="combining-selection-helpers">Combining selection helpers</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">ends_with</span>(<span class="st">"color"</span>) <span class="sc">|</span> <span class="fu">contains</span>(<span class="st">"year"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 4
+   hair_color    skin_color  eye_color birth_year
+   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
+ 1 blond         fair        blue            19  
+ 2 &lt;NA&gt;          gold        yellow         112  
+ 3 &lt;NA&gt;          white, blue red             33  
+ 4 none          white       yellow          41.9
+ 5 brown         light       brown           19  
+ 6 brown, grey   light       blue            52  
+ 7 brown         light       blue            47  
+ 8 &lt;NA&gt;          white, red  red             NA  
+ 9 black         light       brown           24  
+10 auburn, white fair        blue-gray       57  
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <!-------- SELECT ----------------------------------------------------------></p>
+</section>
+</section>
+<section id="renaming-columns" class="level3" data-number="14.3.2">
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="renaming-columns"><span class="header-section-number">14.3.2</span> Renaming columns</h3>
+<p>The dplyr package provides several functions to rename columns in a data frame. Two of the most commonly used functions for this purpose are <code>rename()</code> and <code>rename_with()</code>.</p>
+<section id="rename" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="rename">rename()</h4>
+<p>The rename() function allows you to change the names of specific columns in a data frame. The syntax for the function is as follows:</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-20"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="1">1</button><span id="annotated-cell-20-1" class="code-annotation-target"><a href="#annotated-cell-20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(data, <span class="at">new_name =</span> old_name)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-20" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-20" data-code-lines="1" data-code-annotation="1">The old_name is the present name in the column and the new_name it the new name that particular column is expected to be renamed to.</span>
+</dd>
+</dl>
+</div>
+</div>
+<ul>
+<li><strong>data:</strong> This is the data frame you want to modify.<br>
+</li>
+<li><strong>new_name:</strong> This is the new name you want to assign to an existing column.<br>
+</li>
+<li><strong>old_name:</strong> This is the current name of the column you wish to rename.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-21"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="1">1</button><span id="annotated-cell-21-1" class="code-annotation-target"><a href="#annotated-cell-21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(mtcars) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-21-2"><a href="#annotated-cell-21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="2">2</button><span id="annotated-cell-21-3" class="code-annotation-target"><a href="#annotated-cell-21-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">miles_per_gallon =</span> mpg,</span>
+<span id="annotated-cell-21-4"><a href="#annotated-cell-21-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">displacement =</span> disp,</span>
+<span id="annotated-cell-21-5"><a href="#annotated-cell-21-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">horsepower =</span> hp</span>
+<span id="annotated-cell-21-6"><a href="#annotated-cell-21-6" aria-hidden="true" tabindex="-1"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-21" data-code-lines="1" data-code-annotation="1">Convert the mtcars data frame to a tibble</span>
+</dd>
+<dt data-target-cell="annotated-cell-21" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-21" data-code-lines="3,4,5" data-code-annotation="2">rename the columns <code>mpg</code>, <code>disp</code> and <code>hp</code> to <code>miles_per_gallon</code>, <code>displacement</code> and <code>horsepower</code> respectively.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 32 × 11
+   miles_per_gallon   cyl displacement horsepower  drat    wt  qsec    vs    am
+              &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1             21       6         160         110  3.9   2.62  16.5     0     1
+ 2             21       6         160         110  3.9   2.88  17.0     0     1
+ 3             22.8     4         108          93  3.85  2.32  18.6     1     1
+ 4             21.4     6         258         110  3.08  3.22  19.4     1     0
+ 5             18.7     8         360         175  3.15  3.44  17.0     0     0
+ 6             18.1     6         225         105  2.76  3.46  20.2     1     0
+ 7             14.3     8         360         245  3.21  3.57  15.8     0     0
+ 8             24.4     4         147.         62  3.69  3.19  20       1     0
+ 9             22.8     4         141.         95  3.92  3.15  22.9     1     0
+10             19.2     6         168.        123  3.92  3.44  18.3     1     0
+# ℹ 22 more rows
+# ℹ 2 more variables: gear &lt;dbl&gt;, carb &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="rename_with" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="rename_with">rename_with()</h4>
+<p>The <code>rename_with()</code> function provides more flexibility by allowing you to apply a function to all or some column names. The syntax for this function is:</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rename_with</span>(data, .fn, .cols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<ul>
+<li><strong>data:</strong> The data frame you want to modify.</li>
+<li><strong>.fn:</strong> A function that will be applied to the selected column names.</li>
+<li><strong>.cols:</strong> Specifies which columns should be renamed (you can use tidyselect helpers like <code>starts_with()</code>, <code>contains()</code>, etc.).</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-23"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-23" data-target-annotation="1">1</button><span id="annotated-cell-23-1" class="code-annotation-target"><a href="#annotated-cell-23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(iris)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-23" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-23" data-code-lines="1" data-code-annotation="1">Convert the iris data frame to a tibble.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 150 × 5
+   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+ 1          5.1         3.5          1.4         0.2 setosa 
+ 2          4.9         3            1.4         0.2 setosa 
+ 3          4.7         3.2          1.3         0.2 setosa 
+ 4          4.6         3.1          1.5         0.2 setosa 
+ 5          5           3.6          1.4         0.2 setosa 
+ 6          5.4         3.9          1.7         0.4 setosa 
+ 7          4.6         3.4          1.4         0.3 setosa 
+ 8          5           3.4          1.5         0.2 setosa 
+ 9          4.4         2.9          1.4         0.2 setosa 
+10          4.9         3.1          1.5         0.1 setosa 
+# ℹ 140 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-24"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-24-1"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(iris) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="1">1</button><span id="annotated-cell-24-2" class="code-annotation-target"><a href="#annotated-cell-24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">"_"</span>, x))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-24" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-24" data-code-lines="2" data-code-annotation="1">replace the <code>.</code> in all the column name to <code>_</code> using the <code>gsub()</code> in base r.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 150 × 5
+   Sepal_Length Sepal_Width Petal_Length Petal_Width Species
+          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+ 1          5.1         3.5          1.4         0.2 setosa 
+ 2          4.9         3            1.4         0.2 setosa 
+ 3          4.7         3.2          1.3         0.2 setosa 
+ 4          4.6         3.1          1.5         0.2 setosa 
+ 5          5           3.6          1.4         0.2 setosa 
+ 6          5.4         3.9          1.7         0.4 setosa 
+ 7          4.6         3.4          1.4         0.3 setosa 
+ 8          5           3.4          1.5         0.2 setosa 
+ 9          4.4         2.9          1.4         0.2 setosa 
+10          4.9         3.1          1.5         0.1 setosa 
+# ℹ 140 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-25"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="1">1</button><span id="annotated-cell-25-1" class="code-annotation-target"><a href="#annotated-cell-25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rename_with</span>(starwars, toupper)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-25" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-25" data-code-lines="1" data-code-annotation="1">Convert all the column names in the <code>starwars</code> data frame to upper case.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   NAME     HEIGHT  MASS HAIR_COLOR SKIN_COLOR EYE_COLOR BIRTH_YEAR SEX   GENDER
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 C-3PO       167    75 &lt;NA&gt;       gold       yellow         112   none  mascu…
+ 3 R2-D2        96    32 &lt;NA&gt;       white, bl… red             33   none  mascu…
+ 4 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+ 5 Leia Or…    150    49 brown      light      brown           19   fema… femin…
+ 6 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
+ 7 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
+ 8 R5-D4        97    32 &lt;NA&gt;       white, red red             NA   none  mascu…
+ 9 Biggs D…    183    84 black      light      brown           24   male  mascu…
+10 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: HOMEWORLD &lt;chr&gt;, SPECIES &lt;chr&gt;, FILMS &lt;list&gt;,
+#   VEHICLES &lt;list&gt;, STARSHIPS &lt;list&gt;</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <!----- RENAME --------------------------------------------------------------></p>
+</section>
+</section>
+<section id="reorder-columns" class="level3" data-number="14.3.3">
+<h3 data-number="14.3.3" class="anchored" data-anchor-id="reorder-columns"><span class="header-section-number">14.3.3</span> Reorder columns</h3>
+<p>The <code>relocate()</code> function allows users to change the order of columns in a data frame or tibble, making it easier to organize data according to specific needs.</p>
+<section id="moving-one-or-more-columns-to-front" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="moving-one-or-more-columns-to-front">Moving one or more columns to front</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-26"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-26" data-target-annotation="1">1</button><span id="annotated-cell-26-1" class="code-annotation-target"><a href="#annotated-cell-26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">relocate</span>(starwars, hair_color, skin_color, eye_color)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-26" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-26" data-code-lines="1" data-code-annotation="1">Make the <code>hair_color</code>, <code>skin_color</code> and <code>eye_color</code> as the first set of columns.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   hair_color    skin_color eye_color name  height  mass birth_year sex   gender
+   &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 blond         fair       blue      Luke…    172    77       19   male  mascu…
+ 2 &lt;NA&gt;          gold       yellow    C-3PO    167    75      112   none  mascu…
+ 3 &lt;NA&gt;          white, bl… red       R2-D2     96    32       33   none  mascu…
+ 4 none          white      yellow    Dart…    202   136       41.9 male  mascu…
+ 5 brown         light      brown     Leia…    150    49       19   fema… femin…
+ 6 brown, grey   light      blue      Owen…    178   120       52   male  mascu…
+ 7 brown         light      blue      Beru…    165    75       47   fema… femin…
+ 8 &lt;NA&gt;          white, red red       R5-D4     97    32       NA   none  mascu…
+ 9 black         light      brown     Bigg…    183    84       24   male  mascu…
+10 auburn, white fair       blue-gray Obi-…    182    77       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="moving-one-or-more-columns-after-another-column" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="moving-one-or-more-columns-after-another-column">Moving one or more columns after another column</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-27"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="1">1</button><span id="annotated-cell-27-1" class="code-annotation-target"><a href="#annotated-cell-27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">relocate</span>(starwars, hair_color, skin_color, eye_color, <span class="at">.after =</span> name)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-27" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="1" data-code-annotation="1">Move the <code>hair_color</code>, <code>skin_color</code> and <code>eye_color</code> after the <code>name</code> column</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   name     hair_color skin_color eye_color height  mass birth_year sex   gender
+   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk… blond      fair       blue         172    77       19   male  mascu…
+ 2 C-3PO    &lt;NA&gt;       gold       yellow       167    75      112   none  mascu…
+ 3 R2-D2    &lt;NA&gt;       white, bl… red           96    32       33   none  mascu…
+ 4 Darth V… none       white      yellow       202   136       41.9 male  mascu…
+ 5 Leia Or… brown      light      brown        150    49       19   fema… femin…
+ 6 Owen La… brown, gr… light      blue         178   120       52   male  mascu…
+ 7 Beru Wh… brown      light      blue         165    75       47   fema… femin…
+ 8 R5-D4    &lt;NA&gt;       white, red red           97    32       NA   none  mascu…
+ 9 Biggs D… black      light      brown        183    84       24   male  mascu…
+10 Obi-Wan… auburn, w… fair       blue-gray    182    77       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="moving-one-or-more-columns-before-another-column" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="moving-one-or-more-columns-before-another-column">moving one or more columns before another column</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-28"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-28" data-target-annotation="1">1</button><span id="annotated-cell-28-1" class="code-annotation-target"><a href="#annotated-cell-28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">relocate</span>(starwars, hair_color, skin_color, eye_color, <span class="at">.before =</span> name)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-28" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-28" data-code-lines="1" data-code-annotation="1">Move the <code>hair_color</code>, <code>skin_color</code> and <code>eye_color</code> before the <code>name</code> column</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   hair_color    skin_color eye_color name  height  mass birth_year sex   gender
+   &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 blond         fair       blue      Luke…    172    77       19   male  mascu…
+ 2 &lt;NA&gt;          gold       yellow    C-3PO    167    75      112   none  mascu…
+ 3 &lt;NA&gt;          white, bl… red       R2-D2     96    32       33   none  mascu…
+ 4 none          white      yellow    Dart…    202   136       41.9 male  mascu…
+ 5 brown         light      brown     Leia…    150    49       19   fema… femin…
+ 6 brown, grey   light      blue      Owen…    178   120       52   male  mascu…
+ 7 brown         light      blue      Beru…    165    75       47   fema… femin…
+ 8 &lt;NA&gt;          white, red red       R5-D4     97    32       NA   none  mascu…
+ 9 black         light      brown     Bigg…    183    84       24   male  mascu…
+10 auburn, white fair       blue-gray Obi-…    182    77       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <!------- RELOCATE ---------------------------------------------------------></p>
+</section>
+</section>
+<section id="filter-records" class="level3" data-number="14.3.4">
+<h3 data-number="14.3.4" class="anchored" data-anchor-id="filter-records"><span class="header-section-number">14.3.4</span> Filter records</h3>
+<p>To subset rows in a data frame (or tibble) based on specific conditions you can use the <code>filter()</code> function.</p>
+<p><strong>Basic Syntax:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(.data, condition1, condition2, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<ul>
+<li><strong>.data:</strong> The data frame or tibble you are working with.</li>
+<li><strong>condition1, condition2, …:</strong> Logical conditions that define which rows to keep. Multiple conditions can be combined using logical operators (&amp; for “and”, | for “or”).</li>
+</ul>
+<p><strong>Example:</strong></p>
+<section id="filtering-rows-based-on-a-single-condition" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="filtering-rows-based-on-a-single-condition">Filtering rows based on a single condition</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="1">1</button><span id="annotated-cell-30-1" class="code-annotation-target"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(starwars, eye_color <span class="sc">==</span> <span class="st">"blue"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-30" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-30" data-code-lines="1" data-code-annotation="1">Retrieve all row where the eye_color is blue</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172  77   blond      fair       blue            19   male  mascu…
+ 2 Owen La…    178 120   brown, gr… light      blue            52   male  mascu…
+ 3 Beru Wh…    165  75   brown      light      blue            47   fema… femin…
+ 4 Anakin …    188  84   blond      fair       blue            41.9 male  mascu…
+ 5 Wilhuff…    180  NA   auburn, g… fair       blue            64   male  mascu…
+ 6 Chewbac…    228 112   brown      unknown    blue           200   male  mascu…
+ 7 Jek Ton…    180 110   brown      fair       blue            NA   &lt;NA&gt;  &lt;NA&gt;  
+ 8 Lobot       175  79   none       light      blue            37   male  mascu…
+ 9 Mon Mot…    150  NA   auburn     fair       blue            48   fema… femin…
+10 Qui-Gon…    193  89   brown      fair       blue            92   male  mascu…
+11 Finis V…    170  NA   blond      fair       blue            91   male  mascu…
+12 Ric Olié    183  NA   brown      fair       blue            NA   male  mascu…
+13 Adi Gal…    184  50   none       dark       blue            NA   fema… femin…
+14 Mas Ame…    196  NA   none       blue       blue            NA   male  mascu…
+15 Cliegg …    183  NA   brown      fair       blue            82   male  mascu…
+16 Luminar…    170  56.2 black      yellow     blue            58   fema… femin…
+17 Barriss…    166  50   black      yellow     blue            40   fema… femin…
+18 Jocasta…    167  NA   white      fair       blue            NA   fema… femin…
+19 Tarfful     234 136   brown      brown      blue            NA   male  mascu…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="filtering-with-multiple-conditions" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="filtering-with-multiple-conditions">Filtering with multiple conditions</h4>
+<p>You can filter based on multiple conditions using <code>&amp; (AND)</code> or <code>| (OR)</code>.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="1">1</button><span id="annotated-cell-31-1" class="code-annotation-target"><a href="#annotated-cell-31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(starwars, eye_color <span class="sc">==</span> <span class="st">"blue"</span> <span class="sc">&amp;</span> skin_color <span class="sc">==</span> <span class="st">"light"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-31" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-31" data-code-lines="1" data-code-annotation="1">Retrieve all row where the eye_color is blue and skin color is light.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Owen Lars    178   120 brown, gr… light      blue              52 male  mascu…
+2 Beru Whi…    165    75 brown      light      blue              47 fema… femin…
+3 Lobot        175    79 none       light      blue              37 male  mascu…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-32"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="1">1</button><span id="annotated-cell-32-1" class="code-annotation-target"><a href="#annotated-cell-32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(starwars, sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">|</span> hair_color <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"brown"</span>, <span class="st">"black"</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-32" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-32" data-code-lines="1" data-code-annotation="1">Retrieve all records where sex is female or the hair color is either brown or black.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 39 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Leia Or…    150  49   brown      light      brown           19   fema… femin…
+ 2 Beru Wh…    165  75   brown      light      blue            47   fema… femin…
+ 3 Biggs D…    183  84   black      light      brown           24   male  mascu…
+ 4 Chewbac…    228 112   brown      unknown    blue           200   male  mascu…
+ 5 Han Solo    180  80   brown      fair       brown           29   male  mascu…
+ 6 Wedge A…    170  77   brown      fair       hazel           21   male  mascu…
+ 7 Jek Ton…    180 110   brown      fair       blue            NA   &lt;NA&gt;  &lt;NA&gt;  
+ 8 Boba Fe…    183  78.2 black      fair       brown           31.5 male  mascu…
+ 9 Lando C…    177  79   black      dark       brown           31   male  mascu…
+10 Mon Mot…    150  NA   auburn     fair       blue            48   fema… femin…
+# ℹ 29 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="filtering-with-comparison-operators" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="filtering-with-comparison-operators">Filtering with comparison operators</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-33"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-33" data-target-annotation="1">1</button><span id="annotated-cell-33-1" class="code-annotation-target"><a href="#annotated-cell-33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(starwars, height <span class="sc">&gt;</span> <span class="dv">180</span> <span class="sc">&amp;</span> mass <span class="sc">&gt;=</span> <span class="dv">80</span> <span class="sc">&amp;</span> birth_year <span class="sc">&lt;=</span> <span class="dv">80</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-33" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-33" data-code-lines="1" data-code-annotation="1">Retrieve all records where height is greater than 180 and mass is greater than or equal to 80 and birth year is less than or equal to 80.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Darth Va…    202   136 none       white      yellow          41.9 male  mascu…
+2 Biggs Da…    183    84 black      light      brown           24   male  mascu…
+3 Anakin S…    188    84 blond      fair       blue            41.9 male  mascu…
+4 IG-88        200   140 none       metal      red             15   none  mascu…
+5 Bossk        190   113 none       green      red             53   male  mascu…
+6 Mace Win…    188    84 none       dark       brown           72   male  mascu…
+7 Plo Koon     188    80 none       orange     black           22   male  mascu…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="using-functions-within-filter" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="using-functions-within-filter">Using functions within filter()</h4>
+<p>You can use other functions within <code>filter()</code>, such as <code>is.na()</code> for handling missing values or string functions like <code>grepl()</code>.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-34"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-34" data-target-annotation="1">1</button><span id="annotated-cell-34-1" class="code-annotation-target"><a href="#annotated-cell-34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(starwars, <span class="fu">is.na</span>(hair_color))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-34" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-34" data-code-lines="1" data-code-annotation="1">Filter records of hair_color with missing values <code>(NA)</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 C-3PO        167    75 &lt;NA&gt;       gold       yellow           112 none  mascu…
+2 R2-D2         96    32 &lt;NA&gt;       white, bl… red               33 none  mascu…
+3 R5-D4         97    32 &lt;NA&gt;       white, red red               NA none  mascu…
+4 Greedo       173    74 &lt;NA&gt;       green      black             44 male  mascu…
+5 Jabba De…    175  1358 &lt;NA&gt;       green-tan… orange           600 herm… mascu…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-35"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="1">1</button><span id="annotated-cell-35-1" class="code-annotation-target"><a href="#annotated-cell-35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(starwars, <span class="fu">grepl</span>(<span class="st">"Skywalker"</span>, name))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-35" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-35" data-code-lines="1" data-code-annotation="1">Filter names with <code>Skywalker</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Luke Sky…    172    77 blond      fair       blue            19   male  mascu…
+2 Anakin S…    188    84 blond      fair       blue            41.9 male  mascu…
+3 Shmi Sky…    163    NA black      fair       brown           72   fema… femin…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Common pitfalls and tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Ensure data types match:</strong> Be mindful of data types when filtering, especially with factors and strings.</p></li>
+<li><p><strong>Missing values:</strong> By default, comparisons with <code>NA</code> will result in <code>NA</code>. Use <code>is.na()</code> to explicitly handle missing values.</p></li>
+<li><p><strong>Order of conditions matters:</strong> Be clear about the logical conditions and their order, especially when combining multiple conditions.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="between" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="between">between()</h4>
+<p>Filter between a range of values</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-36"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="1">1</button><span id="annotated-cell-36-1" class="code-annotation-target"><a href="#annotated-cell-36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(starwars, <span class="fu">between</span>(height, <span class="dv">100</span>, <span class="dv">150</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-36" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-36" data-code-lines="1" data-code-annotation="1">Retrieve records of height between 100 and 150</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Leia Org…    150    49 brown      light      brown             19 fema… femin…
+2 Mon Moth…    150    NA auburn     fair       blue              48 fema… femin…
+3 Watto        137    NA black      blue, grey yellow            NA male  mascu…
+4 Sebulba      112    40 none       grey, red  orange            NA male  mascu…
+5 Gasgano      122    NA none       white, bl… black             NA male  mascu…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <!------ FILTER -------------------------------------------------------------></p>
+</section>
+</section>
+<section id="create-modify-and-delete-columns" class="level3" data-number="14.3.5">
+<h3 data-number="14.3.5" class="anchored" data-anchor-id="create-modify-and-delete-columns"><span class="header-section-number">14.3.5</span> Create, modify and delete columns</h3>
+<p>The <code>mutate()</code> function is used to create or modify columns in a data frame (or tibble). It allows you to add new columns or change existing ones based on calculations or transformations of other columns.</p>
+<section id="creating-a-new-column" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="creating-a-new-column">Creating a new column</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-37"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-37-1"><a href="#annotated-cell-37-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span> </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-37" data-target-annotation="1">1</button><span id="annotated-cell-37-2" class="code-annotation-target"><a href="#annotated-cell-37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bmi =</span> mass <span class="sc">/</span> (height <span class="sc">/</span> <span class="dv">100</span>)<span class="sc">^</span><span class="dv">2</span>) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-37-3"><a href="#annotated-cell-37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, mass, height, bmi)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-37" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-37" data-code-lines="2" data-code-annotation="1">calculate the Body Mass Index by converting the height from cm to m and squaring before dividing by the mass (weight in kg)</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 4
+   name                mass height   bmi
+   &lt;chr&gt;              &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt;
+ 1 Luke Skywalker        77    172  26.0
+ 2 C-3PO                 75    167  26.9
+ 3 R2-D2                 32     96  34.7
+ 4 Darth Vader          136    202  33.3
+ 5 Leia Organa           49    150  21.8
+ 6 Owen Lars            120    178  37.9
+ 7 Beru Whitesun Lars    75    165  27.5
+ 8 R5-D4                 32     97  34.0
+ 9 Biggs Darklighter     84    183  25.1
+10 Obi-Wan Kenobi        77    182  23.2
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="modifying-an-existing-column" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="modifying-an-existing-column">Modifying an existing column</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-38"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-38-1"><a href="#annotated-cell-38-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-38" data-target-annotation="1">1</button><span id="annotated-cell-38-2" class="code-annotation-target"><a href="#annotated-cell-38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">height =</span> height <span class="sc">*</span> <span class="dv">2</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-38" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-38" data-code-lines="2" data-code-annotation="1">Double the height of all characters.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    344    77 blond      fair       blue            19   male  mascu…
+ 2 C-3PO       334    75 &lt;NA&gt;       gold       yellow         112   none  mascu…
+ 3 R2-D2       192    32 &lt;NA&gt;       white, bl… red             33   none  mascu…
+ 4 Darth V…    404   136 none       white      yellow          41.9 male  mascu…
+ 5 Leia Or…    300    49 brown      light      brown           19   fema… femin…
+ 6 Owen La…    356   120 brown, gr… light      blue            52   male  mascu…
+ 7 Beru Wh…    330    75 brown      light      blue            47   fema… femin…
+ 8 R5-D4       194    32 &lt;NA&gt;       white, red red             NA   none  mascu…
+ 9 Biggs D…    366    84 black      light      brown           24   male  mascu…
+10 Obi-Wan…    364    77 auburn, w… fair       blue-gray       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="using-conditional-statements" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="using-conditional-statements">Using conditional statements</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-39"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-39-1"><a href="#annotated-cell-39-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span> </span>
+<span id="annotated-cell-39-2"><a href="#annotated-cell-39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-39" data-target-annotation="1">1</button><span id="annotated-cell-39-3" class="code-annotation-target"><a href="#annotated-cell-39-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">bmi =</span> mass <span class="sc">/</span> (height <span class="sc">/</span> <span class="dv">100</span>)<span class="sc">^</span><span class="dv">2</span>,</span>
+<span id="annotated-cell-39-4"><a href="#annotated-cell-39-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">brief_bmi_category =</span> <span class="fu">if_else</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-39" data-target-annotation="2">2</button><span id="annotated-cell-39-5" class="code-annotation-target"><a href="#annotated-cell-39-5" aria-hidden="true" tabindex="-1"></a>      bmi <span class="sc">&gt;</span> <span class="fl">24.9</span>, <span class="st">"Overweight"</span>, <span class="st">"Normal weight"</span></span>
+<span id="annotated-cell-39-6"><a href="#annotated-cell-39-6" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-39" data-target-annotation="3">3</button><span id="annotated-cell-39-7" class="code-annotation-target"><a href="#annotated-cell-39-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">bmi_category =</span> <span class="fu">case_when</span>(</span>
+<span id="annotated-cell-39-8"><a href="#annotated-cell-39-8" aria-hidden="true" tabindex="-1"></a>      bmi <span class="sc">&lt;</span> <span class="fl">18.5</span> <span class="sc">~</span> <span class="st">"Underweight"</span>,</span>
+<span id="annotated-cell-39-9"><a href="#annotated-cell-39-9" aria-hidden="true" tabindex="-1"></a>      bmi <span class="sc">&gt;=</span> <span class="fl">18.5</span> <span class="sc">&amp;</span> bmi <span class="sc">&lt;=</span> <span class="fl">24.9</span> <span class="sc">~</span> <span class="st">"Normal weight"</span>,</span>
+<span id="annotated-cell-39-10"><a href="#annotated-cell-39-10" aria-hidden="true" tabindex="-1"></a>      bmi <span class="sc">&gt;=</span> <span class="dv">25</span> <span class="sc">&amp;</span> bmi <span class="sc">&lt;=</span> <span class="fl">29.9</span> <span class="sc">~</span> <span class="st">"Overweight"</span>,</span>
+<span id="annotated-cell-39-11"><a href="#annotated-cell-39-11" aria-hidden="true" tabindex="-1"></a>      bmi <span class="sc">&gt;=</span> <span class="dv">30</span> <span class="sc">~</span> <span class="st">"Obesity"</span>,</span>
+<span id="annotated-cell-39-12"><a href="#annotated-cell-39-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">.default =</span> <span class="st">"Unknow weight"</span></span>
+<span id="annotated-cell-39-13"><a href="#annotated-cell-39-13" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="annotated-cell-39-14"><a href="#annotated-cell-39-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span>                   </span>
+<span id="annotated-cell-39-15"><a href="#annotated-cell-39-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, mass, height, bmi, brief_bmi_category, bmi_category)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-39" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-39" data-code-lines="3" data-code-annotation="1">calculate the Body Mass Index by converting the height from cm to m and squaring before dividing by the mass (weight in kg).</span>
+</dd>
+<dt data-target-cell="annotated-cell-39" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-39" data-code-lines="5" data-code-annotation="2">create a brief categorical value of the calculated bmi using the <code>if_else()</code> function.</span>
+</dd>
+<dt data-target-cell="annotated-cell-39" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-39" data-code-lines="7" data-code-annotation="3">create a detailed categorical value of the calculated bmi using the <code>case_when()</code> function.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 6
+   name                mass height   bmi brief_bmi_category bmi_category 
+   &lt;chr&gt;              &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;              &lt;chr&gt;        
+ 1 Luke Skywalker        77    172  26.0 Overweight         Overweight   
+ 2 C-3PO                 75    167  26.9 Overweight         Overweight   
+ 3 R2-D2                 32     96  34.7 Overweight         Obesity      
+ 4 Darth Vader          136    202  33.3 Overweight         Obesity      
+ 5 Leia Organa           49    150  21.8 Normal weight      Normal weight
+ 6 Owen Lars            120    178  37.9 Overweight         Obesity      
+ 7 Beru Whitesun Lars    75    165  27.5 Overweight         Overweight   
+ 8 R5-D4                 32     97  34.0 Overweight         Obesity      
+ 9 Biggs Darklighter     84    183  25.1 Overweight         Overweight   
+10 Obi-Wan Kenobi        77    182  23.2 Normal weight      Normal weight
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <!------ MUTATE -------------------------------------------------------------></p>
+</section>
+</section>
+<section id="summarise-records" class="level3" data-number="14.3.6">
+<h3 data-number="14.3.6" class="anchored" data-anchor-id="summarise-records"><span class="header-section-number">14.3.6</span> Summarise records</h3>
+<p>…</p>
+<section id="count" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="count">count()</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-40"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-40" data-target-annotation="1">1</button><span id="annotated-cell-40-1" class="code-annotation-target"><a href="#annotated-cell-40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(starwars, eye_color, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"eye_color_count"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-40" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-40" data-code-lines="1" data-code-annotation="1">Count the number of character with the different type of eye colors and arrange the values in descending order.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 15 × 2
+   eye_color     eye_color_count
+   &lt;chr&gt;                   &lt;int&gt;
+ 1 brown                      21
+ 2 blue                       19
+ 3 yellow                     11
+ 4 black                      10
+ 5 orange                      8
+ 6 red                         5
+ 7 hazel                       3
+ 8 unknown                     3
+ 9 blue-gray                   1
+10 dark                        1
+11 gold                        1
+12 green, yellow               1
+13 pink                        1
+14 red, blue                   1
+15 white                       1</code></pre>
+</div>
+</div>
+<p><strong>Count multiple columns unique values:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-41"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-41" data-target-annotation="1">1</button><span id="annotated-cell-41-1" class="code-annotation-target"><a href="#annotated-cell-41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(starwars, eye_color, skin_color, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"count"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-41" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-41" data-code-lines="1" data-code-annotation="1">Count the number of character with each type of eye and skin color.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 53 × 3
+   eye_color skin_color count
+   &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt;
+ 1 blue      fair          10
+ 2 brown     light          7
+ 3 brown     fair           5
+ 4 black     grey           4
+ 5 brown     dark           4
+ 6 blue      light          3
+ 7 black     green          2
+ 8 blue      yellow         2
+ 9 brown     brown          2
+10 brown     tan            2
+# ℹ 43 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="distinct" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="distinct">distinct()</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-42"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-42" data-target-annotation="1">1</button><span id="annotated-cell-42-1" class="code-annotation-target"><a href="#annotated-cell-42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(starwars, sex)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-42" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-42" data-code-lines="1" data-code-annotation="1">Get the unique values in the sex column.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 1
+  sex           
+  &lt;chr&gt;         
+1 male          
+2 none          
+3 female        
+4 hermaphroditic
+5 &lt;NA&gt;          </code></pre>
+</div>
+</div>
+<p><strong>Get multiple distinct column values:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-43"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-43" data-target-annotation="1">1</button><span id="annotated-cell-43-1" class="code-annotation-target"><a href="#annotated-cell-43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(starwars, sex, gender)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-43" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-43" data-code-lines="1" data-code-annotation="1">Get the unique value in the sex and gender columns.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  sex            gender   
+  &lt;chr&gt;          &lt;chr&gt;    
+1 male           masculine
+2 none           masculine
+3 female         feminine 
+4 hermaphroditic masculine
+5 &lt;NA&gt;           &lt;NA&gt;     
+6 none           feminine </code></pre>
+</div>
+</div>
+</section>
+<section id="summarise" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="summarise">summarise()</h4>
+<p>The <code>summarise()</code> function is used to create summary statistics of variables in a data frame (or tibble). It reduces multiple values down to a single value per group, making it essential for data aggregation and summary analysis.</p>
+<section id="calculating-a-single-summary-statistic" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="calculating-a-single-summary-statistic">Calculating a single summary statistic</h5>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-44"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-44" data-target-annotation="1">1</button><span id="annotated-cell-44-1" class="code-annotation-target"><a href="#annotated-cell-44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(starwars, <span class="at">avg_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-44" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-44" data-code-lines="1" data-code-annotation="1">Get the average mass of all character in the dataset.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  avg_mass
+     &lt;dbl&gt;
+1     97.3</code></pre>
+</div>
+</div>
+</section>
+<section id="calculating-multiple-summary-statistics" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="calculating-multiple-summary-statistics">Calculating multiple summary statistics</h5>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-45"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-45-1"><a href="#annotated-cell-45-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-45-2"><a href="#annotated-cell-45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-45" data-target-annotation="1">1</button><span id="annotated-cell-45-3" class="code-annotation-target"><a href="#annotated-cell-45-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">min_mass =</span> <span class="fu">min</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-45" data-target-annotation="2">2</button><span id="annotated-cell-45-4" class="code-annotation-target"><a href="#annotated-cell-45-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-45" data-target-annotation="3">3</button><span id="annotated-cell-45-5" class="code-annotation-target"><a href="#annotated-cell-45-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">max_mass =</span> <span class="fu">max</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="annotated-cell-45-6"><a href="#annotated-cell-45-6" aria-hidden="true" tabindex="-1"></a>  )  </span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-45" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-45" data-code-lines="3" data-code-annotation="1">Get the minimum mass of all character.</span>
+</dd>
+<dt data-target-cell="annotated-cell-45" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-45" data-code-lines="4" data-code-annotation="2">Get the average mass</span>
+</dd>
+<dt data-target-cell="annotated-cell-45" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-45" data-code-lines="5" data-code-annotation="3">Get the maximum mass of all character.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  min_mass avg_mass max_mass
+     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1       15     97.3     1358</code></pre>
+</div>
+</div>
+</section>
+<section id="using-summarise-with-across-for-multiple-columns" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="using-summarise-with-across-for-multiple-columns">Using summarise() with across() for multiple columns</h5>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-46"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-46-1"><a href="#annotated-cell-46-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-46-2"><a href="#annotated-cell-46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="annotated-cell-46-3"><a href="#annotated-cell-46-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-46" data-target-annotation="1">1</button><span id="annotated-cell-46-4" class="code-annotation-target"><a href="#annotated-cell-46-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(height, mass, birth_year),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-46" data-target-annotation="2">2</button><span id="annotated-cell-46-5" class="code-annotation-target"><a href="#annotated-cell-46-5" aria-hidden="true" tabindex="-1"></a>      \(x) <span class="fu">max</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-46" data-target-annotation="3">3</button><span id="annotated-cell-46-6" class="code-annotation-target"><a href="#annotated-cell-46-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">.names =</span> <span class="st">"max_{col}"</span></span>
+<span id="annotated-cell-46-7"><a href="#annotated-cell-46-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="annotated-cell-46-8"><a href="#annotated-cell-46-8" aria-hidden="true" tabindex="-1"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-46" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-46" data-code-lines="4" data-code-annotation="1">Summarize across multiple columns</span>
+</dd>
+<dt data-target-cell="annotated-cell-46" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-46" data-code-lines="5" data-code-annotation="2">Use the <code>max()</code> aggregate function.</span>
+</dd>
+<dt data-target-cell="annotated-cell-46" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-46" data-code-lines="6" data-code-annotation="3">rename the summarized column.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  max_height max_mass max_birth_year
+       &lt;int&gt;    &lt;dbl&gt;          &lt;dbl&gt;
+1        264     1358            896</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <!------ SUMMARISE --------------------------------------------------------></p>
+</section>
+</section>
+</section>
+<section id="grouped-data" class="level3" data-number="14.3.7">
+<h3 data-number="14.3.7" class="anchored" data-anchor-id="grouped-data"><span class="header-section-number">14.3.7</span> Grouped data</h3>
+<section id="aggregate-summary" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="aggregate-summary">Aggregate summary</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-47"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-47-1"><a href="#annotated-cell-47-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span> </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-47" data-target-annotation="1">1</button><span id="annotated-cell-47-2" class="code-annotation-target"><a href="#annotated-cell-47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-47" data-target-annotation="2">2</button><span id="annotated-cell-47-3" class="code-annotation-target"><a href="#annotated-cell-47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-47" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-47" data-code-lines="2" data-code-annotation="1">Group the data by character sex (the sex variable)</span>
+</dd>
+<dt data-target-cell="annotated-cell-47" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-47" data-code-lines="3" data-code-annotation="2">Get the average body mass of each group.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  sex            avg_mass
+  &lt;chr&gt;             &lt;dbl&gt;
+1 female             54.7
+2 hermaphroditic   1358  
+3 male               80.2
+4 none               69.8
+5 &lt;NA&gt;               81  </code></pre>
+</div>
+</div>
+<p>The <code>summarise()</code> function also have an argument called <code>.by</code> which allows a selection of columns to group by for just a single operation.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-48"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-48-1"><a href="#annotated-cell-48-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-48-2"><a href="#annotated-cell-48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-48" data-target-annotation="1">1</button><span id="annotated-cell-48-3" class="code-annotation-target"><a href="#annotated-cell-48-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-48" data-target-annotation="2">2</button><span id="annotated-cell-48-4" class="code-annotation-target"><a href="#annotated-cell-48-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> sex</span>
+<span id="annotated-cell-48-5"><a href="#annotated-cell-48-5" aria-hidden="true" tabindex="-1"></a>  ) </span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-48" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-48" data-code-lines="3" data-code-annotation="1">Get the average body mass of each group.</span>
+</dd>
+<dt data-target-cell="annotated-cell-48" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-48" data-code-lines="4" data-code-annotation="2">Group the data by character sex (the sex variable)</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  sex            avg_mass
+  &lt;chr&gt;             &lt;dbl&gt;
+1 male               80.2
+2 none               69.8
+3 female             54.7
+4 hermaphroditic   1358  
+5 &lt;NA&gt;               81  </code></pre>
+</div>
+</div>
+</section>
+<section id="window-function-with-mutate" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="window-function-with-mutate">Window function with mutate()</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-49"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-49-1"><a href="#annotated-cell-49-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-49" data-target-annotation="1">1</button><span id="annotated-cell-49-2" class="code-annotation-target"><a href="#annotated-cell-49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(skin_color) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-49" data-target-annotation="2">2</button><span id="annotated-cell-49-3" class="code-annotation-target"><a href="#annotated-cell-49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">skin_color_avg_birth_year =</span> <span class="fu">mean</span>(birth_year, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-49" data-target-annotation="3">3</button><span id="annotated-cell-49-4" class="code-annotation-target"><a href="#annotated-cell-49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(skin_color, birth_year, skin_color_avg_birth_year)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-49" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-49" data-code-lines="2" data-code-annotation="1">segment the data by skin_color</span>
+</dd>
+<dt data-target-cell="annotated-cell-49" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-49" data-code-lines="3" data-code-annotation="2">For each group, calculate the average birth year.</span>
+</dd>
+<dt data-target-cell="annotated-cell-49" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-49" data-code-lines="4" data-code-annotation="3">select only the skin_color, birth_year and the calculated skin_color_avg_birth_year columns</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 3
+# Groups:   skin_color [31]
+   skin_color  birth_year skin_color_avg_birth_year
+   &lt;chr&gt;            &lt;dbl&gt;                     &lt;dbl&gt;
+ 1 fair              19                        57.7
+ 2 gold             112                       112  
+ 3 white, blue       33                        33  
+ 4 white             41.9                      41.9
+ 5 light             19                        37.5
+ 6 light             52                        37.5
+ 7 light             47                        37.5
+ 8 white, red        NA                       NaN  
+ 9 light             24                        37.5
+10 fair              57                        57.7
+# ℹ 77 more rows</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <!------ GROUP_BY --------------------------------------------------------></p>
+</section>
+</section>
+<section id="arrange" class="level3" data-number="14.3.8">
+<h3 data-number="14.3.8" class="anchored" data-anchor-id="arrange"><span class="header-section-number">14.3.8</span> arrange()</h3>
+</section>
+<section id="joins" class="level3" data-number="14.3.9">
+<h3 data-number="14.3.9" class="anchored" data-anchor-id="joins"><span class="header-section-number">14.3.9</span> joins</h3>
+</section>
+<section id="bind-row-column" class="level3" data-number="14.3.10">
+<h3 data-number="14.3.10" class="anchored" data-anchor-id="bind-row-column"><span class="header-section-number">14.3.10</span> bind row &amp; column</h3>
+</section>
+</section>
+<section id="stringr" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="stringr"><span class="header-section-number">14.4</span> stringr</h2>
+<section id="str_length" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="str_length"><span class="header-section-number">14.4.1</span> str_length()</h3>
+</section>
+<section id="case-str_to_upper-str_to_lower-str_to_title-str_to_sentence" class="level3" data-number="14.4.2">
+<h3 data-number="14.4.2" class="anchored" data-anchor-id="case-str_to_upper-str_to_lower-str_to_title-str_to_sentence"><span class="header-section-number">14.4.2</span> case() ||&gt; str_to_upper(), str_to_lower(), str_to_title(), str_to_sentence</h3>
+</section>
+<section id="str_detect" class="level3" data-number="14.4.3">
+<h3 data-number="14.4.3" class="anchored" data-anchor-id="str_detect"><span class="header-section-number">14.4.3</span> str_detect()</h3>
+</section>
+<section id="str_extract-str_extract_all" class="level3" data-number="14.4.4">
+<h3 data-number="14.4.4" class="anchored" data-anchor-id="str_extract-str_extract_all"><span class="header-section-number">14.4.4</span> str_extract() || str_extract_all()</h3>
+</section>
+<section id="str_glue" class="level3" data-number="14.4.5">
+<h3 data-number="14.4.5" class="anchored" data-anchor-id="str_glue"><span class="header-section-number">14.4.5</span> str_glue()</h3>
+</section>
+<section id="str_remove-str_remove_all" class="level3" data-number="14.4.6">
+<h3 data-number="14.4.6" class="anchored" data-anchor-id="str_remove-str_remove_all"><span class="header-section-number">14.4.6</span> str_remove() || str_remove_all()</h3>
+</section>
+<section id="str_replace-str_replace_all" class="level3" data-number="14.4.7">
+<h3 data-number="14.4.7" class="anchored" data-anchor-id="str_replace-str_replace_all"><span class="header-section-number">14.4.7</span> str_replace() || str_replace_all()</h3>
+</section>
+<section id="str_split" class="level3" data-number="14.4.8">
+<h3 data-number="14.4.8" class="anchored" data-anchor-id="str_split"><span class="header-section-number">14.4.8</span> str_split()</h3>
+</section>
+<section id="str_trim" class="level3" data-number="14.4.9">
+<h3 data-number="14.4.9" class="anchored" data-anchor-id="str_trim"><span class="header-section-number">14.4.9</span> str_trim()</h3>
+</section>
+</section>
+<section id="tidyr" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="tidyr"><span class="header-section-number">14.5</span> tidyr</h2>
+<section id="drop_na" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="drop_na"><span class="header-section-number">14.5.1</span> drop_na()</h3>
+</section>
+<section id="reshaping-data-pivot_longer-pivot_wider" class="level3" data-number="14.5.2">
+<h3 data-number="14.5.2" class="anchored" data-anchor-id="reshaping-data-pivot_longer-pivot_wider"><span class="header-section-number">14.5.2</span> Reshaping data | pivot_longer() pivot_wider()</h3>
+</section>
+<section id="separate" class="level3" data-number="14.5.3">
+<h3 data-number="14.5.3" class="anchored" data-anchor-id="separate"><span class="header-section-number">14.5.3</span> Separate||</h3>
+<section id="separate_wider_delim-separate_wider_position-separate_wider_regex." class="level4" data-number="14.5.3.1">
+<h4 data-number="14.5.3.1" class="anchored" data-anchor-id="separate_wider_delim-separate_wider_position-separate_wider_regex."><span class="header-section-number">14.5.3.1</span> separate_wider_delim, separate_wider_position, separate_wider_regex.</h4>
+</section>
+<section id="separate_longer_delim-separate_longer_position" class="level4" data-number="14.5.3.2">
+<h4 data-number="14.5.3.2" class="anchored" data-anchor-id="separate_longer_delim-separate_longer_position"><span class="header-section-number">14.5.3.2</span> separate_longer_delim, separate_longer_position</h4>
+</section>
+</section>
+<section id="unite" class="level3" data-number="14.5.4">
+<h3 data-number="14.5.4" class="anchored" data-anchor-id="unite"><span class="header-section-number">14.5.4</span> unite()</h3>
+</section>
+</section>
+<section id="purrr" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="purrr"><span class="header-section-number">14.6</span> purrr</h2>
+<section id="map-map2-." class="level3" data-number="14.6.1">
+<h3 data-number="14.6.1" class="anchored" data-anchor-id="map-map2-."><span class="header-section-number">14.6.1</span> map || map2, ….</h3>
+</section>
+<section id="list-manipulation" class="level3" data-number="14.6.2">
+<h3 data-number="14.6.2" class="anchored" data-anchor-id="list-manipulation"><span class="header-section-number">14.6.2</span> list manipulation</h3>
+</section>
+</section>
+<section id="lubridate" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="lubridate"><span class="header-section-number">14.7</span> lubridate</h2>
+<section id="today" class="level3" data-number="14.7.1">
+<h3 data-number="14.7.1" class="anchored" data-anchor-id="today"><span class="header-section-number">14.7.1</span> today()</h3>
+</section>
+<section id="parse-date" class="level3" data-number="14.7.2">
+<h3 data-number="14.7.2" class="anchored" data-anchor-id="parse-date"><span class="header-section-number">14.7.2</span> parse date</h3>
+</section>
+<section id="year-quarter-month-day" class="level3" data-number="14.7.3">
+<h3 data-number="14.7.3" class="anchored" data-anchor-id="year-quarter-month-day"><span class="header-section-number">14.7.3</span> year, quarter, month, day</h3>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
+          }
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          trigger: 'click',
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          positionFixed: true,
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./r_operators.html" class="pagination-link" aria-label="Operators">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Operators</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./python_programming.html" class="pagination-link" aria-label="Python">
+        <span class="nav-page-text">Python</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
