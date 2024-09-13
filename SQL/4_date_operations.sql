@@ -1,4 +1,4 @@
--- Using the ProductDeliveryDB -----------------------
+-- Use the ProductDeliveryDB -----------------------
 SELECT * FROM OrderDelivery;
 
 -- Get Current Date ===========================================================================
