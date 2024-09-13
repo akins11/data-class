@@ -58,6 +58,31 @@ SELECT
 FROM OrderDelivery;
 
 
+-- Date Formating =============================================================================
+SELECT TO_CHAR(CURRENT_DATE, 'DD-Mon-YYYY');
+
+SELECT 
+	order_timestamp, 
+	TO_CHAR(order_timestamp, 'DD-Mon-YYYY') AS formatted_date
+FROM OrderDelivery;
+
+-- full month format
+SELECT TO_CHAR(CURRENT_DATE, 'FMMonth DD, YYYY');
+
+SELECT 
+	order_timestamp, 
+	TO_CHAR(order_timestamp, 'FMMonth DD, YYYY') AS formatted_date
+FROM OrderDelivery
+ORDER BY order_timestamp;
+
+-- full month name including day name.
+SELECT TO_CHAR(CURRENT_DATE, 'Day, FMMonth DD, YYYY');
+
+SELECT 
+	order_timestamp, 
+	TO_CHAR(order_timestamp, 'Day, FMMonth DD, YYYY') AS formatted_date
+FROM OrderDelivery
+ORDER BY order_timestamp;
 
 -- Date and Time Calculations =================================================================
 -- INTERVAL - Adds a specified time interval to a date -----------------------
@@ -117,4 +142,5 @@ WHERE EXTRACT(DOW FROM order_timestamp) IN (0, 6); -- 0 = Sunday, 6 = Saturday
 SELECT *
 FROM OrderDelivery
 WHERE EXTRACT(DOW FROM order_timestamp) NOT IN (0, 6);
+
 

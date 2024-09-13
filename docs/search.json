@@ -546,8 +546,8 @@
     "objectID": "sql_text_data.html#string-replacement-and-removal",
     "href": "sql_text_data.html#string-replacement-and-removal",
     "title": "4  Working with Text",
-    "section": "4.4 String replacement and removal",
-    "text": "4.4 String replacement and removal\n\n4.4.1 REPLACE\nThis function replace occurrences of a substring within a string or the whole string.\n\n\n\nSQL\n\nSELECT \n1  current_health, REPLACE(current_health, 'K', 'Okay') AS updated_current_health\nFROM tableName\n\n\n\n1\n\nReplace all ‘K’ with the string ‘Okay’\n\n\n\n\n\n\n\n\n\n  \n    \n      current_health\n      updated_current_health\n    \n  \n  \n    Bad\nBad\n    Good\nGood\n    K\nOkay\n    Bad\nBad\n    Good\nGood\n    K\nOkay\n  \n  \n  \n\n\n\n\n\n\n4.4.2 Trim strings\n\nTRIM:\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  TRIM(' Hello World ') AS trimmed_string;\n\n\n\n1\n\nRemove both leading and trailing spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      trimmed_string\n    \n  \n  \n    \"          Hello World        \"\n\"Hello World\"\n  \n  \n  \n\n\n\n\n\n\nLTRIM (left trim):\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  LTRIM(' Hello World ') AS left_trimmed_string;\n\n\n\n1\n\nRemove leading spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      left_trimmed_string\n    \n  \n  \n    \"        Hello World        \"\n\"Hello World        \"\n  \n  \n  \n\n\n\n\n\n\nRTRIM (right trim):\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  RTRIM(' Hello World ') AS right_trimmed_string;\n\n\n\n1\n\nRemove trailing spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      right_trimmed_string\n    \n  \n  \n    \"        Hello World        \"\n\"        Hello World\"",
+    "section": "4.5 String replacement and removal",
+    "text": "4.5 String replacement and removal\n\n4.5.1 REPLACE\nThis function replace occurrences of a substring within a string or the whole string.\n\n\n\nSQL\n\nSELECT \n1  current_health, REPLACE(current_health, 'K', 'Okay') AS updated_current_health\nFROM tableName\n\n\n\n1\n\nReplace all ‘K’ with the string ‘Okay’\n\n\n\n\n\n\n\n\n\n  \n    \n      current_health\n      updated_current_health\n    \n  \n  \n    Bad\nBad\n    Good\nGood\n    K\nOkay\n    Bad\nBad\n    Good\nGood\n    K\nOkay\n  \n  \n  \n\n\n\n\n\n\n4.5.2 Trim strings\n\nTRIM:\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  TRIM(' Hello World ') AS trimmed_string;\n\n\n\n1\n\nRemove both leading and trailing spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      trimmed_string\n    \n  \n  \n    \"          Hello World        \"\n\"Hello World\"\n  \n  \n  \n\n\n\n\n\n\nLTRIM (left trim):\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  LTRIM(' Hello World ') AS left_trimmed_string;\n\n\n\n1\n\nRemove leading spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      left_trimmed_string\n    \n  \n  \n    \"        Hello World        \"\n\"Hello World        \"\n  \n  \n  \n\n\n\n\n\n\nRTRIM (right trim):\n\n\n\nSQL\n\nSELECT \n  ' Hello World ' AS with_whitespace\n1  RTRIM(' Hello World ') AS right_trimmed_string;\n\n\n\n1\n\nRemove trailing spaces\n\n\n\n\n\n\n\n\n\n  \n    \n      with_whitespace\n      right_trimmed_string\n    \n  \n  \n    \"        Hello World        \"\n\"        Hello World\"",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Text</span>"
@@ -557,8 +557,8 @@
     "objectID": "sql_text_data.html#string-formatting",
     "href": "sql_text_data.html#string-formatting",
     "title": "4  Working with Text",
-    "section": "4.5 String formatting",
-    "text": "4.5 String formatting\n\n4.5.1 UPPER and LOWER\n\n\n\nSQL\n\nSELECT  \n  first_name,\n1  UPPER(first_name) AS to_upper_case,\n2  LOWER(first_name) AS to_lower_case,\n3  UPPER(LEFT(column_name, 1)) + LOWER(SUBSTRING(column_name, 2, LEN(column_name))) AS to_title_case\n\n\n\n1\n\nConvert names to upper case.\n\n2\n\nConvert names to lower case.\n\n3\n\nConvert names to title case.\n\n\n\n\n\n\n\n\n\n  \n    \n      first_name\n      to_upper_case\n      to_lower_case\n      to_title_case\n    \n  \n  \n    hARPER\nHARPER\nharper\nHarper\n    jANE\nJANE\njane\nJane\n    cOLLINS\nCOLLINS\ncollins\nCollins\n    bROWN\nBROWN\nbrown\nBrown\n  \n  \n  \n\n\n\n\n\n\n4.5.2 FORMAT\n\n\n\nSQL\n\n-- Format a number with commas\nSELECT \n  1234567.89 AS number,\n1  FORMAT(1234567.89, 'N2') AS formatted_number;\n\n-- Format a date\nSELECT \n  GETDATE() AS current_date,\n2  FORMAT(GETDATE(), 'MMMM dd, yyyy') AS formatted_date;\n\n\n\n1\n\nFormat a number with commas.\n\n2\n\nFormat a date.\n\n\n\n\n\n\n\n\n\n  \n    \n      number\n      formatted_number\n    \n  \n  \n    1234568\n1,234,567.89\n  \n  \n  \n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n      forma_date\n    \n  \n  \n    2024-8-31\nAugust 31, 2024",
+    "section": "4.6 String formatting",
+    "text": "4.6 String formatting\n\n4.6.1 UPPER and LOWER\n\n\n\nSQL\n\nSELECT  \n  first_name,\n1  UPPER(first_name) AS to_upper_case,\n2  LOWER(first_name) AS to_lower_case,\n3  UPPER(LEFT(column_name, 1)) + LOWER(SUBSTRING(column_name, 2, LEN(column_name))) AS to_title_case\n\n\n\n1\n\nConvert names to upper case.\n\n2\n\nConvert names to lower case.\n\n3\n\nConvert names to title case.\n\n\n\n\n\n\n\n\n\n  \n    \n      first_name\n      to_upper_case\n      to_lower_case\n      to_title_case\n    \n  \n  \n    hARPER\nHARPER\nharper\nHarper\n    jANE\nJANE\njane\nJane\n    cOLLINS\nCOLLINS\ncollins\nCollins\n    bROWN\nBROWN\nbrown\nBrown\n  \n  \n  \n\n\n\n\n\n\n4.6.2 FORMAT\n\n\n\nSQL\n\n-- Format a number with commas\nSELECT \n  1234567.89 AS number,\n1  FORMAT(1234567.89, 'N2') AS formatted_number;\n\n-- Format a date\nSELECT \n  GETDATE() AS current_date,\n2  FORMAT(GETDATE(), 'MMMM dd, yyyy') AS formatted_date;\n\n\n\n1\n\nFormat a number with commas.\n\n2\n\nFormat a date.\n\n\n\n\n\n\n\n\n\n  \n    \n      number\n      formatted_number\n    \n  \n  \n    1234568\n1,234,567.89\n  \n  \n  \n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n      forma_date\n    \n  \n  \n    2024-8-31\nAugust 31, 2024",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Text</span>"
@@ -568,8 +568,8 @@
     "objectID": "sql_text_data.html#string-aggregation",
     "href": "sql_text_data.html#string-aggregation",
     "title": "4  Working with Text",
-    "section": "4.6 String aggregation",
-    "text": "4.6 String aggregation\nConcatenate values from multiple rows into a single string.\n\n\n\n\n\n  \n    \n      split_value\n    \n  \n  \n    Category One\n    Category Two\n    Category Three\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\n1SELECT STRING_AGG(product_category, ', ') AS aggregated_string\nFROM tableName;\n\n\n\n1\n\nCombine all categories (rows) into a single string and separated by a comma (,)\n\n\n\n\n\n\n\n\n\n  \n    \n      product_category\n    \n  \n  \n    Category One, Category Two, Category Three",
+    "section": "4.7 String aggregation",
+    "text": "4.7 String aggregation\nConcatenate values from multiple rows into a single string.\n\n\n\n\n\n  \n    \n      split_value\n    \n  \n  \n    Category One\n    Category Two\n    Category Three\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\n1SELECT STRING_AGG(product_category, ', ') AS aggregated_string\nFROM tableName;\n\n\n\n1\n\nCombine all categories (rows) into a single string and separated by a comma (,)\n\n\n\n\n\n\n\n\n\n  \n    \n      product_category\n    \n  \n  \n    Category One, Category Two, Category Three",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Text</span>"
@@ -579,8 +579,8 @@
     "objectID": "sql_text_data.html#string-splitting",
     "href": "sql_text_data.html#string-splitting",
     "title": "4  Working with Text",
-    "section": "4.7 String splitting",
-    "text": "4.7 String splitting\nSplit a string into multiple rows based on a delimiter.\n\n\n\n\n\n  \n    \n      members\n    \n  \n  \n    John,Paul,George,Ringo\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\n1SELECT string_to_array('John,Paul,George,Ringo', ',') AS members;\n\n\n\n1\n\nSplit the ‘Hello,World,SQL,Server’ into multiple rows using the (,) comma.\n\n\n\n\n\n\n\n\n\n  \n    \n      members\n    \n  \n  \n    {John,Paul,George,Ringo}",
+    "section": "4.8 String splitting",
+    "text": "4.8 String splitting\nSplit a string into multiple rows based on a delimiter.\n\n\n\n\n\n  \n    \n      members\n    \n  \n  \n    John,Paul,George,Ringo\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\n1SELECT string_to_array('John,Paul,George,Ringo', ',') AS members;\n\n\n\n1\n\nSplit the ‘Hello,World,SQL,Server’ into multiple rows using the (,) comma.\n\n\n\n\n\n\n\n\n\n  \n    \n      members\n    \n  \n  \n    {John,Paul,George,Ringo}",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Text</span>"
@@ -656,8 +656,8 @@
     "objectID": "sql_date_data.html#date-and-time-calculations",
     "href": "sql_date_data.html#date-and-time-calculations",
     "title": "5  Working with Date",
-    "section": "5.3 Date and time calculations",
-    "text": "5.3 Date and time calculations\n\nADD:\nAdd a specified number of units (e.g., day, month, year) to a date.\n\n\n\nSQL\n\nSELECT \n  NOW() AS current_date_time,\n  NOW() + INTERVAL '10 days' AS date_plus_ten_days,\n  NOW() + INTERVAL '2 months' AS date_plus_two_months,\n  NOW() + INTERVAL '1 year' AS date_plus_one_year;\n\n\n\n\n\n\n\n  \n    \n      current_date_time\n      date_plus_seven_days\n      date_plus_two_months\n      date_plus_one_year\n    \n  \n  \n    2024-09-05 14:25:04.569941\n2024-09-12 14:25:04.569941\n2024-11-05 14:25:04.569941\n2025-09-05 14:25:04.569941\n  \n  \n  \n\n\n\n\n\n\nDATEDIFF:\nCalculates the difference between two dates in a specified unit.\n\n\n\nSQL\n\nSELECT \n    '2023-12-31'::date AS date, \n    ('2023-12-31'::date - '2023-01-01'::date) AS days_difference;\n\n\n\n\n\n\n\n  \n    \n      date\n      days_difference\n    \n  \n  \n    2023-12-31\n364",
+    "section": "5.4 Date and time calculations",
+    "text": "5.4 Date and time calculations\n\nADD:\nAdd a specified number of units (e.g., day, month, year) to a date.\n\n\n\nSQL\n\nSELECT \n  NOW() AS current_date_time,\n  NOW() + INTERVAL '10 days' AS date_plus_ten_days,\n  NOW() + INTERVAL '2 months' AS date_plus_two_months,\n  NOW() + INTERVAL '1 year' AS date_plus_one_year;\n\n\n\n\n\n\n\n  \n    \n      current_date_time\n      date_plus_seven_days\n      date_plus_two_months\n      date_plus_one_year\n    \n  \n  \n    2024-09-13 03:17:28.128996\n2024-09-20 03:17:28.128996\n2024-11-13 03:17:28.128996\n2025-09-13 03:17:28.128996\n  \n  \n  \n\n\n\n\n\n\nDATEDIFF:\nCalculates the difference between two dates in a specified unit.\n\n\n\nSQL\n\nSELECT \n    '2023-12-31'::date AS date, \n    ('2023-12-31'::date - '2023-01-01'::date) AS days_difference;\n\n\n\n\n\n\n\n  \n    \n      date\n      days_difference\n    \n  \n  \n    2023-12-31\n364",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with Date</span>"
@@ -678,8 +678,8 @@
     "objectID": "sql_date_data.html#date-and-time-comparison",
     "href": "sql_date_data.html#date-and-time-comparison",
     "title": "5  Working with Date",
-    "section": "5.4 Date and time comparison",
-    "text": "5.4 Date and time comparison\n\n\n\nSQL\n\nSELECT \n  CASE\n    WHEN '2024-08-26'::DATE &gt; '2024-08-01'::DATE THEN 'Later'\n    ELSE 'Earlier or Same'\n  END AS comparison_result;\n\n\n\n\n\n\n\n  \n    \n      comparison_result\n    \n  \n  \n    Later",
+    "section": "5.5 Date and time comparison",
+    "text": "5.5 Date and time comparison\n\n\n\nSQL\n\nSELECT \n  CASE\n    WHEN '2024-08-26'::DATE &gt; '2024-08-01'::DATE THEN 'Later'\n    ELSE 'Earlier or Same'\n  END AS comparison_result;\n\n\n\n\n\n\n\n  \n    \n      comparison_result\n    \n  \n  \n    Later",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with Date</span>"
@@ -965,7 +965,7 @@
     "href": "sql_date_data.html#getting-the-current-date-and-time",
     "title": "5  Working with Date",
     "section": "",
-    "text": "Current date\n\n\n\nSQL\n\n1SELECT CURRENT_DATE AS current_date;\n\n\n\n1\n\nReturns the current date and time.\n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n    \n  \n  \n    2024-09-05\n  \n  \n  \n\n\n\n\n\n\nCurrent Time\n\n\n\nSQL\n\n1SELECT CURRENT_TIME AS current_time;\n\n\n\n1\n\nReturns the current date and time.\n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n    \n  \n  \n    11:28:02.918290+01:00\n  \n  \n  \n\n\n\n\n\n\nGet Timestamp:\n\n\n\nSQL\n\n1SELECT CURRENT_TIMESTAMP AS current_date_time;\n\n\n\n1\n\nReturns the current date and time (Timestamp).\n\n\n\n\n\n\n\n\n\n  \n    \n      high_precision_datetime\n    \n  \n  \n    2024-09-04 11:29:05.220186\n  \n  \n  \n\n\n\n\n\n\nMAKE_DATE:\nCreates a date from separate year, month, and day values:\n\n\n\nSQL\n\nSELECT \n  2023 AS year,\n  12 AS month,\n  31 AS day,\n  MAKE_DATE(2023, 12, 31) AS constructed_date;\n  \n\nSELECT \n  2023 AS year,\n  12 AS month,\n  31 AS day,\n  '2023-12-31'::DATE AS constructed_date;\n\n\n\n\n\n\n\n  \n    \n      year\n      month\n      day\n      constructed_date\n    \n  \n  \n    2023\n12\n31\n2023-12-31",
+    "text": "Current date\n\n\n\nSQL\n\n1SELECT CURRENT_DATE AS current_date;\n\n\n\n1\n\nReturns the current date and time.\n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n    \n  \n  \n    2024-09-13\n  \n  \n  \n\n\n\n\n\n\nCurrent Time\n\n\n\nSQL\n\n1SELECT CURRENT_TIME AS current_time;\n\n\n\n1\n\nReturns the current date and time.\n\n\n\n\n\n\n\n\n\n  \n    \n      current_date\n    \n  \n  \n    11:28:02.918290+01:00\n  \n  \n  \n\n\n\n\n\n\nGet Timestamp:\n\n\n\nSQL\n\n1SELECT CURRENT_TIMESTAMP AS current_date_time;\n\n\n\n1\n\nReturns the current date and time (Timestamp).\n\n\n\n\n\n\n\n\n\n  \n    \n      high_precision_datetime\n    \n  \n  \n    2024-09-04 11:29:05.220186\n  \n  \n  \n\n\n\n\n\n\nMAKE_DATE:\nCreates a date from separate year, month, and day values:\n\n\n\nSQL\n\nSELECT \n  2023 AS year,\n  12 AS month,\n  31 AS day,\n  MAKE_DATE(2023, 12, 31) AS constructed_date;\n  \n\nSELECT \n  2023 AS year,\n  12 AS month,\n  31 AS day,\n  '2023-12-31'::DATE AS constructed_date;\n\n\n\n\n\n\n\n  \n    \n      year\n      month\n      day\n      constructed_date\n    \n  \n  \n    2023\n12\n31\n2023-12-31",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with Date</span>"
@@ -1155,8 +1155,8 @@
     "objectID": "sql_text_data.html#task",
     "href": "sql_text_data.html#task",
     "title": "4  Working with Text",
-    "section": "4.8 Task",
-    "text": "4.8 Task",
+    "section": "4.10 Task",
+    "text": "4.10 Task",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Text</span>"
@@ -1166,8 +1166,8 @@
     "objectID": "sql_date_data.html#task",
     "href": "sql_date_data.html#task",
     "title": "5  Working with Date",
-    "section": "5.5 Task",
-    "text": "5.5 Task",
+    "section": "5.6 Task",
+    "text": "5.6 Task",
     "crumbs": [
       "SQL",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with Date</span>"
@@ -1544,6 +1544,39 @@
     "crumbs": [
       "R",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#string-search",
+    "href": "sql_text_data.html#string-search",
+    "title": "4  Working with Text",
+    "section": "4.4 String search",
+    "text": "4.4 String search\n\n4.4.1 SIMILAR TO\n\n\n\nSQL\n\nSELECT * \nFROM tableName \n1WHERE column_name SIMILAR TO '%(word1|word2)%';\n\n\n\n1\n\nGet all records with text word1 or word2\n\n\n\n\nExample:\n\n\n\nSQL\n\nSELECT customer_id, category\nFROM tableName\n1WHERE category SIMILAR TO '%(VIP|Regular)%';\n\n\n\n1\n\nGet all customers in the VIP and Regular category.\n\n\n\n\n\n\n\n\n\n  \n    \n      customer_id\n      category\n    \n  \n  \n    1\nRegular\n    2\nVIP\n    3\nVIP\n    4\nRegular\n    5\nVIP",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_text_data.html#regular-expression-functions",
+    "href": "sql_text_data.html#regular-expression-functions",
+    "title": "4  Working with Text",
+    "section": "4.9 Regular expression functions",
+    "text": "4.9 Regular expression functions\n\n4.9.1 regexp_match\nThe regexp_match() function is used to match a string against a regular expression pattern.\n\n\n\nSQL\n\nSELECT regexp_match('Hello World', 'World') AS match_word;\n\n\n\n\n\n\n\n  \n    \n      match_word\n    \n  \n  \n    {World}\n  \n  \n  \n\n\n\n\nUsing Flags: We can perform a case-insensitive search, we can use the ‘i’ flag.\n\n\n\nSQL\n\n1SELECT regexp_match('hello world', 'WORLD', 'i') AS case_match_word;\n\n\n\n1\n\nGet the string ‘WORLD’ regardless of the case\n\n\n\n\n\n\n\n\n\n  \n    \n      case_match_word\n    \n  \n  \n    {World}\n  \n  \n  \n\n\n\n\n\n\n\nSQL\n\n1SELECT regexp_match('foo123bar', '\\d+') AS digits;\n\n\n\n1\n\nGet all digits in the “foo123bar” string.\n\n\n\n\n\n\n\n\n\n  \n    \n      digits\n    \n  \n  \n    {123}\n  \n  \n  \n\n\n\n\n\n\n\n4.9.2 regexp_replace\nThe regexp_replace() function is used to replace occurrences of a substring that matches a regular expression pattern with another substring.\n\n\n\nSQL\n\nSELECT regexp_replace('I love cats', 'cats', 'dogs');\n\n\n\n\n\nSQL\n\n1SELECT regexp_replace('The current year is 2023', '\\d+', '2024') AS year_description;\n\n\n\n1\n\nReplace the value 2023 with 2024 using the ‘’ pattern.\n\n\n\n\n\n\n\n\n\n  \n    \n      year_description\n    \n  \n  \n    The current year is 2024\n  \n  \n  \n\n\n\n\nSuppose we have a string with multiple spaces, such as “This is an example”, and we want to replace multiple spaces with a single space.\n\n\n\nSQL\n\n1SELECT regexp_replace('This   is   an example', '\\s+', ' ', 'g') AS single_space;\n\n\n\n1\n\nReplace multiple space with a single space.\n\n\n\n\n\n\n\n\n\n  \n    \n      single_space\n    \n  \n  \n    This is an example\n  \n  \n  \n\n\n\n\nIn this case, ‘+’ matches one or more whitespace characters, and using ‘g’ as a flag indicates that all occurrences should be replaced. This will return:",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Working with Text</span>"
+    ]
+  },
+  {
+    "objectID": "sql_date_data.html#date-formats-using-to_char",
+    "href": "sql_date_data.html#date-formats-using-to_char",
+    "title": "5  Working with Date",
+    "section": "5.3 Date formats using TO_CHAR",
+    "text": "5.3 Date formats using TO_CHAR\nThere are varieties of date formatting options that can be used with the TO_CHAR() function.\n\n5.3.1 ISO format\nFor example YYYY-MM-DD\n\n\n\nSQL\n\n1SELECT TO_CHAR('2024-09-13'::DATE, 'YYY-MM-DD') AS iso_date;\n\n\n\n1\n\nThis returns the date in ISO format\n\n\n\n\n\n\n\n\n\n  \n    \n      iso_date\n    \n  \n  \n    2024-09-13\n  \n  \n  \n\n\n\n\n\n\n5.3.2 Full date format\nfor example October 05, 2023\n\n\n\nSQL\n\n1SELECT TO_CHAR('2024-09-13'::DATE, 'FMMonth DD, YYYY') AS full_date;\n\n\n\n1\n\nThis will return the full month name followed by the day and year\n\n\n\n\n\n\n\n\n\n  \n    \n      full_date\n    \n  \n  \n    September 13, 2024\n  \n  \n  \n\n\n\n\n\n\n5.3.3 Short date format\n\n\n\nSQL\n\n1SELECT TO_CHAR('2024-09-13'::DATE, 'MM/DD/YYYY') AS date_diff_punct;\n\n\n\n1\n\nThis format is commonly used in the United States\n\n\n\n\n\n\n\n\n\n  \n    \n      date_diff_punct\n    \n  \n  \n    09/14/2024\n  \n  \n  \n\n\n\n\n\n\n5.3.4 Day and month name\nFor example “Thursday, October 05, 2023”\n\n\n\nSQL\n\n1SELECT TO_CHAR('2024-09-13'::DATE, 'Day, FMMonth DD, YYYY') AS date_name;\n\n\n\n1\n\nThis will return the day of the week followed by the full month name and year\n\n\n\n\n\n\n\n\n\n  \n    \n      date_name\n    \n  \n  \n    Friday   , September 13, 2024\n  \n  \n  \n\n\n\n\n\n\n5.3.5 Weekday and month name abbreviation\n\n\n\nSQL\n\n1SELECT TO_CHAR('2024-09-13'::DATE, 'Dy Mon DD YYYY') AS week_abbr;\n\n\n\n1\n\nThis will return an abbreviated weekday name along with an abbreviated month name.\n\n\n\n\n\n\n\n\n\n  \n    \n      date_name\n    \n  \n  \n    Fri Sep 13 2024\n  \n  \n  \n\n\n\n\n\n\n5.3.6 Quarter of year\n\n\n\nSQL\n\n1SELECT TO_CHAR('2024-09-13'::DATE, 'Q YYYY') AS quarter_year;\n\n\n\n1\n\nThis will return the quarter of the year along with the year\n\n\n\n\n\n\n\n\n\n  \n    \n      quarter_year\n    \n  \n  \n    3 2024",
+    "crumbs": [
+      "SQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with Date</span>"
     ]
   }
 ]

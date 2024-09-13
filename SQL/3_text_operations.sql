@@ -144,6 +144,20 @@ SELECT LOWER(first_name), INITCAP(LOWER(first_name)) AS title_case_first_name
 FROM Customers;
 
 
+-- String search ======================================================================
+-- SIMILAR TO -----------------------------
+-- Get all customers in the VIP & Regular category
+SELECT * 
+FROM Customers 
+WHERE category SIMILAR TO '%(VIP|Regular)%';
+
+-- OR using the IN keyword
+SELECT * 
+FROM Customers
+WHERE category IN ('VIP', 'Regular');
+
+
+
 -- String splitting ===================================================================
 SELECT string_to_array('John,Paul,George,Ringo', ',') AS members;
 SELECT string_to_array('apple|banana|cherry', '|') AS fruits;
@@ -179,6 +193,41 @@ FROM Customers;
 -- Ordering Values
 SELECT STRING_AGG(first_name, ', ' ORDER BY first_name) AS customer_first_names
 FROM Customers;
+
+
+-- Regular Expressions =====================================================
+-- regexp_match ------------------------------------------
+SELECT regexp_match('Hello World', 'World');
+
+-- Get all digits in the string
+SELECT regexp_match('foo123bar', '\d+');
+
+SELECT regexp_match(REPLACE('$156,478', ',', ''), '\d+');
+SELECT (regexp_match(REPLACE('$156,478', ',', ''), '\d+'))[1];
+
+SELECT regexp_match('hello world', 'WORLD', 'i');
+
+-- regexp_replace -----------------------------------
+-- replace the a string based on a regular expression pattern
+SELECT regexp_replace('Hello 123 World', '\d+', 'NUM');
+
+SELECT regexp_replace('The current year is 2023', '\d+', '2024');
+
+-- Replace multiple space between words
+SELECT regexp_replace('This   is   an example', '\s+', ' ', 'g');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- Group names 
 -- SELECT category, STRING_AGG(first_name, ', ') AS customer_first_names
