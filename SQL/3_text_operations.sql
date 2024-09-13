@@ -1,4 +1,4 @@
--- Using the ProductDeliveryDB -----------------------
+-- Use the ProductDeliveryDB -----------------------
 
 -- Create the Customers table
 CREATE TABLE Customers (
