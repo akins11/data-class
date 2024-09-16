@@ -2,7 +2,7 @@
 CREATE DATABASE PropertyDB;
 
 
--- Create a sales table in the database
+-- Create a property value table in the database
 CREATE TABLE PropertyValue (
 	transaction_id SERIAL PRIMARY KEY,
 	property_address VARCHAR(200) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE PropertyValue (
 -- (Optional Check)
 SELECT * FROM PropertyValue;
 
-
+-- Insert records into the table
 COPY PropertyValue (
 	transaction_id,
 	property_address,
@@ -38,6 +38,7 @@ SELECT * FROM PropertyValue;
 -- 1. Create separate columns for the street, city and state information from the `property_address` column.
 SELECT property_address FROM PropertyValue;
 
+-- Example: splitting the string using the comma with extra space
 SELECT string_to_array('Allen Avenue, Lagos Island, Lagos', ', ');
 
 -- street name = `Allen Avenue`
@@ -102,8 +103,11 @@ ALTER COLUMN sales_date TYPE DATE USING sales_date::DATE;
 SELECT sales_date FROM PropertyValue;
 
 
--- 3. Replace bad inputed values in the advertised column ===============================
+-- 3. Replace bad inputed values in the advertised column ====================================
 SELECT advertised FROM PropertyValue;
+
+-- Get the different unique values from the advertised column.
+SELECT DISTINCT advertised FROM PropertyValue;
 
 -- false = 0, N, No >> No
 -- true  = 1, Y, Yes >> Yes
@@ -145,12 +149,12 @@ SELECT advertised FROM PropertyValue;
 -- 4. Convert the land value to a float data type ===============================
 SELECT land_value FROM PropertyValue;
 
-SELECT land_value, REPLACE(land_value, 'N', '')::FLOAT FROM PropertyValue;
+SELECT land_value, REPLACE(land_value, '₦', '')::FLOAT FROM PropertyValue;
 
 -- Update PropertyValue: land_value
 -- Drop the text value
 UPDATE PropertyValue
-SET land_value = REPLACE(land_value, 'N', '');
+SET land_value = REPLACE(land_value, '₦', '');
 
 -- (Optional check)
 SELECT land_value FROM PropertyValue;
@@ -163,19 +167,19 @@ ALTER COLUMN land_value TYPE FLOAT USING land_value::FLOAT;
 SELECT land_value FROM PropertyValue;
 
 
--- 5. Convert building_value column to a float data type ===================
+-- 5. Convert building_value column to a float data type ===========================================
 SELECT building_value FROM PropertyValue;
 
 SELECT 
 	building_value, 
-	REPLACE(building_value, 'N', '') AS replaced_naira_sign,
-	REPLACE(REPLACE(building_value, 'N', ''), ',', '')::FLOAT AS replaced_naira_sign_comma
+	REPLACE(building_value, '₦', '') AS replaced_naira_sign,
+	REPLACE(REPLACE(building_value, '₦', ''), ',', '')::FLOAT AS replaced_naira_sign_comma
 FROM PropertyValue;
 
 -- Update the PropertyValue: building_value
 -- remove the naira sign and comma
 UPDATE PropertyValue
-SET building_value = REPLACE(REPLACE(building_value, 'N', ''), ',', '');
+SET building_value = REPLACE(REPLACE(building_value, '₦', ''), ',', ''); 
 
 -- (Optional Check)
 SELECT building_value FROM PropertyValue;
@@ -198,13 +202,13 @@ SELECT
 FROM PropertyValue;
 
 
-SELECT REPLACE(total_value, 'N', '') 
+SELECT REPLACE(total_value, '₦', '') 
 FROM PropertyValue;
 
 -- Update PropertyValue: total_value
 -- replace the naira sign
 UPDATE PropertyValue
-SET total_value = REPLACE(total_value, 'N', '');
+SET total_value = REPLACE(total_value, '₦', '');
 
 -- (Optional Check)
 SELECT total_value FROM PropertyValue;
@@ -229,6 +233,8 @@ SELECT
 	land_value + building_value AS sum_land_building
 FROM PropertyValue;
 
+-- (Optional check)
+-- Get records where the calculated total_value is not equal to the sum of land_value and building_value.
 SELECT land_value, building_value, total_value, land_value + building_value AS sum_land_building
 FROM PropertyValue
 WHERE total_value != land_value + building_value;

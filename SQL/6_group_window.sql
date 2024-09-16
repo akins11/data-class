@@ -1,4 +1,4 @@
--- USE ProductOrderStatus ===================================
+-- USE ProductOrderStatus ===========================================
 
 
 -- Create Sales view table -----------------------
@@ -30,6 +30,9 @@ CSV HEADER;
 -- (Optional Check)
 SELECT * FROM SalesView;
 
+
+
+
 -- GROUP BY =========================================================================
 -- Single column
 SELECT 
@@ -57,14 +60,6 @@ SELECT COUNT(*), SUM(amount), AVG(amount), MIN(amount), MAX(amount)
 FROM SalesView 
 GROUP BY store_id;
 
-
--- HAVING Clause with GROUP BY
-SELECT store_id, SUM(amount) AS total_sales_amount
-FROM SalesView
-GROUP BY store_id
-HAVING SUM(amount) > 300;
-
-
 -- With Expressions within the group by clause
 SELECT  
 	EXTRACT(DAY FROM sales_date) AS day, 
@@ -72,6 +67,12 @@ SELECT
 FROM SalesView
 GROUP BY EXTRACT(DAY FROM sales_date);
 
+
+-- HAVING Clause with GROUP BY
+SELECT store_id, SUM(amount) AS total_sales_amount
+FROM SalesView
+GROUP BY store_id
+HAVING SUM(amount) > 300;
 
 
 -- WINDOW FUNCTION ===================================================================
