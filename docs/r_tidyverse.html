@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./python_programming.html" rel="next">
+<link href="./r_data_visualization.html" rel="next">
 <link href="./r_operators.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -244,6 +244,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tidyverse</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_data_visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Visualization</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -258,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./python_data_types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
   </div>
 </li>
       </ul>
@@ -275,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./powerbi_data_import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tool_source.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Data Tool Referenece</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Data Tool Referenece</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -308,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#csv-file" id="toc-csv-file" class="nav-link" data-scroll-target="#csv-file"><span class="header-section-number">14.2.1</span> .CSV file</a></li>
   <li><a href="#xlsx-file" id="toc-xlsx-file" class="nav-link" data-scroll-target="#xlsx-file"><span class="header-section-number">14.2.2</span> .xlsx file</a></li>
   </ul></li>
-  <li><a href="#dplyr" id="toc-dplyr" class="nav-link" data-scroll-target="#dplyr"><span class="header-section-number">14.3</span> dplyr</a>
+  <li><a href="#dplyr" id="toc-dplyr" class="nav-link" data-scroll-target="#dplyr"><span class="header-section-number">14.3</span> {dplyr}</a>
   <ul class="collapse">
   <li><a href="#selecting-columns" id="toc-selecting-columns" class="nav-link" data-scroll-target="#selecting-columns"><span class="header-section-number">14.3.1</span> Selecting columns</a></li>
   <li><a href="#renaming-columns" id="toc-renaming-columns" class="nav-link" data-scroll-target="#renaming-columns"><span class="header-section-number">14.3.2</span> Renaming columns</a></li>
@@ -317,40 +323,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#create-modify-and-delete-columns" id="toc-create-modify-and-delete-columns" class="nav-link" data-scroll-target="#create-modify-and-delete-columns"><span class="header-section-number">14.3.5</span> Create, modify and delete columns</a></li>
   <li><a href="#summarise-records" id="toc-summarise-records" class="nav-link" data-scroll-target="#summarise-records"><span class="header-section-number">14.3.6</span> Summarise records</a></li>
   <li><a href="#grouped-data" id="toc-grouped-data" class="nav-link" data-scroll-target="#grouped-data"><span class="header-section-number">14.3.7</span> Grouped data</a></li>
-  <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange"><span class="header-section-number">14.3.8</span> arrange()</a></li>
-  <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins"><span class="header-section-number">14.3.9</span> joins</a></li>
+  <li><a href="#sort-records" id="toc-sort-records" class="nav-link" data-scroll-target="#sort-records"><span class="header-section-number">14.3.8</span> Sort records</a></li>
+  <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins"><span class="header-section-number">14.3.9</span> Joins</a></li>
   <li><a href="#bind-row-column" id="toc-bind-row-column" class="nav-link" data-scroll-target="#bind-row-column"><span class="header-section-number">14.3.10</span> bind row &amp; column</a></li>
   </ul></li>
-  <li><a href="#stringr" id="toc-stringr" class="nav-link" data-scroll-target="#stringr"><span class="header-section-number">14.4</span> stringr</a>
+  <li><a href="#stringr" id="toc-stringr" class="nav-link" data-scroll-target="#stringr"><span class="header-section-number">14.4</span> {stringr}</a>
   <ul class="collapse">
-  <li><a href="#str_length" id="toc-str_length" class="nav-link" data-scroll-target="#str_length"><span class="header-section-number">14.4.1</span> str_length()</a></li>
-  <li><a href="#case-str_to_upper-str_to_lower-str_to_title-str_to_sentence" id="toc-case-str_to_upper-str_to_lower-str_to_title-str_to_sentence" class="nav-link" data-scroll-target="#case-str_to_upper-str_to_lower-str_to_title-str_to_sentence"><span class="header-section-number">14.4.2</span> case() ||&gt; str_to_upper(), str_to_lower(), str_to_title(), str_to_sentence</a></li>
-  <li><a href="#str_detect" id="toc-str_detect" class="nav-link" data-scroll-target="#str_detect"><span class="header-section-number">14.4.3</span> str_detect()</a></li>
-  <li><a href="#str_extract-str_extract_all" id="toc-str_extract-str_extract_all" class="nav-link" data-scroll-target="#str_extract-str_extract_all"><span class="header-section-number">14.4.4</span> str_extract() || str_extract_all()</a></li>
-  <li><a href="#str_glue" id="toc-str_glue" class="nav-link" data-scroll-target="#str_glue"><span class="header-section-number">14.4.5</span> str_glue()</a></li>
-  <li><a href="#str_remove-str_remove_all" id="toc-str_remove-str_remove_all" class="nav-link" data-scroll-target="#str_remove-str_remove_all"><span class="header-section-number">14.4.6</span> str_remove() || str_remove_all()</a></li>
-  <li><a href="#str_replace-str_replace_all" id="toc-str_replace-str_replace_all" class="nav-link" data-scroll-target="#str_replace-str_replace_all"><span class="header-section-number">14.4.7</span> str_replace() || str_replace_all()</a></li>
-  <li><a href="#str_split" id="toc-str_split" class="nav-link" data-scroll-target="#str_split"><span class="header-section-number">14.4.8</span> str_split()</a></li>
-  <li><a href="#str_trim" id="toc-str_trim" class="nav-link" data-scroll-target="#str_trim"><span class="header-section-number">14.4.9</span> str_trim()</a></li>
+  <li><a href="#string-length" id="toc-string-length" class="nav-link" data-scroll-target="#string-length"><span class="header-section-number">14.4.1</span> String length</a></li>
+  <li><a href="#case-format" id="toc-case-format" class="nav-link" data-scroll-target="#case-format"><span class="header-section-number">14.4.2</span> Case format</a></li>
+  <li><a href="#detect-the-presence-of-a-match" id="toc-detect-the-presence-of-a-match" class="nav-link" data-scroll-target="#detect-the-presence-of-a-match"><span class="header-section-number">14.4.3</span> Detect the presence of a match</a></li>
+  <li><a href="#subset-string" id="toc-subset-string" class="nav-link" data-scroll-target="#subset-string"><span class="header-section-number">14.4.4</span> Subset string</a></li>
+  <li><a href="#extract-a-match" id="toc-extract-a-match" class="nav-link" data-scroll-target="#extract-a-match"><span class="header-section-number">14.4.5</span> Extract a match</a></li>
+  <li><a href="#interpolating-strings" id="toc-interpolating-strings" class="nav-link" data-scroll-target="#interpolating-strings"><span class="header-section-number">14.4.6</span> Interpolating strings</a></li>
+  <li><a href="#remove-matched-patterns-from-string" id="toc-remove-matched-patterns-from-string" class="nav-link" data-scroll-target="#remove-matched-patterns-from-string"><span class="header-section-number">14.4.7</span> Remove matched patterns from string</a></li>
+  <li><a href="#replace-matches-with-a-new-string" id="toc-replace-matches-with-a-new-string" class="nav-link" data-scroll-target="#replace-matches-with-a-new-string"><span class="header-section-number">14.4.8</span> Replace matches with a new string</a></li>
+  <li><a href="#split-string-into-serveral-part" id="toc-split-string-into-serveral-part" class="nav-link" data-scroll-target="#split-string-into-serveral-part"><span class="header-section-number">14.4.9</span> Split string into serveral part</a></li>
+  <li><a href="#remove-whitespace" id="toc-remove-whitespace" class="nav-link" data-scroll-target="#remove-whitespace"><span class="header-section-number">14.4.10</span> Remove whitespace</a></li>
   </ul></li>
-  <li><a href="#tidyr" id="toc-tidyr" class="nav-link" data-scroll-target="#tidyr"><span class="header-section-number">14.5</span> tidyr</a>
+  <li><a href="#tidyr" id="toc-tidyr" class="nav-link" data-scroll-target="#tidyr"><span class="header-section-number">14.5</span> {tidyr}</a>
   <ul class="collapse">
-  <li><a href="#drop_na" id="toc-drop_na" class="nav-link" data-scroll-target="#drop_na"><span class="header-section-number">14.5.1</span> drop_na()</a></li>
-  <li><a href="#reshaping-data-pivot_longer-pivot_wider" id="toc-reshaping-data-pivot_longer-pivot_wider" class="nav-link" data-scroll-target="#reshaping-data-pivot_longer-pivot_wider"><span class="header-section-number">14.5.2</span> Reshaping data | pivot_longer() pivot_wider()</a></li>
-  <li><a href="#separate" id="toc-separate" class="nav-link" data-scroll-target="#separate"><span class="header-section-number">14.5.3</span> Separate||</a></li>
-  <li><a href="#unite" id="toc-unite" class="nav-link" data-scroll-target="#unite"><span class="header-section-number">14.5.4</span> unite()</a></li>
+  <li><a href="#drop-rows-containing-missing-values" id="toc-drop-rows-containing-missing-values" class="nav-link" data-scroll-target="#drop-rows-containing-missing-values"><span class="header-section-number">14.5.1</span> Drop rows containing missing values</a></li>
+  <li><a href="#reshaping-data" id="toc-reshaping-data" class="nav-link" data-scroll-target="#reshaping-data"><span class="header-section-number">14.5.2</span> Reshaping data</a></li>
+  <li><a href="#separate-character-column-values" id="toc-separate-character-column-values" class="nav-link" data-scroll-target="#separate-character-column-values"><span class="header-section-number">14.5.3</span> Separate character column values</a></li>
+  <li><a href="#unite-multiple-columns-into-sigle-column" id="toc-unite-multiple-columns-into-sigle-column" class="nav-link" data-scroll-target="#unite-multiple-columns-into-sigle-column">Unite multiple columns into sigle column</a></li>
   </ul></li>
-  <li><a href="#purrr" id="toc-purrr" class="nav-link" data-scroll-target="#purrr"><span class="header-section-number">14.6</span> purrr</a>
+  <li><a href="#purrr" id="toc-purrr" class="nav-link" data-scroll-target="#purrr"><span class="header-section-number">14.6</span> {purrr}</a>
   <ul class="collapse">
-  <li><a href="#map-map2-." id="toc-map-map2-." class="nav-link" data-scroll-target="#map-map2-."><span class="header-section-number">14.6.1</span> map || map2, ….</a></li>
+  <li><a href="#other-variants-of-map" id="toc-other-variants-of-map" class="nav-link" data-scroll-target="#other-variants-of-map"><span class="header-section-number">14.6.1</span> Other variants of map()</a></li>
   <li><a href="#list-manipulation" id="toc-list-manipulation" class="nav-link" data-scroll-target="#list-manipulation"><span class="header-section-number">14.6.2</span> list manipulation</a></li>
   </ul></li>
-  <li><a href="#lubridate" id="toc-lubridate" class="nav-link" data-scroll-target="#lubridate"><span class="header-section-number">14.7</span> lubridate</a>
+  <li><a href="#lubridate" id="toc-lubridate" class="nav-link" data-scroll-target="#lubridate"><span class="header-section-number">14.7</span> {lubridate}</a>
   <ul class="collapse">
-  <li><a href="#today" id="toc-today" class="nav-link" data-scroll-target="#today"><span class="header-section-number">14.7.1</span> today()</a></li>
-  <li><a href="#parse-date" id="toc-parse-date" class="nav-link" data-scroll-target="#parse-date"><span class="header-section-number">14.7.2</span> parse date</a></li>
-  <li><a href="#year-quarter-month-day" id="toc-year-quarter-month-day" class="nav-link" data-scroll-target="#year-quarter-month-day"><span class="header-section-number">14.7.3</span> year, quarter, month, day</a></li>
+  <li><a href="#parsing-dates" id="toc-parsing-dates" class="nav-link" data-scroll-target="#parsing-dates"><span class="header-section-number">14.7.1</span> Parsing dates</a></li>
+  <li><a href="#parsing-time" id="toc-parsing-time" class="nav-link" data-scroll-target="#parsing-time"><span class="header-section-number">14.7.2</span> Parsing time</a></li>
+  <li><a href="#parsing-to-datetime" id="toc-parsing-to-datetime" class="nav-link" data-scroll-target="#parsing-to-datetime"><span class="header-section-number">14.7.3</span> Parsing to datetime</a></li>
+  <li><a href="#extracting-components-of-a-date" id="toc-extracting-components-of-a-date" class="nav-link" data-scroll-target="#extracting-components-of-a-date"><span class="header-section-number">14.7.4</span> Extracting components of a date</a></li>
+  <li><a href="#manipulating-dates" id="toc-manipulating-dates" class="nav-link" data-scroll-target="#manipulating-dates"><span class="header-section-number">14.7.5</span> Manipulating dates</a></li>
+  <li><a href="#date-comparisons" id="toc-date-comparisons" class="nav-link" data-scroll-target="#date-comparisons"><span class="header-section-number">14.7.6</span> Date comparisons</a></li>
   </ul></li>
+  <li><a href="#task" id="toc-task" class="nav-link" data-scroll-target="#task"><span class="header-section-number">14.8</span> Task</a></li>
   </ul>
 </nav>
     </div>
@@ -500,7 +511,7 @@ Tip
 </section>
 </section>
 <section id="dplyr" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="dplyr"><span class="header-section-number">14.3</span> dplyr</h2>
+<h2 data-number="14.3" class="anchored" data-anchor-id="dplyr"><span class="header-section-number">14.3</span> {dplyr}</h2>
 <section id="selecting-columns" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="selecting-columns"><span class="header-section-number">14.3.1</span> Selecting columns</h3>
 <p>@ select() || tidyselect…</p>
@@ -814,13 +825,13 @@ Strict selection
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-72"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-72" data-target-annotation="1">1</button><span id="annotated-cell-72-1" class="code-annotation-target"><a href="#annotated-cell-72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">all_of</span>(<span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"height"</span>, <span class="st">"mass"</span>, <span class="st">"max"</span>)))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-161"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-161" data-target-annotation="1">1</button><span id="annotated-cell-161-1" class="code-annotation-target"><a href="#annotated-cell-161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(starwars, <span class="fu">all_of</span>(<span class="fu">c</span>(<span class="st">"name"</span>, <span class="st">"height"</span>, <span class="st">"mass"</span>, <span class="st">"max"</span>)))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-72" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-161" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-72" data-code-lines="1" data-code-annotation="1">The <code>max</code> value is not a valid column name in the starwars table.</span>
+<span data-code-cell="annotated-cell-161" data-code-lines="1" data-code-annotation="1">The <code>max</code> value is not a valid column name in the starwars table.</span>
 </dd>
 </dl>
 </div>
@@ -2077,92 +2088,2289 @@ Common pitfalls and tips
 # ℹ 77 more rows</code></pre>
 </div>
 </div>
+</section>
+<section id="ungrouping-data-ungroup" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ungrouping-data-ungroup">Ungrouping Data ungroup()</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-50"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-50-1"><a href="#annotated-cell-50-1" aria-hidden="true" tabindex="-1"></a>gp_tbl <span class="ot">&lt;-</span> starwars <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-50" data-target-annotation="1">1</button><span id="annotated-cell-50-2" class="code-annotation-target"><a href="#annotated-cell-50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex, gender)</span>
+<span id="annotated-cell-50-3"><a href="#annotated-cell-50-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-50-4"><a href="#annotated-cell-50-4" aria-hidden="true" tabindex="-1"></a>gp_tbl <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-50" data-target-annotation="2">2</button><span id="annotated-cell-50-5" class="code-annotation-target"><a href="#annotated-cell-50-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>())</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-50" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-50" data-code-lines="2" data-code-annotation="1">Group the data by the sex and gender variables.</span>
+</dd>
+<dt data-target-cell="annotated-cell-50" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-50" data-code-lines="5" data-code-annotation="2">Get the number of times each group appeared in the data.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'sex'. You can override using the `.groups`
+argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+# Groups:   sex [5]
+  sex            gender    count
+  &lt;chr&gt;          &lt;chr&gt;     &lt;int&gt;
+1 female         feminine     16
+2 hermaphroditic masculine     1
+3 male           masculine    60
+4 none           feminine      1
+5 none           masculine     5
+6 &lt;NA&gt;           &lt;NA&gt;          4</code></pre>
+</div>
+</div>
+<p>After performing grouped operations, you may want to remove the grouping structure to perform further operations on the entire dataset.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-51"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-51" data-target-annotation="1">1</button><span id="annotated-cell-51-1" class="code-annotation-target"><a href="#annotated-cell-51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is_grouped_df</span>(gp_tbl)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-51" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-51" data-code-lines="1" data-code-annotation="1">Check whether the data <code>gp_tbl</code> is a grouped data frame</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>Use <code>ungroup()</code> for this purpose.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-52"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-52-1"><a href="#annotated-cell-52-1" aria-hidden="true" tabindex="-1"></a>gp_tbl <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-52" data-target-annotation="1">1</button><span id="annotated-cell-52-2" class="code-annotation-target"><a href="#annotated-cell-52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-52" data-target-annotation="2">2</button><span id="annotated-cell-52-3" class="code-annotation-target"><a href="#annotated-cell-52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-52" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-52" data-code-lines="2" data-code-annotation="1">Get the number of times each group appeared in the data.</span>
+</dd>
+<dt data-target-cell="annotated-cell-52" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-52" data-code-lines="3" data-code-annotation="2">Remove the group definition from the dataset <code>gp_tbl</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'sex'. You can override using the `.groups`
+argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  sex            gender    count
+  &lt;chr&gt;          &lt;chr&gt;     &lt;int&gt;
+1 female         feminine     16
+2 hermaphroditic masculine     1
+3 male           masculine    60
+4 none           feminine      1
+5 none           masculine     5
+6 &lt;NA&gt;           &lt;NA&gt;          4</code></pre>
+</div>
+</div>
 <p><br> <br> <br> <!------ GROUP_BY --------------------------------------------------------></p>
 </section>
 </section>
-<section id="arrange" class="level3" data-number="14.3.8">
-<h3 data-number="14.3.8" class="anchored" data-anchor-id="arrange"><span class="header-section-number">14.3.8</span> arrange()</h3>
+<section id="sort-records" class="level3" data-number="14.3.8">
+<h3 data-number="14.3.8" class="anchored" data-anchor-id="sort-records"><span class="header-section-number">14.3.8</span> Sort records</h3>
+<p>The <code>arrange()</code> function is used to reorder rows of a data frame based on the values of one or more columns. It’s a straightforward and highly useful function for sorting data in ascending or descending order, which can help in organizing a dataset.</p>
+<p><strong>Examples:</strong></p>
+<section id="sorting-in-ascending-order" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sorting-in-ascending-order">Sorting in ascending order</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-53"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-53-1"><a href="#annotated-cell-53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Default as Ascending</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-53" data-target-annotation="1">1</button><span id="annotated-cell-53-2" class="code-annotation-target"><a href="#annotated-cell-53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(starwars, height)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-53" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-53" data-code-lines="2" data-code-annotation="1">Sort the starwars data by character height in ascending order.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Yoda         66    17 white      green      brown            896 male  mascu…
+ 2 Ratts T…     79    15 none       grey, blue unknown           NA male  mascu…
+ 3 Wicket …     88    20 brown      brown      brown              8 male  mascu…
+ 4 Dud Bolt     94    45 none       blue, grey yellow            NA male  mascu…
+ 5 R2-D2        96    32 &lt;NA&gt;       white, bl… red               33 none  mascu…
+ 6 R4-P17       96    NA none       silver, r… red, blue         NA none  femin…
+ 7 R5-D4        97    32 &lt;NA&gt;       white, red red               NA none  mascu…
+ 8 Sebulba     112    40 none       grey, red  orange            NA male  mascu…
+ 9 Gasgano     122    NA none       white, bl… black             NA male  mascu…
+10 Watto       137    NA black      blue, grey yellow            NA male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="sorting-in-descending-order" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sorting-in-descending-order">Sorting in descending order</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-54"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-54" data-target-annotation="1">1</button><span id="annotated-cell-54-1" class="code-annotation-target"><a href="#annotated-cell-54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(starwars, <span class="fu">desc</span>(height))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-54" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-54" data-code-lines="1" data-code-annotation="1">Sort the starwars data by character height in descending order.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Yarael …    264    NA none       white      yellow          NA   male  mascu…
+ 2 Tarfful     234   136 brown      brown      blue            NA   male  mascu…
+ 3 Lama Su     229    88 none       grey       black           NA   male  mascu…
+ 4 Chewbac…    228   112 brown      unknown    blue           200   male  mascu…
+ 5 Roos Ta…    224    82 none       grey       orange          NA   male  mascu…
+ 6 Grievous    216   159 none       brown, wh… green, y…       NA   male  mascu…
+ 7 Taun We     213    NA none       grey       black           NA   fema… femin…
+ 8 Rugor N…    206    NA none       green      orange          NA   male  mascu…
+ 9 Tion Me…    206    80 none       grey       black           NA   male  mascu…
+10 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="sorting-by-multiple-columns" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sorting-by-multiple-columns">Sorting by multiple columns</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-55"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-55" data-target-annotation="1">1</button><span id="annotated-cell-55-1" class="code-annotation-target"><a href="#annotated-cell-55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(starwars, <span class="fu">desc</span>(height), <span class="fu">desc</span>(mass))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-55" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-55" data-code-lines="1" data-code-annotation="1">Sort by height and mass in descending order.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 87 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Yarael …    264    NA none       white      yellow          NA   male  mascu…
+ 2 Tarfful     234   136 brown      brown      blue            NA   male  mascu…
+ 3 Lama Su     229    88 none       grey       black           NA   male  mascu…
+ 4 Chewbac…    228   112 brown      unknown    blue           200   male  mascu…
+ 5 Roos Ta…    224    82 none       grey       orange          NA   male  mascu…
+ 6 Grievous    216   159 none       brown, wh… green, y…       NA   male  mascu…
+ 7 Taun We     213    NA none       grey       black           NA   fema… femin…
+ 8 Tion Me…    206    80 none       grey       black           NA   male  mascu…
+ 9 Rugor N…    206    NA none       green      orange          NA   male  mascu…
+10 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sorting with NA values
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>By default, <code>arrange()</code> function will place <code>NA</code> (missing) values at the end of the sort.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(starwars, birth_year) <span class="sc">|&gt;</span> <span class="fu">tail</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Grievous    216   159 none       brown, wh… green, y…         NA male  mascu…
+ 2 Tarfful     234   136 brown      brown      blue              NA male  mascu…
+ 3 Raymus …    188    79 brown      light      brown             NA male  mascu…
+ 4 Sly Moo…    178    48 none       pale       white             NA &lt;NA&gt;  &lt;NA&gt;  
+ 5 Tion Me…    206    80 none       grey       black             NA male  mascu…
+ 6 Finn         NA    NA black      dark       dark              NA male  mascu…
+ 7 Rey          NA    NA brown      light      hazel             NA fema… femin…
+ 8 Poe Dam…     NA    NA brown      light      brown             NA male  mascu…
+ 9 BB8          NA    NA none       none       black             NA none  mascu…
+10 Captain…     NA    NA none       none       unknown           NA fema… femin…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(starwars, <span class="fu">desc</span>(birth_year)) <span class="sc">|&gt;</span> <span class="fu">tail</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Grievous    216   159 none       brown, wh… green, y…         NA male  mascu…
+ 2 Tarfful     234   136 brown      brown      blue              NA male  mascu…
+ 3 Raymus …    188    79 brown      light      brown             NA male  mascu…
+ 4 Sly Moo…    178    48 none       pale       white             NA &lt;NA&gt;  &lt;NA&gt;  
+ 5 Tion Me…    206    80 none       grey       black             NA male  mascu…
+ 6 Finn         NA    NA black      dark       dark              NA male  mascu…
+ 7 Rey          NA    NA brown      light      hazel             NA fema… femin…
+ 8 Poe Dam…     NA    NA brown      light      brown             NA male  mascu…
+ 9 BB8          NA    NA none       none       black             NA none  mascu…
+10 Captain…     NA    NA none       none       unknown           NA fema… femin…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!------ ARRANGE ----------------------------------------------------------->
+</section>
 </section>
 <section id="joins" class="level3" data-number="14.3.9">
-<h3 data-number="14.3.9" class="anchored" data-anchor-id="joins"><span class="header-section-number">14.3.9</span> joins</h3>
+<h3 data-number="14.3.9" class="anchored" data-anchor-id="joins"><span class="header-section-number">14.3.9</span> Joins</h3>
+<p>Joins are used to combine data from two data frames (or tibbles) based on matching values in specified columns. They are fundamental operations for data manipulation, allowing you to bring together information from different sources into a single dataset.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Paul"</span>, <span class="st">"Jamy"</span>, <span class="st">"Wendy"</span>, <span class="st">"David"</span>),</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>, <span class="dv">92</span>)</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>df1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+     id name  score
+  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt;
+1     1 Paul     85
+2     2 Jamy     90
+3     3 Wendy    88
+4     4 David    92</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">subject =</span> <span class="fu">c</span>(<span class="st">"Math"</span>, <span class="st">"Science"</span>, <span class="st">"History"</span>, <span class="st">"Art"</span>),</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">grade =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"B+"</span>, <span class="st">"A-"</span>)</span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>df2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+     id subject grade
+  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+1     2 Math    A    
+2     3 Science B    
+3     4 History B+   
+4     5 Art     A-   </code></pre>
+</div>
+</div>
+<section id="inner_join" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="inner_join">inner_join</h4>
+<p>This returns rows with matching values in both data frames.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-58"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-58" data-target-annotation="1">1</button><span id="annotated-cell-58-1" class="code-annotation-target"><a href="#annotated-cell-58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">inner_join</span>(df1, df2, <span class="at">by =</span> <span class="st">"id"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-58" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-58" data-code-lines="1" data-code-annotation="1">Only rows with matching id values in both <code>df1</code> and <code>df2</code> are returned.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+     id name  score subject grade
+  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+1     2 Jamy     90 Math    A    
+2     3 Wendy    88 Science B    
+3     4 David    92 History B+   </code></pre>
+</div>
+</div>
+</section>
+<section id="left_join" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="left_join">left_join</h4>
+<p>This returns all rows from the left data frame and matching rows from the right data frame. All rows from the left data frame (df1) will be matched rows from the right data frame (df2). If there’s no match, <code>NA</code> is returned for columns from the right data frame.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-59"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-59" data-target-annotation="1">1</button><span id="annotated-cell-59-1" class="code-annotation-target"><a href="#annotated-cell-59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">left_join</span>(df1, df2, <span class="at">by =</span> <span class="st">"id"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-59" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-59" data-code-lines="1" data-code-annotation="1">All rows from <code>df1</code> are kept. For id = 1, there’s no match in <code>df2</code>, so <code>NA</code> values are filled in for subject and grade.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+     id name  score subject grade
+  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+1     1 Paul     85 &lt;NA&gt;    &lt;NA&gt; 
+2     2 Jamy     90 Math    A    
+3     3 Wendy    88 Science B    
+4     4 David    92 History B+   </code></pre>
+</div>
+</div>
+</section>
+<section id="right_join" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="right_join">right_join</h4>
+<p>This returns all rows from the right data frame and matching rows from the left data frame. all rows from the right data frame (df2) will be matched rows from the left data frame (df1). If there’s no match, <code>NA</code> is returned for columns from the left data frame.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-60"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="1">1</button><span id="annotated-cell-60-1" class="code-annotation-target"><a href="#annotated-cell-60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">right_join</span>(df1, df2, <span class="at">by =</span> <span class="st">"id"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-60" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-60" data-code-lines="1" data-code-annotation="1">All rows from <code>df2</code> are kept. For id = 5, there’s no match in <code>df1</code>, so NA values are filled in for name and score.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+     id name  score subject grade
+  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+1     2 Jamy     90 Math    A    
+2     3 Wendy    88 Science B    
+3     4 David    92 History B+   
+4     5 &lt;NA&gt;     NA Art     A-   </code></pre>
+</div>
+</div>
+</section>
+<section id="full_join" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="full_join">full_join</h4>
+<p>This returns all rows from both data frames, with matching rows combined. If there’s no match, <code>NA</code> is returned in the unmatched columns.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-61"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-61" data-target-annotation="1">1</button><span id="annotated-cell-61-1" class="code-annotation-target"><a href="#annotated-cell-61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">full_join</span>(df1, df2, <span class="at">by =</span> <span class="st">"id"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-61" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-61" data-code-lines="1" data-code-annotation="1">All rows from both df1 and df2 are included. For id = 1 and id = 5, missing values are filled with NA.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+     id name  score subject grade
+  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+1     1 Paul     85 &lt;NA&gt;    &lt;NA&gt; 
+2     2 Jamy     90 Math    A    
+3     3 Wendy    88 Science B    
+4     4 David    92 History B+   
+5     5 &lt;NA&gt;     NA Art     A-   </code></pre>
+</div>
+</div>
+</section>
+<section id="semi_join" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="semi_join">semi_join</h4>
+<p>This returns rows from the left data frame that have matching values in the right data frame, without bringing columns from the right data frame. The <code>semi_join()</code> returns all rows from the left data frame (df1) that have a match in the right data frame (df2). It does not include any columns from the right data frame.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-62"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-62" data-target-annotation="1">1</button><span id="annotated-cell-62-1" class="code-annotation-target"><a href="#annotated-cell-62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">semi_join</span>(df1, df2, <span class="at">by =</span> <span class="st">"id"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-62" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-62" data-code-lines="1" data-code-annotation="1">Only rows from <code>df1</code> with id values that match <code>df2</code> are returned, without including columns from <code>df2.</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+     id name  score
+  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt;
+1     2 Jamy     90
+2     3 Wendy    88
+3     4 David    92</code></pre>
+</div>
+</div>
+</section>
+<section id="anti_join" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="anti_join">anti_join</h4>
+<p>This returns rows from the left data frame that do not have matching values in the right data frame. The <code>anti_join()</code> returns all rows from the left data frame (df1) that do not have a match in the right data frame (df2).</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-63"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-63" data-target-annotation="1">1</button><span id="annotated-cell-63-1" class="code-annotation-target"><a href="#annotated-cell-63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anti_join</span>(df1, df2, <span class="at">by =</span> <span class="st">"id"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-63" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-63" data-code-lines="1" data-code-annotation="1">Only rows from <code>df1</code> where id does not match any value in <code>df2</code> are returned.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+     id name  score
+  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt;
+1     1 Paul     85</code></pre>
+</div>
+</div>
+</section>
+<section id="joining-with-different-column-names" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="joining-with-different-column-names">Joining with different column names</h4>
+<p>If the columns you want to join by have different names in the two data frames, you can specify them as a named vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>df3 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id1 =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">value1 =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>)</span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>df3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+    id1 value1
+  &lt;dbl&gt; &lt;chr&gt; 
+1     1 A     
+2     2 B     
+3     3 C     </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>df4 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id2 =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),</span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">value2 =</span> <span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>)</span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb83-6"><a href="#cb83-6" aria-hidden="true" tabindex="-1"></a>df4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+    id2 value2
+  &lt;dbl&gt; &lt;chr&gt; 
+1     2 X     
+2     3 Y     
+3     4 Z     </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-66"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-66" data-target-annotation="1">1</button><span id="annotated-cell-66-1" class="code-annotation-target"><a href="#annotated-cell-66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">inner_join</span>(df3, df4, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"id1"</span> <span class="ot">=</span> <span class="st">"id2"</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-66" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-66" data-code-lines="1" data-code-annotation="1">Join using different column names ‘id1’ and ‘id2’</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+    id1 value1 value2
+  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; 
+1     2 B      X     
+2     3 C      Y     </code></pre>
+</div>
+</div>
+</section>
 </section>
 <section id="bind-row-column" class="level3" data-number="14.3.10">
 <h3 data-number="14.3.10" class="anchored" data-anchor-id="bind-row-column"><span class="header-section-number">14.3.10</span> bind row &amp; column</h3>
+<p>You can combine multiple data frames (or tibbles) either by stacking them vertically (row-wise) or horizontally (column-wise).</p>
+<section id="append-new-data-frames-by-row" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="append-new-data-frames-by-row">Append new data frames by row</h4>
+<p>Also known as vertical concatenation, stacks multiple data frames on top of each other by rows, meaning it adds new observations to a dataset.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Paul"</span>, <span class="st">"Jouel"</span>, <span class="st">"Ruth"</span>),</span>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">category =</span> <span class="fu">c</span>(<span class="st">"VIP"</span>, <span class="st">"Regular"</span>, <span class="st">"Premium"</span>, <span class="st">"VIP"</span>)</span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-7"><a href="#cb86-7" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+     id name  category
+  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   
+1     1 Jane  VIP     
+2     2 Paul  Regular 
+3     3 Jouel Premium 
+4     4 Ruth  VIP     </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>new_row_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">6</span>,</span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Doe"</span>, <span class="st">"Peter"</span>),</span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">category =</span> <span class="fu">c</span>(<span class="st">"Regular"</span>, <span class="st">"Premium"</span>)</span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>new_row_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+     id name  category
+  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   
+1     5 Doe   Regular 
+2     6 Peter Premium </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Similar columns and data-type
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>While combining data frames by rows using the function <code>bind_rows()</code>, it is important for the data frames to have the same number of columns.</p></li>
+<li><p>The names of all columns in the data frames must be the same.</p></li>
+<li><p>Lastly, the data type of each column must also be the same.</p></li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-69"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-69" data-target-annotation="1">1</button><span id="annotated-cell-69-1" class="code-annotation-target"><a href="#annotated-cell-69-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(df, new_row_df)</span>
+<span id="annotated-cell-69-2"><a href="#annotated-cell-69-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-69-3"><a href="#annotated-cell-69-3" aria-hidden="true" tabindex="-1"></a>df</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-69" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-69" data-code-lines="1" data-code-annotation="1">Append the <code>new_row_df</code> data frame to the main data frame <code>df</code> by row.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+     id name  category
+  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   
+1     1 Jane  VIP     
+2     2 Paul  Regular 
+3     3 Jouel Premium 
+4     4 Ruth  VIP     
+5     5 Doe   Regular 
+6     6 Peter Premium </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Handling different columns
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the data frames have different columns, bind_rows() automatically fills missing values with NA.</p>
+</div>
+</div>
+</section>
+<section id="append-new-data-frames-by-column" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="append-new-data-frames-by-column">Append new data frames by column</h4>
+<p>Also known as horizontal concatenation, joins multiple data frames by columns, meaning it adds new variables (columns) to a dataset. It is useful when you have different datasets with the same number of rows but different variables and want to combine them horizontally.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>new_col_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">total_order =</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="dv">15</span>), <span class="dv">6</span>)</span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a>new_col_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  total_order
+        &lt;int&gt;
+1           9
+2          15
+3          12
+4           5
+5           7
+6          10</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Different row counts
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the data frames have different numbers of rows, <code>bind_cols()</code> will still combine them, but the shorter data frame will have NA values for the missing rows.</p>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-71"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-71" data-target-annotation="1">1</button><span id="annotated-cell-71-1" class="code-annotation-target"><a href="#annotated-cell-71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(df, new_col_df)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-71" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-71" data-code-lines="1" data-code-annotation="1">Append a new data frame <code>new_col_df</code> to the main data frame <code>df</code> by column.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+     id name  category total_order
+  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;          &lt;int&gt;
+1     1 Jane  VIP                9
+2     2 Paul  Regular           15
+3     3 Jouel Premium           12
+4     4 Ruth  VIP                5
+5     5 Doe   Regular            7
+6     6 Peter Premium           10</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <br> <!-------- Dplyr -------------------------------------------------------------></p>
+</section>
 </section>
 </section>
 <section id="stringr" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="stringr"><span class="header-section-number">14.4</span> stringr</h2>
-<section id="str_length" class="level3" data-number="14.4.1">
-<h3 data-number="14.4.1" class="anchored" data-anchor-id="str_length"><span class="header-section-number">14.4.1</span> str_length()</h3>
+<h2 data-number="14.4" class="anchored" data-anchor-id="stringr"><span class="header-section-number">14.4</span> {stringr}</h2>
+<section id="string-length" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="string-length"><span class="header-section-number">14.4.1</span> String length</h3>
+<p>The function <code>str_length()</code> helps retrieve the number of <code>elements</code> in a given string. These elements are usually letters.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-72"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-72" data-target-annotation="1">1</button><span id="annotated-cell-72-1" class="code-annotation-target"><a href="#annotated-cell-72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_length</span>(<span class="st">"Hello World"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-72" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-72" data-code-lines="1" data-code-annotation="1">Get the number of elements in the string ‘Hello World’</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11</code></pre>
+</div>
+</div>
+<p><br></p>
 </section>
-<section id="case-str_to_upper-str_to_lower-str_to_title-str_to_sentence" class="level3" data-number="14.4.2">
-<h3 data-number="14.4.2" class="anchored" data-anchor-id="case-str_to_upper-str_to_lower-str_to_title-str_to_sentence"><span class="header-section-number">14.4.2</span> case() ||&gt; str_to_upper(), str_to_lower(), str_to_title(), str_to_sentence</h3>
+<section id="case-format" class="level3" data-number="14.4.2">
+<h3 data-number="14.4.2" class="anchored" data-anchor-id="case-format"><span class="header-section-number">14.4.2</span> Case format</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>example_string <span class="ot">&lt;-</span> <span class="st">"worKIng wIth caSe"</span></span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>example_string</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "worKIng wIth caSe"</code></pre>
+</div>
+</div>
+<section id="upper-case" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="upper-case">Upper case</h4>
+<p>Convert all strings to upper case.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-74"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-74" data-target-annotation="1">1</button><span id="annotated-cell-74-1" class="code-annotation-target"><a href="#annotated-cell-74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_to_upper</span>(example_string)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-74" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-74" data-code-lines="1" data-code-annotation="1">Change the <code>example_string</code> value to upper case.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "WORKING WITH CASE"</code></pre>
+</div>
+</div>
 </section>
-<section id="str_detect" class="level3" data-number="14.4.3">
-<h3 data-number="14.4.3" class="anchored" data-anchor-id="str_detect"><span class="header-section-number">14.4.3</span> str_detect()</h3>
+<section id="lower-case" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="lower-case">Lower case</h4>
+<p>Convert all strings to lower case.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-75"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-75" data-target-annotation="1">1</button><span id="annotated-cell-75-1" class="code-annotation-target"><a href="#annotated-cell-75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_to_lower</span>(example_string)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-75" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-75" data-code-lines="1" data-code-annotation="1">Change the <code>example_string</code> value to lower case</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "working with case"</code></pre>
+</div>
+</div>
 </section>
-<section id="str_extract-str_extract_all" class="level3" data-number="14.4.4">
-<h3 data-number="14.4.4" class="anchored" data-anchor-id="str_extract-str_extract_all"><span class="header-section-number">14.4.4</span> str_extract() || str_extract_all()</h3>
+<section id="title-case" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="title-case">title case</h4>
+<p>Convert all strings to a title case, where the first letter of each word is capitalized.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-76"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-76" data-target-annotation="1">1</button><span id="annotated-cell-76-1" class="code-annotation-target"><a href="#annotated-cell-76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_to_title</span>(example_string)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-76" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-76" data-code-lines="1" data-code-annotation="1">Change the <code>example_string</code> value to a title case.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Working With Case"</code></pre>
+</div>
+</div>
 </section>
-<section id="str_glue" class="level3" data-number="14.4.5">
-<h3 data-number="14.4.5" class="anchored" data-anchor-id="str_glue"><span class="header-section-number">14.4.5</span> str_glue()</h3>
+<section id="sentence-case" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sentence-case">Sentence case</h4>
+<p>Convert the string to a sentence case, where only the first letter of sentence is capitalized.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-77"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-77" data-target-annotation="1">1</button><span id="annotated-cell-77-1" class="code-annotation-target"><a href="#annotated-cell-77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_to_sentence</span>(example_string)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-77" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-77" data-code-lines="1" data-code-annotation="1">Change the <code>example_string</code> value to a sentence case.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Working with case"</code></pre>
+</div>
+</div>
+<p><br></p>
 </section>
-<section id="str_remove-str_remove_all" class="level3" data-number="14.4.6">
-<h3 data-number="14.4.6" class="anchored" data-anchor-id="str_remove-str_remove_all"><span class="header-section-number">14.4.6</span> str_remove() || str_remove_all()</h3>
 </section>
-<section id="str_replace-str_replace_all" class="level3" data-number="14.4.7">
-<h3 data-number="14.4.7" class="anchored" data-anchor-id="str_replace-str_replace_all"><span class="header-section-number">14.4.7</span> str_replace() || str_replace_all()</h3>
+<section id="detect-the-presence-of-a-match" class="level3" data-number="14.4.3">
+<h3 data-number="14.4.3" class="anchored" data-anchor-id="detect-the-presence-of-a-match"><span class="header-section-number">14.4.3</span> Detect the presence of a match</h3>
+<p>When using the <code>str_detect()</code> function to detect the presence of a match it returns a logical vector with <code>TRUE</code> for each element of string that matches pattern and <code>FALSE</code> otherwise.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-78"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-78" data-target-annotation="1">1</button><span id="annotated-cell-78-1" class="code-annotation-target"><a href="#annotated-cell-78-1" aria-hidden="true" tabindex="-1"></a>status <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Success"</span>, <span class="st">"Failed"</span>, <span class="st">"Success"</span>, <span class="st">"Processing"</span>, <span class="st">"success"</span>)</span>
+<span id="annotated-cell-78-2"><a href="#annotated-cell-78-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-78-3"><a href="#annotated-cell-78-3" aria-hidden="true" tabindex="-1"></a>status</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-78" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-78" data-code-lines="1" data-code-annotation="1">Create a vector of strings</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Success"    "Failed"     "Success"    "Processing" "success"   </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-79"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-79" data-target-annotation="1">1</button><span id="annotated-cell-79-1" class="code-annotation-target"><a href="#annotated-cell-79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_detect</span>(status, <span class="st">"Success"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-79" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-79" data-code-lines="1" data-code-annotation="1">Check if the value “Success” is in any of the values in <code>status</code>.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE  TRUE FALSE FALSE</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Case sensitive
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>str_detect()</code> is case sensitive like most functions in the stringr package. It is important to use the appropriate type of case to avoid misleading results like the case of the last “success” string above</p>
+</div>
+</div>
+<p><br></p>
 </section>
-<section id="str_split" class="level3" data-number="14.4.8">
-<h3 data-number="14.4.8" class="anchored" data-anchor-id="str_split"><span class="header-section-number">14.4.8</span> str_split()</h3>
+<section id="subset-string" class="level3" data-number="14.4.4">
+<h3 data-number="14.4.4" class="anchored" data-anchor-id="subset-string"><span class="header-section-number">14.4.4</span> Subset string</h3>
+<p>Find and extract matching elements from a string that match a specified pattern.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-80"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-80" data-target-annotation="1">1</button><span id="annotated-cell-80-1" class="code-annotation-target"><a href="#annotated-cell-80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_subset</span>(status, <span class="st">'S'</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-80" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-80" data-code-lines="1" data-code-annotation="1">Extract only string with a capital letter <code>S</code> in <code>status</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Success" "Success"</code></pre>
+</div>
+</div>
+<p><strong>Using regular expression:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-81"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-81" data-target-annotation="1">1</button><span id="annotated-cell-81-1" class="code-annotation-target"><a href="#annotated-cell-81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_subset</span>(status, <span class="st">'^P'</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-81" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-81" data-code-lines="1" data-code-annotation="1">Extract status starting with the letter “P”</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Processing"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-82"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-82" data-target-annotation="1">1</button><span id="annotated-cell-82-1" class="code-annotation-target"><a href="#annotated-cell-82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_subset</span>(status, <span class="st">'d$'</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-82" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-82" data-code-lines="1" data-code-annotation="1">Extract only strings that ends with a letter “d”.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Failed"</code></pre>
+</div>
+</div>
+<p><br></p>
 </section>
-<section id="str_trim" class="level3" data-number="14.4.9">
-<h3 data-number="14.4.9" class="anchored" data-anchor-id="str_trim"><span class="header-section-number">14.4.9</span> str_trim()</h3>
+<section id="extract-a-match" class="level3" data-number="14.4.5">
+<h3 data-number="14.4.5" class="anchored" data-anchor-id="extract-a-match"><span class="header-section-number">14.4.5</span> Extract a match</h3>
+<p>The function <code>str_extract()</code> is specifically used to extract the first match of a specified pattern from each element of a character vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>shopping_list <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Orange x2"</span>, <span class="st">"A bag of beans"</span>, <span class="st">"1 pack of sugar"</span>, <span class="st">"Milk x4"</span>)</span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a>shopping_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Orange x2"       "A bag of beans"  "1 pack of sugar" "Milk x4"        </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(shopping_list, <span class="st">"</span><span class="sc">\\</span><span class="st">d"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2" NA  "1" "4"</code></pre>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="interpolating-strings" class="level3" data-number="14.4.6">
+<h3 data-number="14.4.6" class="anchored" data-anchor-id="interpolating-strings"><span class="header-section-number">14.4.6</span> Interpolating strings</h3>
+<p>The <code>str_glue()</code> provides elegant syntax to create formatted strings by embedding variable values directly within the string. This allows for dynamic string creation based on variable content.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="st">"John"</span></span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str_glue</span>(<span class="st">"My name is {name} and I'm {age} years old."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>My name is John and I'm 30 years old.</code></pre>
+</div>
+</div>
+<section id="named-arguments" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="named-arguments">Named arguments</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_glue</span>(</span>
+<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"My name is {name}, and my age next year will be {age + 1}."</span>, </span>
+<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"Joe"</span>, </span>
+<span id="cb112-4"><a href="#cb112-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="dv">40</span></span>
+<span id="cb112-5"><a href="#cb112-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>My name is Joe, and my age next year will be 41.</code></pre>
+</div>
+</div>
+</section>
+<section id="data-frame-integration" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="data-frame-integration">Data frame integration</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="co"># str_glue_data("{rownames(mtcars)} has {hp} hp")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="remove-matched-patterns-from-string" class="level3" data-number="14.4.7">
+<h3 data-number="14.4.7" class="anchored" data-anchor-id="remove-matched-patterns-from-string"><span class="header-section-number">14.4.7</span> Remove matched patterns from string</h3>
+<section id="str_remove" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="str_remove">str_remove</h4>
+<p>The <code>str_remove()</code> function is used to remove the first occurrence of a specified pattern from each string in a character vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>status <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Status: Success"</span>, <span class="st">"Status: Processing"</span>)</span>
+<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_remove</span>(status, <span class="st">"Status: "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Success"    "Processing"</code></pre>
+</div>
+</div>
+</section>
+<section id="str_remove_all" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="str_remove_all">str_remove_all</h4>
+<p>The <code>str_remove_all()</code> function extends the functionality of <code>str_remove()</code> by removing all occurrences of a specified pattern from each string in a character vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a>amount <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"194,450,000"</span>, <span class="st">"278,574,789"</span>, <span class="st">"120,245,658"</span>)</span>
+<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_remove_all</span>(amount, <span class="st">","</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "194450000" "278574789" "120245658"</code></pre>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="replace-matches-with-a-new-string" class="level3" data-number="14.4.8">
+<h3 data-number="14.4.8" class="anchored" data-anchor-id="replace-matches-with-a-new-string"><span class="header-section-number">14.4.8</span> Replace matches with a new string</h3>
+<section id="replace-a-single-first-match" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="replace-a-single-first-match">Replace a single (first) match</h4>
+<p>The <code>str_replace()</code> function is used to replace the first occurrence of a pattern in a string with a specified replacement.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a>amount <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"S100"</span>, <span class="st">"S200"</span>, <span class="st">"S300"</span>)</span>
+<span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb119-3"><a href="#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace</span>(amount, <span class="st">"S"</span>, <span class="st">"$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "$100" "$200" "$300"</code></pre>
+</div>
+</div>
+</section>
+<section id="replace-a-multiple-matches" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="replace-a-multiple-matches">Replace a multiple matches</h4>
+<p>The <code>str_replace_all()</code> function serves a similar purpose but replaces all occurrences of a pattern within a string or vector of strings.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="co"># +++++++++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb121-2"><a href="#cb121-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-3"><a href="#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace_all</span>(amount, <span class="st">"S"</span>, <span class="st">"$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "$100" "$200" "$300"</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="split-string-into-serveral-part" class="level3" data-number="14.4.9">
+<h3 data-number="14.4.9" class="anchored" data-anchor-id="split-string-into-serveral-part"><span class="header-section-number">14.4.9</span> Split string into serveral part</h3>
+<p>The <code>str_split()</code> can divide a character vector into substrings based on a specified pattern.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"apples and oranges and bananas and pears"</span>)</span>
+<span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb123-3"><a href="#cb123-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_split</span>(fruits, <span class="st">" and "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] "apples"  "oranges" "bananas" "pears"  </code></pre>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="remove-whitespace" class="level3" data-number="14.4.10">
+<h3 data-number="14.4.10" class="anchored" data-anchor-id="remove-whitespace"><span class="header-section-number">14.4.10</span> Remove whitespace</h3>
+<p>Use the <code>str_trim()</code> removes whitespace from start and end of string.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a>whitespace_str <span class="ot">&lt;-</span> <span class="st">" Complete "</span></span>
+<span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a>whitespace_str</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] " Complete "</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_trim</span>(whitespace_str, <span class="at">side =</span> <span class="st">"left"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Complete "</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_trim</span>(whitespace_str, <span class="at">side =</span> <span class="st">"right"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] " Complete"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_trim</span>(whitespace_str, <span class="at">side =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Complete"</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <br> <!----- Stringr ------------------------------------------------------------></p>
 </section>
 </section>
 <section id="tidyr" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="tidyr"><span class="header-section-number">14.5</span> tidyr</h2>
-<section id="drop_na" class="level3" data-number="14.5.1">
-<h3 data-number="14.5.1" class="anchored" data-anchor-id="drop_na"><span class="header-section-number">14.5.1</span> drop_na()</h3>
+<h2 data-number="14.5" class="anchored" data-anchor-id="tidyr"><span class="header-section-number">14.5</span> {tidyr}</h2>
+<section id="drop-rows-containing-missing-values" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="drop-rows-containing-missing-values"><span class="header-section-number">14.5.1</span> Drop rows containing missing values</h3>
+<p>The <code>drop_na()</code> function is to remove rows from a data frame where any specified columns contain missing values (NA). If no specific columns are indicated, it will check all columns by default.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb133-2"><a href="#cb133-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>,</span>
+<span id="cb133-3"><a href="#cb133-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="dv">1000</span>), <span class="dv">5</span>), <span class="cn">NA</span>, <span class="cn">NA</span>),</span>
+<span id="cb133-4"><a href="#cb133-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> <span class="fu">c</span>(<span class="cn">NA</span>, LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>])</span>
+<span id="cb133-5"><a href="#cb133-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb133-6"><a href="#cb133-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb133-7"><a href="#cb133-7" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 3
+      x     y z    
+  &lt;int&gt; &lt;int&gt; &lt;chr&gt;
+1     1    NA &lt;NA&gt; 
+2     2   808 A    
+3     3    54 B    
+4     4   201 C    
+5     5   130 D    
+6     6   115 E    
+7     7    NA F    
+8     8    NA G    </code></pre>
+</div>
+</div>
+<section id="drop-all-missing-values" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="drop-all-missing-values">Drop all missing values</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-98"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-98" data-target-annotation="1">1</button><span id="annotated-cell-98-1" class="code-annotation-target"><a href="#annotated-cell-98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">drop_na</span>(df)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-98" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-98" data-code-lines="1" data-code-annotation="1">The resulting data frame will only include rows where there are no <code>NAs</code> in any column.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+      x     y z    
+  &lt;int&gt; &lt;int&gt; &lt;chr&gt;
+1     2   808 A    
+2     3    54 B    
+3     4   201 C    
+4     5   130 D    
+5     6   115 E    </code></pre>
+</div>
+</div>
 </section>
-<section id="reshaping-data-pivot_longer-pivot_wider" class="level3" data-number="14.5.2">
-<h3 data-number="14.5.2" class="anchored" data-anchor-id="reshaping-data-pivot_longer-pivot_wider"><span class="header-section-number">14.5.2</span> Reshaping data | pivot_longer() pivot_wider()</h3>
+<section id="selecting-specific-columns" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="selecting-specific-columns">Selecting specific columns</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-99"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-99" data-target-annotation="1">1</button><span id="annotated-cell-99-1" class="code-annotation-target"><a href="#annotated-cell-99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">drop_na</span>(df, z)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-99" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-99" data-code-lines="1" data-code-annotation="1">This will remove rows where column ‘z’ has <code>NA</code> values while ignoring other columns.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 3
+      x     y z    
+  &lt;int&gt; &lt;int&gt; &lt;chr&gt;
+1     2   808 A    
+2     3    54 B    
+3     4   201 C    
+4     5   130 D    
+5     6   115 E    
+6     7    NA F    
+7     8    NA G    </code></pre>
+</div>
+</div>
 </section>
-<section id="separate" class="level3" data-number="14.5.3">
-<h3 data-number="14.5.3" class="anchored" data-anchor-id="separate"><span class="header-section-number">14.5.3</span> Separate||</h3>
-<section id="separate_wider_delim-separate_wider_position-separate_wider_regex." class="level4" data-number="14.5.3.1">
-<h4 data-number="14.5.3.1" class="anchored" data-anchor-id="separate_wider_delim-separate_wider_position-separate_wider_regex."><span class="header-section-number">14.5.3.1</span> separate_wider_delim, separate_wider_position, separate_wider_regex.</h4>
 </section>
-<section id="separate_longer_delim-separate_longer_position" class="level4" data-number="14.5.3.2">
-<h4 data-number="14.5.3.2" class="anchored" data-anchor-id="separate_longer_delim-separate_longer_position"><span class="header-section-number">14.5.3.2</span> separate_longer_delim, separate_longer_position</h4>
+<section id="reshaping-data" class="level3" data-number="14.5.2">
+<h3 data-number="14.5.2" class="anchored" data-anchor-id="reshaping-data"><span class="header-section-number">14.5.2</span> Reshaping data</h3>
+<section id="pivot_longer" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="pivot_longer">pivot_longer</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb137-2"><a href="#cb137-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id_col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb137-3"><a href="#cb137-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">&lt;15</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="dv">100</span><span class="sc">:</span><span class="dv">10000</span>, <span class="dv">3</span>),</span>
+<span id="cb137-4"><a href="#cb137-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">16-35</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="dv">1000</span><span class="sc">:</span><span class="dv">50000</span>, <span class="dv">3</span>),</span>
+<span id="cb137-5"><a href="#cb137-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">36-55</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="dv">5000</span><span class="sc">:</span><span class="dv">100000</span>, <span class="dv">3</span>),</span>
+<span id="cb137-6"><a href="#cb137-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">56&gt;</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="dv">5000</span><span class="sc">:</span><span class="dv">1000000</span>, <span class="dv">3</span>)</span>
+<span id="cb137-7"><a href="#cb137-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb137-8"><a href="#cb137-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-9"><a href="#cb137-9" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  id_col `&lt;15` `16-35` `36-55`  `56&gt;`
+   &lt;int&gt; &lt;int&gt;   &lt;int&gt;   &lt;int&gt;  &lt;int&gt;
+1      1  8748   19565   35799 430496
+2      2  4014   22766   56646 459822
+3      3  8622   47732   32992 250293</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb139"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_longer</span>(df, <span class="sc">!</span>id_col, <span class="at">names_to =</span> <span class="st">"age"</span>, <span class="at">values_to =</span> <span class="st">"income"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 3
+   id_col age   income
+    &lt;int&gt; &lt;chr&gt;  &lt;int&gt;
+ 1      1 &lt;15     8748
+ 2      1 16-35  19565
+ 3      1 36-55  35799
+ 4      1 56&gt;   430496
+ 5      2 &lt;15     4014
+ 6      2 16-35  22766
+ 7      2 36-55  56646
+ 8      2 56&gt;   459822
+ 9      3 &lt;15     8622
+10      3 16-35  47732
+11      3 36-55  32992
+12      3 56&gt;   250293</code></pre>
+</div>
+</div>
+</section>
+<section id="pivot_wider" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="pivot_wider">pivot_wider</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb141"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb141-2"><a href="#cb141-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id_col =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="dv">2</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="dv">3</span>, <span class="dv">3</span>)),</span>
+<span id="cb141-3"><a href="#cb141-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">state =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Lagos"</span>, <span class="st">"Kano"</span>, <span class="st">"Akwa Ibom"</span>), <span class="dv">3</span>),</span>
+<span id="cb141-4"><a href="#cb141-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">market_size =</span> <span class="fu">sample</span>(<span class="dv">15</span><span class="sc">:</span><span class="dv">25</span>, <span class="dv">9</span>)</span>
+<span id="cb141-5"><a href="#cb141-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_wider</span>(df, <span class="at">names_from =</span> state, <span class="at">values_from =</span> market_size)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  id_col Lagos  Kano `Akwa Ibom`
+   &lt;dbl&gt; &lt;int&gt; &lt;int&gt;       &lt;int&gt;
+1      1    16    15          20
+2      2    25    21          18
+3      3    19    22          17</code></pre>
+</div>
+</div>
+<p><br></p>
 </section>
 </section>
-<section id="unite" class="level3" data-number="14.5.4">
-<h3 data-number="14.5.4" class="anchored" data-anchor-id="unite"><span class="header-section-number">14.5.4</span> unite()</h3>
+<section id="separate-character-column-values" class="level3" data-number="14.5.3">
+<h3 data-number="14.5.3" class="anchored" data-anchor-id="separate-character-column-values"><span class="header-section-number">14.5.3</span> Separate character column values</h3>
+<section id="separate-character-column-into-multiple-columns" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="separate-character-column-into-multiple-columns">Separate character column into multiple columns</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id_col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">x =</span> <span class="fu">c</span>(<span class="st">"Lagos-789"</span>, <span class="st">"Ondo-4568"</span>, <span class="st">"Oyo-2478"</span>))</span>
+<span id="cb144-2"><a href="#cb144-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb144-3"><a href="#cb144-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  id_col x        
+   &lt;int&gt; &lt;chr&gt;    
+1      1 Lagos-789
+2      2 Ondo-4568
+3      3 Oyo-2478 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">separate_wider_delim</span>(</span>
+<span id="cb146-2"><a href="#cb146-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df, </span>
+<span id="cb146-3"><a href="#cb146-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">cols =</span> x, </span>
+<span id="cb146-4"><a href="#cb146-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">delim =</span> <span class="st">"-"</span>, </span>
+<span id="cb146-5"><a href="#cb146-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"state"</span>, <span class="st">"participant"</span>)</span>
+<span id="cb146-6"><a href="#cb146-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  id_col state participant
+   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;      
+1      1 Lagos 789        
+2      2 Ondo  4568       
+3      3 Oyo   2478       </code></pre>
+</div>
+</div>
+</section>
+<section id="separate-character-column-into-multiple-rows" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="separate-character-column-into-multiple-rows">Separate character column into multiple rows</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb148-2"><a href="#cb148-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id_col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb148-3"><a href="#cb148-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="st">"one"</span>, <span class="st">"one two"</span>, <span class="st">"one two"</span>)</span>
+<span id="cb148-4"><a href="#cb148-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb148-5"><a href="#cb148-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-6"><a href="#cb148-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  id_col x      
+   &lt;int&gt; &lt;chr&gt;  
+1      1 one    
+2      2 one two
+3      3 one two</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb150"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb150-1"><a href="#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">separate_longer_delim</span>(df, x, <span class="at">delim =</span> <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  id_col x    
+   &lt;int&gt; &lt;chr&gt;
+1      1 one  
+2      2 one  
+3      2 two  
+4      3 one  
+5      3 two  </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="unite-multiple-columns-into-sigle-column" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="unite-multiple-columns-into-sigle-column">Unite multiple columns into sigle column</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb152-2"><a href="#cb152-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">apartment =</span> <span class="fu">c</span>(<span class="st">"478 Apt"</span>, <span class="st">"Floor 54 Apt"</span>, <span class="st">"kent 78 Apt"</span>),</span>
+<span id="cb152-3"><a href="#cb152-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">street =</span> <span class="fu">c</span>(<span class="st">"apex St."</span>, <span class="st">"clary St."</span>, <span class="st">"cover St."</span>)</span>
+<span id="cb152-4"><a href="#cb152-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb152-5"><a href="#cb152-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb152-6"><a href="#cb152-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  apartment    street   
+  &lt;chr&gt;        &lt;chr&gt;    
+1 478 Apt      apex St. 
+2 Floor 54 Apt clary St.
+3 kent 78 Apt  cover St.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb154"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unite</span>(</span>
+<span id="cb154-2"><a href="#cb154-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb154-3"><a href="#cb154-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="st">"address"</span>, </span>
+<span id="cb154-4"><a href="#cb154-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(apartment, street), </span>
+<span id="cb154-5"><a href="#cb154-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sep =</span> <span class="st">", "</span></span>
+<span id="cb154-6"><a href="#cb154-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  address                
+  &lt;chr&gt;                  
+1 478 Apt, apex St.      
+2 Floor 54 Apt, clary St.
+3 kent 78 Apt, cover St. </code></pre>
+</div>
+</div>
 </section>
 </section>
 <section id="purrr" class="level2" data-number="14.6">
-<h2 data-number="14.6" class="anchored" data-anchor-id="purrr"><span class="header-section-number">14.6</span> purrr</h2>
-<section id="map-map2-." class="level3" data-number="14.6.1">
-<h3 data-number="14.6.1" class="anchored" data-anchor-id="map-map2-."><span class="header-section-number">14.6.1</span> map || map2, ….</h3>
+<h2 data-number="14.6" class="anchored" data-anchor-id="purrr"><span class="header-section-number">14.6</span> {purrr}</h2>
+<p>The <code>map()</code> function is an important part of the purrr package just like <code>lapply()</code> in base R, it allows users to apply a specified function to each element of a list or atomic vector and returns a list containing the results.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Functionality
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The primary input to <code>map()</code> is a list or atomic vector (.x), and it takes a function (.f) that will be applied to each element of .x. The output is always a list, regardless of the type of input.</p>
+</div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-110"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-110" data-target-annotation="1">1</button><span id="annotated-cell-110-1" class="code-annotation-target"><a href="#annotated-cell-110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, \(x) x <span class="sc">*</span> <span class="dv">2</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-110" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-110" data-code-lines="1" data-code-annotation="1">multiply each number from 1 to 10 by 2 and returns a list with the results.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 2
+
+[[2]]
+[1] 4
+
+[[3]]
+[1] 6
+
+[[4]]
+[1] 8
+
+[[5]]
+[1] 10
+
+[[6]]
+[1] 12
+
+[[7]]
+[1] 14
+
+[[8]]
+[1] 16
+
+[[9]]
+[1] 18
+
+[[10]]
+[1] 20</code></pre>
+</div>
+</div>
+<section id="other-variants-of-map" class="level3" data-number="14.6.1">
+<h3 data-number="14.6.1" class="anchored" data-anchor-id="other-variants-of-map"><span class="header-section-number">14.6.1</span> Other variants of map()</h3>
+<section id="map-logical" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="map-logical">Map logical</h4>
+<p>The <code>map_lgl()</code> function is expected to return a logical vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-111"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-111" data-target-annotation="1">1</button><span id="annotated-cell-111-1" class="code-annotation-target"><a href="#annotated-cell-111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_lgl</span>(<span class="fu">list</span>(<span class="dv">1</span>, <span class="cn">NA</span>, <span class="dv">2</span>), \(x) <span class="fu">is.na</span>(x))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-111" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-111" data-code-lines="1" data-code-annotation="1">Check whether any of the values in the vector is <code>NA</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE  TRUE FALSE</code></pre>
+</div>
+</div>
+</section>
+<section id="map-integer" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="map-integer">Map integer</h4>
+<p>Using the <code>map_int()</code> function returns an integer vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb158"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_int</span>(<span class="fu">list</span>(<span class="fl">10.478</span>, <span class="fl">10.5478</span>, <span class="fl">11.2478</span>), \(x) <span class="fu">round</span>(x <span class="sc">*</span> <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1048 1055 1125</code></pre>
+</div>
+</div>
+</section>
+<section id="map-double" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="map-double">Map double</h4>
+<p>The <code>map_dbl()</code> is useful for returning a double vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb160"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb160-1"><a href="#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_dbl</span>(<span class="fu">list</span>(<span class="fl">10.478</span>, <span class="fl">10.5478</span>, <span class="fl">11.2478</span>), \(x) <span class="fu">round</span>(x <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1047.80 1054.78 1124.78</code></pre>
+</div>
+</div>
+</section>
+<section id="map-character" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="map-character">Map character</h4>
+<p>The function <code>map_chr()</code> helps return a character vector.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb162"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a href="#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_chr</span>(</span>
+<span id="cb162-2"><a href="#cb162-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="st">"sTate"</span>, <span class="st">"ZONe"</span>, <span class="st">"COunTrY"</span>, <span class="st">"contineNT"</span>),</span>
+<span id="cb162-3"><a href="#cb162-3" aria-hidden="true" tabindex="-1"></a>  \(x) <span class="fu">str_to_title</span>(x)</span>
+<span id="cb162-4"><a href="#cb162-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "State"     "Zone"      "Country"   "Continent"</code></pre>
+</div>
+</div>
+</section>
 </section>
 <section id="list-manipulation" class="level3" data-number="14.6.2">
 <h3 data-number="14.6.2" class="anchored" data-anchor-id="list-manipulation"><span class="header-section-number">14.6.2</span> list manipulation</h3>
+<section id="keep-values-based-on-a-condition" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="keep-values-based-on-a-condition">Keep values based on a condition</h4>
+<p>The <code>keep()</code> function returns elements of a list or vector that satisfy a specified condition</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb164"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb164-1"><a href="#cb164-1" aria-hidden="true" tabindex="-1"></a>full_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">80</span>), <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">50</span>))</span>
+<span id="cb164-2"><a href="#cb164-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb164-3"><a href="#cb164-3" aria-hidden="true" tabindex="-1"></a>full_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 20 50 80
+
+[[2]]
+[1] 10 30 50</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-116"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-116" data-target-annotation="1">1</button><span id="annotated-cell-116-1" class="code-annotation-target"><a href="#annotated-cell-116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">keep</span>(full_list, \(x) <span class="fu">mean</span>(x) <span class="sc">&gt;</span> <span class="dv">40</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-116" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-116" data-code-lines="1" data-code-annotation="1">Return the vector where the average value is greater than 40.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 20 50 80</code></pre>
+</div>
+</div>
+</section>
+<section id="discard-values-based-on-a-condition" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="discard-values-based-on-a-condition">discard values based on a condition</h4>
+<p>The <code>discard()</code> function is the opposite of <code>keep()</code> and it removes elements that satisfy a condition.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-117"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-117" data-target-annotation="1">1</button><span id="annotated-cell-117-1" class="code-annotation-target"><a href="#annotated-cell-117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">discard</span>(full_list, \(x) <span class="fu">min</span>(x) <span class="sc">&gt;</span> <span class="dv">15</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-117" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-117" data-code-lines="1" data-code-annotation="1">Drop the vector where the minimum value is greater than 15</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 10 30 50</code></pre>
+</div>
+</div>
+</section>
+<section id="safely-get-element-deep-within-a-nested-list" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="safely-get-element-deep-within-a-nested-list">Safely get element deep within a nested list</h4>
+<p>The <code>pluck()</code> function can extracts elements from deeply nested lists or data structures.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb168"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb168-1"><a href="#cb168-1" aria-hidden="true" tabindex="-1"></a>nested_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb168-2"><a href="#cb168-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> <span class="fu">list</span>(<span class="at">ax =</span> <span class="fu">list</span>(<span class="at">ay =</span> <span class="dv">5</span>)), </span>
+<span id="cb168-3"><a href="#cb168-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> <span class="fu">list</span>(<span class="at">bx =</span> <span class="fu">list</span>(<span class="at">by =</span> <span class="dv">20</span>))</span>
+<span id="cb168-4"><a href="#cb168-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb168-5"><a href="#cb168-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb168-6"><a href="#cb168-6" aria-hidden="true" tabindex="-1"></a>nested_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+$a$ax
+$a$ax$ay
+[1] 5
+
+
+
+$b
+$b$bx
+$b$bx$by
+[1] 20</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-119"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-119" data-target-annotation="1">1</button><span id="annotated-cell-119-1" class="code-annotation-target"><a href="#annotated-cell-119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pluck</span>(nested_list, <span class="st">"a"</span>, <span class="st">"ax"</span>, <span class="st">"ay"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-119" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-119" data-code-lines="1" data-code-annotation="1">Extract the value assigned to the name ay in the nested list.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p><br> <br> <br> <br> <!-------- Purrr -------------------------------------------------------------></p>
+</section>
 </section>
 </section>
 <section id="lubridate" class="level2" data-number="14.7">
-<h2 data-number="14.7" class="anchored" data-anchor-id="lubridate"><span class="header-section-number">14.7</span> lubridate</h2>
-<section id="today" class="level3" data-number="14.7.1">
-<h3 data-number="14.7.1" class="anchored" data-anchor-id="today"><span class="header-section-number">14.7.1</span> today()</h3>
+<h2 data-number="14.7" class="anchored" data-anchor-id="lubridate"><span class="header-section-number">14.7</span> {lubridate}</h2>
+<p>The <code>lubridate</code> package in R simplifies handling and manipulating dates and times. It has several functions for parsing, manipulating, and performing operations on dates and times. This makes handling dates less error-prone, with a clear syntax that allows you to handle real-world complexities</p>
+<section id="parsing-dates" class="level3" data-number="14.7.1">
+<h3 data-number="14.7.1" class="anchored" data-anchor-id="parsing-dates"><span class="header-section-number">14.7.1</span> Parsing dates</h3>
+<p>There are different functions that can parse strings into date objects, including:</p>
+<section id="as_date" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="as_date">as_date</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-120"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-120" data-target-annotation="1">1</button><span id="annotated-cell-120-1" class="code-annotation-target"><a href="#annotated-cell-120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_date</span>(<span class="st">"2023/05/23"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-120" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-120" data-code-lines="1" data-code-annotation="1">Parse the string “2023/05/23” to a date object.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-05-23"</code></pre>
+</div>
+</div>
 </section>
-<section id="parse-date" class="level3" data-number="14.7.2">
-<h3 data-number="14.7.2" class="anchored" data-anchor-id="parse-date"><span class="header-section-number">14.7.2</span> parse date</h3>
+<section id="year-month-day" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="year-month-day">year-month-day</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-121"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-121" data-target-annotation="1">1</button><span id="annotated-cell-121-1" class="code-annotation-target"><a href="#annotated-cell-121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">"2023-02-25"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-121" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-121" data-code-lines="1" data-code-annotation="1">Parse the string “2023-02-25” to a date object using the helper function <code>ymd()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-02-25"</code></pre>
+</div>
+</div>
 </section>
-<section id="year-quarter-month-day" class="level3" data-number="14.7.3">
-<h3 data-number="14.7.3" class="anchored" data-anchor-id="year-quarter-month-day"><span class="header-section-number">14.7.3</span> year, quarter, month, day</h3>
+<section id="year-day-month" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="year-day-month">year-day-month</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-122"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-122" data-target-annotation="1">1</button><span id="annotated-cell-122-1" class="code-annotation-target"><a href="#annotated-cell-122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ydm</span>(<span class="st">"2023-25-02"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-122" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-122" data-code-lines="1" data-code-annotation="1">Parse the string “2023-25-02” to a date object using the helper function <code>ydm()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-02-25"</code></pre>
+</div>
+</div>
+</section>
+<section id="month-day-year" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="month-day-year">month-day-year</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-123"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-123" data-target-annotation="1">1</button><span id="annotated-cell-123-1" class="code-annotation-target"><a href="#annotated-cell-123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mdy</span>(<span class="st">"12-25-2021"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-123" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-123" data-code-lines="1" data-code-annotation="1">Parse the string “12-25-2021” to a date object using the helper function <code>mdy()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2021-12-25"</code></pre>
+</div>
+</div>
+</section>
+<section id="month-year-day" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="month-year-day">month-year-day</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-124"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-124" data-target-annotation="1">1</button><span id="annotated-cell-124-1" class="code-annotation-target"><a href="#annotated-cell-124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">myd</span>(<span class="st">"12-2023-09"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-124" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-124" data-code-lines="1" data-code-annotation="1">Parse the string “12-2023-09” to a date object using the helper function <code>myd()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-12-09"</code></pre>
+</div>
+</div>
+</section>
+<section id="day-month-year" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="day-month-year">day-month-year</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-125"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-125" data-target-annotation="1">1</button><span id="annotated-cell-125-1" class="code-annotation-target"><a href="#annotated-cell-125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dmy</span>(<span class="st">"05-23-2022"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-125" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-125" data-code-lines="1" data-code-annotation="1">Parse the string “05-23-2022” to a date object using the helper function <code>dmy()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
+</section>
+<section id="day-year-month" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="day-year-month">day-year-month</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-126"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-126" data-target-annotation="1">1</button><span id="annotated-cell-126-1" class="code-annotation-target"><a href="#annotated-cell-126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dym</span>(<span class="st">"05-2022-08"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-126" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-126" data-code-lines="1" data-code-annotation="1">Parse the string “05-2022-08” to a date object using the helper function <code>dym()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2022-08-05"</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="parsing-time" class="level3" data-number="14.7.2">
+<h3 data-number="14.7.2" class="anchored" data-anchor-id="parsing-time"><span class="header-section-number">14.7.2</span> Parsing time</h3>
+<section id="hour-minute-second" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="hour-minute-second">hour-minute-second</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-127"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-127" data-target-annotation="1">1</button><span id="annotated-cell-127-1" class="code-annotation-target"><a href="#annotated-cell-127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hms</span>(<span class="st">"12:25:35"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-127" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-127" data-code-lines="1" data-code-annotation="1">Parse the string “12:25:35” to a time object using the helper function <code>hms()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "12H 25M 35S"</code></pre>
+</div>
+</div>
+</section>
+<section id="hour-minute" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="hour-minute">hour-minute</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-128"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-128" data-target-annotation="1">1</button><span id="annotated-cell-128-1" class="code-annotation-target"><a href="#annotated-cell-128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hm</span>(<span class="st">"05:35"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-128" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-128" data-code-lines="1" data-code-annotation="1">Parse the string “05:35” to a time object using the helper function <code>hm()</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "5H 35M 0S"</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="parsing-to-datetime" class="level3" data-number="14.7.3">
+<h3 data-number="14.7.3" class="anchored" data-anchor-id="parsing-to-datetime"><span class="header-section-number">14.7.3</span> Parsing to datetime</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-129"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-129" data-target-annotation="1">1</button><span id="annotated-cell-129-1" class="code-annotation-target"><a href="#annotated-cell-129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_datetime</span>(<span class="st">"2023-09-15 12:45:00"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-129" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-129" data-code-lines="1" data-code-annotation="1">Convert the string to a date-time object.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-09-15 12:45:00 UTC"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb181"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb181-1"><a href="#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ymd_hms</span>(<span class="st">"2023-09-15 12:45:00"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-09-15 12:45:00 UTC"</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Other helper functions for date-time
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Just like the date parsing helper functions, the date-time also have similar functions including the time object.</p>
+</div>
+</div>
+</section>
+<section id="extracting-components-of-a-date" class="level3" data-number="14.7.4">
+<h3 data-number="14.7.4" class="anchored" data-anchor-id="extracting-components-of-a-date"><span class="header-section-number">14.7.4</span> Extracting components of a date</h3>
+<p>You can extract specific components of a date-time object using functions such as the following:</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-131"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-131" data-target-annotation="1">1</button><span id="annotated-cell-131-1" class="code-annotation-target"><a href="#annotated-cell-131-1" aria-hidden="true" tabindex="-1"></a>new_date_time <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2023-09-15 12:45:00"</span>)</span>
+<span id="annotated-cell-131-2"><a href="#annotated-cell-131-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-131-3"><a href="#annotated-cell-131-3" aria-hidden="true" tabindex="-1"></a>new_date_time</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-131" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-131" data-code-lines="1" data-code-annotation="1">Parse the string “2023-09-15 12:45:00” to a date-time object.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-09-15 12:45:00 UTC"</code></pre>
+</div>
+</div>
+<section id="date-components" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="date-components">Date components</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-132"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-132" data-target-annotation="1">1</button><span id="annotated-cell-132-1" class="code-annotation-target"><a href="#annotated-cell-132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>(new_date_time)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-132" data-target-annotation="2">2</button><span id="annotated-cell-132-2" class="code-annotation-target"><a href="#annotated-cell-132-2" aria-hidden="true" tabindex="-1"></a><span class="fu">month</span>(new_date_time)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-132" data-target-annotation="3">3</button><span id="annotated-cell-132-3" class="code-annotation-target"><a href="#annotated-cell-132-3" aria-hidden="true" tabindex="-1"></a><span class="fu">day</span>(new_date_time)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-132" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-132" data-code-lines="1" data-code-annotation="1">Get the <code>Year</code> component of the <code>new_date_time</code> value.</span>
+</dd>
+<dt data-target-cell="annotated-cell-132" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-132" data-code-lines="2" data-code-annotation="2">Get the <code>Month</code> component of the <code>new_date_time</code> value.</span>
+</dd>
+<dt data-target-cell="annotated-cell-132" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-132" data-code-lines="3" data-code-annotation="3">Get the <code>Day</code> component of the <code>new_date_time</code> value.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2023
+[1] 9
+[1] 15</code></pre>
+</div>
+</div>
+</section>
+<section id="time-components" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="time-components">Time components</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-133"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-133" data-target-annotation="1">1</button><span id="annotated-cell-133-1" class="code-annotation-target"><a href="#annotated-cell-133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hour</span>(new_date_time)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-133" data-target-annotation="2">2</button><span id="annotated-cell-133-2" class="code-annotation-target"><a href="#annotated-cell-133-2" aria-hidden="true" tabindex="-1"></a><span class="fu">minute</span>(new_date_time)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-133" data-target-annotation="3">3</button><span id="annotated-cell-133-3" class="code-annotation-target"><a href="#annotated-cell-133-3" aria-hidden="true" tabindex="-1"></a><span class="fu">second</span>(new_date_time)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-133" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-133" data-code-lines="1" data-code-annotation="1">Get the <code>Hour</code> component of the <code>new_date_time</code> value.</span>
+</dd>
+<dt data-target-cell="annotated-cell-133" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-133" data-code-lines="2" data-code-annotation="2">Get the <code>Minute</code> component of the <code>new_date_time</code> value.</span>
+</dd>
+<dt data-target-cell="annotated-cell-133" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-133" data-code-lines="3" data-code-annotation="3">Get the <code>Second</code> component of the <code>new_date_time</code> value.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12
+[1] 45
+[1] 0</code></pre>
+</div>
+</div>
+</section>
+<section id="day-of-..-components" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="day-of-..-components">Day of .. components</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-134"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-134" data-target-annotation="1">1</button><span id="annotated-cell-134-1" class="code-annotation-target"><a href="#annotated-cell-134-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wday</span>(new_date_time)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-134" data-target-annotation="2">2</button><span id="annotated-cell-134-2" class="code-annotation-target"><a href="#annotated-cell-134-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mday</span>(new_date_time)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-134" data-target-annotation="3">3</button><span id="annotated-cell-134-3" class="code-annotation-target"><a href="#annotated-cell-134-3" aria-hidden="true" tabindex="-1"></a><span class="fu">yday</span>(new_date_time)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-134" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-134" data-code-lines="1" data-code-annotation="1">Extracts the day of the week. default (1 = Sunday, 7 = Saturday).</span>
+</dd>
+<dt data-target-cell="annotated-cell-134" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-134" data-code-lines="2" data-code-annotation="2">Extracts Extracts the day of the month.</span>
+</dd>
+<dt data-target-cell="annotated-cell-134" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-134" data-code-lines="3" data-code-annotation="3">Extracts the day of the year default (1 = January 1, 365/366 = December 31).</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6
+[1] 15
+[1] 258</code></pre>
+</div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="manipulating-dates" class="level3" data-number="14.7.5">
+<h3 data-number="14.7.5" class="anchored" data-anchor-id="manipulating-dates"><span class="header-section-number">14.7.5</span> Manipulating dates</h3>
+<p>Dates can be manipulated using arithmetic operators to add or subtract days, months, years, etc. <strong>Example:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-135"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-135" data-target-annotation="1">1</button><span id="annotated-cell-135-1" class="code-annotation-target"><a href="#annotated-cell-135-1" aria-hidden="true" tabindex="-1"></a>new_date_time <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">10</span>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-135" data-target-annotation="2">2</button><span id="annotated-cell-135-2" class="code-annotation-target"><a href="#annotated-cell-135-2" aria-hidden="true" tabindex="-1"></a>new_date_time <span class="sc">-</span> <span class="fu">months</span>(<span class="dv">2</span>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-135" data-target-annotation="3">3</button><span id="annotated-cell-135-3" class="code-annotation-target"><a href="#annotated-cell-135-3" aria-hidden="true" tabindex="-1"></a>new_date_time <span class="sc">+</span> <span class="fu">years</span>(<span class="dv">1</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-135" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-135" data-code-lines="1" data-code-annotation="1">Adds 10 more days to <code>2023-09-15 12:45:00</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-135" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-135" data-code-lines="2" data-code-annotation="2">Subtracts 2 months from <code>2023-09-15 12:45:00</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-135" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-135" data-code-lines="3" data-code-annotation="3">Adds 1 year to <code>2023-09-15 12:45:00</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-09-25 12:45:00 UTC"
+[1] "2023-07-15 12:45:00 UTC"
+[1] "2024-09-15 12:45:00 UTC"</code></pre>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="date-comparisons" class="level3" data-number="14.7.6">
+<h3 data-number="14.7.6" class="anchored" data-anchor-id="date-comparisons"><span class="header-section-number">14.7.6</span> Date comparisons</h3>
+<p>Standard comparison operators such as (==, &lt;, &gt;, !=) can be used to compare different date objects. <strong>Examples:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-136"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-136" data-target-annotation="1">1</button><span id="annotated-cell-136-1" class="code-annotation-target"><a href="#annotated-cell-136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">"2023-09-15"</span>) <span class="sc">==</span> <span class="fu">ymd</span>(<span class="st">"2023-09-15"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-136" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-136" data-code-lines="1" data-code-annotation="1">Compare whether <code>2023-09-15</code> is equal to <code>2023-09-15</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-137"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-137" data-target-annotation="1">1</button><span id="annotated-cell-137-1" class="code-annotation-target"><a href="#annotated-cell-137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">"2023-09-15"</span>) <span class="sc">&gt;</span> <span class="fu">ymd</span>(<span class="st">"2023-08-15"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-137" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-137" data-code-lines="1" data-code-annotation="1">Compare whether <code>2023-09-15</code> &gt; <code>2023-08-15</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<section id="within" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="within">Within</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-138"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-138-1"><a href="#annotated-cell-138-1" aria-hidden="true" tabindex="-1"></a>new_date_inverval <span class="ot">&lt;-</span> <span class="fu">interval</span>(<span class="fu">ymd</span>(<span class="st">"2023-01-01"</span>), <span class="fu">ymd</span>(<span class="st">"2023-12-31"</span>))</span>
+<span id="annotated-cell-138-2"><a href="#annotated-cell-138-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-138" data-target-annotation="1">1</button><span id="annotated-cell-138-3" class="code-annotation-target"><a href="#annotated-cell-138-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">"2023-09-15"</span>) <span class="sc">%within%</span> new_date_inverval</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-138" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-138" data-code-lines="3" data-code-annotation="1">Checks if the date <code>2023-09-15</code> lies within an interval <code>new_date_inverval</code>.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="task" class="level2" data-number="14.8">
+<h2 data-number="14.8" class="anchored" data-anchor-id="task"><span class="header-section-number">14.8</span> Task</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -2634,8 +4842,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./python_programming.html" class="pagination-link" aria-label="Python">
-        <span class="nav-page-text">Python</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./r_data_visualization.html" class="pagination-link" aria-label="Visualization">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Visualization</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

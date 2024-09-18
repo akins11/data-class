@@ -25,6 +25,9 @@ book:
         - r_data_structure.qmd
         - r_operators.qmd
         - r_tidyverse.qmd
+        - r_data_visualization.qmd
+        - r_exploratory.qmd
+        - r_data_cleaning.qmd
     - part: python_programming.qmd
       chapters: 
         - python_data_types.qmd
