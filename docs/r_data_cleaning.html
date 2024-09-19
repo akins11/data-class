@@ -320,12 +320,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#remove-bad-values" id="toc-remove-bad-values" class="nav-link active" data-scroll-target="#remove-bad-values"><span class="header-section-number">17.1</span> Remove bad values</a></li>
-  <li><a href="#convert-to-approprate-data-type" id="toc-convert-to-approprate-data-type" class="nav-link" data-scroll-target="#convert-to-approprate-data-type"><span class="header-section-number">17.2</span> Convert to approprate data-type</a></li>
-  <li><a href="#seperate-values-into-multiple-columns" id="toc-seperate-values-into-multiple-columns" class="nav-link" data-scroll-target="#seperate-values-into-multiple-columns"><span class="header-section-number">17.3</span> Seperate values into multiple columns</a></li>
-  <li><a href="#filter-out-poor-values" id="toc-filter-out-poor-values" class="nav-link" data-scroll-target="#filter-out-poor-values"><span class="header-section-number">17.4</span> Filter out poor values</a></li>
-  <li><a href="#standarized-values" id="toc-standarized-values" class="nav-link" data-scroll-target="#standarized-values"><span class="header-section-number">17.5</span> Standarized values</a></li>
-  <li><a href="#calculate-new-values-from-current-values." id="toc-calculate-new-values-from-current-values." class="nav-link" data-scroll-target="#calculate-new-values-from-current-values."><span class="header-section-number">17.6</span> Calculate new values from current values.</a></li>
+  <li><a href="#find-the-dirt" id="toc-find-the-dirt" class="nav-link active" data-scroll-target="#find-the-dirt"><span class="header-section-number">17.1</span> Find the dirt</a>
+  <ul class="collapse">
+  <li><a href="#data-exploration" id="toc-data-exploration" class="nav-link" data-scroll-target="#data-exploration"><span class="header-section-number">17.1.1</span> Data exploration</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -355,25 +353,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="remove-bad-values" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="remove-bad-values"><span class="header-section-number">17.1</span> Remove bad values</h2>
-</section>
-<section id="convert-to-approprate-data-type" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="convert-to-approprate-data-type"><span class="header-section-number">17.2</span> Convert to approprate data-type</h2>
-</section>
-<section id="seperate-values-into-multiple-columns" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="seperate-values-into-multiple-columns"><span class="header-section-number">17.3</span> Seperate values into multiple columns</h2>
-</section>
-<section id="filter-out-poor-values" class="level2" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="filter-out-poor-values"><span class="header-section-number">17.4</span> Filter out poor values</h2>
-</section>
-<section id="standarized-values" class="level2" data-number="17.5">
-<h2 data-number="17.5" class="anchored" data-anchor-id="standarized-values"><span class="header-section-number">17.5</span> Standarized values</h2>
-</section>
-<section id="calculate-new-values-from-current-values." class="level2" data-number="17.6">
-<h2 data-number="17.6" class="anchored" data-anchor-id="calculate-new-values-from-current-values."><span class="header-section-number">17.6</span> Calculate new values from current values.</h2>
+<section id="find-the-dirt" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="find-the-dirt"><span class="header-section-number">17.1</span> Find the dirt</h2>
+<section id="data-exploration" class="level3" data-number="17.1.1">
+<h3 data-number="17.1.1" class="anchored" data-anchor-id="data-exploration"><span class="header-section-number">17.1.1</span> Data exploration</h3>
+<ul>
+<li>missing values,</li>
+<li>data distribution,</li>
+<li>search for outliers, (inconsistent values)</li>
+<li>inconsistent categorical values (contaminated data)</li>
+<li>data invalidity</li>
+<li>data duplicated records</li>
+<li>data type issues</li>
+<li>structural errors</li>
+<li>column names misalignment</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
