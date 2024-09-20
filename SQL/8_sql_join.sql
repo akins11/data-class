@@ -1,4 +1,4 @@
---CREATE DATABASE ProductOrderStatusDB;
+-- USE DATABASE ProductOrderStatusDB =================================
 
 -- Create Customers table --------------------------------------------
 CREATE TABLE Customers (
@@ -48,49 +48,60 @@ FROM customers
 INNER JOIN Orders
 	ON customers.customer_id = Orders.customer_id;
 
+-- OR (Using Alias)
+
+SELECT 
+	c.customer_id, 
+	c.customer_name, 
+	o.order_id
+FROM customers AS c
+INNER JOIN Orders AS o
+	ON c.customer_id = o.customer_id;
+
+
 
 -- LEFT JOIN ==============================================================
 -- Shows all customers, including those without orders.
 SELECT 
-	customers.customer_id,
-	customers.customer_name, 
-	Orders.order_id
-FROM customers
-LEFT JOIN Orders
-	ON customers.customer_id = Orders.customer_id;
+	c.customer_id,
+	c.customer_name, 
+	o.order_id
+FROM customers c
+LEFT JOIN Orders o
+	ON c.customer_id = o.customer_id;
 
 
 -- RIGHT JOIN =============================================================
 -- Show all orders, including those without corresponding customers.
 SELECT 
-	customers.customer_id, 
-	customers.customer_name, 
-	Orders.order_id
-FROM customers
-RIGHT JOIN Orders
-	ON Customers.customer_id = Orders.customer_id;
+	c.customer_id, 
+	c.customer_name, 
+	o.order_id
+FROM customers c
+RIGHT JOIN Orders o
+	ON c.customer_id = o.customer_id;
 
 
 -- FULL JOIN (FULL OUTER JOIN) =============================================
--- Show all customers and all orders, including those without matches.
+-- Show all customers and all orders, including those without match.
 SELECT 
-	customers.customer_id, 
-	customers.customer_name, 
-	Orders.order_id
-FROM customers
-FULL OUTER JOIN Orders
-	ON customers.customer_id = Orders.customer_id;
+	c.customer_id, 
+	c.customer_name, 
+	o.order_id
+FROM customers c
+FULL OUTER JOIN Orders o
+	ON c.customer_id = o.customer_id;
 
 
 -- CROSS JOIN ==============================================================
 -- Show every possible combination of customers and orders.
 SELECT
-	customers.customer_id, 
-	Orders.customer_id,
-	customers.customer_name, 
-	Orders.order_id
-FROM customers
-CROSS JOIN Orders;
+	c.customer_id AS customer_customer_id, 
+	o.customer_id AS order_customer_id,
+	c.customer_name, 
+	o.order_id
+FROM customers c
+CROSS JOIN Orders o;
 
 
 -- SELF JOIN ===============================================================
@@ -105,7 +116,6 @@ WHERE a.customer_id <> b.customer_id;
 
 
 
--- 
 -- Create ProductA table -----------------------
 CREATE TABLE ProductA (
     product_id INTEGER,
