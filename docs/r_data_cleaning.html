@@ -322,7 +322,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#find-the-dirt" id="toc-find-the-dirt" class="nav-link active" data-scroll-target="#find-the-dirt"><span class="header-section-number">17.1</span> Find the dirt</a>
   <ul class="collapse">
-  <li><a href="#data-exploration" id="toc-data-exploration" class="nav-link" data-scroll-target="#data-exploration"><span class="header-section-number">17.1.1</span> Data exploration</a></li>
+  <li><a href="#data-struture" id="toc-data-struture" class="nav-link" data-scroll-target="#data-struture"><span class="header-section-number">17.1.1</span> Data Struture</a></li>
+  <li><a href="#data-exploration" id="toc-data-exploration" class="nav-link" data-scroll-target="#data-exploration"><span class="header-section-number">17.1.2</span> Data exploration</a></li>
+  </ul></li>
+  <li><a href="#data-final-checks" id="toc-data-final-checks" class="nav-link" data-scroll-target="#data-final-checks"><span class="header-section-number">17.2</span> Data final checks</a>
+  <ul class="collapse">
+  <li><a href="#check-data-types" id="toc-check-data-types" class="nav-link" data-scroll-target="#check-data-types"><span class="header-section-number">17.2.1</span> Check data types</a></li>
+  <li><a href="#check-missing-values" id="toc-check-missing-values" class="nav-link" data-scroll-target="#check-missing-values"><span class="header-section-number">17.2.2</span> Check missing values</a></li>
+  <li><a href="#data-integrity" id="toc-data-integrity" class="nav-link" data-scroll-target="#data-integrity"><span class="header-section-number">17.2.3</span> Data integrity</a></li>
+  <li><a href="#check-unified-appropriate-category-values" id="toc-check-unified-appropriate-category-values" class="nav-link" data-scroll-target="#check-unified-appropriate-category-values"><span class="header-section-number">17.2.4</span> Check unified &amp; appropriate category values</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -350,24 +358,1083 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/dirty_employee_data.csv"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1">Import the employee dataset.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 1050 Columns: 10
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (6): First.Name, LAST_NAME, Gender, Department, HireDate, emp_period
+dbl (4): Emp ID, AGE, Salary, perf_score
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
 </div>
 <section id="find-the-dirt" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="find-the-dirt"><span class="header-section-number">17.1</span> Find the dirt</h2>
-<section id="data-exploration" class="level3" data-number="17.1.1">
-<h3 data-number="17.1.1" class="anchored" data-anchor-id="data-exploration"><span class="header-section-number">17.1.1</span> Data exploration</h3>
+<section id="data-struture" class="level3" data-number="17.1.1">
+<h3 data-number="17.1.1" class="anchored" data-anchor-id="data-struture"><span class="header-section-number">17.1.1</span> Data Struture</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(employee_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,050
+Columns: 10
+$ `Emp ID`   &lt;dbl&gt; 17487, 27710, 44887, 84983, 99418, 63517, 76074, 58813, 575…
+$ First.Name &lt;chr&gt; "David", "Jane", "Sarah", "Mary", "Robert", "John", "Emily"…
+$ LAST_NAME  &lt;chr&gt; "Garcia", "Johnson", "Rodriguez", "Miller", "Martinez", "Br…
+$ Gender     &lt;chr&gt; "Female", "Male", "Female", "F", "Male", "Female", "Male", …
+$ AGE        &lt;dbl&gt; 55, 57, 26, 42, 31, 50, 23, 42, 46, 34, 36, 57, 39, 19, 55,…
+$ Department &lt;chr&gt; "Human Resource", "Finance", "Finance", "Marketg", "Human R…
+$ Salary     &lt;dbl&gt; 48190, 25895, 64947, 71114, 52962, 52213, 52504, 76424, 458…
+$ HireDate   &lt;chr&gt; "2019-11-09", "2019-07-16", "2012-01-04", "2020-01-26", "20…
+$ perf_score &lt;dbl&gt; 3, 9, 10, 10, 8, 1, 5, 4, 4, 9, 3, 4, 3, 6, 8, 4, 3, 8, 3, …
+$ emp_period &lt;chr&gt; "2012 - 2015", "2016 - 2018", "2016 - 2014", "2016 - 2018",…</code></pre>
+</div>
+</div>
+<p>The data contains 1,050 rows and 10 columns. based on the present records as shown above, there are different data type. …</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data Dictionary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The <code>employee_df</code> contains dirty records of both past and present employees including the variables:</p>
 <ul>
-<li>missing values,</li>
-<li>data distribution,</li>
-<li>search for outliers, (inconsistent values)</li>
-<li>inconsistent categorical values (contaminated data)</li>
-<li>data invalidity</li>
-<li>data duplicated records</li>
-<li>data type issues</li>
-<li>structural errors</li>
-<li>column names misalignment</li>
+<li><strong>Emp ID:</strong> A unique id assigned to each employee</li>
+<li><strong>First.Name:</strong> Employee’s first name.</li>
+<li><strong>LAST_NAME:</strong> Employee’s last name.</li>
+<li><strong>Gender:</strong> The imputed gender of employees.</li>
+<li><strong>AGE:</strong> The age of employee</li>
+<li><strong>Department:</strong> The department the employee belongs to.</li>
+<li><strong>Salary:</strong> The monthly gross salary of each employee.</li>
+<li><strong>HireDate:</strong> The date in which the employee started with the company</li>
+<li><strong>perf_score:</strong> The most recent performance score of the employee.</li>
+<li><strong>emp_period1:</strong> The period of employment.</li>
 </ul>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-1" class="code-annotation-target"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(employee_df)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="1" data-code-annotation="1">Retrieve the first 5 rows in the table.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 10
+  `Emp ID` First.Name LAST_NAME Gender   AGE Department     Salary HireDate     
+     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;        
+1    17487 David      Garcia    Female    55 Human Resource  48190 2019-11-09   
+2    27710 Jane       Johnson   Male      57 Finance         25895 2019-07-16   
+3    44887 Sarah      Rodriguez Female    26 Finance         64947 2012-01-04   
+4    84983 Mary       Miller    F         42 Marketg         71114 2020-01-26   
+5    99418 Robert     Martinez  Male      31 Human Resource  52962 2014-11-21   
+6    63517 John       Brown     Female    50 HR              52213 2018-01-06 A…
+# ℹ 2 more variables: perf_score &lt;dbl&gt;, emp_period &lt;chr&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="data-exploration" class="level3" data-number="17.1.2">
+<h3 data-number="17.1.2" class="anchored" data-anchor-id="data-exploration"><span class="header-section-number">17.1.2</span> Data exploration</h3>
+<p>An initial exploration of the data should be performed to understand the ….</p>
+<section id="data-type" class="level4" data-number="17.1.2.1">
+<h4 data-number="17.1.2.1" class="anchored" data-anchor-id="data-type"><span class="header-section-number">17.1.2.1</span> Data type</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-1" class="code-annotation-target"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(employee_df, \(x) <span class="fu">class</span>(x))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-5" data-code-lines="1" data-code-annotation="1">Loop over each column in the dataset and get the data type.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Emp ID  First.Name   LAST_NAME      Gender         AGE  Department 
+  "numeric" "character" "character" "character"   "numeric" "character" 
+     Salary    HireDate  perf_score  emp_period 
+  "numeric" "character"   "numeric" "character" </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Issues
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>The <code>Salary</code> variable should be a numeric data and not a character data.</p></li>
+<li><p>The <code>HireDate</code> contains date information, but the variable has a character data type.</p></li>
+</ul>
+</div>
+</div>
+<p><strong>Solution:</strong><br>
+Convert the identified columns with wrong data types to the approprate data type.</p>
+<ul>
+<li><strong>Salary:</strong></li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1">1</button><span id="annotated-cell-6-1" class="code-annotation-target"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(employee_df, <span class="at">Salary =</span> <span class="fu">as.double</span>(Salary))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="1" data-code-annotation="1">Convert the <code>Salary</code> variable from a character data to a double data type using the <code>as.double()</code> function.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,050 × 10
+   `Emp ID` First.Name LAST_NAME Gender   AGE Department     Salary HireDate    
+      &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;       
+ 1    17487 David      Garcia    Female    55 Human Resource  48190 2019-11-09  
+ 2    27710 Jane       Johnson   Male      57 Finance         25895 2019-07-16  
+ 3    44887 Sarah      Rodriguez Female    26 Finance         64947 2012-01-04  
+ 4    84983 Mary       Miller    F         42 Marketg         71114 2020-01-26  
+ 5    99418 Robert     Martinez  Male      31 Human Resource  52962 2014-11-21  
+ 6    63517 John       Brown     Female    50 HR              52213 2018-01-06 …
+ 7    76074 Emily      Brown     Male      23 HR              52504 2010-09-16  
+ 8    58813 Lisa       Miller    Female    42 Human Resource  76424 2019-11-05  
+ 9    57504 Michael    Martinez  Female    46 Sales           45859 2012-01-13  
+10    12760 Mary       Davis     Male      34 Sales           44642 2015-12-02  
+# ℹ 1,040 more rows
+# ℹ 2 more variables: perf_score &lt;dbl&gt;, emp_period &lt;chr&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>HireDate:</strong></li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-7"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-7-1"><a href="#annotated-cell-7-1" aria-hidden="true" tabindex="-1"></a>invalid_date_records <span class="ot">&lt;-</span> employee_df <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="1">1</button><span id="annotated-cell-7-2" class="code-annotation-target"><a href="#annotated-cell-7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_valid_date =</span> <span class="fu">str_detect</span>(HireDate, <span class="st">"^</span><span class="sc">\\</span><span class="st">d{4}-</span><span class="sc">\\</span><span class="st">d{2}-</span><span class="sc">\\</span><span class="st">d{2}$"</span>)) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="2">2</button><span id="annotated-cell-7-3" class="code-annotation-target"><a href="#annotated-cell-7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(HireDate, is_valid_date) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="3">3</button><span id="annotated-cell-7-4" class="code-annotation-target"><a href="#annotated-cell-7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>is_valid_date)</span>
+<span id="annotated-cell-7-5"><a href="#annotated-cell-7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-7-6"><a href="#annotated-cell-7-6" aria-hidden="true" tabindex="-1"></a>invalid_date_records                                          </span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-7" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-7" data-code-lines="2" data-code-annotation="1">add a new column <code>is_valid_date</code> to the data to indicate which record have a valid and invalid date using the <code>str_detect()</code> function from the {stringr} package and the regex.</span>
+</dd>
+<dt data-target-cell="annotated-cell-7" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-7" data-code-lines="3" data-code-annotation="2">Select only the <code>HireDate</code> and the new <code>is_valid_date</code> date column.</span>
+</dd>
+<dt data-target-cell="annotated-cell-7" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-7" data-code-lines="4" data-code-annotation="3">Retrieve records with invalid dates.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 117 × 2
+   HireDate             is_valid_date
+   &lt;chr&gt;                &lt;lgl&gt;        
+ 1 2018-01-06 After RE. FALSE        
+ 2 2015-05-10 After RE. FALSE        
+ 3 2011-12-01 After RE. FALSE        
+ 4 2020-12-08 After RE. FALSE        
+ 5 2019-05-14 After RE. FALSE        
+ 6 2015-08-31 After RE. FALSE        
+ 7 2018-12-26 After RE. FALSE        
+ 8 2018-02-07 After RE. FALSE        
+ 9 2023-01-10 After RE. FALSE        
+10 2013-07-22 After RE. FALSE        
+# ℹ 107 more rows</code></pre>
+</div>
+</div>
+<p>The string “After RE.” is present ….</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-8-1"><a href="#annotated-cell-8-1" aria-hidden="true" tabindex="-1"></a>invalid_date_records <span class="sc">|&gt;</span> </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="1">1</button><span id="annotated-cell-8-2" class="code-annotation-target"><a href="#annotated-cell-8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(HireDate, <span class="st">"After RE."</span>, <span class="at">negate =</span> <span class="cn">TRUE</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-8" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="2" data-code-annotation="1">Get records where the string ‘After RE.’ is not present. This is to ensure that ‘After RE.’ is the only abnormal string.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 0 × 2
+# ℹ 2 variables: HireDate &lt;chr&gt;, is_valid_date &lt;lgl&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-9"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-9-1"><a href="#annotated-cell-9-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> employee_df <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-9-2"><a href="#annotated-cell-9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="1">1</button><span id="annotated-cell-9-3" class="code-annotation-target"><a href="#annotated-cell-9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">HireDate =</span> <span class="fu">str_remove</span>(HireDate, <span class="st">"After RE."</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="2">2</button><span id="annotated-cell-9-4" class="code-annotation-target"><a href="#annotated-cell-9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">HireDate =</span> <span class="fu">ymd</span>(HireDate)</span>
+<span id="annotated-cell-9-5"><a href="#annotated-cell-9-5" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="annotated-cell-9-6"><a href="#annotated-cell-9-6" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="3">3</button><span id="annotated-cell-9-7" class="code-annotation-target"><a href="#annotated-cell-9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(employee_df<span class="sc">$</span>HireDate)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-9" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-9" data-code-lines="3" data-code-annotation="1">Remove the string “After RE.” from the records where it is present. using the <code>str_remove()</code> function from the {stringr} package</span>
+</dd>
+<dt data-target-cell="annotated-cell-9" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-9" data-code-lines="4" data-code-annotation="2">Convert the updated <code>HireDate</code> variable to a date data type using the <code>ymd()</code> for the {lubridate}</span>
+</dd>
+<dt data-target-cell="annotated-cell-9" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-9" data-code-lines="7" data-code-annotation="3">Retrieve the new class of the <code>HireDate</code> variable.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Date"</code></pre>
+</div>
+</div>
+<p><br> <br> <br></p>
+</section>
+<section id="data-distribution" class="level4" data-number="17.1.2.2">
+<h4 data-number="17.1.2.2" class="anchored" data-anchor-id="data-distribution"><span class="header-section-number">17.1.2.2</span> Data distribution</h4>
+<p>Search for outliers, (inconsistent values)</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-10"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-10-1"><a href="#annotated-cell-10-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="1">1</button><span id="annotated-cell-10-2" class="code-annotation-target"><a href="#annotated-cell-10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.numeric), <span class="sc">-</span><span class="fu">c</span>(<span class="st">`</span><span class="at">Emp ID</span><span class="st">`</span>)) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="2">2</button><span id="annotated-cell-10-3" class="code-annotation-target"><a href="#annotated-cell-10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-10" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-10" data-code-lines="2" data-code-annotation="1">Select all numeric variables excluding the <code>Emp ID</code> variable.</span>
+</dd>
+<dt data-target-cell="annotated-cell-10" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-10" data-code-lines="3" data-code-annotation="2">Perform a descriptive data analysis on the selected numeric variables.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      AGE            Salary        perf_score   
+ Min.   : 18.0   Min.   : 1068   Min.   : 1.00  
+ 1st Qu.: 30.0   1st Qu.:40620   1st Qu.: 3.00  
+ Median : 41.0   Median :50244   Median : 6.00  
+ Mean   : 43.1   Mean   :50414   Mean   : 5.71  
+ 3rd Qu.: 53.0   3rd Qu.:61186   3rd Qu.: 8.00  
+ Max.   :160.0   Max.   :96256   Max.   :10.00  
+                 NA's   :50                     </code></pre>
+</div>
+</div>
+<p><strong>AGE:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-11"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-11-1"><a href="#annotated-cell-11-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-11-2"><a href="#annotated-cell-11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="1">1</button><span id="annotated-cell-11-3" class="code-annotation-target"><a href="#annotated-cell-11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="2">2</button><span id="annotated-cell-11-4" class="code-annotation-target"><a href="#annotated-cell-11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">100</span>), <span class="at">linewidth =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="annotated-cell-11-5"><a href="#annotated-cell-11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="annotated-cell-11-6"><a href="#annotated-cell-11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Age"</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="3">3</button><span id="annotated-cell-11-7" class="code-annotation-target"><a href="#annotated-cell-11-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="annotated-cell-11-8"><a href="#annotated-cell-11-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribution of mployee's Age"</span></span>
+<span id="annotated-cell-11-9"><a href="#annotated-cell-11-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="annotated-cell-11-10"><a href="#annotated-cell-11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="4">4</button><span id="annotated-cell-11-11" class="code-annotation-target"><a href="#annotated-cell-11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-11" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="3" data-code-annotation="1">Create a box plot.</span>
+</dd>
+<dt data-target-cell="annotated-cell-11" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="4" data-code-annotation="2">Add a vertical line at age 100.</span>
+</dd>
+<dt data-target-cell="annotated-cell-11" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="7" data-code-annotation="3">Remove the y axis title.</span>
+</dd>
+<dt data-target-cell="annotated-cell-11" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="11" data-code-annotation="4">Remove the y axis text.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="r_data_cleaning_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Outliers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>AGE:</strong> The <code>AGE</code> variable contains outliers with multiple records having age above 100 and …</li>
+</ul>
+</div>
+</div>
+<p><strong>Solution:</strong><br>
+…</p>
+<p><br> <br> <br></p>
+</section>
+<section id="inconsistent-categorical-values" class="level4" data-number="17.1.2.3">
+<h4 data-number="17.1.2.3" class="anchored" data-anchor-id="inconsistent-categorical-values"><span class="header-section-number">17.1.2.3</span> Inconsistent categorical values</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-12"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-12-1"><a href="#annotated-cell-12-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="1">1</button><span id="annotated-cell-12-2" class="code-annotation-target"><a href="#annotated-cell-12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Gender, Department) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="2">2</button><span id="annotated-cell-12-3" class="code-annotation-target"><a href="#annotated-cell-12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-12" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-12" data-code-lines="2" data-code-annotation="1">Select the Gender and Department variables.</span>
+</dd>
+<dt data-target-cell="annotated-cell-12" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-12" data-code-lines="3" data-code-annotation="2">Retrieve only unique values from each variable.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 46 × 2
+   Gender Department    
+   &lt;chr&gt;  &lt;chr&gt;         
+ 1 Female Human Resource
+ 2 Male   Finance       
+ 3 Female Finance       
+ 4 F      Marketg       
+ 5 Male   Human Resource
+ 6 Female HR            
+ 7 Male   HR            
+ 8 Female Sales         
+ 9 Male   Sales         
+10 Female Marketg       
+# ℹ 36 more rows</code></pre>
+</div>
+</div>
+<p><strong>Gender:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-13"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="1">1</button><span id="annotated-cell-13-1" class="code-annotation-target"><a href="#annotated-cell-13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(employee_df, Gender)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-13" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="1" data-code-annotation="1">Get the unique Gender values.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  Gender
+  &lt;chr&gt; 
+1 Female
+2 Male  
+3 F     
+4 female
+5 M     
+6 male  </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-14"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-14-1"><a href="#annotated-cell-14-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> employee_df <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-14-2"><a href="#annotated-cell-14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="annotated-cell-14-3"><a href="#annotated-cell-14-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Gender =</span> <span class="fu">case_when</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-14" data-target-annotation="1">1</button><span id="annotated-cell-14-4" class="code-annotation-target"><a href="#annotated-cell-14-4" aria-hidden="true" tabindex="-1"></a>      Gender <span class="sc">==</span> <span class="st">"M"</span> <span class="sc">~</span> <span class="st">"Male"</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-14" data-target-annotation="2">2</button><span id="annotated-cell-14-5" class="code-annotation-target"><a href="#annotated-cell-14-5" aria-hidden="true" tabindex="-1"></a>      Gender <span class="sc">==</span> <span class="st">"F"</span> <span class="sc">~</span> <span class="st">"Female"</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-14" data-target-annotation="3">3</button><span id="annotated-cell-14-6" class="code-annotation-target"><a href="#annotated-cell-14-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">.default =</span> <span class="fu">str_to_title</span>(Gender)</span>
+<span id="annotated-cell-14-7"><a href="#annotated-cell-14-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="annotated-cell-14-8"><a href="#annotated-cell-14-8" aria-hidden="true" tabindex="-1"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-14" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-14" data-code-lines="4" data-code-annotation="1">Convert the string “M” to “Male”</span>
+</dd>
+<dt data-target-cell="annotated-cell-14" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-14" data-code-lines="5" data-code-annotation="2">Convert the string “F” to “Female”</span>
+</dd>
+<dt data-target-cell="annotated-cell-14" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-14" data-code-lines="6" data-code-annotation="3">Set other values to a title string using the <code>str_to_title()</code> function from {stringr}</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-15"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-15" data-target-annotation="1">1</button><span id="annotated-cell-15-1" class="code-annotation-target"><a href="#annotated-cell-15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(employee_df, Gender)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-15" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-15" data-code-lines="1" data-code-annotation="1">Get the unified unique Gender values.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 1
+  Gender
+  &lt;chr&gt; 
+1 Female
+2 Male  </code></pre>
+</div>
+</div>
+<p><strong>Department:</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-16"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-16" data-target-annotation="1">1</button><span id="annotated-cell-16-1" class="code-annotation-target"><a href="#annotated-cell-16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(employee_df, Department)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-16" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-16" data-code-lines="1" data-code-annotation="1">Get the unique Department values.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 1
+  Department    
+  &lt;chr&gt;         
+1 Human Resource
+2 Finance       
+3 Marketg       
+4 HR            
+5 Sales         
+6 IT            
+7 Operations    
+8 Marketing     
+9 finance       </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-17"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-17-1"><a href="#annotated-cell-17-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> employee_df <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-17-2"><a href="#annotated-cell-17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="annotated-cell-17-3"><a href="#annotated-cell-17-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Department =</span> <span class="fu">case_when</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="1">1</button><span id="annotated-cell-17-4" class="code-annotation-target"><a href="#annotated-cell-17-4" aria-hidden="true" tabindex="-1"></a>      Department <span class="sc">==</span> <span class="st">"Marketg"</span> <span class="sc">~</span> <span class="st">"Marketing"</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="2">2</button><span id="annotated-cell-17-5" class="code-annotation-target"><a href="#annotated-cell-17-5" aria-hidden="true" tabindex="-1"></a>      Department <span class="sc">==</span> <span class="st">"Human Resource"</span> <span class="sc">~</span> <span class="st">"HR"</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="3">3</button><span id="annotated-cell-17-6" class="code-annotation-target"><a href="#annotated-cell-17-6" aria-hidden="true" tabindex="-1"></a>      Department <span class="sc">==</span> <span class="st">"finance"</span> <span class="sc">~</span> <span class="st">"Finance"</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="4">4</button><span id="annotated-cell-17-7" class="code-annotation-target"><a href="#annotated-cell-17-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">.default =</span> Department</span>
+<span id="annotated-cell-17-8"><a href="#annotated-cell-17-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="annotated-cell-17-9"><a href="#annotated-cell-17-9" aria-hidden="true" tabindex="-1"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-17" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-17" data-code-lines="4" data-code-annotation="1">Convert the string “Marketg” to “Marketing”</span>
+</dd>
+<dt data-target-cell="annotated-cell-17" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-17" data-code-lines="5" data-code-annotation="2">Convert the string “Human Resource” to “HR”</span>
+</dd>
+<dt data-target-cell="annotated-cell-17" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-17" data-code-lines="6" data-code-annotation="3">Convert the string “finance” to “Finance”</span>
+</dd>
+<dt data-target-cell="annotated-cell-17" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-17" data-code-lines="7" data-code-annotation="4">Set other records to their default values.</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-18"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="1">1</button><span id="annotated-cell-18-1" class="code-annotation-target"><a href="#annotated-cell-18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(employee_df, Department)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-18" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-18" data-code-lines="1" data-code-annotation="1">Get the unified unique <code>Department</code> values.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  Department
+  &lt;chr&gt;     
+1 HR        
+2 Finance   
+3 Marketing 
+4 Sales     
+5 IT        
+6 Operations</code></pre>
+</div>
+</div>
+<p><br> <br> <br></p>
+</section>
+<section id="duplicated-records" class="level4" data-number="17.1.2.4">
+<h4 data-number="17.1.2.4" class="anchored" data-anchor-id="duplicated-records"><span class="header-section-number">17.1.2.4</span> Duplicated records</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(employee_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,000 × 10
+   `Emp ID` First.Name LAST_NAME Gender   AGE Department Salary HireDate  
+      &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;date&gt;    
+ 1    17487 David      Garcia    Female    55 HR          48190 2019-11-09
+ 2    27710 Jane       Johnson   Male      57 Finance     25895 2019-07-16
+ 3    44887 Sarah      Rodriguez Female    26 Finance     64947 2012-01-04
+ 4    84983 Mary       Miller    Female    42 Marketing   71114 2020-01-26
+ 5    99418 Robert     Martinez  Male      31 HR          52962 2014-11-21
+ 6    63517 John       Brown     Female    50 HR          52213 2018-01-06
+ 7    76074 Emily      Brown     Male      23 HR          52504 2010-09-16
+ 8    58813 Lisa       Miller    Female    42 HR          76424 2019-11-05
+ 9    57504 Michael    Martinez  Female    46 Sales       45859 2012-01-13
+10    12760 Mary       Davis     Male      34 Sales       44642 2015-12-02
+# ℹ 990 more rows
+# ℹ 2 more variables: perf_score &lt;dbl&gt;, emp_period &lt;chr&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> <span class="fu">distinct</span>(employee_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><br> <br> <br></p>
+</section>
+<section id="missing-values" class="level4" data-number="17.1.2.5">
+<h4 data-number="17.1.2.5" class="anchored" data-anchor-id="missing-values"><span class="header-section-number">17.1.2.5</span> Missing values</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(employee_df, \(x) <span class="fu">sum</span>(<span class="fu">is.na</span>(x)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Emp ID First.Name  LAST_NAME     Gender        AGE Department     Salary 
+         0          0          0          0          0          0         48 
+  HireDate perf_score emp_period 
+         0          0          0 </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Missing salary values
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The data contains missing salary of 53 employees from different departments.</p>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(Salary)) <span class="sc">|&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(Department)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  Department
+  &lt;chr&gt;     
+1 Sales     
+2 Marketing 
+3 IT        
+4 Finance   
+5 HR        
+6 Operations</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_salary =</span> <span class="fu">mean</span>(Salary, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> <span class="fu">c</span>(Department)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  Department avg_salary
+  &lt;chr&gt;           &lt;dbl&gt;
+1 HR             51658.
+2 Finance        49221.
+3 Marketing      49822.
+4 Sales          50022.
+5 IT             49668.
+6 Operations     51929.</code></pre>
+</div>
+</div>
+<p><strong>Solution:</strong><br>
+Impute the missing values with the average salary based on the department.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> employee_df <span class="sc">|&gt;</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Salary =</span> <span class="fu">case_when</span>(</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(Salary) <span class="sc">&amp;</span> Department <span class="sc">==</span> <span class="st">"Finance"</span> <span class="sc">~</span> <span class="fl">51469.24</span>,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(Salary) <span class="sc">&amp;</span> Department <span class="sc">==</span> <span class="st">"Marketing"</span> <span class="sc">~</span> <span class="fl">47637.33</span>,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(Salary) <span class="sc">&amp;</span> Department <span class="sc">==</span> <span class="st">"Operations"</span> <span class="sc">~</span> <span class="fl">51850.20</span>,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(Salary) <span class="sc">&amp;</span> Department <span class="sc">==</span> <span class="st">"IT"</span> <span class="sc">~</span> <span class="fl">49203.54</span>,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(Salary) <span class="sc">&amp;</span> Department <span class="sc">==</span> <span class="st">"HR"</span> <span class="sc">~</span> <span class="fl">51137.85</span>,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(Salary) <span class="sc">&amp;</span> Department <span class="sc">==</span> <span class="st">"Sales"</span> <span class="sc">~</span> <span class="fl">47607.89</span>,</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">.default =</span> Salary</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><strong>Check for missing values</strong></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(employee_df, \(x) <span class="fu">sum</span>(<span class="fu">is.na</span>(x)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Emp ID First.Name  LAST_NAME     Gender        AGE Department     Salary 
+         0          0          0          0          0          0          0 
+  HireDate perf_score emp_period 
+         0          0          0 </code></pre>
+</div>
+</div>
+<p><br> <br> <br></p>
+</section>
+<section id="data-invalidity" class="level4" data-number="17.1.2.6">
+<h4 data-number="17.1.2.6" class="anchored" data-anchor-id="data-invalidity"><span class="header-section-number">17.1.2.6</span> Data invalidity</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>(employee_df, emp_period)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 91 × 1
+   emp_period 
+   &lt;chr&gt;      
+ 1 2012 - 2015
+ 2 2016 - 2018
+ 3 2016 - 2014
+ 4 2014 - 2019
+ 5 2015 - 2021
+ 6 2017 - 2019
+ 7 2014 - 2017
+ 8 2010 - 2021
+ 9 2013 - 2019
+10 2012 - 2017
+# ℹ 81 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-27"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-27-1"><a href="#annotated-cell-27-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> employee_df <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-27-2"><a href="#annotated-cell-27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_delim</span>(                                                  </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="1">1</button><span id="annotated-cell-27-3" class="code-annotation-target"><a href="#annotated-cell-27-3" aria-hidden="true" tabindex="-1"></a>      emp_period,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="2">2</button><span id="annotated-cell-27-4" class="code-annotation-target"><a href="#annotated-cell-27-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">delim =</span> <span class="st">" - "</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="3">3</button><span id="annotated-cell-27-5" class="code-annotation-target"><a href="#annotated-cell-27-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"start_year"</span>, <span class="st">"end_year"</span>)</span>
+<span id="annotated-cell-27-6"><a href="#annotated-cell-27-6" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-27-7"><a href="#annotated-cell-27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="4">4</button><span id="annotated-cell-27-8" class="code-annotation-target"><a href="#annotated-cell-27-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">start_year =</span> <span class="fu">as.integer</span>(start_year),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="5">5</button><span id="annotated-cell-27-9" class="code-annotation-target"><a href="#annotated-cell-27-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">end_year =</span> <span class="fu">if_else</span>(end_year <span class="sc">==</span> <span class="st">"-"</span>, <span class="cn">NA</span>, end_year) <span class="sc">|&gt;</span> <span class="fu">as.integer</span>(),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="6">6</button><span id="annotated-cell-27-10" class="code-annotation-target"><a href="#annotated-cell-27-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">employment_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(end_year), <span class="st">"Active"</span>, <span class="st">"Terminated"</span>)</span>
+<span id="annotated-cell-27-11"><a href="#annotated-cell-27-11" aria-hidden="true" tabindex="-1"></a>  ) </span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-27" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="3" data-code-annotation="1">Perform a separate operation on the <code>emp_period</code> (employee period) variable</span>
+</dd>
+<dt data-target-cell="annotated-cell-27" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="4" data-code-annotation="2">Using the ” - ” pattern to separate the two values into multiple columns.</span>
+</dd>
+<dt data-target-cell="annotated-cell-27" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="5" data-code-annotation="3">Assign the new column <code>start_year</code> and <code>end_year</code> names</span>
+</dd>
+<dt data-target-cell="annotated-cell-27" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="8" data-code-annotation="4">Convert the <code>start_year</code> to an integer.</span>
+</dd>
+<dt data-target-cell="annotated-cell-27" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="9" data-code-annotation="5">Transform the “-” to <code>NA</code>, indicating missing values. i.e.&nbsp;The employee is still active.</span>
+</dd>
+<dt data-target-cell="annotated-cell-27" data-target-annotation="6">6</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="10" data-code-annotation="6">Create a new column called <code>employment_status</code> to store the current employment status. “Active” for those who are still working within the org. and “Terminated” for those who have left the org.</span>
+</dd>
+</dl>
+</div>
+</div>
+<p><br> <br> <br></p>
+</section>
+<section id="column-names-misalignment" class="level4" data-number="17.1.2.7">
+<h4 data-number="17.1.2.7" class="anchored" data-anchor-id="column-names-misalignment"><span class="header-section-number">17.1.2.7</span> Column names misalignment</h4>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="ot">&lt;-</span> employee_df <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">employee_id =</span> <span class="st">`</span><span class="at">Emp ID</span><span class="st">`</span>,</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">first_name =</span> First.Name,</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">last_name =</span> LAST_NAME,</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">gender =</span> Gender,</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">age =</span> AGE,</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">department =</span> Department,</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">salary =</span> Salary,</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">hire_date =</span> HireDate,</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">performance_score =</span> perf_score</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><br> <br> <br> <br></p>
+</section>
+</section>
+</section>
+<section id="data-final-checks" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="data-final-checks"><span class="header-section-number">17.2</span> Data final checks</h2>
+<section id="check-data-types" class="level3" data-number="17.2.1">
+<h3 data-number="17.2.1" class="anchored" data-anchor-id="check-data-types"><span class="header-section-number">17.2.1</span> Check data types</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-29"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-29" data-target-annotation="1">1</button><span id="annotated-cell-29-1" class="code-annotation-target"><a href="#annotated-cell-29-1" aria-hidden="true" tabindex="-1"></a>valid_data_types <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="annotated-cell-29-2"><a href="#annotated-cell-29-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">employee_id =</span> <span class="st">"integer"</span>,</span>
+<span id="annotated-cell-29-3"><a href="#annotated-cell-29-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">first_name =</span> <span class="st">"character"</span>,</span>
+<span id="annotated-cell-29-4"><a href="#annotated-cell-29-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">last_name =</span> <span class="st">"character"</span>,</span>
+<span id="annotated-cell-29-5"><a href="#annotated-cell-29-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">gender =</span> <span class="st">"character"</span>,</span>
+<span id="annotated-cell-29-6"><a href="#annotated-cell-29-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="st">"integer"</span>,</span>
+<span id="annotated-cell-29-7"><a href="#annotated-cell-29-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">department =</span> <span class="st">"character"</span>,</span>
+<span id="annotated-cell-29-8"><a href="#annotated-cell-29-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">salary =</span> <span class="st">"numeric"</span>,</span>
+<span id="annotated-cell-29-9"><a href="#annotated-cell-29-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">hire_date =</span> <span class="st">"Date"</span>,</span>
+<span id="annotated-cell-29-10"><a href="#annotated-cell-29-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">performance_score =</span> <span class="st">"integer"</span>,</span>
+<span id="annotated-cell-29-11"><a href="#annotated-cell-29-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">start_year =</span> <span class="st">"integer"</span>,</span>
+<span id="annotated-cell-29-12"><a href="#annotated-cell-29-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">end_year =</span> <span class="st">"integer"</span>,</span>
+<span id="annotated-cell-29-13"><a href="#annotated-cell-29-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">employment_status =</span> <span class="st">"character"</span></span>
+<span id="annotated-cell-29-14"><a href="#annotated-cell-29-14" aria-hidden="true" tabindex="-1"></a>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-29" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-29" data-code-lines="1" data-code-annotation="1">Create a list of variable names and their valid data type.</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="1">1</button><span id="annotated-cell-30-1" class="code-annotation-target"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a>check_data_type <span class="ot">&lt;-</span> <span class="fu">map2_lgl</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="2">2</button><span id="annotated-cell-30-2" class="code-annotation-target"><a href="#annotated-cell-30-2" aria-hidden="true" tabindex="-1"></a>  employee_df,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="3">3</button><span id="annotated-cell-30-3" class="code-annotation-target"><a href="#annotated-cell-30-3" aria-hidden="true" tabindex="-1"></a>  valid_data_types,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="4">4</button><span id="annotated-cell-30-4" class="code-annotation-target"><a href="#annotated-cell-30-4" aria-hidden="true" tabindex="-1"></a>  \(x, y) <span class="fu">class</span>(x) <span class="sc">==</span> y</span>
+<span id="annotated-cell-30-5"><a href="#annotated-cell-30-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="annotated-cell-30-6"><a href="#annotated-cell-30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-30-7"><a href="#annotated-cell-30-7" aria-hidden="true" tabindex="-1"></a>check_data_type</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-30" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-30" data-code-lines="1" data-code-annotation="1">Use the <code>map2_lgl()</code> function from the {purrr} package to create a logical vector.</span>
+</dd>
+<dt data-target-cell="annotated-cell-30" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-30" data-code-lines="2" data-code-annotation="2">Set the cleaned employee_df as the first vector argument (x)</span>
+</dd>
+<dt data-target-cell="annotated-cell-30" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-30" data-code-lines="3" data-code-annotation="3">Set the valid data type list as the second vector argument (y)</span>
+</dd>
+<dt data-target-cell="annotated-cell-30" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-30" data-code-lines="4" data-code-annotation="4">Use an anonymous function to check whether the class of each variable corresponds with the supplied valid data type using a conditional statement.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      employee_id        first_name         last_name            gender 
+            FALSE              TRUE              TRUE              TRUE 
+              age        department            salary         hire_date 
+            FALSE              TRUE              TRUE              TRUE 
+performance_score        start_year          end_year employment_status 
+            FALSE              TRUE              TRUE              TRUE </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="1">1</button><span id="annotated-cell-31-1" class="code-annotation-target"><a href="#annotated-cell-31-1" aria-hidden="true" tabindex="-1"></a>check_data_type[<span class="sc">!</span>check_data_type]</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-31" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-31" data-code-lines="1" data-code-annotation="1">Return only variables with invalid data type (Not TRUE).</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      employee_id               age performance_score 
+            FALSE             FALSE             FALSE </code></pre>
+</div>
+</div>
+<p><br> <br></p>
+</section>
+<section id="check-missing-values" class="level3" data-number="17.2.2">
+<h3 data-number="17.2.2" class="anchored" data-anchor-id="check-missing-values"><span class="header-section-number">17.2.2</span> Check missing values</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-32"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="1">1</button><span id="annotated-cell-32-1" class="code-annotation-target"><a href="#annotated-cell-32-1" aria-hidden="true" tabindex="-1"></a>is_missing <span class="ot">&lt;-</span> <span class="fu">map_lgl</span>(employee_df, \(x) <span class="fu">all</span>(<span class="fu">is.na</span>(x)))</span>
+<span id="annotated-cell-32-2"><a href="#annotated-cell-32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-32-3"><a href="#annotated-cell-32-3" aria-hidden="true" tabindex="-1"></a>is_missing</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-32" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-32" data-code-lines="1" data-code-annotation="1">Check whether for each variable all the values are not missing. Expected to produce a FALSE output</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      employee_id        first_name         last_name            gender 
+            FALSE             FALSE             FALSE             FALSE 
+              age        department            salary         hire_date 
+            FALSE             FALSE             FALSE             FALSE 
+performance_score        start_year          end_year employment_status 
+            FALSE             FALSE             FALSE             FALSE </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-33"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-33" data-target-annotation="1">1</button><span id="annotated-cell-33-1" class="code-annotation-target"><a href="#annotated-cell-33-1" aria-hidden="true" tabindex="-1"></a>is_missing[is_missing]</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-33" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-33" data-code-lines="1" data-code-annotation="1">Return variables with missing values.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>named logical(0)</code></pre>
+</div>
+</div>
+<p><br> <br></p>
+</section>
+<section id="data-integrity" class="level3" data-number="17.2.3">
+<h3 data-number="17.2.3" class="anchored" data-anchor-id="data-integrity"><span class="header-section-number">17.2.3</span> Data integrity</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="sc">|&gt;</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.numeric), <span class="sc">-</span>employee_id) <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      age             salary      performance_score   start_year  
+ Min.   : 18.00   Min.   : 1068   Min.   : 1.000    Min.   :2010  
+ 1st Qu.: 30.00   1st Qu.:40923   1st Qu.: 3.000    1st Qu.:2011  
+ Median : 41.00   Median :50165   Median : 6.000    Median :2013  
+ Mean   : 43.21   Mean   :50283   Mean   : 5.697    Mean   :2013  
+ 3rd Qu.: 54.00   3rd Qu.:60316   3rd Qu.: 8.000    3rd Qu.:2015  
+ Max.   :160.00   Max.   :96256   Max.   :10.000    Max.   :2017  
+                                                                  
+    end_year   
+ Min.   :2013  
+ 1st Qu.:2017  
+ Median :2018  
+ Mean   :2018  
+ 3rd Qu.:2020  
+ Max.   :2023  
+ NA's   :19    </code></pre>
+</div>
+</div>
+<ul>
+<li>Check age, salary, hire_date, start_year, end_year &amp; performance_score data integrity.</li>
+</ul>
+<p><br> <br></p>
+</section>
+<section id="check-unified-appropriate-category-values" class="level3" data-number="17.2.4">
+<h3 data-number="17.2.4" class="anchored" data-anchor-id="check-unified-appropriate-category-values"><span class="header-section-number">17.2.4</span> Check unified &amp; appropriate category values</h3>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-35"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-35-1"><a href="#annotated-cell-35-1" aria-hidden="true" tabindex="-1"></a>employee_df <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="1">1</button><span id="annotated-cell-35-2" class="code-annotation-target"><a href="#annotated-cell-35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.character), <span class="sc">-</span><span class="fu">c</span>(first_name, last_name)) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="2">2</button><span id="annotated-cell-35-3" class="code-annotation-target"><a href="#annotated-cell-35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(\(x) <span class="fu">unique</span>(x))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-35" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-35" data-code-lines="2" data-code-annotation="1">Select the gender, department and employment_status variables.</span>
+</dd>
+<dt data-target-cell="annotated-cell-35" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-35" data-code-lines="3" data-code-annotation="2">Retrieve only the different unique values for each variable.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$gender
+[1] "Female" "Male"  
+
+$department
+[1] "HR"         "Finance"    "Marketing"  "Sales"      "IT"        
+[6] "Operations"
+
+$employment_status
+[1] "Terminated" "Active"    </code></pre>
+</div>
+</div>
 
 
 </section>

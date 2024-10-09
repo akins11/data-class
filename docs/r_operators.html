@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./python_programming.html" rel="next">
+<link href="./r_tidyverse.html" rel="next">
 <link href="./r_data_structure.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -238,6 +238,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tidyverse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_data_visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Visualization</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_exploratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">EDA</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_data_cleaning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Data Cleaning</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -252,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./python_data_types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
   </div>
 </li>
       </ul>
@@ -269,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./powerbi_data_import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
   </div>
 </li>
       </ul>
@@ -277,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tool_source.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Data Tool Referenece</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Data Tool Referenece</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -359,13 +383,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">10</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">Check if 10 equal to 10.</span>
+</dd>
+</dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>1.Check if 10 equal to 10.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -530,6 +561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="in-in" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="in-in">IN ( <code>%in%</code> )</h4>
+<p>The %in% operator in R is a built-in infix operator used to determine if elements of one vector are present in another vector. It returns a logical vector indicating whether each element of the first vector matches any element of the second vector</p>
 <p><strong>Example</strong></p>
 <div class="cell">
 <div class="code-with-filename">
@@ -542,6 +574,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
+<p>This operator is particularly useful for value matching and can be applied to both numeric and character vectors.</p>
 <p><br> <br> <br> <!----- Comparison Operator -------------------------------------------------></p>
 </section>
 </section>
@@ -551,13 +584,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Logical can operators combine multiple conditions and evaluate them:</p>
 <section id="and" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="and">AND ( <code>&amp;</code> )</h4>
-<p>Returns TRUE only if both conditions are true.</p>
+<p>The <code>&amp;</code> operator is known as the element-wise <strong>AND</strong> operator. It takes two logical vectors and compares them element by element. The result is a new logical vector where each element is <code>TRUE</code> if both corresponding elements from the input vectors are <code>TRUE</code>; otherwise, it is <code>FALSE</code>.</p>
+<p><strong>Example:</strong></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">&amp;</span> (<span class="dv">5</span> <span class="sc">&lt;</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-10"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="1">1</button><span id="annotated-cell-10-1" class="code-annotation-target"><a href="#annotated-cell-10-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">&amp;</span> (<span class="dv">5</span> <span class="sc">&lt;</span> <span class="dv">50</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-10" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-10" data-code-lines="1" data-code-annotation="1">Check whether both left and right hand side is <code>TRUE</code></span>
+</dd>
+</dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
@@ -566,13 +608,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="or" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="or">OR ( <code>|</code> )</h4>
-<p>Returns TRUE if at least one of the conditions is true.</p>
+<p>The <code>|</code> operator functions as the element-wise <strong>OR</strong> operator. It also compares two logical vectors element by element but returns <code>TRUE</code> if at least one of the corresponding elements is <code>TRUE</code>. If both are <code>FALSE</code>, then it returns <code>FALSE</code>.</p>
+<p><strong>Example:</strong></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">100</span>) <span class="sc">|</span> (<span class="dv">20</span> <span class="sc">&lt;=</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-11"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="1">1</button><span id="annotated-cell-11-1" class="code-annotation-target"><a href="#annotated-cell-11-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">100</span>) <span class="sc">|</span> (<span class="dv">20</span> <span class="sc">&lt;=</span> <span class="dv">50</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-11" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="1" data-code-annotation="1">Check whether any of the left and right hand side is <code>TRUE</code></span>
+</dd>
+</dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
@@ -582,12 +633,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="negation-operator-not" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="negation-operator-not">Negation operator ( Not <code>!</code> )</h2>
+<p>The <code>!</code> operator represents logical negation <strong>NOT</strong>. It takes a single logical value and returns its opposite: if the input value is <code>TRUE</code>, it returns <code>FALSE</code>; if it’s <code>FALSE</code>, it returns <code>TRUE</code>.</p>
+<p><strong>Example:</strong></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>(<span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-12"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="1">1</button><span id="annotated-cell-12-1" class="code-annotation-target"><a href="#annotated-cell-12-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>(<span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">5</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-12" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-12" data-code-lines="1" data-code-annotation="1">Negate the output of the value <code>10 &gt; 5</code></span>
+</dd>
+</dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
@@ -600,10 +661,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="unnumbered anchored" data-anchor-id="identical"><code>identical()</code></h4>
 <p>This checks whether two objects are exactly identical in terms of attributes and types.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>obj_1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>obj_2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(obj_1, obj_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>obj_1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>obj_2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(obj_1, obj_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -614,7 +675,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="13.3" class="anchored" data-anchor-id="control-flow"><span class="header-section-number">13.3</span> Control Flow</h2>
 <section id="if-else" class="level3" data-number="13.3.1">
 <h3 data-number="13.3.1" class="anchored" data-anchor-id="if-else"><span class="header-section-number">13.3.1</span> IF ELSE</h3>
-<p>is used to execute code conditionally based on whether one or more conditions are true. This structure allows you to make decisions within your code and perform different actions depending on the outcome of those conditions.</p>
+<p>This is used to execute code conditionally based on whether one or more conditions are true. This structure allows you to make decisions within your code and perform different actions depending on the outcome of those conditions.</p>
 <section id="basic-structure-and-syntax" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="basic-structure-and-syntax">Basic Structure and Syntax</h4>
 <p>The structure allows for multiple conditions to be checked in sequence. The first true condition will have its corresponding block of code executed, and the rest will be skipped.</p>
@@ -623,18 +684,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condition1) {</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute if condition1 is TRUE</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition2) {</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute if condition2 is TRUE</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute if none of the above conditions are TRUE</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condition1) {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute if condition1 is TRUE</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition2) {</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute if condition2 is TRUE</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute if none of the above conditions are TRUE</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p><strong>if Statement:</strong> Checks the first condition. If it’s true, the code block inside the <code>if</code> statement is executed.<br>
-<strong>else if Statement:</strong> Checks the next condition if the previous <code>if</code> or <code>else if</code> was false. You can have multiple <code>else if</code> statements.<br>
-<strong>else Statement:</strong> Executes a block of code if none of the preceding <code>if</code> or <code>else if</code> conditions are true. The else statement is optional.</p>
+<ul>
+<li><strong>if</strong> Statement: Checks the first condition. If it’s true, the code block inside the <code>if</code> statement is executed.<br>
+</li>
+<li><strong>else if</strong> Statement: Checks the next condition if the previous <code>if</code> or <code>else if</code> was false. You can have multiple <code>else if</code> statements.<br>
+</li>
+<li><strong>else</strong> Statement: Executes a block of code if none of the preceding <code>if</code> or <code>else if</code> conditions are true. The else statement is optional.</li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -660,15 +725,15 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">200</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="sc">&lt;</span> <span class="dv">10</span>) {</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is less than 10"</span>)</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">200</span>) {</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is greater then 200"</span>)</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is equal 200"</span>)</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="sc">&lt;</span> <span class="dv">10</span>) {</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is less than 10"</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">200</span>) {</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is greater then 200"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is equal 200"</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "x is equal 200"</code></pre>
@@ -680,21 +745,21 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>score <span class="ot">&lt;-</span> <span class="dv">105</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">90</span>) {</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"A"</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">80</span>) {</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"B"</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">70</span>) {</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"C"</span></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">60</span>) {</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"D"</span></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"F"</span></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>score <span class="ot">&lt;-</span> <span class="dv">105</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">90</span>) {</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"A"</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">80</span>) {</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"B"</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">70</span>) {</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"C"</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (score <span class="sc">&gt;=</span> <span class="dv">60</span>) {</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"D"</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  grade <span class="ot">&lt;-</span> <span class="st">"F"</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "A"</code></pre>
@@ -711,26 +776,26 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (y <span class="sc">&gt;</span> <span class="dv">5</span>) {</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">"x is positive and y is greater than 5"</span>)</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">"x is positive and y is 5 or less"</span>)</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is zero or negative"</span>)</span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (y <span class="sc">&gt;</span> <span class="dv">5</span>) {</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">"x is positive and y is greater than 5"</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">"x is positive and y is 5 or less"</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"x is zero or negative"</span>)</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "x is positive and y is greater than 5"</code></pre>
@@ -746,7 +811,7 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(test_expression_or_condition, value_if_true, value_if_false)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(test_expression_or_condition, value_if_true, value_if_false)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <p><strong>Example</strong></p>
@@ -801,22 +866,30 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="dv">30</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>income <span class="ot">&lt;-</span> <span class="dv">60000</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (age <span class="sc">&gt;</span> <span class="dv">25</span> <span class="sc">&amp;&amp;</span> income <span class="sc">&gt;</span> <span class="dv">50000</span>) {</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Eligible for the loan"</span>)</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (age <span class="sc">&gt;</span> <span class="dv">25</span> <span class="sc">||</span> income <span class="sc">&gt;</span> <span class="dv">50000</span>) {</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Partially eligible for the loan"</span>)</span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Not eligible for the loan"</span>)</span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-21"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-21-1"><a href="#annotated-cell-21-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="annotated-cell-21-2"><a href="#annotated-cell-21-2" aria-hidden="true" tabindex="-1"></a>income <span class="ot">&lt;-</span> <span class="dv">60000</span></span>
+<span id="annotated-cell-21-3"><a href="#annotated-cell-21-3" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="1">1</button><span id="annotated-cell-21-4" class="code-annotation-target"><a href="#annotated-cell-21-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (age <span class="sc">&gt;</span> <span class="dv">25</span> <span class="sc">&amp;&amp;</span> income <span class="sc">&gt;</span> <span class="dv">50000</span>) {</span>
+<span id="annotated-cell-21-5"><a href="#annotated-cell-21-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-21-6"><a href="#annotated-cell-21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Eligible for the loan"</span>)</span>
+<span id="annotated-cell-21-7"><a href="#annotated-cell-21-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-21-8"><a href="#annotated-cell-21-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (age <span class="sc">&gt;</span> <span class="dv">25</span> <span class="sc">||</span> income <span class="sc">&gt;</span> <span class="dv">50000</span>) {</span>
+<span id="annotated-cell-21-9"><a href="#annotated-cell-21-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-21-10"><a href="#annotated-cell-21-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Partially eligible for the loan"</span>)</span>
+<span id="annotated-cell-21-11"><a href="#annotated-cell-21-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-21-12"><a href="#annotated-cell-21-12" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="annotated-cell-21-13"><a href="#annotated-cell-21-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-21-14"><a href="#annotated-cell-21-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Not eligible for the loan"</span>)</span>
+<span id="annotated-cell-21-15"><a href="#annotated-cell-21-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-21-16"><a href="#annotated-cell-21-16" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-21" data-code-lines="4" data-code-annotation="1">Check whether age is greater than 25 and income is greater than 50000</span>
+</dd>
+</dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Eligible for the loan"</code></pre>
@@ -851,9 +924,9 @@ Key points to remember
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> sequence) {</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute on each iteration</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> sequence) {</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute on each iteration</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <ul>
@@ -916,11 +989,23 @@ How the for loop works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>student_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (name <span class="cf">in</span> student_names) { </span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(name)</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-24"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-24-1"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a>student_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>)</span>
+<span id="annotated-cell-24-2"><a href="#annotated-cell-24-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="1">1</button><span id="annotated-cell-24-3" class="code-annotation-target"><a href="#annotated-cell-24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (name <span class="cf">in</span> student_names) {</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="2">2</button><span id="annotated-cell-24-4" class="code-annotation-target"><a href="#annotated-cell-24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(name)</span>
+<span id="annotated-cell-24-5"><a href="#annotated-cell-24-5" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-24" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-24" data-code-lines="3" data-code-annotation="1">Using the student_names as the sequence of value.</span>
+</dd>
+<dt data-target-cell="annotated-cell-24" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-24" data-code-lines="4" data-code-annotation="2">Print the current student name for that particular sequence.</span>
+</dd>
+</dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Alice"
@@ -928,10 +1013,6 @@ How the for loop works
 [1] "Charlie"</code></pre>
 </div>
 </div>
-<ol type="1">
-<li>Using the student_names as the sequence of value.</li>
-<li>Print the current student name for that particular sequence.</li>
-</ol>
 </section>
 <section id="nested-for-loops" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="nested-for-loops">nested for loops</h4>
@@ -941,15 +1022,27 @@ How the for loop works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>my_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">nrow=</span><span class="dv">3</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(my_matrix)) {</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(my_matrix)) {</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(my_matrix[i, j])</span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-25"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-25-1"><a href="#annotated-cell-25-1" aria-hidden="true" tabindex="-1"></a>my_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">nrow=</span><span class="dv">3</span>)</span>
+<span id="annotated-cell-25-2"><a href="#annotated-cell-25-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="1">1</button><span id="annotated-cell-25-3" class="code-annotation-target"><a href="#annotated-cell-25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(my_matrix)) {</span>
+<span id="annotated-cell-25-4"><a href="#annotated-cell-25-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="2">2</button><span id="annotated-cell-25-5" class="code-annotation-target"><a href="#annotated-cell-25-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(my_matrix)) {</span>
+<span id="annotated-cell-25-6"><a href="#annotated-cell-25-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(my_matrix[i, j])</span>
+<span id="annotated-cell-25-7"><a href="#annotated-cell-25-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="annotated-cell-25-8"><a href="#annotated-cell-25-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-25-9"><a href="#annotated-cell-25-9" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-25" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-25" data-code-lines="3" data-code-annotation="1">The main for loop, iterating using <code>i</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-25" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-25" data-code-lines="5" data-code-annotation="2">The nested for loop, iterating using <code>j</code> and <code>i</code></span>
+</dd>
+</dl>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1
@@ -990,7 +1083,7 @@ How the for loop works
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-26" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-26" data-code-lines="1" data-code-annotation="1">Use a sequence of 1 to 5</span>
+<span data-code-cell="annotated-cell-26" data-code-lines="1" data-code-annotation="1">Use a sequence from 1 to 5</span>
 </dd>
 <dt data-target-cell="annotated-cell-26" data-target-annotation="2">2</dt>
 <dd>
@@ -1035,7 +1128,7 @@ How the for loop works
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-27" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-27" data-code-lines="1" data-code-annotation="1">Use a sequence of 1 to 5</span>
+<span data-code-cell="annotated-cell-27" data-code-lines="1" data-code-annotation="1">Use a sequence from 1 to 5</span>
 </dd>
 <dt data-target-cell="annotated-cell-27" data-target-annotation="2">2</dt>
 <dd>
@@ -1062,6 +1155,103 @@ How the for loop works
 <section id="performance-considerations-vectorization" class="level4" data-number="13.3.3.1">
 <h4 data-number="13.3.3.1" class="anchored" data-anchor-id="performance-considerations-vectorization"><span class="header-section-number">13.3.3.1</span> Performance considerations: (Vectorization)</h4>
 <p>Whenever possible, use vectorized functions like <code>apply()</code>, <code>lapply()</code>, <code>sapply()</code></p>
+</section>
+<section id="apply" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="apply">apply()</h4>
+<p>The <code>apply()</code> function allows us to perform operations on rows or columns of a matrix efficiently.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-28"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-28-1"><a href="#annotated-cell-28-1" aria-hidden="true" tabindex="-1"></a>new_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">3</span>)</span>
+<span id="annotated-cell-28-2"><a href="#annotated-cell-28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-28-3"><a href="#annotated-cell-28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the sum of each row in the matrix</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-28" data-target-annotation="1">1</button><span id="annotated-cell-28-4" class="code-annotation-target"><a href="#annotated-cell-28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(new_matrix, <span class="at">MARGIN =</span> <span class="dv">1</span>, <span class="at">FUN =</span> sum)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-28" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-28" data-code-lines="4" data-code-annotation="1">Use the <code>apply()</code> function to calculate the sum of each row.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 22 26 30</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the mean of each column by setting MARGIN to 2</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(new_matrix, <span class="at">MARGIN =</span> <span class="dv">2</span>, <span class="at">FUN =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  2  5  8 11</code></pre>
+</div>
+</div>
+</section>
+<section id="lapply" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="lapply">lapply()</h4>
+<p>The <code>lapply()</code> function is used to apply a function over a list or vector, returning a list of the same length as the input. Now we can use <code>lapply()</code> to get the square root of each element in the vector</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="1">1</button><span id="annotated-cell-30-1" class="code-annotation-target"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), \(x) x<span class="sc">^</span><span class="dv">2</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-30" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-30" data-code-lines="1" data-code-annotation="1">Get the square root of each element in the <code>c(1, 2, 3, 4, 5)</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 1
+
+[[2]]
+[1] 4
+
+[[3]]
+[1] 9
+
+[[4]]
+[1] 16
+
+[[5]]
+[1] 25</code></pre>
+</div>
+</div>
+</section>
+<section id="sapply" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sapply">sapply()</h4>
+<p>The <code>sapply()</code> function is used for applying a function to each element of a vector or list and simplifying the output.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="1">1</button><span id="annotated-cell-31-1" class="code-annotation-target"><a href="#annotated-cell-31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), \(x) x<span class="sc">^</span><span class="dv">2</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-31" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-31" data-code-lines="1" data-code-annotation="1">Get the square root of each element in the <code>c(1, 2, 3, 4, 5)</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1  4  9 16 25</code></pre>
+</div>
+</div>
 <p><br> <br></p>
 </section>
 </section>
@@ -1075,9 +1265,9 @@ How the for loop works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (condition) {</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute as long as the condition is TRUE</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (condition) {</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute as long as the condition is TRUE</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <ul>
@@ -1108,26 +1298,26 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-29"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-29" data-target-annotation="1">1</button><span id="annotated-cell-29-1" class="code-annotation-target"><a href="#annotated-cell-29-1" aria-hidden="true" tabindex="-1"></a>counter <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="annotated-cell-29-2"><a href="#annotated-cell-29-2" aria-hidden="true" tabindex="-1"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-29" data-target-annotation="2">2</button><span id="annotated-cell-29-3" class="code-annotation-target"><a href="#annotated-cell-29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (counter <span class="sc">&lt;=</span> <span class="dv">5</span>) {</span>
-<span id="annotated-cell-29-4"><a href="#annotated-cell-29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(counter)</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-29" data-target-annotation="3">3</button><span id="annotated-cell-29-5" class="code-annotation-target"><a href="#annotated-cell-29-5" aria-hidden="true" tabindex="-1"></a>  counter <span class="ot">&lt;-</span> counter <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="annotated-cell-29-6"><a href="#annotated-cell-29-6" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-33"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-33" data-target-annotation="1">1</button><span id="annotated-cell-33-1" class="code-annotation-target"><a href="#annotated-cell-33-1" aria-hidden="true" tabindex="-1"></a>counter <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="annotated-cell-33-2"><a href="#annotated-cell-33-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-33" data-target-annotation="2">2</button><span id="annotated-cell-33-3" class="code-annotation-target"><a href="#annotated-cell-33-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (counter <span class="sc">&lt;=</span> <span class="dv">5</span>) {</span>
+<span id="annotated-cell-33-4"><a href="#annotated-cell-33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(counter)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-33" data-target-annotation="3">3</button><span id="annotated-cell-33-5" class="code-annotation-target"><a href="#annotated-cell-33-5" aria-hidden="true" tabindex="-1"></a>  counter <span class="ot">&lt;-</span> counter <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="annotated-cell-33-6"><a href="#annotated-cell-33-6" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-29" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-33" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-29" data-code-lines="1" data-code-annotation="1">Initialize a counter starting from 1</span>
+<span data-code-cell="annotated-cell-33" data-code-lines="1" data-code-annotation="1">Initialize a counter starting from 1</span>
 </dd>
-<dt data-target-cell="annotated-cell-29" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-33" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-29" data-code-lines="3" data-code-annotation="2">Loop as long as counter is less than or equal to 5</span>
+<span data-code-cell="annotated-cell-33" data-code-lines="3" data-code-annotation="2">Loop as long as counter is less than or equal to 5</span>
 </dd>
-<dt data-target-cell="annotated-cell-29" data-target-annotation="3">3</dt>
+<dt data-target-cell="annotated-cell-33" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-29" data-code-lines="5" data-code-annotation="3">Increment the counter with 1</span>
+<span data-code-cell="annotated-cell-33" data-code-lines="5" data-code-annotation="3">Increment the counter with 1</span>
 </dd>
 </dl>
 </div>
@@ -1147,35 +1337,41 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="1">1</button><span id="annotated-cell-30-1" class="code-annotation-target"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a>roll <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="annotated-cell-30-2"><a href="#annotated-cell-30-2" aria-hidden="true" tabindex="-1"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="2">2</button><span id="annotated-cell-30-3" class="code-annotation-target"><a href="#annotated-cell-30-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (roll <span class="sc">!=</span> <span class="dv">6</span>) {</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="3">3</button><span id="annotated-cell-30-4" class="code-annotation-target"><a href="#annotated-cell-30-4" aria-hidden="true" tabindex="-1"></a>  roll <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span>)</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="4">4</button><span id="annotated-cell-30-5" class="code-annotation-target"><a href="#annotated-cell-30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(roll)</span>
-<span id="annotated-cell-30-6"><a href="#annotated-cell-30-6" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-34"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-34" data-target-annotation="1">1</button><span id="annotated-cell-34-1" class="code-annotation-target"><a href="#annotated-cell-34-1" aria-hidden="true" tabindex="-1"></a>roll <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="annotated-cell-34-2"><a href="#annotated-cell-34-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-34" data-target-annotation="2">2</button><span id="annotated-cell-34-3" class="code-annotation-target"><a href="#annotated-cell-34-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (roll <span class="sc">!=</span> <span class="dv">6</span>) {</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-34" data-target-annotation="3">3</button><span id="annotated-cell-34-4" class="code-annotation-target"><a href="#annotated-cell-34-4" aria-hidden="true" tabindex="-1"></a>  roll <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-34" data-target-annotation="4">4</button><span id="annotated-cell-34-5" class="code-annotation-target"><a href="#annotated-cell-34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(roll)</span>
+<span id="annotated-cell-34-6"><a href="#annotated-cell-34-6" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-30" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-34" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-30" data-code-lines="1" data-code-annotation="1">Initial roll value</span>
+<span data-code-cell="annotated-cell-34" data-code-lines="1" data-code-annotation="1">Initial roll value</span>
 </dd>
-<dt data-target-cell="annotated-cell-30" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-34" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-30" data-code-lines="3" data-code-annotation="2">Continue to re-execute the loop as long as the roll values is not 6</span>
+<span data-code-cell="annotated-cell-34" data-code-lines="3" data-code-annotation="2">Continue to re-execute the loop as long as the roll values is not 6</span>
 </dd>
-<dt data-target-cell="annotated-cell-30" data-target-annotation="3">3</dt>
+<dt data-target-cell="annotated-cell-34" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-30" data-code-lines="4" data-code-annotation="3">Roll a die again</span>
+<span data-code-cell="annotated-cell-34" data-code-lines="4" data-code-annotation="3">Roll a die again</span>
 </dd>
-<dt data-target-cell="annotated-cell-30" data-target-annotation="4">4</dt>
+<dt data-target-cell="annotated-cell-34" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-30" data-code-lines="5" data-code-annotation="4">print the current output of the die roll.</span>
+<span data-code-cell="annotated-cell-34" data-code-lines="5" data-code-annotation="4">print the current output of the die roll.</span>
 </dd>
 </dl>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6</code></pre>
+<pre><code>[1] 3
+[1] 5
+[1] 3
+[1] 3
+[1] 4
+[1] 1
+[1] 6</code></pre>
 </div>
 </div>
 </section>
@@ -1190,43 +1386,43 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="1">1</button><span id="annotated-cell-31-1" class="code-annotation-target"><a href="#annotated-cell-31-1" aria-hidden="true" tabindex="-1"></a>counter <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="annotated-cell-31-2"><a href="#annotated-cell-31-2" aria-hidden="true" tabindex="-1"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="2">2</button><span id="annotated-cell-31-3" class="code-annotation-target"><a href="#annotated-cell-31-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (counter <span class="sc">&lt;=</span> <span class="dv">5</span>) {</span>
-<span id="annotated-cell-31-4"><a href="#annotated-cell-31-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="3">3</button><span id="annotated-cell-31-5" class="code-annotation-target"><a href="#annotated-cell-31-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (counter <span class="sc">==</span> <span class="dv">3</span>) {</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="4">4</button><span id="annotated-cell-31-6" class="code-annotation-target"><a href="#annotated-cell-31-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span></span>
-<span id="annotated-cell-31-7"><a href="#annotated-cell-31-7" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="annotated-cell-31-8"><a href="#annotated-cell-31-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="5">5</button><span id="annotated-cell-31-9" class="code-annotation-target"><a href="#annotated-cell-31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(counter)</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="6">6</button><span id="annotated-cell-31-10" class="code-annotation-target"><a href="#annotated-cell-31-10" aria-hidden="true" tabindex="-1"></a>  counter <span class="ot">&lt;-</span> counter <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="annotated-cell-31-11"><a href="#annotated-cell-31-11" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-35"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="1">1</button><span id="annotated-cell-35-1" class="code-annotation-target"><a href="#annotated-cell-35-1" aria-hidden="true" tabindex="-1"></a>counter <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="annotated-cell-35-2"><a href="#annotated-cell-35-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="2">2</button><span id="annotated-cell-35-3" class="code-annotation-target"><a href="#annotated-cell-35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (counter <span class="sc">&lt;=</span> <span class="dv">5</span>) {</span>
+<span id="annotated-cell-35-4"><a href="#annotated-cell-35-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="3">3</button><span id="annotated-cell-35-5" class="code-annotation-target"><a href="#annotated-cell-35-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (counter <span class="sc">==</span> <span class="dv">3</span>) {</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="4">4</button><span id="annotated-cell-35-6" class="code-annotation-target"><a href="#annotated-cell-35-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span></span>
+<span id="annotated-cell-35-7"><a href="#annotated-cell-35-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="annotated-cell-35-8"><a href="#annotated-cell-35-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="5">5</button><span id="annotated-cell-35-9" class="code-annotation-target"><a href="#annotated-cell-35-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(counter)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="6">6</button><span id="annotated-cell-35-10" class="code-annotation-target"><a href="#annotated-cell-35-10" aria-hidden="true" tabindex="-1"></a>  counter <span class="ot">&lt;-</span> counter <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="annotated-cell-35-11"><a href="#annotated-cell-35-11" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-31" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-35" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-31" data-code-lines="1" data-code-annotation="1">Initialize a counter starting from 1</span>
+<span data-code-cell="annotated-cell-35" data-code-lines="1" data-code-annotation="1">Initialize a counter starting from 1</span>
 </dd>
-<dt data-target-cell="annotated-cell-31" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-35" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-31" data-code-lines="3" data-code-annotation="2">Continue the loop as long as the counter is less than or equal to 5.</span>
+<span data-code-cell="annotated-cell-35" data-code-lines="3" data-code-annotation="2">Continue the loop as long as the counter is less than or equal to 5.</span>
 </dd>
-<dt data-target-cell="annotated-cell-31" data-target-annotation="3">3</dt>
+<dt data-target-cell="annotated-cell-35" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-31" data-code-lines="5" data-code-annotation="3">Check if the current counter value is 3</span>
+<span data-code-cell="annotated-cell-35" data-code-lines="5" data-code-annotation="3">Check if the current counter value is 3</span>
 </dd>
-<dt data-target-cell="annotated-cell-31" data-target-annotation="4">4</dt>
+<dt data-target-cell="annotated-cell-35" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-31" data-code-lines="6" data-code-annotation="4">Exit loop when counter reaches 3</span>
+<span data-code-cell="annotated-cell-35" data-code-lines="6" data-code-annotation="4">Exit loop when counter reaches 3</span>
 </dd>
-<dt data-target-cell="annotated-cell-31" data-target-annotation="5">5</dt>
+<dt data-target-cell="annotated-cell-35" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-31" data-code-lines="9" data-code-annotation="5">print out the current counter value.</span>
+<span data-code-cell="annotated-cell-35" data-code-lines="9" data-code-annotation="5">print out the current counter value.</span>
 </dd>
-<dt data-target-cell="annotated-cell-31" data-target-annotation="6">6</dt>
+<dt data-target-cell="annotated-cell-35" data-target-annotation="6">6</dt>
 <dd>
-<span data-code-cell="annotated-cell-31" data-code-lines="10" data-code-annotation="6">Increment the counter with 1</span>
+<span data-code-cell="annotated-cell-35" data-code-lines="10" data-code-annotation="6">Increment the counter with 1</span>
 </dd>
 </dl>
 </div>
@@ -1244,44 +1440,44 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-32"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="1">1</button><span id="annotated-cell-32-1" class="code-annotation-target"><a href="#annotated-cell-32-1" aria-hidden="true" tabindex="-1"></a>counter <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="annotated-cell-32-2"><a href="#annotated-cell-32-2" aria-hidden="true" tabindex="-1"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="2">2</button><span id="annotated-cell-32-3" class="code-annotation-target"><a href="#annotated-cell-32-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (counter <span class="sc">&lt;=</span> <span class="dv">5</span>) {</span>
-<span id="annotated-cell-32-4"><a href="#annotated-cell-32-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="3">3</button><span id="annotated-cell-32-5" class="code-annotation-target"><a href="#annotated-cell-32-5" aria-hidden="true" tabindex="-1"></a>  counter <span class="ot">&lt;-</span> counter <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="annotated-cell-32-6"><a href="#annotated-cell-32-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="4">4</button><span id="annotated-cell-32-7" class="code-annotation-target"><a href="#annotated-cell-32-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (counter <span class="sc">==</span> <span class="dv">3</span>) {</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="5">5</button><span id="annotated-cell-32-8" class="code-annotation-target"><a href="#annotated-cell-32-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">next</span></span>
-<span id="annotated-cell-32-9"><a href="#annotated-cell-32-9" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="annotated-cell-32-10"><a href="#annotated-cell-32-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="6">6</button><span id="annotated-cell-32-11" class="code-annotation-target"><a href="#annotated-cell-32-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(counter)</span>
-<span id="annotated-cell-32-12"><a href="#annotated-cell-32-12" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-36"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="1">1</button><span id="annotated-cell-36-1" class="code-annotation-target"><a href="#annotated-cell-36-1" aria-hidden="true" tabindex="-1"></a>counter <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="annotated-cell-36-2"><a href="#annotated-cell-36-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="2">2</button><span id="annotated-cell-36-3" class="code-annotation-target"><a href="#annotated-cell-36-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (counter <span class="sc">&lt;=</span> <span class="dv">5</span>) {</span>
+<span id="annotated-cell-36-4"><a href="#annotated-cell-36-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="3">3</button><span id="annotated-cell-36-5" class="code-annotation-target"><a href="#annotated-cell-36-5" aria-hidden="true" tabindex="-1"></a>  counter <span class="ot">&lt;-</span> counter <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="annotated-cell-36-6"><a href="#annotated-cell-36-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="4">4</button><span id="annotated-cell-36-7" class="code-annotation-target"><a href="#annotated-cell-36-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (counter <span class="sc">==</span> <span class="dv">3</span>) {</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="5">5</button><span id="annotated-cell-36-8" class="code-annotation-target"><a href="#annotated-cell-36-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">next</span></span>
+<span id="annotated-cell-36-9"><a href="#annotated-cell-36-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="annotated-cell-36-10"><a href="#annotated-cell-36-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="6">6</button><span id="annotated-cell-36-11" class="code-annotation-target"><a href="#annotated-cell-36-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(counter)</span>
+<span id="annotated-cell-36-12"><a href="#annotated-cell-36-12" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-32" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-36" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-32" data-code-lines="1" data-code-annotation="1">Initialize a counter starting from 1</span>
+<span data-code-cell="annotated-cell-36" data-code-lines="1" data-code-annotation="1">Initialize a counter starting from 1</span>
 </dd>
-<dt data-target-cell="annotated-cell-32" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-36" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-32" data-code-lines="3" data-code-annotation="2">Continue the loop as long as the counter is less than or equal to 5.</span>
+<span data-code-cell="annotated-cell-36" data-code-lines="3" data-code-annotation="2">Continue the loop as long as the counter is less than or equal to 5.</span>
 </dd>
-<dt data-target-cell="annotated-cell-32" data-target-annotation="3">3</dt>
+<dt data-target-cell="annotated-cell-36" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-32" data-code-lines="5" data-code-annotation="3">Increment the counter with 1</span>
+<span data-code-cell="annotated-cell-36" data-code-lines="5" data-code-annotation="3">Increment the counter with 1</span>
 </dd>
-<dt data-target-cell="annotated-cell-32" data-target-annotation="4">4</dt>
+<dt data-target-cell="annotated-cell-36" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-32" data-code-lines="7" data-code-annotation="4">Check if the current counter value is 3</span>
+<span data-code-cell="annotated-cell-36" data-code-lines="7" data-code-annotation="4">Check if the current counter value is 3</span>
 </dd>
-<dt data-target-cell="annotated-cell-32" data-target-annotation="5">5</dt>
+<dt data-target-cell="annotated-cell-36" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-32" data-code-lines="8" data-code-annotation="5">Skip printing the number 3</span>
+<span data-code-cell="annotated-cell-36" data-code-lines="8" data-code-annotation="5">Skip printing the number 3</span>
 </dd>
-<dt data-target-cell="annotated-cell-32" data-target-annotation="6">6</dt>
+<dt data-target-cell="annotated-cell-36" data-target-annotation="6">6</dt>
 <dd>
-<span data-code-cell="annotated-cell-32" data-code-lines="11" data-code-annotation="6">Print the current counter value.</span>
+<span data-code-cell="annotated-cell-36" data-code-lines="11" data-code-annotation="6">Print the current counter value.</span>
 </dd>
 </dl>
 </div>
@@ -1307,16 +1503,16 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(arg1, arg2, ...) {</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute</span></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Return a value (optional)</span></span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="co"># OR using the lambda function Syntax</span></span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>function_name <span class="ot">&lt;-</span> \(arg1, arg2, ...) {</span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute</span></span>
-<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(arg1, arg2, ...) {</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Return a value (optional)</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="co"># OR using the lambda function Syntax</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>function_name <span class="ot">&lt;-</span> \(arg1, arg2, ...) {</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Code to execute</span></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <ul>
@@ -1331,24 +1527,24 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-34"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-34-1"><a href="#annotated-cell-34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to add two numbers</span></span>
-<span id="annotated-cell-34-2"><a href="#annotated-cell-34-2" aria-hidden="true" tabindex="-1"></a>add_numbers <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-34" data-target-annotation="1">1</button><span id="annotated-cell-34-3" class="code-annotation-target"><a href="#annotated-cell-34-3" aria-hidden="true" tabindex="-1"></a>  summed_values <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-34" data-target-annotation="2">2</button><span id="annotated-cell-34-4" class="code-annotation-target"><a href="#annotated-cell-34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(summed_values)</span>
-<span id="annotated-cell-34-5"><a href="#annotated-cell-34-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="annotated-cell-34-6"><a href="#annotated-cell-34-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-34-7"><a href="#annotated-cell-34-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function</span></span>
-<span id="annotated-cell-34-8"><a href="#annotated-cell-34-8" aria-hidden="true" tabindex="-1"></a><span class="fu">add_numbers</span>(<span class="dv">5</span>, <span class="dv">3</span>) </span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-38"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-38-1"><a href="#annotated-cell-38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to add two numbers</span></span>
+<span id="annotated-cell-38-2"><a href="#annotated-cell-38-2" aria-hidden="true" tabindex="-1"></a>add_numbers <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-38" data-target-annotation="1">1</button><span id="annotated-cell-38-3" class="code-annotation-target"><a href="#annotated-cell-38-3" aria-hidden="true" tabindex="-1"></a>  summed_values <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-38" data-target-annotation="2">2</button><span id="annotated-cell-38-4" class="code-annotation-target"><a href="#annotated-cell-38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(summed_values)</span>
+<span id="annotated-cell-38-5"><a href="#annotated-cell-38-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="annotated-cell-38-6"><a href="#annotated-cell-38-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-38-7"><a href="#annotated-cell-38-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function</span></span>
+<span id="annotated-cell-38-8"><a href="#annotated-cell-38-8" aria-hidden="true" tabindex="-1"></a><span class="fu">add_numbers</span>(<span class="dv">5</span>, <span class="dv">3</span>) </span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-34" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-38" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-34" data-code-lines="3" data-code-annotation="1">Add the values assigned to the arguments.</span>
+<span data-code-cell="annotated-cell-38" data-code-lines="3" data-code-annotation="1">Add the values assigned to the arguments.</span>
 </dd>
-<dt data-target-cell="annotated-cell-34" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-38" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-34" data-code-lines="4" data-code-annotation="2">Return the summed value.</span>
+<span data-code-cell="annotated-cell-38" data-code-lines="4" data-code-annotation="2">Return the summed value.</span>
 </dd>
 </dl>
 </div>
@@ -1371,19 +1567,19 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-35"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="1">1</button><span id="annotated-cell-35-1" class="code-annotation-target"><a href="#annotated-cell-35-1" aria-hidden="true" tabindex="-1"></a>multiply <span class="ot">&lt;-</span> <span class="cf">function</span>(a, <span class="at">b =</span> <span class="dv">2</span>) {</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="2">2</button><span id="annotated-cell-35-2" class="code-annotation-target"><a href="#annotated-cell-35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(a <span class="sc">*</span> b)</span>
-<span id="annotated-cell-35-3"><a href="#annotated-cell-35-3" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-39"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-39" data-target-annotation="1">1</button><span id="annotated-cell-39-1" class="code-annotation-target"><a href="#annotated-cell-39-1" aria-hidden="true" tabindex="-1"></a>multiply <span class="ot">&lt;-</span> <span class="cf">function</span>(a, <span class="at">b =</span> <span class="dv">2</span>) {</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-39" data-target-annotation="2">2</button><span id="annotated-cell-39-2" class="code-annotation-target"><a href="#annotated-cell-39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(a <span class="sc">*</span> b)</span>
+<span id="annotated-cell-39-3"><a href="#annotated-cell-39-3" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-35" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-39" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-35" data-code-lines="1" data-code-annotation="1">Function with a default value of for the <code>b</code> argument</span>
+<span data-code-cell="annotated-cell-39" data-code-lines="1" data-code-annotation="1">Function with a default value of for the <code>b</code> argument</span>
 </dd>
-<dt data-target-cell="annotated-cell-35" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-39" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-35" data-code-lines="2" data-code-annotation="2">Return the multiplied value.</span>
+<span data-code-cell="annotated-cell-39" data-code-lines="2" data-code-annotation="2">Return the multiplied value.</span>
 </dd>
 </dl>
 </div>
@@ -1393,14 +1589,14 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-36"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-36-1"><a href="#annotated-cell-36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calls with and without the second argument</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="1">1</button><span id="annotated-cell-36-2" class="code-annotation-target"><a href="#annotated-cell-36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span>(<span class="dv">5</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-40"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-40-1"><a href="#annotated-cell-40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calls with and without the second argument</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-40" data-target-annotation="1">1</button><span id="annotated-cell-40-2" class="code-annotation-target"><a href="#annotated-cell-40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span>(<span class="dv">5</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-36" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-40" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-36" data-code-lines="2" data-code-annotation="1">Uses default b = 2 to multiple the value 5.</span>
+<span data-code-cell="annotated-cell-40" data-code-lines="2" data-code-annotation="1">Uses default b = 2 to multiple the value 5.</span>
 </dd>
 </dl>
 </div>
@@ -1413,8 +1609,8 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Overrides default</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span>(<span class="dv">5</span>, <span class="dv">3</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Overrides default</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span>(<span class="dv">5</span>, <span class="dv">3</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 15</code></pre>
@@ -1426,7 +1622,7 @@ How it works
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">add_numbers</span>(<span class="at">b =</span> <span class="dv">3</span>, <span class="at">a =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">add_numbers</span>(<span class="at">b =</span> <span class="dv">3</span>, <span class="at">a =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8</code></pre>
@@ -1439,12 +1635,12 @@ How it works
 <p>This are functions without a name, often used for quick, one-time operations, especially as arguments to other functions like lapply().</p>
 <p><strong>Example:</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-39"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-39" data-target-annotation="1">1</button><span id="annotated-cell-39-1" class="code-annotation-target"><a href="#annotated-cell-39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, \(x) x<span class="sc">^</span><span class="dv">2</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-43"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-43" data-target-annotation="1">1</button><span id="annotated-cell-43-1" class="code-annotation-target"><a href="#annotated-cell-43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, \(x) x<span class="sc">^</span><span class="dv">2</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-39" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-43" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-39" data-code-lines="1" data-code-annotation="1">Use an anonymous function within <code>sapply()</code></span>
+<span data-code-cell="annotated-cell-43" data-code-lines="1" data-code-annotation="1">Use an anonymous function within <code>sapply()</code></span>
 </dd>
 </dl>
 </div>
@@ -1926,8 +2122,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./python_programming.html" class="pagination-link" aria-label="Python">
-        <span class="nav-page-text">Python</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./r_tidyverse.html" class="pagination-link" aria-label="Tidyverse">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tidyverse</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

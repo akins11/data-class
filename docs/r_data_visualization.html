@@ -256,6 +256,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">EDA</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_data_cleaning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Data Cleaning</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -270,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./python_data_types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
   </div>
 </li>
       </ul>
@@ -287,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./powerbi_data_import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Processing…</span></span></a>
   </div>
 </li>
       </ul>
@@ -295,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tool_source.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Data Tool Referenece</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Data Tool Referenece</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -395,7 +401,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-1" class="code-annotation-target"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="1" data-code-annotation="1">Create a ggplot object including the data.</span>
+</dd>
+</dl>
 </div>
 <div class="cell-output-display">
 <div>
@@ -414,7 +428,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp, <span class="at">color =</span> cyl, <span class="at">size =</span> wt))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-1" class="code-annotation-target"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> hp, <span class="at">color =</span> cyl, <span class="at">size =</span> wt))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="1" data-code-annotation="1">Include the aesthetics.</span>
+</dd>
+</dl>
 </div>
 <div class="cell-output-display">
 <div>
@@ -466,7 +488,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-lines="2" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="2" data-code-annotation="1">Add the bar chart geometry to include the bars for each unique class.</span>
 </dd>
 </dl>
 </div>
@@ -497,7 +519,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-6" data-code-lines="2" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-6" data-code-lines="2" data-code-annotation="1">Add the bar chart geometry to include the <code>class</code> bars.</span>
 </dd>
 </dl>
 </div>
@@ -513,6 +535,7 @@ Common aesthetics include
 </section>
 <section id="point-scatter-plot" class="level4" data-number="15.2.3.2">
 <h4 data-number="15.2.3.2" class="anchored" data-anchor-id="point-scatter-plot"><span class="header-section-number">15.2.3.2</span> Point (scatter) plot</h4>
+<p>Create a scatter plot which is useful for displaying the relationship between two continuous variables.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -525,7 +548,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-7" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-7" data-code-lines="2" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-7" data-code-lines="2" data-code-annotation="1">Add the point chart geometry to show the <code>mpg</code> and <code>hp</code> relationship.</span>
 </dd>
 </dl>
 </div>
@@ -540,6 +563,7 @@ Common aesthetics include
 </section>
 <section id="line-chart" class="level4" data-number="15.2.3.3">
 <h4 data-number="15.2.3.3" class="anchored" data-anchor-id="line-chart"><span class="header-section-number">15.2.3.3</span> Line chart</h4>
+<p>Create a trend chart by connecting observations in the order of the variable on the X axis.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -552,7 +576,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-8" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-8" data-code-lines="2" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-8" data-code-lines="2" data-code-annotation="1">Add the line geometry to show the trend of unemployment during the period on the x-axis</span>
 </dd>
 </dl>
 </div>
@@ -567,6 +591,7 @@ Common aesthetics include
 </section>
 <section id="histogram" class="level4" data-number="15.2.3.4">
 <h4 data-number="15.2.3.4" class="anchored" data-anchor-id="histogram"><span class="header-section-number">15.2.3.4</span> Histogram</h4>
+<p>Visualize the distribution of a single continuous (numeric) variable by dividing the x axis into bins and counting the number of observations in each bin.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -579,7 +604,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-9" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="2" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-9" data-code-lines="2" data-code-annotation="1">Add the Histogram geometry with 5 bin widths for the <code>hwy</code> variable.</span>
 </dd>
 </dl>
 </div>
@@ -594,6 +619,7 @@ Common aesthetics include
 </section>
 <section id="box-plot" class="level4" data-number="15.2.3.5">
 <h4 data-number="15.2.3.5" class="anchored" data-anchor-id="box-plot"><span class="header-section-number">15.2.3.5</span> Box plot</h4>
+<p>Create a chart that display the distribution of a continuous variable including five summary statistics (the median, two hinges and two whiskers), and all “outlying” points individually.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -606,7 +632,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-10" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-10" data-code-lines="2" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-10" data-code-lines="2" data-code-annotation="1">Add the box plot geometry which display the distribution of <code>hwy</code> for each <code>class</code></span>
 </dd>
 </dl>
 </div>
@@ -634,7 +660,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-11" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-11" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-11" data-code-lines="3" data-code-annotation="1">Create multiple panels using the <code>cyl</code> variable.</span>
 </dd>
 </dl>
 </div>
@@ -662,7 +688,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-12" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-12" data-code-lines="3" data-code-annotation="1">Rows = drv, Columns = cyl</span>
+<span data-code-cell="annotated-cell-12" data-code-lines="3" data-code-annotation="1">Create multiple panels using the following: Rows = <code>drv</code>, Columns = <code>cyl</code></span>
 </dd>
 </dl>
 </div>
@@ -695,7 +721,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-13" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-13" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-13" data-code-lines="3" data-code-annotation="1">Change the default color using a new palette <code>Set1</code></span>
 </dd>
 </dl>
 </div>
@@ -723,7 +749,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-14" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-14" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-14" data-code-lines="3" data-code-annotation="1">Create a new scales on the x axis starting from 10 to 40 increasing by 5</span>
 </dd>
 </dl>
 </div>
@@ -757,7 +783,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-15" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-15" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-15" data-code-lines="3" data-code-annotation="1">Zoom into a specific range of value 15 to 40 in the a-axis.</span>
 </dd>
 </dl>
 </div>
@@ -777,8 +803,8 @@ Common aesthetics include
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> class, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> class, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output-display">
 <div>
@@ -801,7 +827,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-17" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-17" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-17" data-code-lines="3" data-code-annotation="1">Swap the x and y axis. i.e move the <code>class</code> to the y axis and the <code>hwy</code> to the x axis.</span>
 </dd>
 </dl>
 </div>
@@ -856,34 +882,26 @@ Common aesthetics include
 </div>
 <div class="sourceCode cell-code" id="annotated-cell-19"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-19-1"><a href="#annotated-cell-19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty)) <span class="sc">+</span> </span>
 <span id="annotated-cell-19-2"><a href="#annotated-cell-19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="1">1</button><span id="annotated-cell-19-3" class="code-annotation-target"><a href="#annotated-cell-19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="2">2</button><span id="annotated-cell-19-4" class="code-annotation-target"><a href="#annotated-cell-19-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"deepskyblue3"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="3">3</button><span id="annotated-cell-19-5" class="code-annotation-target"><a href="#annotated-cell-19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"deepskyblue2"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="4">4</button><span id="annotated-cell-19-6" class="code-annotation-target"><a href="#annotated-cell-19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="5">5</button><span id="annotated-cell-19-7" class="code-annotation-target"><a href="#annotated-cell-19-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"azure"</span>)</span>
+<span id="annotated-cell-19-3"><a href="#annotated-cell-19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(                                                            </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="1">1</button><span id="annotated-cell-19-4" class="code-annotation-target"><a href="#annotated-cell-19-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"deepskyblue3"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="annotated-cell-19-5"><a href="#annotated-cell-19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"deepskyblue2"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="2">2</button><span id="annotated-cell-19-6" class="code-annotation-target"><a href="#annotated-cell-19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="3">3</button><span id="annotated-cell-19-7" class="code-annotation-target"><a href="#annotated-cell-19-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"azure"</span>)</span>
 <span id="annotated-cell-19-8"><a href="#annotated-cell-19-8" aria-hidden="true" tabindex="-1"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-19" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-19" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-19" data-code-lines="4,5" data-code-annotation="1">Change the axis title color (x &amp; y)</span>
 </dd>
 <dt data-target-cell="annotated-cell-19" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-19" data-code-lines="4" data-code-annotation="2">Add some text…..</span>
+<span data-code-cell="annotated-cell-19" data-code-lines="6" data-code-annotation="2">Increase the text size of the x and y axis.</span>
 </dd>
 <dt data-target-cell="annotated-cell-19" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-19" data-code-lines="5" data-code-annotation="3">Add some text…..</span>
-</dd>
-<dt data-target-cell="annotated-cell-19" data-target-annotation="4">4</dt>
-<dd>
-<span data-code-cell="annotated-cell-19" data-code-lines="6" data-code-annotation="4">Add some text…..</span>
-</dd>
-<dt data-target-cell="annotated-cell-19" data-target-annotation="5">5</dt>
-<dd>
-<span data-code-cell="annotated-cell-19" data-code-lines="7" data-code-annotation="5">Add some text…..</span>
+<span data-code-cell="annotated-cell-19" data-code-lines="7" data-code-annotation="3">Change the plot background color.</span>
 </dd>
 </dl>
 </div>
@@ -914,11 +932,11 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-20" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-20" data-code-lines="1" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-20" data-code-lines="1" data-code-annotation="1">Add scatter plot of <code>hwy</code> and <code>cty</code></span>
 </dd>
 <dt data-target-cell="annotated-cell-20" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-20" data-code-lines="4" data-code-annotation="2">Add some text…..</span>
+<span data-code-cell="annotated-cell-20" data-code-lines="4" data-code-annotation="2">Save the last created plot as a .png file with a width of 5 and height of 4.</span>
 </dd>
 </dl>
 </div>
@@ -928,9 +946,11 @@ Common aesthetics include
 <h3 data-number="15.2.9" class="anchored" data-anchor-id="annotations"><span class="header-section-number">15.2.9</span> Annotations</h3>
 <section id="titleslabels" class="level4" data-number="15.2.9.1">
 <h4 data-number="15.2.9.1" class="anchored" data-anchor-id="titleslabels"><span class="header-section-number">15.2.9.1</span> Titles/labels</h4>
+<p>A title provides immediate context to the viewer about what the data represents.It summarizes the main theme or message of the chart, allowing readers to quickly understand the subject matter without needing to delve into the details.</p>
 </section>
 <section id="individual-functions" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="individual-functions">Individual functions</h4>
+<p>Working with the <code>xlab()</code>, <code>ylab()</code> and <code>ggtitle()</code> functions.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -949,19 +969,19 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-21" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-21" data-code-lines="3" data-code-annotation="1">Add a label or title to the x axis</span>
 </dd>
 <dt data-target-cell="annotated-cell-21" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-21" data-code-lines="4" data-code-annotation="2">Add some text…..</span>
+<span data-code-cell="annotated-cell-21" data-code-lines="4" data-code-annotation="2">Add a label or title to the y axis</span>
 </dd>
 <dt data-target-cell="annotated-cell-21" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-21" data-code-lines="6" data-code-annotation="3">Add some text…..</span>
+<span data-code-cell="annotated-cell-21" data-code-lines="6" data-code-annotation="3">Add a title to the plot</span>
 </dd>
 <dt data-target-cell="annotated-cell-21" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-21" data-code-lines="7" data-code-annotation="4">Add some text…..</span>
+<span data-code-cell="annotated-cell-21" data-code-lines="7" data-code-annotation="4">Add a sub-title to the plot</span>
 </dd>
 </dl>
 </div>
@@ -995,23 +1015,23 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-22" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-22" data-code-lines="4" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="4" data-code-annotation="1">Add a label or title to the x axis</span>
 </dd>
 <dt data-target-cell="annotated-cell-22" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-22" data-code-lines="5" data-code-annotation="2">Add some text…..</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="5" data-code-annotation="2">Add a label or title to the y axis</span>
 </dd>
 <dt data-target-cell="annotated-cell-22" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-22" data-code-lines="6" data-code-annotation="3">Add some text…..</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="6" data-code-annotation="3">Add a title to the plot</span>
 </dd>
 <dt data-target-cell="annotated-cell-22" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-22" data-code-lines="7" data-code-annotation="4">Add some text…..</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="7" data-code-annotation="4">Add a sub-title to the plot</span>
 </dd>
 <dt data-target-cell="annotated-cell-22" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-22" data-code-lines="8" data-code-annotation="5">Add some text…..</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="8" data-code-annotation="5">Add a caption to the plot.</span>
 </dd>
 </dl>
 </div>
@@ -1039,7 +1059,7 @@ Common aesthetics include
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-23" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-23" data-code-lines="3" data-code-annotation="1">Add some text…..</span>
+<span data-code-cell="annotated-cell-23" data-code-lines="3" data-code-annotation="1">Add a text value using the text geometry.</span>
 </dd>
 </dl>
 </div>
@@ -1059,10 +1079,22 @@ Common aesthetics include
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty)) <span class="sc">+</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">25</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"firebrick3"</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">25</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"firebrick3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-24"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-24-1"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty)) <span class="sc">+</span> </span>
+<span id="annotated-cell-24-2"><a href="#annotated-cell-24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="1">1</button><span id="annotated-cell-24-3" class="code-annotation-target"><a href="#annotated-cell-24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">25</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"firebrick3"</span>) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="2">2</button><span id="annotated-cell-24-4" class="code-annotation-target"><a href="#annotated-cell-24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">25</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"firebrick3"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-24" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-24" data-code-lines="3" data-code-annotation="1">Add an horizontal reference line to the plot.</span>
+</dd>
+<dt data-target-cell="annotated-cell-24" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-24" data-code-lines="4" data-code-annotation="2">Add a vertical reference line to the plot.</span>
+</dd>
+</dl>
 </div>
 <div class="cell-output-display">
 <div>
