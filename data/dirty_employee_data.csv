@@ -1,0 +1,1051 @@
+Emp ID,First.Name,LAST_NAME,Gender,AGE,Department,Salary,HireDate,perf_score,emp_period
+17487,David,Garcia,Female,55,Human Resource,48190,2019-11-09,3,2012 - 2015
+27710,Jane,Johnson,Male,57,Finance,25895,2019-07-16,9,2016 - 2018
+44887,Sarah,Rodriguez,Female,26,Finance,64947,2012-01-04,10,2016 - 2014
+84983,Mary,Miller,F,42,Marketg,71114,2020-01-26,10,2016 - 2018
+99418,Robert,Martinez,Male,31,Human Resource,52962,2014-11-21,8,2014 - 2019
+63517,John,Brown,Female,50,HR,52213,2018-01-06 After RE.,1,2015 - 2021
+76074,Emily,Brown,Male,23,HR,52504,2010-09-16,5,2017 - 2019
+58813,Lisa,Miller,Female,42,Human Resource,76424,2019-11-05,4,2014 - 2017
+57504,Michael,Martinez,Female,46,Sales,45859,2012-01-13,4,2010 - 2021
+12760,Mary,Davis,Male,34,Sales,44642,2015-12-02,9,2013 - 2019
+44133,Michael,Brown,Female,36,Marketg,68660,2016-04-20,3,2012 - 2017
+38077,Jane,Johnson,Male,57,IT,64335,2017-09-10,4,2012 - 2015
+70971,Mary,Rodriguez,Female,39,IT,29729,2010-12-31,3,2011 - 2020
+30315,John,Jones,Female,19,Human Resource,45685,2020-04-22,6,2012 - 2021
+43441,Lisa,Miller,Female,55,HR,47405,2015-05-10 After RE.,8,2015 - 2020
+92421,Robert,Jones,Female,18,Sales,62724,2022-11-18,4,2012 - 2014
+38437,Mary,Johnson,Female,25,IT,52866,2021-09-23,3,2014 - 2018
+59956,Lisa,Miller,Female,51,HR,64989,2019-08-22,8,2014 - 2021
+26647,Jane,Smith,Female,36,IT,64165,2012-09-05,3,2011 - 2019
+72132,Lisa,Smith,Male,55,Sales,61452,2021-12-17,5,2010 - 2018
+65367,Mary,Davis,Female,49,Sales,NA,2011-12-24,8,2010 - 2017
+68126,Emily,Miller,Female,51,Marketg,47200,2018-11-12,2,2015 - 2020
+97835,David,Williams,Female,41,Operations,14132,2020-01-15,2,2012 - 2019
+62352,David,Smith,Male,41,Sales,9981,2017-11-30,3,2013 - 2020
+93652,William,Garcia,Female,34,Human Resource,30115,2012-08-08,4,2010 - 2019
+72338,David,Smith,Female,36,Marketing,45248,2021-02-12,9,2015 - 2018
+84058,Lisa,Davis,Female,52,IT,67343,2011-12-01 After RE.,9,2013 - 2014
+35945,William,Rodriguez,Female,47,Finance,66019,2015-09-22,4,2015 - 2017
+35243,Emily,Martinez,Female,55,Marketing,33295,2015-01-07,7,2016 - 2016
+15798,Robert,Martinez,Male,40,finance,52918,2016-07-20,3,2012 - 2020
+67435,Robert,Smith,Female,30,Sales,44583,2020-07-13,2,2012 - 2014
+19722,Michael,Jones,Male,28,Operations,62388,2010-09-14,8,2012 - 2018
+80942,Robert,Miller,Female,25,Operations,39355,2022-06-25,10,2013 - 2018
+66766,Michael,Davis,Male,59,IT,51400,2020-10-03,1,2013 - -
+82731,Sarah,Jones,Female,37,HR,56272,2020-08-17,5,2011 - 2019
+89224,Mary,Miller,Female,53,Operations,46266,2011-08-03,6,2013 - 2019
+74592,Lisa,Miller,Male,23,Sales,39381,2013-10-03,5,2016 - 2021
+86098,William,Williams,Male,53,Human Resource,51866,2022-12-09,3,2017 - 2014
+61572,Robert,Jones,female,64,Human Resource,28812,2012-01-27,8,2013 - 2019
+52458,David,Rodriguez,Female,58,Marketg,57347,2015-05-16,5,2013 - 2018
+88637,Robert,Brown,Female,41,Finance,53968,2017-04-17,4,2015 - 2021
+19639,Lisa,Smith,Male,41,Marketg,44305,2021-10-21,3,2014 - 2018
+90142,Mary,Jones,Female,32,finance,59005,2018-11-08,2,2016 - 2022
+48025,David,Garcia,Female,52,IT,52416,2020-12-08 After RE.,4,2016 - 2021
+38359,Emily,Davis,Male,139,HR,34192,2019-05-14 After RE.,9,2011 - 2019
+93835,Robert,Brown,Female,18,finance,23643,2010-09-27,10,2016 - 2020
+39443,David,Williams,Female,46,Human Resource,73183,2017-09-13,10,2017 - 2017
+82819,Emily,Martinez,Female,49,Marketg,19997,2012-07-09,10,2015 - 2017
+92755,Lisa,Davis,Female,46,Sales,67746,2013-08-26,3,2010 - 2017
+36556,Robert,Johnson,Male,34,HR,36876,2016-07-19,6,2011 - 2019
+79231,Robert,Miller,Female,26,Marketg,84914,2015-08-31 After RE.,6,2017 - 2019
+47764,David,Martinez,Female,54,Human Resource,39916,2015-03-03,8,2013 - 2022
+78806,William,Miller,Female,59,Marketing,61844,2017-04-24,8,2013 - 2014
+78292,Mary,Martinez,female,37,finance,35806,2013-08-14,4,2011 - 2020
+12776,David,Davis,Female,49,finance,49417,2023-04-03,8,2010 - 2013
+61113,Jane,Brown,Male,57,HR,39022,2018-12-26 After RE.,1,2013 - 2016
+44647,John,Smith,Female,26,Marketing,56548,2021-04-15,10,2010 - 2022
+87871,Mary,Rodriguez,Female,57,Sales,54858,2018-02-24,5,2014 - 2019
+93354,Lisa,Rodriguez,Female,38,Finance,27041,2021-12-20,9,2012 - 2020
+96014,Emily,Johnson,Male,18,HR,46869,2021-06-15,6,2013 - 2019
+75504,Lisa,Brown,Female,44,Finance,55255,2013-09-20,9,2011 - 2018
+24302,John,Rodriguez,Female,158,Sales,26845,2022-08-15,5,2014 - 2017
+88120,William,Martinez,Female,62,Finance,28142,2023-09-02,4,2016 - 2017
+41858,Michael,Garcia,Male,50,HR,67061,2022-08-18,4,2011 - 2016
+28387,Mary,Davis,Male,29,Human Resource,26528,2018-12-16,8,2014 - 2019
+91546,John,Brown,Female,24,IT,19943,2018-02-16,4,2014 - 2015
+30959,Jane,Williams,Female,34,Operations,55187,2010-04-24,10,2013 - 2014
+62522,Sarah,Martinez,Male,53,Marketing,32663,2017-06-21,2,2016 - 2020
+92114,Mary,Miller,Female,38,Sales,57542,2023-07-03,8,2016 - 2020
+47166,Lisa,Smith,Female,32,HR,49684,2018-02-07 After RE.,5,2016 - 2017
+59688,Mary,Williams,Male,60,Marketg,62247,2011-07-24,10,2010 - 2021
+66218,Jane,Garcia,Female,35,IT,55682,2012-04-19,10,2015 - 2015
+64815,Mary,Miller,Female,24,Human Resource,65558,2023-07-13,4,2010 - 2020
+29926,Sarah,Garcia,Male,33,Operations,35155,2014-02-14,2,2012 - 2020
+98298,Lisa,Jones,Male,49,finance,56794,2023-01-10 After RE.,6,2016 - 2017
+74066,Lisa,Garcia,Female,28,Marketing,18931,2017-08-21,6,2013 - 2021
+39464,Jane,Johnson,Male,32,Operations,27436,2019-03-26,6,2015 - 2017
+56354,Emily,Williams,Female,60,Human Resource,45228,2018-11-12,5,2016 - 2021
+58267,Michael,Miller,Male,59,Human Resource,56887,2013-05-23,2,2010 - 2020
+60211,Jane,Rodriguez,Male,54,Human Resource,54230,2021-06-26,2,2015 - 2019
+50132,David,Brown,M,58,Sales,43439,2015-01-08,8,2013 - 2014
+31811,Lisa,Rodriguez,Female,27,finance,38025,2020-06-14,10,2011 - 2021
+50275,John,Martinez,Female,36,IT,33880,2012-11-03,5,2016 - 2018
+55532,Mary,Davis,Female,39,Human Resource,59220,2020-01-13,10,2012 - 2015
+44161,Emily,Miller,Male,18,Sales,66986,2019-11-17,2,2011 - 2021
+74615,Mary,Martinez,Male,25,Marketing,30388,2013-07-22 After RE.,3,2016 - 2018
+40503,Emily,Jones,male,62,Operations,41442,2019-05-20,9,2011 - 2015
+81847,Sarah,Miller,Female,145,IT,45538,2021-04-01,4,2014 - 2013
+42410,Jane,Martinez,Female,59,IT,52583,2012-07-18 After RE.,5,2010 - 2017
+53473,John,Garcia,Female,54,HR,30515,2023-04-23,3,2011 - 2017
+47983,Jane,Jones,Male,64,Sales,NA,2011-07-21,3,2014 - 2018
+66570,John,Johnson,Female,41,Marketing,54593,2020-01-05 After RE.,3,2011 - 2023
+67700,Michael,Smith,Female,19,HR,34229,2021-07-14,6,2010 - 2016
+83690,Michael,Jones,Female,38,finance,37937,2019-07-20 After RE.,5,2010 - 2020
+58181,Emily,Martinez,Female,62,Finance,63958,2011-05-28,3,2016 - 2019
+39393,David,Jones,F,26,Human Resource,51601,2018-12-21,3,2017 - 2018
+83395,Jane,Smith,Female,18,finance,45179,2019-01-19,3,2011 - 2019
+29806,Jane,Miller,male,27,Human Resource,31006,2021-05-13 After RE.,8,2016 - 2021
+63271,Sarah,Johnson,female,28,Operations,49137,2011-06-23,7,2016 - 2017
+84481,Jane,Garcia,Female,19,HR,25979,2010-01-01,10,2011 - 2017
+44489,Mary,Williams,Female,31,Operations,54468,2012-11-24,3,2016 - 2018
+51124,John,Smith,Female,22,Sales,40654,2010-01-30 After RE.,6,2014 - 2019
+62550,Jane,Brown,Male,41,IT,70991,2021-11-01,6,2010 - 2016
+31555,Emily,Garcia,Female,21,Marketg,49207,2022-12-30,4,2016 - 2017
+41314,David,Smith,Female,41,Sales,51188,2016-10-13,10,2011 - 2017
+70586,David,Jones,Female,50,Human Resource,59530,2013-04-29,8,2014 - 2020
+53041,Robert,Brown,Female,20,Marketing,36579,2021-10-10,6,2012 - 2020
+25016,David,Jones,Female,25,Human Resource,58404,2017-10-20,4,2015 - 2015
+44795,Sarah,Garcia,Male,34,Finance,28975,2013-06-30,8,2010 - 2018
+51569,Robert,Johnson,Female,54,Marketg,60773,2012-08-22,1,2010 - 2021
+82046,Lisa,Smith,Female,52,finance,26575,2023-01-22,1,2011 - 2017
+12285,Jane,Smith,Female,44,finance,51925,2014-06-22,8,2015 - 2014
+17876,Sarah,Martinez,Female,45,Marketg,63701,2023-03-04,4,2014 - 2018
+92486,Jane,Johnson,Female,35,Sales,48826,2014-10-17,8,2013 - 2016
+88966,Lisa,Rodriguez,Female,48,IT,46666,2016-10-20,10,2014 - 2015
+59587,Lisa,Miller,Female,24,Operations,17844,2011-06-04,9,2011 - 2019
+27831,Emily,Brown,F,21,Sales,42105,2022-07-30,9,2010 - 2015
+97508,David,Rodriguez,Female,52,Finance,31667,2011-09-07,7,2011 - -
+24477,David,Jones,Female,65,Marketg,68314,2022-12-26,7,2011 - 2019
+35355,Emily,Jones,Female,22,Operations,45035,2014-06-24,8,2013 - 2018
+86201,David,Rodriguez,Male,23,Finance,51818,2014-03-16,2,2012 - 2018
+30994,David,Miller,Female,50,Marketing,60887,2019-08-18,1,2014 - 2020
+57799,Michael,Williams,Male,36,HR,42235,2022-07-30,1,2011 - 2018
+84058,Lisa,Davis,Female,52,IT,67343,2011-12-01 After RE.,9,2013 - 2014
+50196,William,Martinez,Male,31,Finance,46173,2015-12-01,2,2015 - 2021
+93205,Robert,Jones,Female,31,Sales,14154,2015-06-01,2,2010 - 2016
+50502,John,Jones,Female,60,Finance,42869,2016-03-21,7,2010 - 2015
+60938,John,Garcia,male,35,HR,38232,2019-05-05,5,2011 - 2017
+91106,Robert,Davis,Female,42,finance,68764,2015-10-06,5,2010 - 2018
+33193,Lisa,Garcia,Male,46,Marketg,70494,2022-11-16 After RE.,3,2016 - 2018
+59861,John,Johnson,Male,21,Marketg,52910,2012-06-01,7,2011 - 2020
+24665,Robert,Williams,Female,57,Marketg,36121,2018-12-25 After RE.,2,2010 - 2018
+58267,Michael,Miller,Male,59,Human Resource,56887,2013-05-23,2,2010 - 2020
+92761,Mary,Williams,Female,34,finance,49104,2011-01-30,7,2010 - 2015
+83798,Emily,Johnson,Female,160,Sales,36306,2019-04-05 After RE.,8,2012 - 2019
+91146,William,Martinez,Female,36,Human Resource,54998,2018-03-28,2,2014 - 2017
+65581,Mary,Smith,Female,20,Sales,37897,2019-11-04 After RE.,1,2012 - 2019
+22635,Jane,Rodriguez,Female,47,Marketing,NA,2012-06-28 After RE.,2,2015 - 2019
+21275,Mary,Brown,Male,60,Marketing,45386,2022-12-09,10,2013 - 2019
+77746,David,Johnson,Male,64,Finance,50008,2018-11-29,7,2010 - 2022
+50331,Robert,Smith,Male,40,IT,56543,2010-04-16,4,2016 - 2017
+22198,William,Williams,Female,28,Marketg,67692,2012-03-12,3,2012 - 2021
+10755,William,Rodriguez,Male,27,Operations,47240,2021-10-13,5,2015 - 2020
+99798,John,Miller,Male,33,IT,NA,2011-02-28,10,2010 - 2016
+55029,Sarah,Davis,Female,31,Marketg,54099,2021-04-25 After RE.,10,2017 - 2017
+36218,Emily,Smith,Female,55,Finance,50364,2021-12-05,7,2011 - 2017
+54982,William,Rodriguez,Male,41,Operations,57055,2015-05-22,8,2011 - 2018
+35448,Emily,Rodriguez,Male,59,finance,44645,2012-06-30,3,2015 - 2020
+19812,Mary,Williams,Female,43,Sales,27286,2016-04-04 After RE.,4,2014 - 2020
+63936,Emily,Davis,Female,48,Operations,39512,2022-10-17,7,2010 - 2018
+40480,William,Williams,Male,127,Sales,52016,2022-02-20,2,2010 - 2015
+86222,Robert,Rodriguez,Female,159,Finance,NA,2019-06-25,5,2012 - 2021
+52154,David,Rodriguez,Male,41,Finance,36769,2011-02-05,2,2012 - 2020
+89125,Mary,Williams,Male,24,IT,47030,2021-09-29,10,2011 - -
+28534,John,Williams,Female,28,Marketing,50161,2010-09-03,7,2012 - 2021
+63509,Jane,Williams,Female,23,HR,40195,2015-08-18,2,2013 - 2020
+88773,Emily,Miller,Female,32,HR,52621,2021-05-08 After RE.,8,2015 - 2018
+94845,William,Martinez,Female,58,Marketing,29795,2017-04-08,3,2012 - 2014
+59752,Robert,Martinez,Female,18,Sales,69432,2019-01-07,1,2015 - 2017
+56128,Sarah,Smith,Male,56,Marketg,53125,2010-06-16,10,2011 - 2019
+64221,Mary,Williams,Male,37,Marketing,14375,2011-01-01,7,2017 - 2019
+11002,David,Johnson,Male,24,Marketing,26994,2016-02-27,10,2014 - 2019
+43713,William,Miller,Female,43,Operations,59307,2011-05-13,1,2016 - 2018
+46085,Emily,Martinez,Male,56,Human Resource,52238,2014-09-02,8,2011 - 2020
+92525,Robert,Johnson,Male,43,finance,47008,2020-01-23,7,2011 - 2015
+41565,Mary,Williams,Female,60,Marketg,61468,2022-02-23,6,2010 - 2022
+68262,Jane,Miller,Female,37,Marketg,74862,2019-03-11,9,2015 - 2021
+37102,John,Johnson,Female,51,Marketing,52568,2016-03-09,2,2010 - 2021
+51193,Sarah,Williams,Female,20,Sales,49078,2010-04-27,4,2010 - 2019
+13648,John,Brown,Male,23,Operations,54839,2022-08-17,9,2015 - 2018
+85868,Mary,Martinez,Male,29,Human Resource,46290,2015-03-12,5,2016 - 2019
+32659,John,Williams,Male,23,IT,65467,2022-01-11,10,2015 - 2020
+47855,Lisa,Smith,Male,36,Operations,38782,2014-07-10,7,2013 - 2020
+48556,Mary,Martinez,Male,59,Operations,75721,2015-06-13,9,2015 - 2020
+22082,David,Garcia,Male,30,Human Resource,57646,2022-01-17,5,2015 - 2021
+66137,Sarah,Johnson,Female,39,Human Resource,45843,2014-09-26 After RE.,10,2015 - 2015
+30695,Jane,Rodriguez,Female,64,Marketg,74869,2010-11-27,4,2014 - 2014
+78445,Lisa,Rodriguez,Male,57,Sales,53707,2014-10-22,4,2016 - 2017
+91622,Robert,Martinez,Female,20,Finance,NA,2015-10-30,4,2017 - 2022
+74934,David,Garcia,Female,49,HR,19909,2014-02-14,7,2010 - 2021
+20869,Jane,Smith,Male,34,Finance,49084,2022-06-24,2,2014 - 2019
+51938,Mary,Jones,Female,53,Human Resource,38242,2012-07-21,2,2016 - 2023
+34246,Lisa,Davis,Female,22,Finance,69710,2011-08-07,5,2011 - 2019
+71197,Emily,Martinez,Female,26,Human Resource,23829,2011-08-26,8,2013 - 2018
+89330,Emily,Martinez,Female,32,Finance,64393,2017-02-12,10,2010 - 2016
+47852,Emily,Garcia,Male,45,Marketg,47155,2014-12-29,6,2016 - 2018
+67776,Emily,Johnson,Female,27,Marketg,44746,2010-03-31,7,2016 - 2016
+34242,Lisa,Smith,Male,34,HR,68035,2018-01-27,8,2012 - 2018
+20074,Mary,Martinez,Female,64,IT,37859,2014-08-30,2,2013 - 2019
+10742,William,Rodriguez,Male,28,Marketing,47726,2022-06-26,8,2010 - 2023
+60813,Michael,Jones,Female,26,HR,49593,2020-01-15,9,2010 - 2021
+62817,William,Garcia,Female,128,Finance,52043,2018-11-14,7,2016 - 2019
+57158,John,Miller,Female,40,finance,29189,2015-07-09,9,2013 - 2020
+57605,John,Miller,Male,40,IT,31204,2014-07-25,2,2012 - 2016
+91489,John,Martinez,Female,38,Marketg,46512,2012-04-30,2,2013 - 2022
+76736,Michael,Smith,Male,48,Sales,84677,2012-05-02 After RE.,6,2010 - 2022
+91104,William,Jones,Female,27,Marketing,74679,2013-01-26,9,2016 - 2020
+40773,Jane,Garcia,Female,47,Finance,55369,2010-10-13 After RE.,7,2017 - 2022
+73657,William,Williams,Female,61,Marketing,38955,2018-05-19,8,2012 - 2019
+81560,Jane,Martinez,Male,20,Operations,50477,2018-06-09,3,2016 - 2019
+14797,Lisa,Jones,Female,59,Marketg,36735,2022-03-30 After RE.,9,2015 - 2017
+53288,Jane,Miller,Female,49,Human Resource,NA,2020-10-22,6,2010 - 2019
+35196,Jane,Rodriguez,Female,54,Operations,43045,2013-10-16 After RE.,3,2011 - 2023
+65991,David,Jones,Female,62,Marketing,25118,2017-12-30,10,2011 - 2016
+57867,David,Johnson,Female,64,IT,45264,2015-10-29,9,2010 - 2017
+12945,Mary,Johnson,F,59,Finance,49583,2017-05-02,1,2013 - 2021
+84521,David,Brown,Female,52,Human Resource,64893,2012-05-18,9,2010 - 2016
+38998,John,Miller,Female,35,IT,44822,2018-02-21 After RE.,5,2011 - 2016
+61395,Sarah,Davis,Female,64,finance,1068,2019-06-17,9,2010 - 2016
+68155,Emily,Davis,Female,21,finance,51045,2019-12-21,3,2013 - 2023
+77146,John,Miller,Female,22,Finance,60479,2018-05-25,8,2010 - 2014
+60107,Michael,Garcia,Female,27,finance,64753,2015-02-12,2,2012 - 2021
+69133,David,Garcia,Female,20,Marketg,37717,2023-08-27,1,2010 - 2022
+12303,Jane,Williams,Male,38,finance,33197,2015-10-16,8,2012 - 2022
+66518,Sarah,Miller,Female,26,HR,57186,2011-05-07,3,2013 - 2018
+25827,David,Garcia,Male,40,Marketg,47240,2016-06-10 After RE.,2,2015 - 2020
+92624,Jane,Johnson,Female,63,Human Resource,39426,2014-03-02,8,2016 - 2021
+98851,Jane,Johnson,Female,23,IT,58810,2017-06-28,5,2012 - 2018
+17788,Jane,Garcia,Female,61,Marketg,47079,2021-05-01 After RE.,8,2010 - 2018
+91881,Robert,Davis,Female,39,HR,26128,2016-06-07 After RE.,5,2012 - 2018
+50817,David,Smith,Female,32,HR,41693,2021-11-28,3,2012 - 2022
+68526,Robert,Johnson,Female,46,finance,58772,2020-05-13,5,2015 - 2020
+93097,Jane,Martinez,Female,22,HR,64903,2018-03-11,8,2012 - -
+11626,John,Johnson,Female,49,Human Resource,56993,2016-03-13,6,2017 - 2016
+87836,Jane,Rodriguez,Female,21,IT,42912,2010-03-16,9,2012 - 2014
+56775,Emily,Smith,Female,20,finance,35651,2013-12-03,6,2016 - 2017
+27520,Jane,Miller,Female,22,Finance,47964,2018-07-27,8,2016 - 2021
+86084,Michael,Davis,Male,20,Marketing,11467,2022-03-13,6,2016 - 2019
+96010,Emily,Johnson,Female,37,Marketing,74899,2015-06-26,5,2016 - 2016
+96162,Sarah,Smith,Female,46,Finance,66916,2011-02-21,6,2017 - 2019
+24744,Jane,Brown,Female,36,Finance,49253,2011-02-16,1,2014 - 2017
+32509,William,Garcia,Female,50,IT,48564,2023-08-15,5,2013 - 2018
+20300,Sarah,Smith,Female,23,Marketing,41974,2013-10-10,5,2015 - 2020
+12881,Jane,Davis,Female,35,IT,48146,2013-11-05,7,2010 - 2021
+34225,Michael,Davis,Female,19,Sales,50230,2013-03-31,1,2013 - 2016
+30991,Jane,Johnson,Female,19,Operations,73878,2019-05-12,4,2015 - 2017
+38576,David,Smith,Female,63,finance,40937,2014-03-08,9,2015 - 2019
+32343,William,Johnson,Male,50,finance,61406,2013-07-15,9,2014 - 2018
+73092,Sarah,Davis,Female,18,HR,74466,2014-10-09,1,2012 - 2022
+28969,David,Davis,Male,24,Sales,64981,2012-12-24,8,2013 - 2021
+57650,William,Johnson,Female,47,Human Resource,72958,2018-01-13,8,2013 - 2019
+30569,William,Jones,M,38,Sales,41245,2018-06-26,8,2016 - 2021
+52220,Michael,Jones,Female,63,Operations,68792,2014-03-22,10,2014 - 2016
+57528,Emily,Johnson,Female,50,Marketg,55594,2012-05-22,1,2016 - 2019
+14912,Emily,Miller,Female,54,finance,42081,2019-02-26,1,2016 - 2016
+48268,Jane,Williams,Male,55,IT,46184,2015-05-21 After RE.,2,2011 - 2016
+19470,William,Brown,Male,52,Marketg,76188,2012-10-15,4,2016 - 2016
+14014,David,Williams,Male,32,Marketg,46521,2023-08-10,2,2010 - 2017
+40570,Sarah,Smith,Female,31,Finance,41168,2011-08-14,10,2014 - 2020
+24129,John,Miller,Male,58,Marketing,52548,2020-01-10,5,2012 - 2016
+93711,Lisa,Garcia,Male,65,Sales,51604,2022-12-15,8,2012 - 2017
+41350,Robert,Miller,Female,49,Human Resource,43382,2014-01-13,5,2015 - 2022
+10673,Sarah,Miller,Female,26,Finance,38595,2016-07-13,6,2016 - 2021
+11872,David,Davis,Female,134,finance,NA,2011-12-06,4,2015 - 2020
+23762,Lisa,Jones,male,26,HR,85181,2020-05-11,6,2010 - 2020
+96413,Emily,Brown,Female,31,Sales,66985,2022-09-05,8,2014 - 2018
+90773,David,Garcia,Male,34,HR,50258,2021-12-28,2,2014 - 2018
+68084,Sarah,Johnson,Female,32,Sales,47613,2013-12-22 After RE.,3,2015 - 2021
+70388,Lisa,Martinez,Female,60,IT,58718,2021-03-25,7,2012 - 2019
+88966,Lisa,Rodriguez,Female,48,IT,46666,2016-10-20,10,2014 - 2015
+28670,Sarah,Davis,Male,35,Finance,72698,2015-05-01,2,2012 - 2015
+29585,Jane,Davis,Female,21,IT,58991,2011-11-16,7,2016 - 2021
+67333,Mary,Garcia,Female,52,Finance,41380,2022-04-20,10,2015 - 2016
+36817,Emily,Williams,Female,30,Marketing,23693,2011-07-17,9,2010 - 2021
+86819,David,Martinez,Female,41,Marketg,47813,2016-09-30,7,2011 - 2018
+28546,Michael,Rodriguez,Female,45,IT,33588,2016-06-26,6,2013 - 2018
+85935,Lisa,Miller,Female,61,Marketg,NA,2011-03-17,9,2010 - 2022
+18982,Robert,Martinez,Female,62,Marketg,54759,2020-03-19,2,2014 - 2023
+75994,Mary,Martinez,Male,56,Human Resource,50707,2014-04-03,4,2011 - 2020
+67765,David,Johnson,Male,45,IT,67407,2019-07-12,1,2014 - 2021
+58433,William,Smith,Female,60,Sales,44778,2022-04-03,10,2011 - 2016
+55429,David,Martinez,Female,30,HR,53783,2020-10-06,9,2013 - 2016
+28936,Emily,Davis,Male,35,Operations,50503,2018-04-08,4,2011 - 2019
+81502,Sarah,Brown,Male,31,HR,40434,2020-11-18,2,2016 - 2019
+86990,Michael,Davis,Male,62,Marketing,22151,2014-08-01,10,2014 - 2018
+43036,Jane,Johnson,Male,38,Marketg,28299,2010-02-18,1,2011 - 2015
+16215,Mary,Johnson,Female,34,Sales,37495,2014-02-09,5,2015 - 2021
+12037,Emily,Williams,Female,59,IT,48448,2021-11-27,9,2015 - 2017
+72716,William,Smith,Female,44,IT,53514,2014-03-17,9,2014 - 2020
+14694,Sarah,Brown,Male,32,IT,43379,2016-02-24 After RE.,5,2013 - 2019
+44621,Jane,Johnson,Female,65,Marketing,45898,2015-11-18,5,2014 - 2015
+52520,Robert,Brown,Male,122,Human Resource,66576,2012-11-06,1,2015 - 2021
+56338,Mary,Johnson,Female,31,Human Resource,77573,2014-02-08,10,2013 - 2016
+10351,Mary,Smith,Male,22,Operations,52405,2016-12-19,7,2012 - 2019
+52480,William,Martinez,Male,48,Finance,63035,2020-02-29,5,2016 - 2019
+42637,Jane,Jones,Female,37,Marketg,52713,2014-07-19,1,2011 - 2021
+99104,Jane,Martinez,Male,49,HR,61953,2020-11-17,10,2011 - 2016
+25545,Lisa,Brown,Male,28,Human Resource,25476,2022-07-12,3,2010 - 2019
+77940,Sarah,Rodriguez,Female,45,IT,62644,2021-05-27,5,2013 - 2017
+61952,Robert,Martinez,Male,61,finance,62198,2019-10-14,1,2012 - 2013
+11922,David,Smith,Female,21,Finance,38333,2014-03-23,6,2015 - 2017
+13301,Jane,Garcia,Female,63,Operations,96256,2014-04-11,9,2017 - 2020
+12436,Mary,Brown,Female,21,Marketg,43526,2017-10-08,7,2013 - 2023
+67538,Michael,Martinez,Female,63,Marketing,30460,2015-08-16,6,2012 - 2021
+57817,Emily,Miller,Female,41,finance,39734,2015-03-26 After RE.,5,2015 - 2017
+24286,John,Smith,Female,32,HR,50995,2023-05-06,10,2013 - 2018
+84826,Emily,Jones,Female,36,Operations,49163,2022-04-22,2,2010 - 2019
+58186,Michael,Johnson,Female,53,HR,44949,2022-09-22,8,2011 - 2018
+47207,Sarah,Miller,Female,21,Human Resource,62157,2012-12-01,3,2012 - -
+46090,Robert,Garcia,Female,33,HR,51809,2011-08-17,9,2014 - 2020
+35680,Michael,Rodriguez,Female,121,IT,66364,2020-01-13,7,2012 - 2016
+53927,Robert,Miller,Female,33,Marketing,65165,2013-02-27,6,2013 - 2020
+68459,Lisa,Brown,Male,27,IT,67820,2012-03-20,4,2012 - 2022
+95928,Michael,Johnson,Male,32,finance,50780,2013-02-14,3,2012 - 2018
+14587,David,Rodriguez,Male,32,Marketg,63892,2022-03-06,10,2016 - 2020
+63041,Lisa,Jones,Female,43,Marketing,70747,2012-04-14,4,2014 - 2020
+59723,William,Smith,Female,41,Marketing,40654,2023-04-20,2,2010 - 2020
+37643,Robert,Garcia,Female,42,HR,52959,2015-12-30,5,2014 - 2018
+15482,Emily,Martinez,Male,50,IT,51906,2014-09-01,2,2014 - 2018
+40855,John,Williams,Male,26,finance,42926,2013-01-20,10,2011 - 2022
+30546,John,Williams,Male,56,Marketg,42577,2021-04-19,6,2012 - 2018
+42488,Lisa,Jones,Male,35,Operations,67157,2019-05-13,6,2015 - 2018
+47768,Mary,Williams,Male,63,Human Resource,56160,2016-07-31,7,2016 - 2013
+45555,Jane,Smith,Male,36,HR,85388,2015-04-28,3,2011 - 2018
+79160,Mary,Johnson,Female,59,Sales,50275,2023-08-18,10,2012 - 2016
+41541,Michael,Johnson,Female,53,Sales,44252,2015-01-18,1,2016 - 2022
+26435,Michael,Jones,Female,24,Finance,33508,2018-03-13,4,2017 - 2021
+90685,Lisa,Rodriguez,Male,45,Marketg,34636,2017-01-19,4,2014 - 2021
+22446,Lisa,Jones,Female,34,finance,72381,2013-01-21,5,2014 - -
+40537,David,Miller,Female,63,HR,48187,2011-12-20,6,2016 - 2016
+31085,Sarah,Johnson,Female,48,Marketing,NA,2010-12-15,6,2012 - 2019
+93518,John,Smith,Male,46,finance,37934,2019-08-05,6,2012 - 2020
+52886,Sarah,Miller,Female,27,HR,51574,2019-03-15,9,2011 - 2022
+68063,Lisa,Davis,M,36,Operations,NA,2021-12-20,3,2016 - 2018
+31726,Sarah,Martinez,Female,45,Human Resource,27747,2022-08-27,10,2015 - 2023
+65240,Emily,Jones,Male,49,IT,22031,2014-10-30,6,2010 - 2016
+65969,Emily,Williams,Male,41,Human Resource,45861,2017-06-10,3,2013 - 2021
+30697,Jane,Miller,Female,59,Finance,60698,2020-12-22,3,2010 - 2023
+64739,Robert,Martinez,Male,33,finance,NA,2022-03-02,9,2013 - 2021
+62131,Jane,Miller,Female,23,IT,70229,2021-12-13,4,2016 - 2022
+10886,Emily,Rodriguez,Female,65,Sales,46151,2015-06-15,5,2016 - 2017
+21734,Lisa,Davis,Female,25,Marketg,35985,2010-09-13,7,2015 - 2023
+71327,William,Johnson,Male,22,Operations,67852,2022-08-31 After RE.,3,2011 - 2015
+62242,Lisa,Williams,Female,32,Operations,47186,2017-12-29,8,2013 - 2016
+34670,Robert,Davis,Female,154,finance,43378,2021-02-09,9,2016 - 2017
+59617,Mary,Martinez,Male,31,Sales,57501,2012-04-02,7,2013 - 2021
+75838,Jane,Williams,Female,51,HR,64812,2022-11-15,5,2014 - 2018
+36509,Emily,Garcia,Male,46,finance,47566,2014-07-24,10,2010 - 2017
+73966,Sarah,Williams,Female,28,Marketg,55000,2015-01-17,3,2011 - 2016
+66285,Emily,Martinez,Female,32,HR,66333,2011-08-06 After RE.,10,2010 - 2018
+96408,Lisa,Brown,Female,24,Operations,74937,2015-09-23,9,2016 - 2013
+34933,Lisa,Williams,Male,46,Sales,56339,2018-08-19,7,2013 - 2022
+48919,Jane,Jones,Male,21,Operations,55428,2022-08-11,9,2016 - 2016
+15177,David,Johnson,Male,64,IT,33647,2023-08-28,2,2016 - 2021
+52610,Emily,Williams,Male,56,Marketg,33658,2019-05-23,8,2010 - 2019
+21682,Michael,Garcia,Female,31,Human Resource,41706,2010-07-17 After RE.,1,2014 - 2021
+30875,Robert,Williams,Female,50,IT,74650,2014-11-16,3,2012 - 2016
+16332,Jane,Martinez,Male,42,Finance,48037,2017-02-10,7,2014 - 2017
+29878,William,Johnson,Male,54,Operations,61307,2020-09-14,10,2012 - 2014
+80404,John,Johnson,Female,47,Marketing,39748,2021-04-12,8,2013 - 2019
+98319,Jane,Miller,Male,63,Marketg,39929,2019-07-13,1,2015 - 2019
+33052,Emily,Rodriguez,Female,58,IT,38279,2020-10-30 After RE.,2,2013 - 2015
+14342,Jane,Jones,Male,26,finance,56558,2012-10-14,1,2014 - 2021
+67222,Mary,Garcia,Male,58,Marketing,42244,2014-10-16,8,2013 - 2014
+49459,Lisa,Miller,M,60,Human Resource,47999,2016-12-05,8,2012 - 2020
+88081,Emily,Miller,Female,26,Marketing,36902,2019-01-23 After RE.,3,2012 - 2018
+49797,Jane,Rodriguez,Male,55,Finance,48277,2020-01-06,7,2011 - 2018
+70100,Jane,Johnson,Female,40,HR,49778,2021-10-09,3,2012 - 2019
+12449,Emily,Davis,Female,24,Marketing,52691,2010-06-23,8,2010 - 2020
+40695,Robert,Williams,Female,26,Human Resource,65811,2018-04-09,1,2016 - 2016
+51608,William,Martinez,Female,30,HR,38543,2021-06-17,2,2011 - 2019
+11606,Mary,Garcia,Female,42,Marketing,42419,2021-06-05,4,2012 - 2018
+39478,Robert,Brown,Female,26,Human Resource,43267,2019-05-24,6,2017 - 2019
+74686,William,Brown,Female,44,Finance,35422,2020-06-16,4,2011 - 2016
+83863,Mary,Williams,Male,28,Marketing,52466,2021-10-10,9,2010 - 2023
+80562,Emily,Brown,Male,32,IT,48515,2020-08-30,9,2011 - 2019
+19812,Mary,Williams,Female,43,Sales,27286,2016-04-04 After RE.,4,2014 - 2020
+36233,Robert,Davis,male,20,Finance,46671,2010-02-10,3,2011 - 2020
+64739,Robert,Martinez,Male,33,finance,NA,2022-03-02,9,2013 - 2021
+13983,Mary,Johnson,Female,20,HR,78349,2010-05-08,2,2015 - 2020
+96408,Lisa,Brown,Female,24,Operations,74937,2015-09-23,9,2016 - 2013
+20955,Sarah,Johnson,Male,40,Operations,35299,2015-11-05 After RE.,5,2010 - 2016
+80211,Emily,Davis,Female,37,IT,48013,2016-01-17,10,2011 - 2016
+69279,John,Rodriguez,Female,36,Finance,31542,2019-08-02,8,2014 - 2020
+40551,Michael,Martinez,Male,58,Human Resource,83662,2016-05-23 After RE.,5,2016 - 2016
+40932,Sarah,Davis,Male,45,Operations,67856,2020-11-24,5,2012 - 2018
+12314,David,Davis,Male,62,Sales,34165,2013-01-18,1,2011 - 2017
+93068,Mary,Williams,Male,47,Sales,19325,2014-11-03,6,2016 - 2022
+19173,Robert,Brown,Male,58,IT,70858,2023-06-19,2,2013 - 2016
+47207,Sarah,Miller,Female,21,Human Resource,62157,2012-12-01,3,2012 - -
+49403,John,Rodriguez,Female,59,IT,39436,2023-04-23,7,2013 - 2016
+15595,David,Williams,Female,38,IT,31522,2023-05-26,2,2012 - 2022
+20043,Michael,Rodriguez,Male,63,Operations,84630,2023-05-01,7,2011 - 2020
+44598,Jane,Johnson,Female,20,Sales,32152,2019-05-22,10,2014 - 2020
+79823,Michael,Garcia,Female,53,HR,68445,2019-12-01 After RE.,1,2012 - 2018
+63271,Sarah,Johnson,female,28,Operations,49137,2011-06-23,7,2016 - 2017
+81111,Lisa,Jones,Male,48,Operations,38958,2013-01-06,8,2016 - 2014
+20215,Robert,Rodriguez,Female,25,HR,56453,2010-03-22,8,2014 - 2017
+58774,Emily,Martinez,Female,122,HR,64789,2017-06-10,8,2011 - 2018
+16622,Sarah,Brown,Female,34,Marketing,30741,2022-03-17,9,2014 - 2020
+95043,Michael,Davis,M,39,Finance,53076,2014-03-11,9,2012 - 2018
+68101,Sarah,Johnson,Female,57,finance,64873,2020-01-29,4,2016 - 2016
+17988,William,Brown,Female,22,HR,NA,2018-11-01,9,2014 - 2016
+45532,Lisa,Martinez,Female,57,Marketing,47695,2020-02-15,8,2013 - 2023
+93191,Lisa,Garcia,Female,64,Marketing,80808,2021-05-10,8,2015 - 2020
+75307,Michael,Johnson,Female,28,IT,55466,2022-01-10 After RE.,3,2010 - 2021
+61050,Mary,Johnson,Female,20,Finance,54364,2011-06-23,4,2011 - 2017
+22790,Sarah,Martinez,Female,38,Operations,69470,2018-12-07,10,2016 - 2013
+42101,Emily,Johnson,Female,43,Sales,43956,2015-07-12,10,2012 - 2019
+33293,Robert,Smith,Male,26,HR,63931,2022-10-27,2,2017 - 2021
+17587,David,Smith,Female,39,Marketing,61870,2017-12-19,3,2013 - 2017
+34521,Mary,Johnson,Female,60,Marketing,67507,2013-07-27,7,2016 - 2017
+65736,Lisa,Smith,Male,44,finance,61092,2017-03-26,2,2010 - 2017
+74764,David,Brown,Female,58,Finance,65948,2012-03-13,2,2015 - 2019
+32252,Sarah,Rodriguez,Female,42,Sales,53872,2018-07-20,5,2012 - -
+40246,Lisa,Williams,Female,49,Marketg,41276,2013-12-10,6,2014 - 2021
+57484,David,Davis,Female,65,HR,44950,2022-06-15,6,2013 - 2014
+55403,Robert,Rodriguez,Female,49,Marketing,55807,2018-10-23,2,2012 - 2020
+51042,Robert,Brown,Female,30,HR,73186,2022-09-24,8,2016 - 2018
+90649,Sarah,Jones,Female,58,Human Resource,60613,2022-10-20,3,2015 - 2018
+80777,Michael,Martinez,Female,27,Human Resource,54165,2019-06-02,5,2011 - 2020
+19181,Lisa,Smith,Male,29,IT,71143,2010-12-07,10,2011 - 2022
+46233,Jane,Johnson,Male,56,Operations,71914,2017-03-07,9,2011 - 2021
+43414,Mary,Garcia,male,23,IT,79840,2018-09-24,6,2011 - 2019
+85795,Mary,Garcia,Female,31,Human Resource,64995,2011-09-08,7,2014 - 2019
+21620,Michael,Johnson,Male,43,Marketing,49125,2015-11-30,10,2013 - 2016
+74501,William,Davis,Female,18,Finance,42820,2012-05-31,4,2016 - 2019
+45045,David,Rodriguez,Female,40,finance,39343,2010-11-07,9,2013 - 2022
+56599,Jane,Garcia,Female,31,finance,44301,2011-11-12,3,2013 - 2018
+17102,Mary,Rodriguez,Female,53,Operations,35036,2011-02-01,10,2010 - 2016
+97077,Jane,Miller,Male,51,finance,37063,2019-09-11,7,2014 - 2020
+11190,Emily,Davis,Female,34,HR,46707,2010-02-19,10,2014 - 2020
+65991,Emily,Brown,Male,35,Finance,59286,2022-03-12,2,2014 - 2021
+28906,Sarah,Miller,Female,53,Marketing,37290,2011-07-03,9,2010 - 2017
+63546,John,Smith,Female,21,Finance,75216,2011-11-30,9,2015 - 2022
+39369,William,Brown,Male,21,Human Resource,2162,2014-03-05 After RE.,8,2010 - 2019
+42280,Emily,Miller,Female,65,HR,54062,2018-05-05,8,2012 - 2021
+26321,Emily,Brown,Male,19,Sales,24208,2013-02-09,2,2013 - 2021
+23156,Jane,Miller,Female,62,Finance,NA,2023-04-29,2,2010 - 2019
+36565,Michael,Rodriguez,Female,19,Operations,36537,2010-01-11,2,2014 - 2014
+73161,William,Johnson,Female,46,Finance,58323,2014-04-10,2,2017 - 2018
+21666,David,Smith,Male,65,Marketg,42474,2010-06-02,3,2015 - 2019
+75919,Mary,Smith,Male,41,Human Resource,43343,2022-12-17,1,2013 - 2018
+22780,Mary,Williams,Male,48,Marketing,59994,2012-11-20,9,2010 - 2018
+59407,David,Smith,Male,48,Sales,28237,2020-02-14,8,2014 - 2019
+16133,William,Smith,Female,34,IT,48372,2012-04-02,10,2014 - 2016
+88172,David,Miller,Female,39,Human Resource,56878,2020-10-08,4,2012 - 2019
+78552,Mary,Garcia,Male,49,HR,57782,2013-01-12,10,2013 - 2019
+72505,William,Williams,Female,42,IT,29642,2012-05-19,2,2017 - 2021
+49738,Robert,Miller,Female,36,Human Resource,16749,2020-09-16,2,2015 - 2017
+24599,David,Garcia,Male,64,Human Resource,72507,2019-04-06,9,2011 - 2016
+71023,David,Rodriguez,Male,61,HR,46241,2017-02-26,6,2016 - 2016
+76983,Mary,Rodriguez,Female,31,Marketg,36450,2020-03-04,5,2012 - 2019
+39277,Jane,Johnson,Male,20,HR,35014,2012-07-16,1,2016 - 2015
+53390,Michael,Brown,Female,51,Finance,28856,2021-11-03,6,2011 - 2016
+26028,Michael,Johnson,Male,44,Finance,55023,2020-11-17,7,2012 - 2018
+23796,Sarah,Brown,Male,29,Marketg,28707,2021-01-10,6,2017 - 2018
+16876,Emily,Brown,Male,57,Marketg,38875,2015-05-23,4,2014 - 2015
+24609,Emily,Williams,Female,48,Finance,67005,2022-03-12,5,2015 - 2023
+61263,William,Smith,Female,56,Marketing,57123,2019-06-30,1,2012 - 2018
+18389,Sarah,Martinez,M,29,Marketg,31520,2023-02-09,10,2013 - 2018
+54849,Emily,Brown,Female,56,Sales,64314,2012-01-03,1,2011 - 2019
+17825,Mary,Jones,Female,50,Sales,51494,2020-07-30 After RE.,6,2012 - 2014
+92411,William,Davis,Male,47,Finance,62855,2014-06-23,2,2014 - 2016
+76148,Lisa,Williams,Female,31,Sales,57146,2020-09-18,7,2010 - 2020
+63917,Lisa,Miller,Female,59,IT,35934,2020-01-15,3,2014 - 2020
+17195,Lisa,Jones,Male,61,HR,59003,2020-04-05,3,2013 - 2020
+85454,Michael,Brown,Female,44,finance,48284,2016-12-31,5,2014 - 2018
+74796,John,Rodriguez,Female,59,finance,62239,2012-11-29,9,2012 - 2017
+36714,Mary,Miller,Male,25,finance,29970,2014-12-30,4,2010 - 2014
+30192,Mary,Smith,Male,53,finance,40718,2014-01-15,3,2010 - 2018
+99435,Lisa,Brown,Female,40,IT,46653,2016-11-12,1,2017 - 2016
+86722,Robert,Brown,Female,44,finance,58319,2018-10-11,3,2013 - 2017
+57331,Emily,Johnson,Male,36,Sales,63967,2010-03-17,4,2012 - 2019
+22892,David,Davis,Female,52,Human Resource,65517,2014-12-28,7,2014 - 2016
+27673,Sarah,Smith,Female,31,HR,64133,2021-02-01,2,2015 - 2022
+76328,Emily,Garcia,Female,23,Finance,NA,2020-04-02,4,2012 - 2021
+87583,Lisa,Rodriguez,Male,64,HR,51586,2021-05-30,8,2013 - 2017
+32311,Michael,Smith,Male,33,Marketg,56453,2012-10-17,4,2014 - 2015
+73520,Robert,Williams,Female,36,Finance,38637,2020-01-19,7,2013 - 2017
+40540,Robert,Smith,Male,41,Sales,35590,2017-05-08,10,2015 - 2021
+38475,David,Johnson,Female,64,Operations,62296,2015-07-30,2,2011 - 2023
+17052,Lisa,Brown,Female,34,Operations,91230,2021-06-03,5,2013 - 2016
+82382,Jane,Jones,Female,47,Sales,43136,2013-03-22,6,2010 - 2019
+39132,Michael,Smith,Female,52,Finance,46050,2018-08-12,7,2010 - 2017
+63704,Lisa,Johnson,Male,63,Finance,49108,2017-03-05,3,2014 - 2019
+61490,John,Rodriguez,Male,19,Marketg,48154,2011-02-21 After RE.,10,2011 - 2017
+41516,Michael,Brown,Female,25,finance,NA,2020-11-02 After RE.,2,2015 - 2015
+16600,Robert,Garcia,Female,60,IT,61474,2011-04-07,6,2013 - 2017
+48853,Emily,Williams,Male,40,Sales,67722,2014-01-09 After RE.,5,2012 - 2018
+90925,Robert,Garcia,Female,31,Human Resource,49815,2017-01-22,1,2011 - 2021
+30438,Sarah,Brown,male,24,HR,26259,2013-04-29,3,2010 - 2021
+86368,John,Rodriguez,Male,49,Marketing,48308,2012-03-28,5,2017 - 2022
+52038,Mary,Smith,Male,157,finance,42356,2020-09-01,6,2015 - 2020
+63872,Robert,Davis,Female,31,finance,40271,2019-03-31,8,2012 - 2021
+57694,Robert,Johnson,Female,59,Operations,49830,2018-09-18,4,2015 - 2018
+93955,David,Brown,Male,46,Finance,57654,2018-03-15,8,2010 - 2019
+76843,Jane,Smith,Female,29,finance,69661,2012-10-30,5,2014 - 2021
+32659,John,Williams,Male,23,IT,65467,2022-01-11,10,2015 - 2020
+94795,David,Smith,Male,49,Finance,71698,2022-02-01 After RE.,8,2015 - 2022
+34242,Lisa,Smith,Male,34,HR,68035,2018-01-27,8,2012 - 2018
+39342,Robert,Miller,Female,56,HR,30242,2010-08-21 After RE.,6,2010 - 2020
+89172,John,Williams,Female,57,Finance,59202,2021-01-12,10,2010 - 2017
+50702,Emily,Garcia,Female,23,IT,62335,2010-01-10,2,2013 - 2019
+26020,Emily,Miller,Female,53,Marketing,18107,2012-09-26,9,2013 - 2018
+95559,Robert,Miller,Female,20,Finance,34423,2021-05-23 After RE.,2,2015 - 2022
+24416,Robert,Martinez,Female,56,Finance,62214,2010-03-28,5,2014 - 2021
+44564,William,Martinez,Male,57,Operations,48703,2020-08-04,6,2011 - -
+47022,David,Jones,Female,41,Human Resource,73670,2012-05-02,9,2012 - 2018
+36502,Michael,Miller,Female,64,HR,64129,2011-04-19,2,2012 - 2019
+37643,Robert,Garcia,Female,42,HR,52959,2015-12-30,5,2014 - 2018
+16372,Michael,Smith,Male,28,HR,NA,2012-11-26,7,2011 - 2017
+62571,Mary,Martinez,Female,52,Finance,33346,2020-02-08,8,2010 - 2021
+42709,John,Rodriguez,Female,58,Marketg,63742,2016-06-23,6,2013 - -
+11761,David,Davis,Female,61,Finance,57715,2021-11-17,6,2011 - 2017
+73753,Lisa,Rodriguez,Male,27,Human Resource,59463,2018-01-14,9,2012 - 2019
+78702,William,Martinez,Male,40,HR,28832,2014-03-04,5,2013 - 2018
+83170,Sarah,Brown,Female,49,finance,67557,2022-01-02,7,2014 - 2017
+98177,William,Jones,Female,29,Marketing,69615,2023-02-08,2,2011 - 2016
+84685,Mary,Davis,Female,29,HR,NA,2018-01-07,3,2013 - 2017
+31770,Jane,Jones,Male,23,HR,NA,2020-06-16,8,2015 - 2020
+56434,William,Johnson,Female,30,Operations,29775,2015-04-12,3,2010 - 2023
+62291,Robert,Williams,Male,33,IT,40271,2014-10-04,10,2012 - 2021
+96620,Emily,Brown,Male,60,HR,28736,2018-04-30,6,2013 - 2018
+51099,Lisa,Davis,Female,52,IT,40662,2011-03-21,1,2013 - 2015
+95277,Lisa,Rodriguez,Female,22,Finance,64778,2012-03-23,3,2015 - 2017
+55173,Michael,Garcia,Female,64,IT,58610,2016-01-15,4,2014 - 2017
+11497,Jane,Williams,Female,62,Operations,60995,2011-02-07,2,2011 - 2016
+77631,Mary,Miller,Female,55,Marketg,43404,2014-01-02 After RE.,7,2015 - 2017
+63979,Mary,Williams,Male,31,HR,55148,2019-05-04 After RE.,10,2011 - 2017
+84867,Sarah,Williams,Male,45,HR,40334,2014-01-12 After RE.,4,2012 - 2022
+49727,Sarah,Williams,Female,38,Operations,62556,2014-04-19,9,2016 - 2018
+22333,Emily,Martinez,Female,44,finance,50169,2015-11-03,5,2013 - 2017
+20942,Michael,Johnson,Male,27,IT,14789,2020-01-29,8,2012 - 2019
+53927,Robert,Miller,Female,33,Marketing,65165,2013-02-27,6,2013 - 2020
+42762,Michael,Williams,Female,19,Marketg,51453,2016-04-17,1,2012 - 2020
+80944,Emily,Davis,Female,37,Finance,90328,2014-05-19 After RE.,9,2014 - 2022
+71972,Michael,Williams,Female,27,Sales,59062,2014-09-11,1,2012 - 2019
+67765,David,Johnson,Male,45,IT,67407,2019-07-12,1,2014 - 2021
+53203,Sarah,Jones,Male,47,finance,NA,2020-06-11,6,2016 - 2020
+46939,Emily,Jones,Female,63,Operations,58679,2015-11-15,4,2015 - 2021
+82348,Jane,Davis,Female,27,Marketg,32622,2016-08-15,6,2017 - 2017
+65188,Emily,Brown,Female,28,Human Resource,NA,2021-10-01,10,2015 - 2017
+97077,Jane,Miller,Male,51,finance,37063,2019-09-11,7,2014 - 2020
+78361,David,Johnson,Female,40,finance,36763,2013-10-09,9,2015 - 2016
+71774,Sarah,Brown,Male,31,Finance,34017,2018-07-14 After RE.,7,2012 - 2019
+38622,Mary,Jones,Male,27,finance,32142,2012-02-15,2,2011 - 2021
+26151,Michael,Williams,Female,42,HR,71198,2015-12-09 After RE.,6,2016 - 2016
+18411,John,Rodriguez,male,51,finance,55437,2017-06-30,4,2013 - 2017
+33947,David,Johnson,Female,35,Operations,86256,2015-02-25,1,2011 - 2018
+63288,Sarah,Garcia,Male,60,Marketg,28889,2011-02-24,4,2011 - 2019
+10969,Emily,Rodriguez,Female,39,Marketing,74058,2021-11-13,3,2011 - 2019
+70224,Sarah,Miller,Male,48,Finance,62888,2019-06-12,6,2013 - 2014
+15391,David,Johnson,Female,36,Human Resource,57620,2013-10-28,6,2010 - 2017
+73480,David,Johnson,Female,39,finance,47192,2016-01-10,1,2015 - 2018
+99670,Jane,Jones,Female,29,HR,43181,2021-09-14,3,2010 - 2019
+17879,Emily,Brown,Female,51,IT,45063,2021-05-13,2,2010 - 2016
+37681,David,Williams,Female,60,Human Resource,31262,2016-07-18,5,2010 - 2021
+27193,Jane,Williams,Female,55,HR,62725,2012-12-30 After RE.,2,2014 - -
+86383,David,Smith,Female,34,HR,53081,2023-02-17,2,2010 - 2019
+21721,William,Garcia,Female,29,HR,43308,2021-08-30,9,2011 - 2019
+73527,David,Williams,Female,39,finance,66747,2020-02-06,10,2010 - 2019
+78956,David,Johnson,Female,19,IT,83507,2014-11-09,5,2010 - 2016
+29850,William,Martinez,Female,38,HR,60791,2010-03-20,10,2014 - 2015
+14517,Michael,Martinez,Female,64,Sales,52300,2010-04-12,3,2012 - 2021
+67336,Robert,Smith,Male,45,Sales,52833,2017-05-29,8,2013 - 2016
+16332,Sarah,Johnson,Female,26,Finance,26638,2018-01-15,2,2010 - 2020
+54446,Lisa,Miller,Male,41,Marketg,NA,2012-09-16,1,2012 - 2018
+94954,Robert,Rodriguez,Female,61,Finance,40519,2018-07-24,7,2012 - -
+92242,Mary,Brown,Male,22,Marketing,54909,2017-08-06,2,2010 - 2020
+73166,David,Johnson,Male,45,Marketg,55496,2013-04-05,3,2012 - 2013
+19738,Emily,Jones,Female,65,IT,66343,2015-09-12 After RE.,8,2010 - 2017
+78615,Lisa,Williams,Male,46,Human Resource,65744,2023-04-25,4,2013 - 2017
+27954,John,Brown,Female,55,IT,24273,2020-03-19 After RE.,3,2013 - 2020
+37250,John,Williams,Male,34,Marketg,48856,2021-02-21,10,2014 - 2018
+39126,Lisa,Miller,Female,45,HR,66359,2017-10-19,9,2015 - 2016
+86098,William,Williams,Male,53,Human Resource,51866,2022-12-09,3,2017 - 2014
+50458,Sarah,Martinez,Female,52,Sales,42291,2012-05-07,9,2016 - 2022
+30991,Jane,Johnson,Female,19,Operations,73878,2019-05-12,4,2015 - 2017
+19096,John,Davis,Female,39,Human Resource,52353,2016-12-21,3,2013 - 2017
+57801,Lisa,Johnson,Female,51,Human Resource,74209,2015-05-05,6,2011 - 2017
+94908,David,Smith,Male,27,Sales,54394,2020-06-19 After RE.,9,2012 - 2017
+84883,Lisa,Davis,Male,50,finance,59086,2012-11-22,5,2013 - 2021
+66470,Emily,Martinez,Female,65,finance,57887,2022-08-27,9,2013 - 2021
+53024,Emily,Jones,Male,33,finance,55289,2010-02-10,10,2013 - 2017
+50159,Michael,Davis,Female,64,Marketg,40698,2019-11-06,9,2011 - 2020
+88141,Mary,Martinez,Female,50,Human Resource,14441,2012-12-19,10,2015 - 2020
+88456,Lisa,Jones,Female,57,Human Resource,58150,2018-05-01,10,2013 - 2020
+95795,Jane,Martinez,Male,37,Finance,62272,2022-09-24,8,2014 - 2021
+95838,Sarah,Smith,Female,39,Marketg,67567,2022-09-16,2,2017 - 2017
+11190,Emily,Davis,Female,34,HR,46707,2010-02-19,10,2014 - 2020
+96159,Mary,Garcia,Male,54,Marketing,80861,2023-06-03,7,2013 - 2021
+71428,Jane,Smith,Female,47,Marketg,60534,2015-04-06,8,2013 - 2014
+36364,Lisa,Rodriguez,Male,50,Human Resource,NA,2018-06-04,9,2012 - 2015
+24631,Michael,Williams,male,44,IT,65090,2023-07-26,10,2012 - 2013
+37364,Emily,Garcia,Female,23,Operations,83675,2011-03-29,9,2013 - 2015
+93528,David,Smith,Male,61,Human Resource,50890,2011-10-26,1,2016 - 2021
+99913,Robert,Jones,Female,47,Sales,NA,2023-01-22,1,2013 - 2023
+74352,Sarah,Smith,Female,53,Operations,29173,2013-03-16,2,2015 - 2017
+78782,Michael,Miller,Female,18,IT,NA,2011-10-15,7,2010 - 2021
+32231,David,Rodriguez,Male,48,finance,63558,2014-02-27,4,2016 - 2021
+71594,Michael,Brown,Male,22,Human Resource,64293,2017-09-13,4,2016 - 2016
+11788,Emily,Miller,Female,60,Human Resource,59452,2014-08-25,4,2010 - 2020
+13003,Emily,Rodriguez,Female,65,Finance,68259,2022-01-23,10,2012 - 2023
+64046,Emily,Johnson,Female,62,finance,21888,2014-04-26,6,2016 - 2018
+85175,Robert,Williams,Female,34,HR,49884,2021-12-07,9,2015 - 2017
+50158,Mary,Williams,Male,53,Marketg,14838,2016-07-19,6,2016 - 2018
+69084,Lisa,Johnson,Female,64,IT,66993,2021-05-29,10,2010 - 2016
+50837,Lisa,Martinez,Female,61,IT,49247,2021-12-01,9,2011 - 2018
+20761,David,Williams,Female,30,Marketg,36045,2018-10-27 After RE.,6,2010 - 2018
+70042,Sarah,Martinez,Male,28,Operations,60163,2012-08-21,8,2012 - 2020
+71117,William,Rodriguez,Female,28,Operations,71540,2015-06-30,10,2012 - 2015
+67246,Lisa,Davis,Female,47,Finance,45569,2013-01-23,1,2016 - 2018
+29850,William,Martinez,Female,38,HR,60791,2010-03-20,10,2014 - 2015
+44826,Michael,Smith,Female,65,Human Resource,27581,2013-09-20,7,2014 - 2018
+91018,William,Jones,Female,48,HR,40255,2021-10-25,5,2013 - 2020
+49149,William,Davis,Female,42,IT,62131,2012-10-25,10,2012 - 2018
+80507,Emily,Miller,M,52,Finance,19122,2013-09-28,2,2011 - 2021
+37954,Lisa,Garcia,Female,61,Marketg,40443,2021-12-18,3,2012 - 2018
+23343,Michael,Martinez,Female,36,Operations,63750,2011-06-14,1,2015 - 2019
+44975,Mary,Jones,Male,57,Marketing,43076,2022-03-31,9,2013 - 2021
+93679,Robert,Johnson,Female,64,HR,NA,2013-12-27,3,2015 - 2018
+97670,Jane,Miller,Female,36,HR,24080,2013-02-10,10,2016 - 2021
+54499,John,Jones,Female,65,HR,32468,2012-12-24 After RE.,4,2013 - 2019
+20246,Sarah,Brown,Female,27,Operations,38047,2013-08-13,6,2013 - 2021
+85132,Sarah,Rodriguez,Female,50,Marketing,57949,2011-09-29,5,2014 - 2017
+29459,John,Miller,Female,36,finance,45974,2020-12-16,6,2012 - 2021
+13631,Michael,Smith,Female,35,finance,60540,2015-11-13,4,2011 - 2013
+31726,Sarah,Martinez,Female,45,Human Resource,27747,2022-08-27,10,2015 - 2023
+76395,Sarah,Miller,Male,53,Marketing,58380,2010-12-07,8,2010 - 2017
+27745,Emily,Williams,Male,22,HR,30850,2010-01-11,7,2014 - 2018
+85556,William,Johnson,Female,58,finance,47561,2021-05-15,10,2012 - 2021
+20846,Jane,Miller,Male,48,Human Resource,59901,2019-05-04,1,2010 - 2017
+71033,Jane,Davis,Female,34,Marketg,45228,2020-03-29,9,2010 - 2019
+92584,Jane,Garcia,Male,28,IT,50205,2023-08-29 After RE.,10,2014 - 2017
+83716,Jane,Brown,Female,22,Marketg,48523,2010-07-09,4,2016 - 2019
+16622,Sarah,Brown,Female,34,Marketing,30741,2022-03-17,9,2014 - 2020
+65662,Michael,Martinez,Male,47,Marketing,53439,2014-12-26,9,2010 - 2022
+84440,Mary,Smith,Male,46,Marketing,85982,2017-02-15,3,2013 - 2017
+90074,William,Brown,Female,48,HR,62607,2014-09-11,10,2016 - 2015
+46572,Emily,Garcia,Female,60,Operations,61389,2018-10-19 After RE.,4,2015 - 2015
+41388,Michael,Garcia,Female,47,IT,46874,2020-12-21,3,2013 - 2020
+75777,William,Davis,Female,39,HR,47574,2020-08-31 After RE.,7,2013 - 2019
+38534,Sarah,Smith,Male,35,IT,32855,2014-09-25,8,2015 - 2016
+80618,William,Miller,Male,34,Marketg,55144,2011-08-20,9,2012 - 2021
+24402,Lisa,Miller,Female,39,finance,42617,2014-02-19,2,2012 - 2016
+23595,John,Davis,Female,57,Operations,26932,2021-05-09,7,2012 - 2019
+35558,Jane,Rodriguez,Female,38,HR,78916,2016-09-06,2,2014 - 2018
+27016,William,Smith,Female,29,IT,33889,2019-06-25,6,2017 - -
+83909,Jane,Miller,Female,33,Operations,77926,2010-04-25,10,2016 - 2015
+42075,Sarah,Jones,Female,44,IT,43285,2017-07-13,10,2015 - 2018
+22529,Sarah,Smith,Female,31,Marketg,60985,2012-10-01,4,2013 - 2019
+46670,John,Garcia,Male,29,Finance,42761,2015-10-26,3,2013 - 2020
+39924,David,Smith,Female,37,Marketing,44356,2013-07-19,3,2016 - 2015
+10913,William,Garcia,Female,53,Marketg,66132,2021-04-21,5,2010 - 2019
+84921,Lisa,Jones,Female,54,Sales,51273,2021-03-02,5,2014 - 2021
+14749,Jane,Garcia,Male,34,Marketg,62581,2018-11-19 After RE.,2,2012 - 2022
+82883,David,Martinez,Female,55,Operations,45263,2020-06-28,4,2011 - 2022
+49154,Lisa,Smith,Male,39,finance,36329,2017-09-22,8,2014 - 2016
+19562,Michael,Brown,Male,19,IT,61167,2018-07-01,2,2014 - 2020
+91625,Mary,Martinez,F,54,Finance,59902,2014-06-10,3,2012 - 2020
+82777,Lisa,Jones,Female,62,Operations,35067,2012-06-30,9,2015 - 2017
+96200,Jane,Brown,Female,38,Marketg,44557,2016-09-28,9,2015 - 2016
+47543,Emily,Garcia,Female,51,Operations,40269,2018-05-22,1,2015 - 2020
+43414,Mary,Garcia,male,23,IT,79840,2018-09-24,6,2011 - 2019
+28770,Jane,Smith,Female,54,Marketing,60851,2015-10-18,9,2016 - 2017
+56970,William,Brown,Male,48,HR,49246,2022-11-11,9,2010 - 2018
+66106,David,Miller,Female,54,Sales,76221,2011-10-14,7,2011 - 2016
+60035,Emily,Johnson,Female,37,Sales,67884,2022-06-13,7,2013 - 2017
+87223,Sarah,Smith,Male,59,HR,34798,2017-02-18,8,2011 - 2018
+88589,Michael,Martinez,Female,124,Operations,35936,2019-07-02,10,2016 - 2020
+87783,David,Miller,Male,24,Finance,NA,2013-07-09 After RE.,7,2012 - 2022
+99520,William,Martinez,M,24,Marketg,57990,2010-04-20,5,2016 - 2017
+85720,Jane,Williams,Male,57,Sales,NA,2015-10-09 After RE.,9,2010 - 2017
+30399,Sarah,Brown,Female,26,Marketg,36902,2021-01-23,9,2011 - 2020
+77537,David,Rodriguez,Male,41,Human Resource,74470,2010-02-13,8,2015 - 2016
+61185,Robert,Miller,Male,60,Marketing,54427,2020-09-25,1,2013 - 2019
+78812,David,Rodriguez,Male,33,Sales,26768,2018-03-11,4,2014 - 2015
+52841,John,Brown,Female,18,finance,51917,2015-08-07,4,2017 - 2021
+13102,Mary,Miller,Female,60,Sales,40263,2022-12-17,9,2011 - 2018
+75767,William,Johnson,Female,42,Operations,46879,2021-07-17,5,2013 - 2018
+36225,Lisa,Johnson,Female,27,Operations,64332,2015-10-04,9,2015 - 2019
+83795,Michael,Brown,Female,50,HR,52567,2012-11-28,9,2013 - 2018
+16528,Sarah,Smith,Female,63,HR,38838,2015-08-02,7,2012 - 2020
+35081,Sarah,Smith,Female,24,finance,56139,2012-12-26,1,2011 - 2019
+74084,Michael,Johnson,Female,41,IT,28585,2022-09-07,6,2011 - 2017
+49263,Lisa,Garcia,Female,52,Operations,27242,2014-11-22 After RE.,10,2010 - 2019
+32848,Mary,Rodriguez,Female,33,Marketing,NA,2010-11-24,2,2015 - 2020
+69055,Emily,Brown,Male,35,Sales,51920,2010-05-10,6,2010 - 2021
+96478,John,Martinez,Male,41,Human Resource,48003,2017-02-23 After RE.,7,2014 - 2020
+27748,Lisa,Miller,Male,28,HR,59391,2022-07-01,3,2012 - 2019
+51512,Sarah,Jones,Female,58,Sales,53401,2017-11-03,5,2011 - 2019
+25885,Jane,Miller,Female,65,Sales,80078,2018-10-02,10,2016 - 2014
+91968,William,Jones,Female,48,finance,50373,2010-03-24,8,2016 - -
+76074,Emily,Brown,Male,23,HR,52504,2010-09-16,5,2017 - 2019
+33976,John,Smith,Male,24,Sales,41905,2019-10-14 After RE.,9,2010 - 2020
+29391,David,Williams,M,45,Sales,48162,2010-11-10,10,2015 - 2014
+20354,Jane,Martinez,Female,57,Finance,56920,2021-11-15,7,2016 - 2018
+42410,Jane,Martinez,Female,59,IT,52583,2012-07-18 After RE.,5,2010 - 2017
+79044,William,Johnson,Female,44,Marketing,58370,2021-03-21,3,2012 - 2022
+96614,Jane,Martinez,Male,64,IT,40965,2017-05-20,4,2011 - 2021
+17070,William,Brown,Female,52,HR,51892,2012-08-18,9,2016 - 2021
+69969,William,Johnson,Female,45,Human Resource,56185,2016-11-19,1,2013 - 2017
+46384,Jane,Johnson,Female,48,Marketg,51673,2019-08-10,6,2013 - 2021
+11846,William,Davis,Female,32,HR,38099,2017-05-05,9,2016 - 2018
+51310,Michael,Miller,Female,53,IT,52822,2014-05-07,3,2016 - 2017
+95278,Emily,Brown,Female,39,finance,49395,2015-06-10,3,2014 - 2019
+69989,William,Brown,Male,19,Sales,64824,2013-02-28,7,2014 - 2018
+69493,Jane,Rodriguez,Male,30,Sales,67473,2015-03-14,5,2014 - 2021
+70224,Sarah,Miller,Male,48,Finance,62888,2019-06-12,6,2013 - 2014
+25179,Emily,Jones,Female,38,HR,26766,2012-03-09,5,2010 - 2018
+41071,Mary,Jones,Male,32,finance,47351,2016-11-12,5,2015 - 2021
+80359,Lisa,Williams,Female,64,Human Resource,78139,2015-11-01 After RE.,8,2016 - 2015
+47491,Michael,Martinez,Female,29,finance,60416,2019-07-11,4,2017 - 2016
+49395,Sarah,Jones,Female,47,Finance,23556,2021-10-12,6,2011 - 2020
+35604,Jane,Jones,Male,51,Marketing,35851,2016-02-22,7,2013 - 2018
+56842,Emily,Miller,Female,58,Marketing,32458,2017-12-24,2,2010 - 2019
+90930,Sarah,Davis,Male,39,finance,56385,2018-05-20,8,2012 - 2017
+53800,John,Brown,Female,23,Sales,44789,2012-07-28,5,2010 - 2015
+55220,Mary,Smith,Female,29,Marketing,51551,2013-10-31,1,2016 - 2016
+36690,Lisa,Miller,Male,48,Finance,44104,2011-08-05,6,2015 - 2019
+66985,John,Brown,Female,21,Marketg,54716,2020-08-16,8,2012 - 2014
+10601,Emily,Williams,F,38,Sales,NA,2018-02-02,9,2016 - 2019
+97169,Emily,Martinez,Female,48,Finance,24550,2010-10-28,7,2014 - 2018
+92170,Michael,Brown,Male,27,Marketing,41155,2023-04-29,10,2016 - 2015
+71928,Robert,Miller,Female,30,IT,64304,2020-08-18,7,2013 - 2019
+14967,Mary,Brown,Female,56,finance,16917,2011-06-04 After RE.,5,2016 - 2017
+47105,John,Johnson,male,56,Operations,44653,2017-01-21,9,2010 - 2018
+16501,Robert,Johnson,Female,48,Finance,41780,2016-06-09,1,2011 - 2016
+27889,John,Jones,female,30,HR,73208,2012-01-06,9,2010 - 2018
+71188,John,Johnson,Male,50,finance,43289,2015-09-09,9,2014 - 2016
+20556,John,Smith,Male,55,HR,68526,2011-06-17,2,2016 - 2018
+98939,Robert,Rodriguez,Female,39,finance,83076,2020-12-19,8,2010 - 2015
+17110,John,Garcia,Female,28,finance,35882,2021-10-12,9,2012 - 2019
+63390,Mary,Garcia,Female,62,finance,44444,2014-09-07,10,2012 - 2020
+87008,Jane,Rodriguez,Female,25,Operations,77029,2019-09-23,4,2012 - 2018
+80777,Michael,Martinez,Female,27,Human Resource,54165,2019-06-02,5,2011 - 2020
+47293,William,Johnson,Female,143,Marketg,52248,2013-08-28 After RE.,9,2011 - 2017
+42262,Lisa,Martinez,Female,37,IT,42592,2013-12-04,1,2010 - 2019
+34789,Robert,Garcia,Male,148,Operations,29994,2022-04-21,9,2013 - 2016
+65790,Jane,Smith,male,40,Operations,18868,2013-01-20,9,2015 - 2018
+45543,Mary,Martinez,Female,58,Marketing,69335,2011-01-17,5,2010 - 2020
+79349,John,Garcia,Female,21,Operations,57353,2017-01-10,1,2017 - 2019
+67721,Mary,Johnson,Female,29,IT,63213,2013-02-21,5,2010 - 2022
+98697,Mary,Jones,Male,64,Finance,31402,2020-03-18,8,2013 - 2018
+78746,Michael,Williams,M,19,IT,31577,2021-03-21,4,2012 - 2015
+27193,Jane,Williams,Female,55,HR,62725,2012-12-30 After RE.,2,2014 - -
+53754,John,Martinez,Female,24,Marketg,NA,2021-05-10,5,2010 - 2020
+70905,John,Jones,Male,29,finance,75310,2020-08-31 After RE.,6,2014 - 2017
+12646,Jane,Martinez,Female,39,Sales,31916,2010-07-02,3,2013 - 2020
+24425,Sarah,Smith,Male,21,Marketg,34605,2017-10-16 After RE.,6,2010 - 2018
+87588,Robert,Garcia,Female,20,Sales,60750,2015-12-27 After RE.,1,2015 - 2021
+32466,David,Williams,Male,27,HR,56213,2022-01-28 After RE.,4,2010 - 2016
+67136,Emily,Johnson,Male,22,HR,50342,2016-02-13,4,2010 - 2019
+80344,Jane,Brown,Male,24,Sales,62743,2012-07-11,6,2013 - 2020
+69856,Michael,Williams,Female,37,finance,62926,2022-04-25,8,2014 - 2020
+37524,Jane,Brown,M,55,Marketg,45082,2012-11-02,3,2012 - 2018
+68699,William,Johnson,Male,45,Sales,51109,2022-12-11,7,2011 - 2017
+82299,Sarah,Garcia,Female,44,Human Resource,53455,2022-08-18,4,2015 - 2018
+61441,Mary,Rodriguez,Female,43,IT,67349,2012-07-11,1,2011 - 2022
+10412,Mary,Davis,Female,56,Human Resource,63529,2012-02-24,8,2012 - 2013
+75227,David,Johnson,Male,22,IT,41897,2014-09-08,4,2016 - 2017
+56437,John,Rodriguez,Female,51,Operations,61666,2023-05-21 After RE.,7,2011 - 2017
+55554,John,Williams,Female,62,Human Resource,46401,2023-05-01,4,2011 - 2017
+26006,Emily,Williams,Male,53,Sales,NA,2014-06-05,9,2012 - 2016
+99708,Lisa,Martinez,Male,54,Operations,57020,2017-12-30,1,2015 - 2017
+72024,Mary,Williams,Male,26,Operations,80508,2010-11-15,5,2013 - 2019
+94031,David,Rodriguez,Female,59,Operations,NA,2012-08-29,10,2012 - 2017
+50631,Michael,Williams,Female,65,Sales,69955,2017-11-12,9,2016 - 2021
+76595,Sarah,Davis,Female,50,Sales,59351,2017-02-15,1,2013 - 2019
+57839,Lisa,Brown,Female,22,Human Resource,60121,2011-05-13,3,2014 - 2018
+24404,Lisa,Johnson,Female,47,IT,28276,2021-12-03,3,2014 - 2018
+60877,Robert,Johnson,Female,21,IT,33821,2013-07-19,8,2010 - 2021
+11834,Mary,Smith,Female,54,Human Resource,46040,2017-03-13,3,2010 - 2017
+39531,Jane,Garcia,Female,61,IT,45895,2018-08-21,1,2011 - 2023
+43522,John,Brown,Female,19,IT,53564,2021-06-26,2,2011 - 2021
+33247,William,Garcia,Female,25,HR,56852,2016-10-14,9,2015 - 2020
+38675,Lisa,Jones,Male,33,Sales,29849,2016-06-15,4,2014 - 2020
+97835,David,Williams,Female,41,Operations,14132,2020-01-15,2,2012 - 2019
+87840,Robert,Brown,Female,34,Sales,61873,2019-10-28,7,2013 - 2015
+90652,Lisa,Brown,Female,44,Finance,83089,2013-11-05,8,2014 - 2021
+35947,Mary,Johnson,Female,38,Finance,40710,2018-02-13,5,2013 - -
+27160,Sarah,Smith,Female,40,Marketing,19036,2013-10-14 After RE.,6,2014 - 2015
+23834,John,Rodriguez,Male,48,Marketg,57779,2013-12-24 After RE.,3,2010 - 2013
+96012,Michael,Brown,Male,51,Sales,NA,2012-11-04,8,2014 - 2017
+82069,Jane,Garcia,Male,42,finance,42291,2015-10-18,9,2016 - 2022
+13365,Robert,Martinez,male,59,Sales,48437,2011-10-10,5,2015 - 2017
+14960,Mary,Martinez,Female,37,Human Resource,44196,2013-07-02,10,2016 - 2015
+14297,John,Williams,Female,32,Sales,26802,2020-10-08,6,2015 - 2015
+57533,Sarah,Davis,Female,30,Finance,40209,2017-02-20,8,2015 - 2020
+99305,Robert,Brown,Female,61,Operations,45302,2019-09-06,8,2010 - 2019
+69856,Michael,Williams,Female,37,finance,62926,2022-04-25,8,2014 - 2020
+48946,Michael,Johnson,Female,39,Marketing,55886,2017-11-19,8,2013 - 2018
+75853,William,Garcia,Female,34,Sales,67120,2014-07-04,5,2013 - 2013
+19722,Sarah,Rodriguez,Male,27,Operations,39154,2017-12-07 After RE.,9,2013 - 2018
+11203,Emily,Brown,Female,40,finance,48377,2016-07-21,9,2012 - 2014
+72169,Sarah,Brown,Female,52,Marketg,63689,2019-06-15,10,2010 - 2023
+40711,Robert,Garcia,Male,24,Finance,45031,2017-05-04,8,2013 - 2021
+67942,John,Martinez,Female,40,finance,45922,2021-08-28,4,2017 - 2022
+86876,William,Garcia,Female,60,Finance,47164,2021-10-22 After RE.,10,2016 - 2016
+76153,John,Martinez,Male,24,Marketing,37472,2017-08-02 After RE.,8,2016 - 2017
+50158,Mary,Williams,Male,53,Marketg,14838,2016-07-19,6,2016 - 2018
+62850,David,Brown,Male,32,HR,47736,2015-07-16,9,2010 - 2015
+21165,David,Garcia,Male,22,HR,53917,2022-07-21,6,2016 - 2019
+86661,Michael,Rodriguez,Female,65,Marketg,50204,2020-08-08,10,2010 - 2022
+46007,William,Jones,Female,36,Human Resource,63470,2017-03-23,8,2013 - 2015
+23072,Sarah,Martinez,Female,51,Human Resource,56244,2014-05-22,7,2012 - 2020
+92254,John,Martinez,Male,62,Marketg,37223,2017-01-20,3,2013 - 2017
+42726,Emily,Miller,Male,47,IT,46636,2012-06-13,9,2015 - 2022
+66752,Mary,Johnson,Female,33,HR,77898,2014-10-15,4,2016 - 2021
+37948,Jane,Miller,Male,24,IT,45823,2020-10-27,4,2012 - 2020
+42605,William,Jones,Female,36,Finance,42761,2018-10-16,10,2016 - 2021
+77498,Mary,Smith,Female,56,IT,NA,2020-03-01,8,2014 - 2017
+63704,Lisa,Johnson,Male,63,Finance,49108,2017-03-05,3,2014 - 2019
+88714,Sarah,Johnson,Female,18,IT,NA,2018-06-24,9,2011 - 2017
+26151,Michael,Williams,Female,42,HR,71198,2015-12-09 After RE.,6,2016 - 2016
+75160,Michael,Smith,Female,41,IT,32929,2011-01-19,10,2016 - 2019
+18560,Jane,Smith,Female,50,Finance,66996,2016-05-29,2,2014 - 2022
+40091,Mary,Miller,Female,42,finance,51002,2020-12-21 After RE.,4,2014 - 2020
+84658,David,Smith,Female,58,Finance,28954,2022-07-05,6,2014 - 2019
+83288,David,Johnson,Female,56,Sales,43769,2018-06-14,2,2016 - 2019
+69105,Robert,Martinez,Female,31,Marketing,NA,2014-10-15,8,2013 - -
+32053,Sarah,Garcia,Male,60,IT,39809,2013-10-03 After RE.,4,2015 - 2019
+72024,Mary,Williams,Male,26,Operations,80508,2010-11-15,5,2013 - 2019
+24214,Michael,Davis,Female,42,Marketing,57511,2012-12-12,6,2013 - 2017
+53405,Jane,Miller,Male,44,Operations,30262,2017-06-06,1,2012 - 2015
+94426,Robert,Smith,Female,42,Marketing,54231,2016-10-21,10,2011 - 2016
+71448,Sarah,Brown,F,40,Finance,63270,2021-12-09,4,2014 - 2017
+25126,Mary,Brown,Female,56,Finance,66893,2016-11-15 After RE.,1,2011 - 2017
+13287,Sarah,Martinez,Female,39,Marketing,35292,2017-08-15,5,2013 - 2017
+66156,Robert,Garcia,Female,27,Operations,47961,2022-08-24,10,2010 - 2018
+15189,Jane,Brown,Male,56,Operations,50387,2022-11-08,3,2010 - 2016
+66106,David,Miller,Female,54,Sales,76221,2011-10-14,7,2011 - 2016
+42816,John,Martinez,Female,39,Finance,29748,2012-10-10,9,2010 - 2016
+53535,Jane,Miller,Female,26,Finance,32737,2011-06-15 After RE.,5,2016 - 2020
+87584,David,Smith,Male,63,Operations,68934,2020-01-15,9,2011 - 2017
+64660,Emily,Jones,Male,38,Marketg,50551,2022-12-25,6,2013 - 2021
+30873,Jane,Williams,Female,31,Marketg,59789,2013-08-26,6,2014 - 2019
+75052,Emily,Williams,Female,61,IT,44237,2023-05-03,3,2010 - 2019
+61259,Emily,Davis,Female,64,IT,NA,2017-12-05,10,2010 - 2020
+34055,Lisa,Martinez,Male,47,Operations,55333,2010-01-09,8,2010 - 2022
+48287,John,Brown,Male,40,Marketing,47438,2012-07-06,4,2016 - 2018
+54195,Emily,Johnson,Male,41,IT,49305,2010-02-02,2,2010 - 2018
+77100,Emily,Williams,Male,124,finance,42396,2021-07-09,9,2010 - 2018
+54287,Robert,Johnson,Male,46,HR,51998,2015-08-13,6,2013 - 2017
+56467,Jane,Martinez,Male,64,IT,33221,2016-06-13 After RE.,5,2015 - 2020
+19045,Robert,Smith,M,38,finance,47258,2014-10-08,4,2011 - 2019
+18481,John,Rodriguez,Female,36,IT,71190,2017-08-24,10,2016 - 2021
+16439,Lisa,Williams,Female,25,Sales,31749,2017-07-11,9,2016 - 2017
+77088,Lisa,Davis,Female,45,IT,49106,2014-12-19,2,2015 - 2019
+46828,John,Brown,Female,36,Marketing,77344,2017-12-21,6,2013 - 2023
+91920,Emily,Brown,Female,62,Marketing,39745,2013-06-15,6,2016 - 2018
+58908,Michael,Smith,Male,64,HR,57673,2018-06-29,7,2017 - 2021
+14296,Robert,Rodriguez,Female,42,IT,NA,2022-01-27,7,2014 - 2022
+42660,Michael,Brown,Female,51,finance,47639,2017-05-15 After RE.,2,2010 - 2019
+20173,Emily,Rodriguez,Female,49,Human Resource,54574,2015-01-16,6,2017 - 2019
+72241,Jane,Rodriguez,Female,32,Human Resource,55153,2011-02-01,2,2010 - 2022
+96871,Mary,Jones,Male,29,HR,30813,2015-08-07,6,2010 - 2023
+14175,Robert,Martinez,Male,23,Human Resource,45265,2020-07-29,3,2015 - 2015
+37250,John,Williams,Male,34,Marketg,48856,2021-02-21,10,2014 - 2018
+91117,Michael,Davis,Male,20,HR,47340,2020-08-05,1,2015 - 2021
+68126,Emily,Miller,Female,51,Marketg,47200,2018-11-12,2,2015 - 2020
+98460,David,Brown,Female,27,HR,64528,2014-02-25,6,2015 - 2021
+49894,Jane,Johnson,Female,35,Sales,63940,2010-06-18,10,2017 - 2016
+29359,Mary,Miller,Male,27,Human Resource,45017,2014-11-01,6,2013 - 2021
+48460,Sarah,Davis,Male,29,IT,48743,2011-02-08,5,2013 - 2018
+68551,David,Williams,Male,20,Marketing,58282,2016-01-30,8,2017 - 2023
+73404,Michael,Davis,Male,53,HR,55282,2018-03-03,6,2015 - 2021
+89942,Lisa,Miller,Male,62,Operations,48064,2022-06-04,2,2010 - 2016
+90733,John,Johnson,Male,45,Operations,34281,2012-07-06,9,2014 - 2017
+92948,Sarah,Martinez,Female,25,Sales,65753,2015-10-04,6,2010 - 2019
+90339,John,Jones,Female,49,Operations,45982,2012-08-23,2,2010 - 2021
+10030,Robert,Martinez,Female,27,Marketing,64035,2011-06-04,6,2013 - 2018
+82667,Lisa,Jones,Male,24,HR,44553,2015-12-23,10,2015 - 2018
+46516,Emily,Jones,Male,60,Operations,52985,2010-07-13,2,2011 - 2016
+80994,Mary,Miller,Female,62,Marketing,47236,2016-01-17 After RE.,1,2015 - 2021
+65546,Robert,Rodriguez,Female,36,finance,47327,2019-02-10,4,2013 - 2017
+28875,William,Garcia,Male,53,HR,48044,2010-12-23,1,2016 - -
+54858,Michael,Garcia,Male,59,finance,58996,2019-02-20,9,2010 - 2018
+12985,William,Brown,Female,32,Sales,50795,2010-07-20,6,2012 - 2018
+79960,Lisa,Brown,Female,41,Operations,68486,2014-06-18,2,2013 - 2020
+66784,Michael,Williams,Female,45,IT,64119,2023-05-18,5,2012 - 2016
+24535,Emily,Jones,Female,30,Sales,32725,2022-08-22,1,2015 - 2017
+93617,Jane,Johnson,Male,36,IT,66870,2020-08-13,9,2011 - 2016
+39781,Emily,Johnson,Male,123,Human Resource,39609,2022-05-07,1,2013 - 2017
+79339,William,Garcia,Female,40,Finance,49951,2021-12-05 After RE.,6,2014 - 2018
+88888,John,Brown,Female,52,IT,19065,2022-04-26,1,2012 - 2020
+41350,Robert,Miller,Female,49,Human Resource,43382,2014-01-13,5,2015 - 2022
+75462,Mary,Brown,Male,58,Marketing,51120,2017-06-02,9,2013 - 2020
+91024,Emily,Smith,F,60,Marketing,46962,2011-05-30,8,2010 - 2017
+93726,Jane,Rodriguez,Male,29,HR,51435,2012-06-01,10,2015 - 2018
+14619,Sarah,Miller,Female,43,Finance,37906,2019-09-06,9,2013 - 2017
+90286,Emily,Rodriguez,Female,52,Human Resource,26668,2012-12-24,8,2017 - 2021
+21371,Jane,Johnson,Female,24,Marketing,47212,2013-08-17,8,2017 - 2017
+86140,Jane,Rodriguez,Female,61,Sales,53784,2016-12-06 After RE.,5,2015 - 2018
+34727,Lisa,Martinez,Male,48,Sales,35697,2023-01-03,5,2012 - 2017
+31098,William,Williams,Female,21,IT,50806,2016-08-23,9,2012 - 2015
+86392,Michael,Martinez,female,60,Sales,45834,2022-07-04,2,2016 - 2020
+44621,Jane,Johnson,Female,65,Marketing,45898,2015-11-18,5,2014 - 2015
+84074,Mary,Jones,female,51,finance,37548,2020-06-13,2,2016 - 2018
+88911,Robert,Brown,Female,38,finance,24292,2021-08-13,8,2015 - 2020
+18847,Lisa,Martinez,Female,59,Sales,43593,2022-05-26,3,2015 - 2018
+52774,Robert,Rodriguez,Female,23,HR,58932,2014-06-16,3,2013 - 2021
+65887,Sarah,Garcia,Female,45,HR,63183,2022-02-18,4,2014 - 2015
+24182,Emily,Johnson,Female,48,finance,33392,2016-11-19,7,2016 - 2017
+84555,Mary,Williams,Female,55,Marketing,37028,2011-10-06,6,2014 - 2018
+42797,William,Davis,Female,29,IT,29529,2022-02-05,8,2014 - 2017
+41858,Michael,Garcia,Male,50,HR,67061,2022-08-18,4,2011 - 2016
+50301,Sarah,Davis,Female,43,Sales,NA,2013-02-16,7,2013 - 2019
+79368,Jane,Martinez,Female,22,Marketing,NA,2023-01-18,10,2014 - 2019
+29684,Lisa,Brown,Female,25,Marketg,39161,2017-05-08,9,2010 - -
+11672,Mary,Williams,Female,31,Marketg,61268,2018-12-29,2,2013 - 2021
+30473,Emily,Garcia,Female,64,Finance,50930,2019-03-03,6,2014 - 2017
+29954,David,Davis,Female,63,Finance,61722,2020-11-06,10,2015 - 2020
+19641,William,Miller,Female,27,Human Resource,NA,2011-09-19,7,2014 - 2021
+56987,Jane,Martinez,Female,58,Marketing,49322,2022-07-06,9,2013 - 2017
+55979,Sarah,Garcia,Female,22,Human Resource,42855,2016-07-13,9,2016 - 2016
+10040,John,Smith,Male,51,Human Resource,26735,2014-09-26,6,2016 - 2022
+17656,Mary,Johnson,Female,21,Finance,84240,2021-03-28,10,2011 - 2022
+33505,Michael,Davis,Female,41,Operations,56343,2015-09-12,4,2013 - 2016
+48287,John,Brown,Male,40,Marketing,47438,2012-07-06,4,2016 - 2018
+70399,Emily,Williams,Male,59,Marketing,37564,2014-08-09 After RE.,1,2016 - 2017
+25702,William,Davis,Male,36,finance,84062,2016-10-08 After RE.,2,2012 - 2017
+24490,Michael,Rodriguez,Female,35,Human Resource,49148,2020-09-17,3,2011 - 2020
+29511,Emily,Garcia,Female,46,HR,43381,2017-06-05,2,2012 - 2018
+26224,Mary,Miller,F,43,Operations,74678,2011-03-05,2,2010 - 2018
+97937,Emily,Williams,Male,50,IT,62162,2020-08-15,2,2014 - 2016
+61662,Robert,Johnson,Female,32,finance,44164,2011-09-26,8,2016 - 2014
+78552,Mary,Garcia,Male,49,HR,57782,2013-01-12,10,2013 - 2019
+38824,Sarah,Rodriguez,Male,63,Marketing,36963,2023-05-14,5,2016 - 2023
+50268,William,Garcia,Female,31,Marketing,68286,2016-09-25,9,2012 - 2019
+49112,David,Miller,Female,33,IT,42447,2012-02-10,5,2010 - 2018
+74749,Sarah,Williams,Male,52,Marketg,65015,2021-09-26,2,2013 - 2018
+44723,Emily,Smith,Male,54,Marketg,52775,2017-09-15,2,2010 - 2017
+96604,David,Jones,Male,34,Operations,50017,2016-02-18,4,2016 - 2020
+83283,William,Rodriguez,Female,59,Finance,30542,2014-12-20,1,2012 - 2023
+35195,Lisa,Smith,Female,19,Sales,92899,2020-04-19,4,2016 - 2021
+48264,John,Smith,Female,22,Marketg,55440,2013-04-21,1,2010 - 2020
+64614,Michael,Brown,Female,24,Marketing,57585,2012-08-31 After RE.,4,2011 - 2019
+65662,Michael,Martinez,Male,47,Marketing,53439,2014-12-26,9,2010 - 2022
+11497,Jane,Williams,Female,62,Operations,60995,2011-02-07,2,2011 - 2016
+21079,Robert,Davis,Female,64,Human Resource,53337,2013-01-13,10,2017 - 2017
+40535,Sarah,Rodriguez,Female,65,Sales,NA,2020-12-07,10,2015 - 2020
+64334,Lisa,Smith,male,23,IT,NA,2013-11-20,4,2013 - 2014
+90351,Emily,Johnson,Female,38,IT,45640,2017-06-03,2,2014 - -
+47246,Michael,Miller,Female,50,Marketg,72551,2021-04-09,9,2013 - 2021
+76765,Mary,Brown,Female,35,Sales,NA,2018-03-09,4,2012 - 2016
+82325,John,Johnson,Female,19,Sales,42340,2019-01-19 After RE.,9,2011 - 2020
+56136,John,Brown,Male,26,Finance,17345,2018-10-25,6,2017 - 2020
+84639,Mary,Jones,M,47,IT,30610,2011-12-08,3,2014 - 2021
+10075,Emily,Garcia,Female,26,Marketg,50627,2017-06-09,6,2010 - 2020
+48244,William,Rodriguez,F,24,finance,34335,2022-11-10,2,2015 - 2014
+65208,Michael,Smith,Female,24,Marketg,64062,2020-12-08,1,2012 - 2021
+59285,William,Davis,Female,39,Marketing,63326,2010-12-06 After RE.,6,2017 - 2020
+38612,Lisa,Miller,Female,51,Finance,34937,2012-10-14,5,2016 - 2016
+97904,Michael,Martinez,male,34,Finance,44097,2015-03-14 After RE.,7,2015 - 2022
+16667,Mary,Johnson,Male,62,finance,34124,2015-11-30,7,2011 - 2020
+25523,Michael,Rodriguez,Male,64,Finance,29706,2020-07-07,10,2012 - 2021
+23447,David,Smith,Male,32,Sales,45532,2019-10-18,10,2015 - 2016
+87390,Lisa,Davis,Male,23,Operations,57731,2011-03-18 After RE.,7,2015 - 2021
+66528,John,Smith,Female,20,Marketing,40966,2022-08-10 After RE.,8,2010 - 2018
+44161,Emily,Miller,Male,18,Sales,66986,2019-11-17,2,2011 - 2021
+46903,Jane,Williams,M,21,IT,73848,2011-11-04 After RE.,10,2016 - 2018
+63240,Robert,Davis,Female,64,Human Resource,56172,2013-04-02,7,2010 - 2016
+23535,John,Smith,Male,54,finance,53405,2020-06-02,8,2016 - 2021
+53693,John,Rodriguez,Female,54,Marketing,41390,2017-11-27,8,2010 - 2018
+72554,Lisa,Garcia,Female,39,HR,NA,2011-05-17,8,2010 - 2019
+23938,William,Johnson,Female,37,Human Resource,34937,2011-03-13 After RE.,9,2015 - 2017
+10662,John,Smith,Male,50,IT,61244,2011-07-12,10,2016 - 2022
+86791,Mary,Williams,Female,43,Operations,48353,2019-09-04,7,2014 - 2015
+18175,Lisa,Rodriguez,Female,63,Sales,49857,2010-09-02,3,2015 - 2019
+42034,Emily,Davis,Female,49,HR,46156,2013-10-07,6,2014 - 2014
+48581,John,Davis,Male,28,Marketg,61975,2022-06-04,1,2011 - 2023
+14681,Sarah,Smith,male,51,Finance,52514,2013-01-25,10,2012 - 2018
+94297,Robert,Davis,Female,35,Human Resource,70509,2013-01-06,9,2011 - 2021
+34162,William,Jones,Female,32,Sales,60760,2013-04-21,2,2014 - 2014
+10527,Mary,Brown,Male,33,Human Resource,NA,2023-07-08,8,2010 - 2013
+22466,Jane,Rodriguez,Male,61,finance,56687,2023-07-20,3,2016 - 2021
+75863,John,Smith,Female,19,Marketing,59894,2015-09-03,6,2012 - 2020
+93956,John,Davis,Female,28,IT,53429,2017-11-20 After RE.,8,2014 - 2015
+32973,David,Garcia,Female,48,Sales,58064,2011-11-11,6,2016 - 2016
+42816,John,Martinez,Female,39,Finance,29748,2012-10-10,9,2010 - 2016
+37954,Lisa,Garcia,Female,61,Marketg,40443,2021-12-18,3,2012 - 2018
+67869,Mary,Brown,Male,51,finance,69924,2021-02-01,6,2016 - -
+28303,Michael,Miller,Female,45,Marketg,64023,2021-01-25,2,2011 - 2021
+68454,Sarah,Williams,Female,58,Finance,74481,2020-06-25,9,2010 - 2023
+94188,Mary,Johnson,Female,53,Finance,72124,2013-03-20,8,2012 - 2021
+14971,Jane,Miller,Male,33,IT,62408,2020-01-19 After RE.,1,2010 - 2020
+78429,Emily,Garcia,female,25,Finance,59560,2018-12-05,7,2014 - 2018
+67708,Jane,Davis,Male,19,Marketg,47252,2019-01-05,7,2015 - 2017
+86804,David,Williams,Male,37,Marketg,43182,2021-08-13,5,2014 - 2018
+62170,Mary,Smith,Female,36,HR,71732,2020-12-18,1,2011 - 2020
+13801,Jane,Jones,Female,28,HR,67262,2019-02-16,1,2010 - 2017
+37912,John,Martinez,Female,40,Sales,58369,2012-08-11,7,2014 - 2015
+16600,Lisa,Jones,Male,19,Operations,15403,2018-02-26,9,2015 - 2022
+90351,Emily,Johnson,Female,38,IT,45640,2017-06-03,2,2014 - -
+19325,Robert,Miller,Female,22,Operations,25562,2021-05-18,8,2013 - 2018
+92215,Lisa,Jones,Female,23,Sales,57766,2021-03-19,7,2015 - 2016
+66986,William,Davis,Male,44,HR,71720,2020-09-17,1,2012 - 2015
+19722,Sarah,Rodriguez,Male,27,Operations,39154,2017-12-07 After RE.,9,2013 - 2018
+64370,William,Davis,Female,58,Marketing,57103,2013-07-08,2,2015 - 2022
+61464,Robert,Garcia,Male,36,Marketg,57015,2015-02-09,8,2014 - 2019
+76700,Sarah,Jones,Male,28,finance,39801,2019-02-13,4,2011 - 2017
+86907,Robert,Rodriguez,Female,58,HR,40702,2022-06-07,6,2011 - 2019
+75614,Mary,Martinez,Female,63,Human Resource,38467,2018-01-11 After RE.,6,2016 - 2021
+16006,David,Brown,Female,30,Finance,42424,2020-12-10,7,2015 - 2018
+61496,Sarah,Jones,Female,22,HR,70077,2015-12-14,5,2011 - 2022
+20549,David,Johnson,Female,160,Finance,59468,2016-04-08,8,2016 - 2021
+28806,Sarah,Johnson,Male,48,Marketing,49782,2015-11-07,6,2011 - 2021
+12472,Jane,Rodriguez,Female,22,Marketg,17495,2015-02-09,9,2010 - 2021
+41465,David,Rodriguez,Male,22,finance,36904,2013-01-02,8,2013 - 2023
+47134,John,Jones,Female,26,Marketg,50951,2013-04-20,8,2013 - 2016
+38649,Mary,Smith,Male,37,Operations,63780,2015-08-11,6,2015 - 2016
+63718,Sarah,Garcia,Male,18,Marketg,60282,2013-10-01,6,2013 - 2020
+88627,John,Johnson,Female,40,finance,49057,2022-05-22,5,2013 - 2015
+85937,Mary,Williams,female,21,Marketing,66084,2019-02-20 After RE.,1,2017 - 2023
+12747,Mary,Brown,Female,43,Sales,67554,2016-09-22,1,2010 - 2016
+65438,Michael,Johnson,Female,57,HR,54331,2010-10-06,3,2015 - 2017
+12221,Jane,Brown,Female,57,Human Resource,NA,2016-06-30,1,2016 - 2018
+34110,David,Johnson,Male,38,Marketg,61371,2020-06-30,6,2010 - 2020
+47014,Emily,Williams,Male,49,IT,59522,2016-09-05,7,2012 - 2019
+72505,William,Williams,Female,42,IT,29642,2012-05-19,2,2017 - 2021
+27769,Jane,Jones,Female,47,IT,45159,2021-03-25,9,2011 - 2015
+39707,Mary,Johnson,Female,18,Operations,37671,2010-04-25,2,2017 - 2018
+46716,Mary,Brown,Male,37,IT,48245,2021-12-05,6,2013 - 2021
+87513,Emily,Brown,Female,63,Marketg,45014,2017-11-02,4,2015 - 2018
+74747,Emily,Smith,Female,35,Marketing,40855,2010-07-21,3,2011 - 2023
+35244,Robert,Martinez,Male,41,finance,67046,2015-05-24,7,2015 - 2018
+37167,Lisa,Garcia,Female,51,Finance,48952,2022-03-07,5,2017 - 2017
+40236,Emily,Johnson,Male,42,finance,52835,2012-12-13,2,2011 - 2018
+80616,Mary,Miller,Male,35,IT,59058,2018-10-14,5,2015 - 2017
+27368,Jane,Brown,Male,50,HR,78049,2012-05-21,1,2012 - 2019
+52867,Robert,Williams,Female,47,HR,51366,2015-03-08,6,2014 - 2020
+74789,Michael,Johnson,Female,18,Human Resource,79311,2020-03-28,7,2010 - 2015
+21158,John,Williams,Female,23,Operations,40767,2010-12-20,4,2014 - 2020
+46996,Sarah,Johnson,Female,57,Marketing,53589,2020-06-04,4,2015 - 2018
+99551,Mary,Davis,Female,35,Finance,52690,2011-09-07,4,2010 - 2014
+42952,Jane,Davis,Female,56,Human Resource,70292,2022-04-10,10,2010 - 2017
+61896,David,Davis,M,20,Finance,70858,2018-11-27,1,2011 - 2018
+97575,Mary,Brown,Female,52,IT,65130,2022-01-09,9,2017 - 2016
+91996,Jane,Rodriguez,Female,52,finance,47776,2010-11-24,3,2011 - 2016
+51487,David,Williams,Male,42,Finance,49689,2010-02-24,10,2014 - 2019
+32118,Emily,Martinez,Male,37,Finance,61166,2013-04-23,4,2010 - 2018
+37454,Robert,Smith,Female,48,Finance,57003,2011-10-07,4,2012 - 2023
+61416,David,Smith,female,18,Finance,54345,2018-11-14,5,2013 - 2020
+43026,Emily,Smith,Female,32,IT,29413,2021-11-28,6,2014 - 2018
+58513,Lisa,Williams,Male,63,IT,40130,2016-02-20,6,2012 - 2023
+55775,Mary,Rodriguez,Female,29,Sales,38017,2013-12-16,8,2011 - 2019
+61655,Mary,Martinez,Female,44,Marketg,51935,2020-08-07 After RE.,3,2012 - 2020
+69554,William,Garcia,Male,46,HR,32809,2015-10-14,3,2011 - 2020
+19007,David,Davis,Male,39,Marketg,64657,2019-10-29,10,2011 - 2015
+63970,Jane,Martinez,Female,48,finance,68854,2019-05-08,5,2012 - 2016
+82041,Michael,Miller,Female,64,Finance,17735,2012-12-29,6,2014 - 2017
+81938,Emily,Davis,Male,58,Operations,40879,2015-04-20,5,2013 - 2019
+35854,Robert,Smith,Female,57,Human Resource,40843,2017-03-10,3,2013 - 2021
+10601,Emily,Williams,F,38,Sales,NA,2018-02-02,9,2016 - 2019
+51217,John,Jones,Female,33,Finance,74405,2010-05-05,4,2010 - 2023
+80273,Michael,Johnson,Female,57,Sales,55615,2022-10-19,3,2010 - 2020
+68011,John,Williams,Male,61,Operations,47376,2012-11-07,3,2011 - 2020
+93835,Robert,Brown,Female,18,finance,23643,2010-09-27,10,2016 - 2020

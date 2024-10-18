@@ -1,0 +1,21 @@
+Group,Data Type,Description,Example
+Numeric,SMALLINT,"A smaller integer type that can store whole numbers ranging from -32,768 to 32,767.",1000
+Numeric,INTEGER or INT,"A standard integer type that can store whole numbers ranging from -2,147,483,648 to 2,147,483,647.",15000
+Numeric,BIGINT,"A larger integer type that can store whole numbers ranging from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.",9000000000
+Numeric,"DECIMAL(p,s)",A numeric type with user-defined precision (p) and scale (s).,"DECIMAL(10, 2): 12345.67."
+Numeric,REAL,A single-precision floating-point number.,3.14
+Numeric,FLOAT,A floating-point number.,3.14159265359
+Character,CHAR(n),"Fixed-length character type. If the string is shorter than n characters, it will be padded with spaces.",'abc '
+Character,VARCHAR(n),Variable-length character type with a limit of n characters.,'Hello'
+Character,TEXT,Variable-length character type with no specific limit.,'This can be a long piece of text.'
+Date/Time,DATE,"Stores calendar dates (year, month, day).",2024-09-01
+Date/Time,TIME [WITHOUT TIME ZONE],Stores time of day without time zone information.,13:30:00
+Date/Time,TIMESTAMP [WITHOUT TIME ZONE],Stores both date and time without time zone information.,2024-09-01 13:30:00
+Date/Time,TIMESTAMPTZ,Stores both date and time with time zone information.,2024-09-01 13:30:00+02
+Date/Time,INTERVAL,Stores a time span (interval between two timestamps).,1 day 2 hours
+Boolean,BOOLEAN,"Can hold one of three values: TRUE, FALSE or NULL.",TRUE
+Array,ARRAY,You can define columns as arrays of any data type,"{1,2,3}"
+JSON,JSON,Stores JSON (JavaScript Object Notation) data,"{""name"": ""John"", ""age"": 30}"
+JSON,JSONB,Stores binary JSON data for faster processing.,"{""name"": ""John"", ""age"": 30}"
+UUID,UUID,Universally Unique Identifier; a 128-bit number used for unique identification.,550e8400-e29b-41d4-a716-446655440000
+Monetary,MONEY,Stores currency amounts with fixed fractional precision.,$123.45

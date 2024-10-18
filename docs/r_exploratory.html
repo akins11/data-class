@@ -354,6 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#missing-value-patterns" id="toc-missing-value-patterns" class="nav-link" data-scroll-target="#missing-value-patterns"><span class="header-section-number">16.6.1</span> Missing value patterns</a></li>
   </ul></li>
+  <li><a href="#using-the-skimr-package" id="toc-using-the-skimr-package" class="nav-link" data-scroll-target="#using-the-skimr-package"><span class="header-section-number">16.7</span> Using the skimr package</a></li>
   </ul>
 </nav>
     </div>
@@ -430,13 +431,13 @@ $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-28"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-28" data-target-annotation="1">1</button><span id="annotated-cell-28-1" class="code-annotation-target"><a href="#annotated-cell-28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_head</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="1">1</button><span id="annotated-cell-30-1" class="code-annotation-target"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_head</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-28" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-30" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-28" data-code-lines="1" data-code-annotation="1">Displays the first 5 rows</span>
+<span data-code-cell="annotated-cell-30" data-code-lines="1" data-code-annotation="1">Displays the first 5 rows</span>
 </dd>
 </dl>
 </div>
@@ -453,13 +454,13 @@ Mazda RX4  21   6  160 110  3.9 2.62 16.46  0  1    4    4</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-29"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-29" data-target-annotation="1">1</button><span id="annotated-cell-29-1" class="code-annotation-target"><a href="#annotated-cell-29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_tail</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-31" data-target-annotation="1">1</button><span id="annotated-cell-31-1" class="code-annotation-target"><a href="#annotated-cell-31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_tail</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-29" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-31" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-29" data-code-lines="1" data-code-annotation="1">Displays the last 5 rows</span>
+<span data-code-cell="annotated-cell-31" data-code-lines="1" data-code-annotation="1">Displays the last 5 rows</span>
 </dd>
 </dl>
 </div>
@@ -476,28 +477,28 @@ Volvo 142E 21.4   4  121 109 4.11 2.78 18.6  1  1    4    2</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-30" data-target-annotation="1">1</button><span id="annotated-cell-30-1" class="code-annotation-target"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_sample</span>(mtcars, <span class="at">n =</span> <span class="dv">10</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-32"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-32" data-target-annotation="1">1</button><span id="annotated-cell-32-1" class="code-annotation-target"><a href="#annotated-cell-32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_sample</span>(mtcars, <span class="at">n =</span> <span class="dv">10</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-30" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-32" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-30" data-code-lines="1" data-code-annotation="1">Get 10 record samples</span>
+<span data-code-cell="annotated-cell-32" data-code-lines="1" data-code-annotation="1">Get 10 record samples</span>
 </dd>
 </dl>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-Maserati Bora      15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
-Cadillac Fleetwood 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
-Lotus Europa       30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
-Merc 240D          24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
-Mazda RX4          21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-Chrysler Imperial  14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
-Datsun 710         22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-Duster 360         14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-AMC Javelin        15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
-Dodge Challenger   15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2</code></pre>
+<pre><code>                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Merc 280          19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+Honda Civic       30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
+Ferrari Dino      19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
+Hornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+Fiat 128          32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+Hornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+Fiat X1-9         27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
+Merc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+Maserati Bora     15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8</code></pre>
 </div>
 </div>
 </section>
@@ -535,13 +536,13 @@ Dodge Challenger   15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2</code></p
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-37"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-37" data-target-annotation="1">1</button><span id="annotated-cell-37-1" class="code-annotation-target"><a href="#annotated-cell-37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-39"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-39" data-target-annotation="1">1</button><span id="annotated-cell-39-1" class="code-annotation-target"><a href="#annotated-cell-39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-37" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-39" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-37" data-code-lines="1" data-code-annotation="1">Displays the first 5 rows</span>
+<span data-code-cell="annotated-cell-39" data-code-lines="1" data-code-annotation="1">Displays the first 5 rows</span>
 </dd>
 </dl>
 </div>
@@ -563,13 +564,13 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-38"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-38" data-target-annotation="1">1</button><span id="annotated-cell-38-1" class="code-annotation-target"><a href="#annotated-cell-38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-40"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-40" data-target-annotation="1">1</button><span id="annotated-cell-40-1" class="code-annotation-target"><a href="#annotated-cell-40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(mtcars)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-38" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-40" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-38" data-code-lines="1" data-code-annotation="1">Displays the last 5 rows</span>
+<span data-code-cell="annotated-cell-40" data-code-lines="1" data-code-annotation="1">Displays the last 5 rows</span>
 </dd>
 </dl>
 </div>
@@ -775,13 +776,13 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-50"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-50" data-target-annotation="1">1</button><span id="annotated-cell-50-1" class="code-annotation-target"><a href="#annotated-cell-50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(mtcars, cyl, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"count"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-52"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-52" data-target-annotation="1">1</button><span id="annotated-cell-52-1" class="code-annotation-target"><a href="#annotated-cell-52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(mtcars, cyl, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"count"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-50" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-52" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-50" data-code-lines="1" data-code-annotation="1">Get the unique cyl count</span>
+<span data-code-cell="annotated-cell-52" data-code-lines="1" data-code-annotation="1">Get the unique cyl count</span>
 </dd>
 </dl>
 </div>
@@ -799,13 +800,13 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-52"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-52" data-target-annotation="1">1</button><span id="annotated-cell-52-1" class="code-annotation-target"><a href="#annotated-cell-52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>cyl)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-54"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-54" data-target-annotation="1">1</button><span id="annotated-cell-54-1" class="code-annotation-target"><a href="#annotated-cell-54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>cyl)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-52" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-54" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-52" data-code-lines="1" data-code-annotation="1">Get a table of unique cyl count.</span>
+<span data-code-cell="annotated-cell-54" data-code-lines="1" data-code-annotation="1">Get a table of unique cyl count.</span>
 </dd>
 </dl>
 </div>
@@ -1270,9 +1271,210 @@ Toyota Corolla 33.9   4 71.1 65 4.22 1.835 19.9  1  1    4    1</code></pre>
      0   0    0  0    0  0    0  0  0    0    0 0</code></pre>
 </div>
 </div>
-
-
+<p><br> <br> <br> <!------- Missing Data Analysis ----------------------------------------></p>
 </section>
+</section>
+<section id="using-the-skimr-package" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="using-the-skimr-package"><span class="header-section-number">16.7</span> Using the skimr package</h2>
+<p>The skimr package is one of the numerous packages in R that allows you to create a general summary of the entire data set using descriptive analysis.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-26"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-26" data-target-annotation="1">1</button><span id="annotated-cell-26-1" class="code-annotation-target"><a href="#annotated-cell-26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(skimr)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-26" data-target-annotation="2">2</button><span id="annotated-cell-26-2" class="code-annotation-target"><a href="#annotated-cell-26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-26" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-26" data-code-lines="1" data-code-annotation="1">Install the package: skimr</span>
+</dd>
+<dt data-target-cell="annotated-cell-26" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-26" data-code-lines="2" data-code-annotation="2">Load the package.</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-27"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="1">1</button><span id="annotated-cell-27-1" class="code-annotation-target"><a href="#annotated-cell-27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(iris)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-27" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="1" data-code-annotation="1">Get the descriptive statistical summary of the iris dataset using the <code>skim()</code> function from the skimr package.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">iris</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">factor</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: left;">ordered</th>
+<th style="text-align: right;">n_unique</th>
+<th style="text-align: left;">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Species</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">set: 50, ver: 50, vir: 50</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sepal.Length</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5.84</td>
+<td style="text-align: right;">0.83</td>
+<td style="text-align: right;">4.3</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">5.80</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">7.9</td>
+<td style="text-align: left;">▆▇▇▅▂</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sepal.Width</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.06</td>
+<td style="text-align: right;">0.44</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">4.4</td>
+<td style="text-align: left;">▁▆▇▂▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Petal.Length</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.76</td>
+<td style="text-align: right;">1.77</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.6</td>
+<td style="text-align: right;">4.35</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">6.9</td>
+<td style="text-align: left;">▇▁▆▇▂</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Petal.Width</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.20</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">1.8</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: left;">▇▁▇▅▃</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

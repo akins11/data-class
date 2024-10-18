@@ -1,0 +1,6 @@
+product_id,product_name,unit_price,category
+1,Laptop,999.99,Electronics
+2,Smartphone,599.99,Electronics
+3,Headphones,149.99,Electronics
+4,Desk Chair,199.99,Furniture
+5,Coffee Table,299.99,Furniture

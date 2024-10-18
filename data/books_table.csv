@@ -1,0 +1,11 @@
+book_id,supplier_id,title,author,genre,publication_year,isbn
+1,1,To Kill a Mockingbird,Harper Lee,Fiction,1960,9780446310789
+2,3,1984,George Orwell,Science Fiction,1949,9780451524935
+3,5,Pride and Prejudice,Jane Austen,Romance,1813,9780141439518
+4,4,The Great Gatsby,F. Scott Fitzgerald,Fiction,1925,9780743273565
+5,1,The Catcher in the Rye,J.D. Salinger,Fiction,1951,9780316769174
+6,5,The Hobbit,J.R.R. Tolkien,Fantasy,1937,9780547928227
+7,2,Harry Potter and the Philosopher''s Stone,J.K. Rowling,Fantasy,1997,9780747532699
+8,4,The Da Vinci Code,Dan Brown,Thriller,2003,9780307474278
+9,5,The Hunger Games,Suzanne Collins,Young Adult,2008,9780439023481
+10,3,The Girl with the Dragon Tattoo,Stieg Larsson,Crime,2005,9780307454546
