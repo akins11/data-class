@@ -2908,12 +2908,12 @@ Handling different columns
 <pre><code># A tibble: 6 × 1
   total_order
         &lt;int&gt;
-1           2
-2           5
-3          15
-4           3
-5          13
-6           7</code></pre>
+1           6
+2           1
+3          10
+4           9
+5           5
+6           2</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -2948,12 +2948,12 @@ Different row counts
 <pre><code># A tibble: 6 × 4
      id name  category total_order
   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;          &lt;int&gt;
-1     1 Jane  VIP                2
-2     2 Paul  Regular            5
-3     3 Jouel Premium           15
-4     4 Ruth  VIP                3
-5     5 Doe   Regular           13
-6     6 Peter Premium            7</code></pre>
+1     1 Jane  VIP                6
+2     2 Paul  Regular            1
+3     3 Jouel Premium           10
+4     4 Ruth  VIP                9
+5     5 Doe   Regular            5
+6     6 Peter Premium            2</code></pre>
 </div>
 </div>
 <p><br> <br> <br> <br> <!-------- Dplyr -------------------------------------------------------------></p>
@@ -3475,11 +3475,11 @@ Case sensitive
       x     y z    
   &lt;int&gt; &lt;int&gt; &lt;chr&gt;
 1     1    NA &lt;NA&gt; 
-2     2   880 A    
-3     3   102 B    
-4     4   471 C    
-5     5   182 D    
-6     6   327 E    
+2     2   397 A    
+3     3   274 B    
+4     4   435 C    
+5     5   748 D    
+6     6    19 E    
 7     7    NA F    
 8     8    NA G    </code></pre>
 </div>
@@ -3505,11 +3505,11 @@ Case sensitive
 <pre><code># A tibble: 5 × 3
       x     y z    
   &lt;int&gt; &lt;int&gt; &lt;chr&gt;
-1     2   880 A    
-2     3   102 B    
-3     4   471 C    
-4     5   182 D    
-5     6   327 E    </code></pre>
+1     2   397 A    
+2     3   274 B    
+3     4   435 C    
+4     5   748 D    
+5     6    19 E    </code></pre>
 </div>
 </div>
 </section>
@@ -3534,11 +3534,11 @@ Case sensitive
 <pre><code># A tibble: 7 × 3
       x     y z    
   &lt;int&gt; &lt;int&gt; &lt;chr&gt;
-1     2   880 A    
-2     3   102 B    
-3     4   471 C    
-4     5   182 D    
-5     6   327 E    
+1     2   397 A    
+2     3   274 B    
+3     4   435 C    
+4     5   748 D    
+5     6    19 E    
 6     7    NA F    
 7     8    NA G    </code></pre>
 </div>
@@ -3570,9 +3570,9 @@ Case sensitive
 <pre><code># A tibble: 3 × 5
   id_col `&lt;15` `16-35` `36-55`  `56&gt;`
    &lt;int&gt; &lt;int&gt;   &lt;int&gt;   &lt;int&gt;  &lt;int&gt;
-1      1  6731   26629   39063 316554
-2      2  9722   34311   74308 841120
-3      3   774   22932   52679 968314</code></pre>
+1      1  1610   12537   80643 660699
+2      2  9927   13938   11536 566593
+3      3  7367   44383   17212 424868</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -3586,18 +3586,18 @@ Case sensitive
 <pre><code># A tibble: 12 × 3
    id_col age   income
     &lt;int&gt; &lt;chr&gt;  &lt;int&gt;
- 1      1 &lt;15     6731
- 2      1 16-35  26629
- 3      1 36-55  39063
- 4      1 56&gt;   316554
- 5      2 &lt;15     9722
- 6      2 16-35  34311
- 7      2 36-55  74308
- 8      2 56&gt;   841120
- 9      3 &lt;15      774
-10      3 16-35  22932
-11      3 36-55  52679
-12      3 56&gt;   968314</code></pre>
+ 1      1 &lt;15     1610
+ 2      1 16-35  12537
+ 3      1 36-55  80643
+ 4      1 56&gt;   660699
+ 5      2 &lt;15     9927
+ 6      2 16-35  13938
+ 7      2 36-55  11536
+ 8      2 56&gt;   566593
+ 9      3 &lt;15     7367
+10      3 16-35  44383
+11      3 36-55  17212
+12      3 56&gt;   424868</code></pre>
 </div>
 </div>
 </section>
@@ -3627,9 +3627,9 @@ Case sensitive
 <pre><code># A tibble: 3 × 4
   id_col Lagos  Kano `Akwa Ibom`
    &lt;dbl&gt; &lt;int&gt; &lt;int&gt;       &lt;int&gt;
-1      1    18    17          24
-2      2    22    16          20
-3      3    21    15          25</code></pre>
+1      1    22    16          18
+2      2    24    21          15
+3      3    23    17          20</code></pre>
 </div>
 </div>
 <p><br></p>
