@@ -336,7 +336,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#metric-binning-methods" id="toc-metric-binning-methods" class="nav-link" data-scroll-target="#metric-binning-methods"><span class="header-section-number">18.1.6</span> Metric Binning Methods</a></li>
   <li><a href="#significance-of-rfm-analysis" id="toc-significance-of-rfm-analysis" class="nav-link" data-scroll-target="#significance-of-rfm-analysis"><span class="header-section-number">18.1.7</span> Significance of RFM Analysis</a></li>
   </ul></li>
-  <li><a href="#cluster-analysis" id="toc-cluster-analysis" class="nav-link" data-scroll-target="#cluster-analysis"><span class="header-section-number">18.2</span> Cluster Analysis</a></li>
+  <li><a href="#cluster-analysis" id="toc-cluster-analysis" class="nav-link" data-scroll-target="#cluster-analysis"><span class="header-section-number">18.2</span> Cluster Analysis</a>
+  <ul class="collapse">
+  <li><a href="#k-means-clustering-overview" id="toc-k-means-clustering-overview" class="nav-link" data-scroll-target="#k-means-clustering-overview"><span class="header-section-number">18.2.1</span> K-Means Clustering Overview</a></li>
+  </ul></li>
   <li><a href="#forecasting" id="toc-forecasting" class="nav-link" data-scroll-target="#forecasting"><span class="header-section-number">18.3</span> Forecasting</a></li>
   </ul>
 </nav>
@@ -4656,6 +4659,1083 @@ $Q_75
 </div>
 </div>
 </section>
+<section id="quick-illustration-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="quick-illustration-3">Quick illustration</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div id="jyojhjixsg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jyojhjixsg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jyojhjixsg thead, #jyojhjixsg tbody, #jyojhjixsg tfoot, #jyojhjixsg tr, #jyojhjixsg td, #jyojhjixsg th {
+  border-style: none;
+}
+
+#jyojhjixsg p {
+  margin: 0;
+  padding: 0;
+}
+
+#jyojhjixsg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 600px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jyojhjixsg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jyojhjixsg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jyojhjixsg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jyojhjixsg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jyojhjixsg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jyojhjixsg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jyojhjixsg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jyojhjixsg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jyojhjixsg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jyojhjixsg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jyojhjixsg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jyojhjixsg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jyojhjixsg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jyojhjixsg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jyojhjixsg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jyojhjixsg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jyojhjixsg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jyojhjixsg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jyojhjixsg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jyojhjixsg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jyojhjixsg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jyojhjixsg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jyojhjixsg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jyojhjixsg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jyojhjixsg .gt_left {
+  text-align: left;
+}
+
+#jyojhjixsg .gt_center {
+  text-align: center;
+}
+
+#jyojhjixsg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jyojhjixsg .gt_font_normal {
+  font-weight: normal;
+}
+
+#jyojhjixsg .gt_font_bold {
+  font-weight: bold;
+}
+
+#jyojhjixsg .gt_font_italic {
+  font-style: italic;
+}
+
+#jyojhjixsg .gt_super {
+  font-size: 65%;
+}
+
+#jyojhjixsg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jyojhjixsg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jyojhjixsg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jyojhjixsg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jyojhjixsg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jyojhjixsg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jyojhjixsg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#jyojhjixsg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jyojhjixsg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal">Customer Recency Score</th>
+</tr>
+<tr class="odd gt_heading">
+<th colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">4: Best, 1: Worst</th>
+</tr>
+<tr class="header gt_col_headings">
+<th id="customer_id" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">customer_id</th>
+<th id="recency" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">recency</th>
+<th id="value_section" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">value_section</th>
+<th id="r_score" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">r_score</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">1</td>
+<td class="gt_row gt_left" headers="recency">1 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75) minimum</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">2</td>
+<td class="gt_row gt_left" headers="recency">1 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75) minimum</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">3</td>
+<td class="gt_row gt_left" headers="recency">1 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75) minimum</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">4</td>
+<td class="gt_row gt_left" headers="recency">1 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75) minimum</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">5</td>
+<td class="gt_row gt_left" headers="recency">2 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">6</td>
+<td class="gt_row gt_left" headers="recency">3 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">7</td>
+<td class="gt_row gt_left" headers="recency">3 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">8</td>
+<td class="gt_row gt_left" headers="recency">3 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">9</td>
+<td class="gt_row gt_left" headers="recency">7 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">10</td>
+<td class="gt_row gt_left" headers="recency">8 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">11</td>
+<td class="gt_row gt_left" headers="recency">9 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">12</td>
+<td class="gt_row gt_left" headers="recency">9 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">13</td>
+<td class="gt_row gt_left" headers="recency">9 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">14</td>
+<td class="gt_row gt_left" headers="recency">9 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">15</td>
+<td class="gt_row gt_left" headers="recency">9 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">16</td>
+<td class="gt_row gt_left" headers="recency">10 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">17</td>
+<td class="gt_row gt_left" headers="recency">10 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">18</td>
+<td class="gt_row gt_left" headers="recency">11 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">19</td>
+<td class="gt_row gt_left" headers="recency">12 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">20</td>
+<td class="gt_row gt_left" headers="recency">14 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">21</td>
+<td class="gt_row gt_left" headers="recency">15 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">22</td>
+<td class="gt_row gt_left" headers="recency">16 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">23</td>
+<td class="gt_row gt_left" headers="recency">16 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">24</td>
+<td class="gt_row gt_left" headers="recency">16 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">25</td>
+<td class="gt_row gt_left" headers="recency" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">17 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #7FFFD4; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">Q1 (&lt;=17.75)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #7FFFD4; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">26</td>
+<td class="gt_row gt_left" headers="recency">18 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">27</td>
+<td class="gt_row gt_left" headers="recency">18 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">28</td>
+<td class="gt_row gt_left" headers="recency">18 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">29</td>
+<td class="gt_row gt_left" headers="recency">19 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">30</td>
+<td class="gt_row gt_left" headers="recency">20 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">31</td>
+<td class="gt_row gt_left" headers="recency">22 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">32</td>
+<td class="gt_row gt_left" headers="recency">22 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">33</td>
+<td class="gt_row gt_left" headers="recency">22 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">34</td>
+<td class="gt_row gt_left" headers="recency">23 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">35</td>
+<td class="gt_row gt_left" headers="recency">23 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">36</td>
+<td class="gt_row gt_left" headers="recency">24 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">37</td>
+<td class="gt_row gt_left" headers="recency">24 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">38</td>
+<td class="gt_row gt_left" headers="recency">25 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">39</td>
+<td class="gt_row gt_left" headers="recency">25 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">40</td>
+<td class="gt_row gt_left" headers="recency">25 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">41</td>
+<td class="gt_row gt_left" headers="recency">25 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">42</td>
+<td class="gt_row gt_left" headers="recency">27 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">43</td>
+<td class="gt_row gt_left" headers="recency">27 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">44</td>
+<td class="gt_row gt_left" headers="recency">28 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">45</td>
+<td class="gt_row gt_left" headers="recency">30 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">46</td>
+<td class="gt_row gt_left" headers="recency">31 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">47</td>
+<td class="gt_row gt_left" headers="recency">32 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">48</td>
+<td class="gt_row gt_left" headers="recency">32 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">49</td>
+<td class="gt_row gt_left" headers="recency">33 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">50</td>
+<td class="gt_row gt_left" headers="recency" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">33 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #B0C4DE; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">Q2 (&lt;=33.5)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #B0C4DE; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">51</td>
+<td class="gt_row gt_left" headers="recency">34 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">52</td>
+<td class="gt_row gt_left" headers="recency">34 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">53</td>
+<td class="gt_row gt_left" headers="recency">34 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">54</td>
+<td class="gt_row gt_left" headers="recency">35 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">55</td>
+<td class="gt_row gt_left" headers="recency">35 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">56</td>
+<td class="gt_row gt_left" headers="recency">35 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">57</td>
+<td class="gt_row gt_left" headers="recency">37 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">58</td>
+<td class="gt_row gt_left" headers="recency">37 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">59</td>
+<td class="gt_row gt_left" headers="recency">38 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">60</td>
+<td class="gt_row gt_left" headers="recency">40 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">61</td>
+<td class="gt_row gt_left" headers="recency">42 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">62</td>
+<td class="gt_row gt_left" headers="recency">44 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">63</td>
+<td class="gt_row gt_left" headers="recency">45 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">64</td>
+<td class="gt_row gt_left" headers="recency">47 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">65</td>
+<td class="gt_row gt_left" headers="recency">64 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">66</td>
+<td class="gt_row gt_left" headers="recency">66 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">67</td>
+<td class="gt_row gt_left" headers="recency">69 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">68</td>
+<td class="gt_row gt_left" headers="recency">71 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">69</td>
+<td class="gt_row gt_left" headers="recency">72 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">70</td>
+<td class="gt_row gt_left" headers="recency">76 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">71</td>
+<td class="gt_row gt_left" headers="recency">80 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">72</td>
+<td class="gt_row gt_left" headers="recency">82 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">73</td>
+<td class="gt_row gt_left" headers="recency">86 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">74</td>
+<td class="gt_row gt_left" headers="recency">87 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">75</td>
+<td class="gt_row gt_left" headers="recency" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">93 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #EE9572; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">Q3 (&lt;=94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #EE9572; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: black">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">76</td>
+<td class="gt_row gt_left" headers="recency">98 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">77</td>
+<td class="gt_row gt_left" headers="recency">102 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">78</td>
+<td class="gt_row gt_left" headers="recency">106 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">79</td>
+<td class="gt_row gt_left" headers="recency">110 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">80</td>
+<td class="gt_row gt_left" headers="recency">111 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">81</td>
+<td class="gt_row gt_left" headers="recency">112 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">82</td>
+<td class="gt_row gt_left" headers="recency">115 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">83</td>
+<td class="gt_row gt_left" headers="recency">124 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">84</td>
+<td class="gt_row gt_left" headers="recency">132 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">85</td>
+<td class="gt_row gt_left" headers="recency">138 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">86</td>
+<td class="gt_row gt_left" headers="recency">148 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">87</td>
+<td class="gt_row gt_left" headers="recency">149 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">88</td>
+<td class="gt_row gt_left" headers="recency">151 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">89</td>
+<td class="gt_row gt_left" headers="recency">152 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">90</td>
+<td class="gt_row gt_left" headers="recency">161 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">91</td>
+<td class="gt_row gt_left" headers="recency">163 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">92</td>
+<td class="gt_row gt_left" headers="recency">164 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">93</td>
+<td class="gt_row gt_left" headers="recency">169 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">94</td>
+<td class="gt_row gt_left" headers="recency">175 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">95</td>
+<td class="gt_row gt_left" headers="recency">177 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">96</td>
+<td class="gt_row gt_left" headers="recency">182 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">97</td>
+<td class="gt_row gt_left" headers="recency">183 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">98</td>
+<td class="gt_row gt_left" headers="recency">184 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="customer_id">99</td>
+<td class="gt_row gt_left" headers="recency">193 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25)</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="customer_id">100</td>
+<td class="gt_row gt_left" headers="recency">195 days</td>
+<td class="gt_row gt_left" headers="value_section" style="background-color: #F0E68C">Above Q3 (&gt; 94.25) maximum</td>
+<td class="gt_row gt_center" headers="r_score" style="background-color: #F0E68C">1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
 <section id="equal-interval-binning" class="level4" data-number="18.1.6.2">
 <h4 data-number="18.1.6.2" class="anchored" data-anchor-id="equal-interval-binning"><span class="header-section-number">18.1.6.2</span> Equal Interval Binning</h4>
 <p>This method divides the range of values into intervals of equal size (width), in other words, each bin has the same difference between the minimum and maximum value.</p>
@@ -4807,23 +5887,23 @@ $Q_75
 <h4 data-number="18.1.6.5" class="anchored" data-anchor-id="comparison-between-binning-methods"><span class="header-section-number">18.1.6.5</span> Comparison between Binning Methods</h4>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tzjinbfnwa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tzjinbfnwa table {
+<div id="nigzprfemv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nigzprfemv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tzjinbfnwa thead, #tzjinbfnwa tbody, #tzjinbfnwa tfoot, #tzjinbfnwa tr, #tzjinbfnwa td, #tzjinbfnwa th {
+#nigzprfemv thead, #nigzprfemv tbody, #nigzprfemv tfoot, #nigzprfemv tr, #nigzprfemv td, #nigzprfemv th {
   border-style: none;
 }
 
-#tzjinbfnwa p {
+#nigzprfemv p {
   margin: 0;
   padding: 0;
 }
 
-#tzjinbfnwa .gt_table {
+#nigzprfemv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4849,12 +5929,12 @@ $Q_75
   border-left-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_caption {
+#nigzprfemv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tzjinbfnwa .gt_title {
+#nigzprfemv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4866,7 +5946,7 @@ $Q_75
   border-bottom-width: 0;
 }
 
-#tzjinbfnwa .gt_subtitle {
+#nigzprfemv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4878,7 +5958,7 @@ $Q_75
   border-top-width: 0;
 }
 
-#tzjinbfnwa .gt_heading {
+#nigzprfemv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4890,13 +5970,13 @@ $Q_75
   border-right-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_bottom_border {
+#nigzprfemv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_col_headings {
+#nigzprfemv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4911,7 +5991,7 @@ $Q_75
   border-right-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_col_heading {
+#nigzprfemv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4931,7 +6011,7 @@ $Q_75
   overflow-x: hidden;
 }
 
-#tzjinbfnwa .gt_column_spanner_outer {
+#nigzprfemv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4943,15 +6023,15 @@ $Q_75
   padding-right: 4px;
 }
 
-#tzjinbfnwa .gt_column_spanner_outer:first-child {
+#nigzprfemv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tzjinbfnwa .gt_column_spanner_outer:last-child {
+#nigzprfemv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tzjinbfnwa .gt_column_spanner {
+#nigzprfemv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4963,11 +6043,11 @@ $Q_75
   width: 100%;
 }
 
-#tzjinbfnwa .gt_spanner_row {
+#nigzprfemv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tzjinbfnwa .gt_group_heading {
+#nigzprfemv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4993,7 +6073,7 @@ $Q_75
   text-align: left;
 }
 
-#tzjinbfnwa .gt_empty_group_heading {
+#nigzprfemv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5008,15 +6088,15 @@ $Q_75
   vertical-align: middle;
 }
 
-#tzjinbfnwa .gt_from_md > :first-child {
+#nigzprfemv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tzjinbfnwa .gt_from_md > :last-child {
+#nigzprfemv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tzjinbfnwa .gt_row {
+#nigzprfemv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5035,7 +6115,7 @@ $Q_75
   overflow-x: hidden;
 }
 
-#tzjinbfnwa .gt_stub {
+#nigzprfemv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5048,7 +6128,7 @@ $Q_75
   padding-right: 5px;
 }
 
-#tzjinbfnwa .gt_stub_row_group {
+#nigzprfemv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5062,15 +6142,15 @@ $Q_75
   vertical-align: top;
 }
 
-#tzjinbfnwa .gt_row_group_first td {
+#nigzprfemv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tzjinbfnwa .gt_row_group_first th {
+#nigzprfemv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tzjinbfnwa .gt_summary_row {
+#nigzprfemv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5080,16 +6160,16 @@ $Q_75
   padding-right: 5px;
 }
 
-#tzjinbfnwa .gt_first_summary_row {
+#nigzprfemv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_first_summary_row.thick {
+#nigzprfemv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tzjinbfnwa .gt_last_summary_row {
+#nigzprfemv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5099,7 +6179,7 @@ $Q_75
   border-bottom-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_grand_summary_row {
+#nigzprfemv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5109,7 +6189,7 @@ $Q_75
   padding-right: 5px;
 }
 
-#tzjinbfnwa .gt_first_grand_summary_row {
+#nigzprfemv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5119,7 +6199,7 @@ $Q_75
   border-top-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_last_grand_summary_row_top {
+#nigzprfemv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5129,11 +6209,11 @@ $Q_75
   border-bottom-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_striped {
+#nigzprfemv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tzjinbfnwa .gt_table_body {
+#nigzprfemv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5142,7 +6222,7 @@ $Q_75
   border-bottom-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_footnotes {
+#nigzprfemv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5156,7 +6236,7 @@ $Q_75
   border-right-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_footnote {
+#nigzprfemv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5165,7 +6245,7 @@ $Q_75
   padding-right: 5px;
 }
 
-#tzjinbfnwa .gt_sourcenotes {
+#nigzprfemv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5179,7 +6259,7 @@ $Q_75
   border-right-color: #D3D3D3;
 }
 
-#tzjinbfnwa .gt_sourcenote {
+#nigzprfemv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5187,72 +6267,72 @@ $Q_75
   padding-right: 5px;
 }
 
-#tzjinbfnwa .gt_left {
+#nigzprfemv .gt_left {
   text-align: left;
 }
 
-#tzjinbfnwa .gt_center {
+#nigzprfemv .gt_center {
   text-align: center;
 }
 
-#tzjinbfnwa .gt_right {
+#nigzprfemv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tzjinbfnwa .gt_font_normal {
+#nigzprfemv .gt_font_normal {
   font-weight: normal;
 }
 
-#tzjinbfnwa .gt_font_bold {
+#nigzprfemv .gt_font_bold {
   font-weight: bold;
 }
 
-#tzjinbfnwa .gt_font_italic {
+#nigzprfemv .gt_font_italic {
   font-style: italic;
 }
 
-#tzjinbfnwa .gt_super {
+#nigzprfemv .gt_super {
   font-size: 65%;
 }
 
-#tzjinbfnwa .gt_footnote_marks {
+#nigzprfemv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tzjinbfnwa .gt_asterisk {
+#nigzprfemv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tzjinbfnwa .gt_indent_1 {
+#nigzprfemv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tzjinbfnwa .gt_indent_2 {
+#nigzprfemv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tzjinbfnwa .gt_indent_3 {
+#nigzprfemv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tzjinbfnwa .gt_indent_4 {
+#nigzprfemv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tzjinbfnwa .gt_indent_5 {
+#nigzprfemv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tzjinbfnwa .katex-display {
+#nigzprfemv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tzjinbfnwa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nigzprfemv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5302,10 +6382,201 @@ $Q_75
 <li><p><strong>Customer Retention Strategies:</strong> Identifying at-risk customers (low recency) allows businesses to implement retention strategies before they churn, such as re-engagement campaigns or special offers.</p></li>
 <li><p><strong>Resource Allocation:</strong> RFM analysis helps allocate marketing resources efficiently by focusing efforts on high-value segments that yield the best return on investment.</p></li>
 </ol>
+<p><br> <br> <br></p>
 </section>
 </section>
 <section id="cluster-analysis" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="cluster-analysis"><span class="header-section-number">18.2</span> Cluster Analysis</h2>
+<p>Cluster analysis is a statistical technique used for grouping data points into clusters based on their similarity. In other words, the goal of cluster analysis is to <strong>partition a dataset into distinct groups where the members of each group are more similar to each other than to those in other groups</strong>.</p>
+<section id="k-means-clustering-overview" class="level3" data-number="18.2.1">
+<h3 data-number="18.2.1" class="anchored" data-anchor-id="k-means-clustering-overview"><span class="header-section-number">18.2.1</span> K-Means Clustering Overview</h3>
+<p>K-means clustering is one of the simplest and most popular unsupervised machine learning algorithms. It partitions the data into K distinct clusters based on feature similarity. The algorithm works as follows: After making sure the dataset is free of any missing value and normalized to ensure each feature contributes equally to the clustering results;</p>
+<ol type="1">
+<li><strong>Initialization</strong>: Choose the <strong>number of clusters (K)</strong> you want to identify in your dataset.</li>
+<li><strong>Assignment Step</strong>: Assign each data point to the nearest centroid based on a distance metric (commonly Euclidean distance). This creates K clusters.</li>
+<li><strong>Update Step</strong>: Calculate new centroids by taking the mean of all data points assigned to each cluster.</li>
+<li><strong>Repeat Steps 2 and 3</strong>: Continue iterating through the assignment and update steps until convergence, which occurs when assignments no longer change or when a maximum number of iterations is reached.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="www/to_cluster_labs.png" class="img-fluid figure-img"></p>
+<figcaption>clusters with their respective centroids</figcaption>
+</figure>
+</div>
+<section id="understanding-cluster-centers" class="level4" data-number="18.2.1.1">
+<h4 data-number="18.2.1.1" class="anchored" data-anchor-id="understanding-cluster-centers"><span class="header-section-number">18.2.1.1</span> Understanding Cluster Centers</h4>
+<p>The centers (or centroids) of clusters are critical in K-means clustering as they represent the average position of all points within a cluster in multi-dimensional space.</p>
+</section>
+<section id="implementing-k-means-in-r" class="level4" data-number="18.2.1.2">
+<h4 data-number="18.2.1.2" class="anchored" data-anchor-id="implementing-k-means-in-r"><span class="header-section-number">18.2.1.2</span> Implementing K-Means in R</h4>
+<ol type="1">
+<li><strong>Preprocess Data</strong>: Normalize or scale your data if necessary, especially if features have different units or scales. This is to ensure each feature contributes equally to the clustering result.</li>
+</ol>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>scaled_iris <span class="ot">&lt;-</span> <span class="fu">select</span>(iris, <span class="sc">-</span>Species) <span class="sc">|&gt;</span> <span class="fu">scale</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Run K-Means Algorithm</strong>:</li>
+</ol>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-15"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-15" data-target-annotation="1">1</button><span id="annotated-cell-15-1" class="code-annotation-target"><a href="#annotated-cell-15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="annotated-cell-15-2"><a href="#annotated-cell-15-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-15" data-target-annotation="2">2</button><span id="annotated-cell-15-3" class="code-annotation-target"><a href="#annotated-cell-15-3" aria-hidden="true" tabindex="-1"></a>kmeans_result <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(scaled_iris, <span class="at">centers =</span> <span class="dv">3</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-15" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-15" data-code-lines="1" data-code-annotation="1">Set seed for reproducibility of the algorithm output.</span>
+</dd>
+<dt data-target-cell="annotated-cell-15" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-15" data-code-lines="3" data-code-annotation="2">Use the <code>kmeans()</code> to partition the dataset into three groups.</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-16"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-16-1"><a href="#annotated-cell-16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check cluster assignments</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-16" data-target-annotation="1">1</button><span id="annotated-cell-16-2" class="code-annotation-target"><a href="#annotated-cell-16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(kmeans_result<span class="sc">$</span>cluster)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-16" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-16" data-code-lines="2" data-code-annotation="1">Get each record’s cluster or group.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [38] 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 3 2 2 2 3 2 2 2 2 2 2 2 2 3 2 2 2 2 3 2 2 2
+ [75] 2 3 3 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 3 3 3 3 2 3 3 3 3
+[112] 3 3 2 2 3 3 3 3 2 3 2 3 2 3 3 2 3 3 3 3 3 3 2 2 3 3 3 2 3 3 3 2 3 3 3 2 3
+[149] 3 2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-17"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-17-1"><a href="#annotated-cell-17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View centroids</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="1">1</button><span id="annotated-cell-17-2" class="code-annotation-target"><a href="#annotated-cell-17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(kmeans_result<span class="sc">$</span>centers)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-17" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-17" data-code-lines="2" data-code-annotation="1">Get the centers of each cluster or group</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width
+1  -1.01119138  0.85041372   -1.3006301  -1.2507035
+2  -0.05005221 -0.88042696    0.3465767   0.2805873
+3   1.13217737  0.08812645    0.9928284   1.0141287</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-18"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-18-1"><a href="#annotated-cell-18-1" aria-hidden="true" tabindex="-1"></a>scaled_iris <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(scaled_iris) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="1">1</button><span id="annotated-cell-18-2" class="code-annotation-target"><a href="#annotated-cell-18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cluster =</span> kmeans_result<span class="sc">$</span>cluster)</span>
+<span id="annotated-cell-18-3"><a href="#annotated-cell-18-3" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="2">2</button><span id="annotated-cell-18-4" class="code-annotation-target"><a href="#annotated-cell-18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(scaled_iris)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-18" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-18" data-code-lines="2" data-code-annotation="1">Create a new column called cluster to store the generated clusters.</span>
+</dd>
+<dt data-target-cell="annotated-cell-18" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-18" data-code-lines="4" data-code-annotation="2">Retrieve the first 5 rows.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  Sepal.Length Sepal.Width Petal.Length Petal.Width cluster
+         &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;   &lt;int&gt;
+1       -0.898      1.02          -1.34       -1.31       1
+2       -1.14      -0.132         -1.34       -1.31       1
+3       -1.38       0.327         -1.39       -1.31       1
+4       -1.50       0.0979        -1.28       -1.31       1
+5       -1.02       1.25          -1.34       -1.31       1
+6       -0.535      1.93          -1.17       -1.05       1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>scaled_iris <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> <span class="fu">factor</span>(cluster))) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> kmeans_result<span class="sc">$</span>centers, </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">5</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"red"</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sepal Length"</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Sepal Width"</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relationship Between Sepal Length &amp; Width for Each Cluster"</span>,</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Cluster"</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="r_project_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important Considerations
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When performing K-means clustering, keep these key points in mind:</p>
+<ul>
+<li><p><strong>Choosing K:</strong> Selecting an appropriate value for K can be challenging; methods such as the <strong>Elbow Method</strong> or <strong>Silhouette Analysis</strong> can help determine an optimal number of clusters.</p></li>
+<li><p><strong>Distance Metric Choice:</strong> The choice of distance metric affects clustering results; while Euclidean distance is common, other metrics may be more suitable for specific datasets.</p></li>
+<li><p><strong>Scalability Issues:</strong> K-means may struggle with very large datasets due to its computational complexity.</p></li>
+<li><p><strong>Assumption of Spherical Clusters:</strong> K-means assumes that clusters are spherical and equally sized; it may not perform well with non-globular shapes or varying densities.</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="forecasting" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="forecasting"><span class="header-section-number">18.3</span> Forecasting</h2>
