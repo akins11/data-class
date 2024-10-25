@@ -340,7 +340,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#k-means-clustering-overview" id="toc-k-means-clustering-overview" class="nav-link" data-scroll-target="#k-means-clustering-overview"><span class="header-section-number">18.2.1</span> K-Means Clustering Overview</a></li>
   </ul></li>
-  <li><a href="#forecasting" id="toc-forecasting" class="nav-link" data-scroll-target="#forecasting"><span class="header-section-number">18.3</span> Forecasting</a></li>
+  <li><a href="#forecasting" id="toc-forecasting" class="nav-link" data-scroll-target="#forecasting"><span class="header-section-number">18.3</span> Forecasting</a>
+  <ul class="collapse">
+  <li><a href="#arima-model" id="toc-arima-model" class="nav-link" data-scroll-target="#arima-model"><span class="header-section-number">18.3.1</span> ARIMA Model</a></li>
+  <li><a href="#building-an-arima-model" id="toc-building-an-arima-model" class="nav-link" data-scroll-target="#building-an-arima-model"><span class="header-section-number">18.3.2</span> Building an ARIMA Model:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -6400,7 +6404,7 @@ $Q_75
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="www/to_cluster_labs.png" class="img-fluid figure-img"></p>
-<figcaption>clusters with their respective centroids</figcaption>
+<figcaption>clusters with their respective centroid</figcaption>
 </figure>
 </div>
 <section id="understanding-cluster-centers" class="level4" data-number="18.2.1.1">
@@ -6543,7 +6547,7 @@ $Q_75
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sepal Length"</span>,</span>
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Sepal Width"</span>,</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relationship Between Sepal Length &amp; Width for Each Cluster"</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relationship Between Sepal Length &amp; Width in Each Cluster"</span>,</span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Cluster"</span></span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -6575,13 +6579,246 @@ Important Considerations
 </ul>
 </div>
 </div>
+<p><br> <br> <br></p>
 </section>
 </section>
 </section>
 <section id="forecasting" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="forecasting"><span class="header-section-number">18.3</span> Forecasting</h2>
+<p>Forecasting, particularly in the context of sales forecasting, refers to the process of estimating future sales revenue for a specific time period, such as a month, quarter, or year. It is a systematic approach to predicting how much a company will sell in the future using historical sales data, market trends, economic indicators, and insights from sales teams to generate estimates.</p>
+<p>Sales forecasting is important to the overall business strategy, decision making, Budgeting and Resource allocation.</p>
+<section id="arima-model" class="level3" data-number="18.3.1">
+<h3 data-number="18.3.1" class="anchored" data-anchor-id="arima-model"><span class="header-section-number">18.3.1</span> ARIMA Model</h3>
+<p>The ARIMA model, which stands for <strong>Autoregressive Integrated Moving Average</strong>. It combines three key components: autoregression (AR), differencing (I), and moving average (MA). This model is particularly effective in capturing the underlying patterns in time series data.</p>
+<section id="key-components-of-arima" class="level4" data-number="18.3.1.1">
+<h4 data-number="18.3.1.1" class="anchored" data-anchor-id="key-components-of-arima"><span class="header-section-number">18.3.1.1</span> Key Components of ARIMA:</h4>
+<ol type="1">
+<li><strong>Autoregressive (AR) component:</strong> The autoregressive component uses <strong>past values of the time series to predict future values</strong>. It essentially regresses the current value on its previous values, allowing the model to account for trends based on historical data. This AR models the relationship between an observation and a number of lagged observations (previous time points).</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ARIMA parameter (p)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The order of the autoregressive part is denoted by <strong>p</strong>, which indicates how many previous values are included in the model. For example <code>ARIMA(p,d,q)</code></p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Integrated (I) component:</strong> This part involves <strong>differencing the time series data to achieve stationarity</strong>. <em>A stationary series has constant mean and variance over time</em>, which is essential for accurate modeling. Differencing helps eliminate trends and seasonality from the data.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ARIMA parameter (d)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The degree of differencing is denoted by <strong>d</strong>. involves differencing the raw observations to make the time series stationary, which means that its statistical properties do not change over time. For example <code>ARIMA(p,d,q)</code></p>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Moving Average (MA) component:</strong> The moving average component <strong>models the relationship between an observation and a residual error from a moving average model applied to lagged observations</strong>. This allows the model to capture short-term fluctuations and random shocks in the data.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ARIMA parameter (q)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The order of the moving average part is denoted by <strong>q</strong>. The MA part captures the impact of past forecast errors on current values. For example <code>ARIMA(p,d,q)</code></p>
+</div>
+</div>
+<section id="non-seasonal-and-seasonal-models" class="level5" data-number="18.3.1.1.1">
+<h5 data-number="18.3.1.1.1" class="anchored" data-anchor-id="non-seasonal-and-seasonal-models"><span class="header-section-number">18.3.1.1.1</span> Non-Seasonal and Seasonal Models:</h5>
+<p>Non-seasonal models are denoted <code>ARIMA(p,d,q)</code>, while seasonal models include additional parameters and are denoted <code>ARIMA(p,d,q)(P,D,Q)m</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Parameter Explanation:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The ARIMA model is typically expressed as <code>ARIMA(p,d,q)</code>, where: - p: Number of lag observations included in the model (autoregressive part). - d: Number of times that the raw observations are differenced (integrated part). - q: Size of the moving average window (moving average part).</p>
+<p>While the ‘P’, ‘D’, ‘Q’, and ‘m’ in seasonal models correspond to the seasonal components.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="building-an-arima-model" class="level3" data-number="18.3.2">
+<h3 data-number="18.3.2" class="anchored" data-anchor-id="building-an-arima-model"><span class="header-section-number">18.3.2</span> Building an ARIMA Model:</h3>
+<p>To construct an ARIMA model, follow these steps: 1. <strong>Data Collection:</strong> Gather historical sales time series data relevant to the business for forecasting.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming monthly data</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>sales_ts <span class="ot">&lt;-</span> <span class="fu">ts</span>(sales_data<span class="sc">$</span>sales, <span class="at">frequency =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Check for Stationarity:</strong> Assess whether the time series is stationary, and if not, how many differences are required to make it stationary.</li>
+</ol>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>adf_test <span class="ot">&lt;-</span> <span class="fu">adf.test</span>(sales_ts)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>adf_test<span class="sc">$</span>p.value</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>If the p-value is greater than 0.05, the series is non-stationary, and you need to difference it.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sales_diff <span class="ot">&lt;-</span> <span class="fu">diff</span>(sales_ts)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>adf_test_diff <span class="ot">&lt;-</span> <span class="fu">adf.test</span>(sales_diff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Autocorrelation:</strong> Autocorrelation is a statistical measure that evaluates the relationship between a time series and its past values. It helps in identifying patterns in data, such as trends and seasonality, which are crucial for effective forecasting.</li>
+</ol>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-23"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-23" data-target-annotation="1">1</button><span id="annotated-cell-23-1" class="code-annotation-target"><a href="#annotated-cell-23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">acf</span>(sales_diff)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-23" data-target-annotation="2">2</button><span id="annotated-cell-23-2" class="code-annotation-target"><a href="#annotated-cell-23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pacf</span>(sales_diff)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-23" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-23" data-code-lines="1" data-code-annotation="1">ACF plot</span>
+</dd>
+<dt data-target-cell="annotated-cell-23" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-23" data-code-lines="2" data-code-annotation="2">PACF plot</span>
+</dd>
+</dl>
+</div>
+</div>
+<p>Other steps includes: 4. <strong>Identify Parameters (p,d,q)(P,D,Q):</strong> Based on ACF and PACF plots, you can choose appropriate values for <strong>p</strong> and <strong>q</strong>. The <strong>d</strong> value is determined by how many times you differenced the series.</p>
+<ol start="5" type="1">
+<li><strong>Model Fitting</strong></li>
+</ol>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-24"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="1">1</button><span id="annotated-cell-24-1" class="code-annotation-target"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">auto.arima</span>(sales_ts)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="2">2</button><span id="annotated-cell-24-2" class="code-annotation-target"><a href="#annotated-cell-24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-24" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-24" data-code-lines="1" data-code-annotation="1">Automatically selects best ARIMA model based on AIC/BIC criteria.</span>
+</dd>
+<dt data-target-cell="annotated-cell-24" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-24" data-code-lines="2" data-code-annotation="2">Retrieve a summary of the model output.</span>
+</dd>
+</dl>
+</div>
+</div>
+<p>Alternatively, specify parameters manually if known</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-25"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="1">1</button><span id="annotated-cell-25-1" class="code-annotation-target"><a href="#annotated-cell-25-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">arima</span>(</span>
+<span id="annotated-cell-25-2"><a href="#annotated-cell-25-2" aria-hidden="true" tabindex="-1"></a>  sales_ts, </span>
+<span id="annotated-cell-25-3"><a href="#annotated-cell-25-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), </span>
+<span id="annotated-cell-25-4"><a href="#annotated-cell-25-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">seasonal =</span> <span class="fu">list</span>(<span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">frequency =</span> <span class="dv">12</span>)</span>
+<span id="annotated-cell-25-5"><a href="#annotated-cell-25-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="2">2</button><span id="annotated-cell-25-6" class="code-annotation-target"><a href="#annotated-cell-25-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-25" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-25" data-code-lines="1" data-code-annotation="1">Manually specify the parameters order for the model, including the seasonal parameters.</span>
+</dd>
+<dt data-target-cell="annotated-cell-25" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-25" data-code-lines="6" data-code-annotation="2">Retrieve a summary of the model output.</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-26"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-26" data-target-annotation="1">1</button><span id="annotated-cell-26-1" class="code-annotation-target"><a href="#annotated-cell-26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">checkresiduals</span>(model)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-26" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-26" data-code-lines="1" data-code-annotation="1">Check residuals to ensure they are white noise.</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-27"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="1">1</button><span id="annotated-cell-27-1" class="code-annotation-target"><a href="#annotated-cell-27-1" aria-hidden="true" tabindex="-1"></a>forecasts <span class="ot">&lt;-</span> <span class="fu">forecast</span>(model, <span class="at">h=</span><span class="dv">12</span>)</span>
+<span id="annotated-cell-27-2"><a href="#annotated-cell-27-2" aria-hidden="true" tabindex="-1"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-27" data-target-annotation="2">2</button><span id="annotated-cell-27-3" class="code-annotation-target"><a href="#annotated-cell-27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(forecasts)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-27" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="1" data-code-annotation="1">Forecasting next 12 periods (months)</span>
+</dd>
+<dt data-target-cell="annotated-cell-27" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-27" data-code-lines="3" data-code-annotation="2">Create a line chart (time series chart) of the historical and estimated future sales.</span>
+</dd>
+</dl>
+</div>
+</div>
+<section id="evaluation-metric" class="level4" data-number="18.3.2.1">
+<h4 data-number="18.3.2.1" class="anchored" data-anchor-id="evaluation-metric"><span class="header-section-number">18.3.2.1</span> Evaluation Metric:</h4>
+<ul>
+<li><p>Root Mean Square Error (<strong>RMSE</strong>): RMSE is particularly useful when you want to give higher weight to larger errors. This is because RMSE squares the errors before averaging them, which means that larger discrepancies have a disproportionately large effect on the final result.</p></li>
+<li><p>Mean Absolute Error (<strong>MAE</strong>): MAE measures the average magnitude of errors in a set of predictions, without considering their direction (i.e., it does not differentiate between overestimation and underestimation).</p></li>
+<li><p>Mean Absolute Percentage Error (<strong>MAPE</strong>): MAPE expresses accuracy as a percentage and is useful for understanding how well your model performs relative to actual values.</p></li>
+<li><p>Mean Error (<strong>ME</strong>): ME calculates the average error between predicted and actual values but can be misleading due to its potential cancellation effect (positive and negative errors can offset each other).</p></li>
+</ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
